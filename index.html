@@ -5,20 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#0a2744" />
-  <title>Deep Sea Fall — 少女與鯨</title>
+  <title>Deep Sea Fall 3D — 少女與鯨</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
 </head>
 <body>
   <div id="app">
-    <canvas id="game" width="390" height="844"></canvas>
+    <canvas id="game"></canvas>
 
     <div id="hud" class="hud hidden">
       <div class="hud-top">
         <div class="depth-pill">
-          <span class="label">DEPTH</span>
+          <span class="label">DEPTH · 3D</span>
           <span id="depthValue">0</span><span class="unit">m</span>
         </div>
         <div class="best-pill">BEST <span id="bestValue">0</span>m</div>
@@ -55,21 +63,21 @@
     <div id="titleScreen" class="screen">
       <div class="title-bg"></div>
       <div class="title-content">
-        <p class="brand">DEEP SEA FALL</p>
+        <p class="brand">DEEP SEA FALL · WEB 3D</p>
         <h1>少女與鯨</h1>
-        <p class="tagline">從水面一直往下墜——無止境的深海旅程</p>
+        <p class="tagline">手機可玩的 3D 深海墜落 · Isaac Sim 寫實過場另見 cinematic</p>
         <div class="title-actions">
           <button type="button" id="btnStartManual" class="primary">手動遊玩</button>
           <button type="button" id="btnStartAI" class="secondary">AI Mode</button>
           <button type="button" id="btnDemo" class="ghost">自動示範</button>
         </div>
-        <p class="hint">拖曳螢幕游動 · 往上滑可回頭撿寶 · 鯨會推你避開危險</p>
+        <p class="hint">拖曳游動 · 鯨會推開危險 · <a href="2d.html" style="color:#5ce1ff">切回 2D 版</a></p>
       </div>
     </div>
 
     <div id="gameOver" class="screen hidden">
       <div class="over-card">
-        <p class="brand-sm">DEEP SEA FALL</p>
+        <p class="brand-sm">DEEP SEA FALL 3D</p>
         <h2>沉眠於深海</h2>
         <p class="over-stat">最深 <span id="finalDepth">0</span> m</p>
         <p class="over-stat">寶物 <span id="finalLoot">0</span></p>
@@ -82,6 +90,6 @@
     </div>
   </div>
 
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/main3d.js"></script>
 </body>
 </html>
