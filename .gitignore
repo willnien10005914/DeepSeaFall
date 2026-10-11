@@ -2,8 +2,9 @@ node_modules/
 .playwright/
 *.log
 .DS_Store
+demo/frames/
 demo/*.webm
 !demo/deep_sea_fall_demo.mp4
 !demo/deep_sea_fall_demo_audio.wav
-demo/frames/
-demo/*.webm
+!demo/deep_sea_fall_playthrough.mp4
+!demo/deep_sea_fall_playthrough_audio.wav

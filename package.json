@@ -5,7 +5,9 @@
   "description": "Vertical mobile web game — girl and whale diving endlessly",
   "scripts": {
     "start": "python3 -m http.server 8765",
-    "record": "node scripts/record-demo.mjs"
+    "record": "node scripts/record-demo.mjs",
+    "record:long": "node scripts/record-long-demo.mjs",
+    "upload:gofile": "node scripts/upload-gofile.mjs"
   },
   "dependencies": {
     "playwright": "^1.49.1"
