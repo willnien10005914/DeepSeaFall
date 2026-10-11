@@ -3,7 +3,7 @@ import { SeaAudio } from "../audio.js";
 import { zoneAt } from "../zones.js";
 import {
   makeGirl, makeWhale, makeFish, makeJelly, makeRock, makeTreasure, makeBubble,
-  HAIR_COLORS, DRESS_COLORS,
+  loadGlb, HAIR_COLORS, DRESS_COLORS,
 } from "./meshes.js";
 
 const BEST_KEY = "deepSeaFall3dBest";
@@ -126,6 +126,9 @@ export class Game3D {
     this.whale.position.set(2.2, -0.6, -1.2);
     this.scene.add(this.whale);
 
+    // Prefer generated GLB assets (same meshes exported as USD for Isaac)
+    this._tryLoadAuthoredAssets();
+
     this.bubbleGroup = new THREE.Group();
     this.scene.add(this.bubbleGroup);
     for (let i = 0; i < 40; i++) {
@@ -150,6 +153,42 @@ export class Game3D {
       new THREE.PointsMaterial({ color: 0x9dffb0, size: 0.06, transparent: true, opacity: 0.55 }),
     );
     this.scene.add(this.bio);
+  }
+
+  async _tryLoadAuthoredAssets() {
+    try {
+      const [girlScene, whaleScene] = await Promise.all([
+        loadGlb("assets/usd/girl.glb"),
+        loadGlb("assets/usd/whale.glb"),
+      ]);
+      // Replace procedural proxies while keeping animation hooks
+      this.scene.remove(this.girl);
+      this.scene.remove(this.whale);
+      girlScene.scale.setScalar(1.0);
+      girlScene.position.set(0, -0.9, 0);
+      // fabricate userData used by anim loop
+      girlScene.userData = {
+        hairMat: { color: { setHex() {} }, emissive: { setHex() {} }, emissiveIntensity: 0 },
+        dressMat: { color: { setHex() {} }, emissive: { setHex() {} }, emissiveIntensity: 0 },
+        strandL: { rotation: { z: 0 } },
+        strandR: { rotation: { z: 0 } },
+        aura: { material: { opacity: 0.08 } },
+      };
+      whaleScene.scale.setScalar(0.55);
+      whaleScene.position.set(1.6, -1.2, -1.4);
+      whaleScene.userData = {
+        tail: { rotation: { y: 0 } },
+        fin: { rotation: { x: 0 } },
+      };
+      this.girl = girlScene;
+      this.whale = whaleScene;
+      this.scene.add(this.girl, this.whale);
+      this._authoredAssets = true;
+      console.info("[DeepSeaFall] Loaded authored GLB girl/whale assets");
+    } catch (err) {
+      console.warn("[DeepSeaFall] GLB assets unavailable, using procedural meshes", err);
+      this._authoredAssets = false;
+    }
   }
 
   _onResize() {

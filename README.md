@@ -35,7 +35,14 @@ cd ~/will/DeepSeaFall/isaac_cinematic
 
 腳本會 headless 啟動 Isaac、以 Camera sensor 拍攝直式 720×1280 幀，再 ffmpeg 合成。
 
-> 少女／鯨目前為 procedural proxy（球體＋方塊），光線與霧感偏寫實；之後可替換成 Nucleus／自製 USD 角色資產。
+### 生成原創 USD（風格參考 Behance，非抓取對方檔案）
+
+```bash
+python assets/scripts/generate_usd_from_style.py
+# 產出 assets/usd/girl.usda whale.usda deep_sea_stage.usda (+ .glb)
+```
+
+Isaac cinematic 會自動載入這些 USD；Web 3D 會載入對應 `.glb`。
 
 ## Demo 錄影
 

@@ -1,0 +1,25 @@
+#usda 1.0
+(
+    defaultPrim = "DeepSeaStage"
+    metersPerUnit = 1
+    upAxis = "Y"
+    doc = "Composition stage: tiny girl + massive humpback for scale contrast."
+)
+
+def Xform "DeepSeaStage" {
+    def Xform "Girl" (
+        prepend references = @girl.usda@
+    ) {
+        double3 xformOp:translate = (0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+
+    def Xform "Whale" (
+        prepend references = @whale.usda@
+    ) {
+        double3 xformOp:translate = (1.2, 0.1, -0.8)
+        float3 xformOp:scale = (1.15, 1.15, 1.15)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+}

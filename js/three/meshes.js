@@ -1,6 +1,17 @@
 import * as THREE from "three";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
-/** Procedural stylized-3D meshes inspired by Girl & Whale media art. */
+/** Procedural stylized-3D meshes inspired by Girl & Whale media art.
+ *  Optional: load authored GLB from /assets/usd/*.glb (same generator as USD).
+ */
+
+const loader = new GLTFLoader();
+
+export function loadGlb(url) {
+  return new Promise((resolve, reject) => {
+    loader.load(url, (gltf) => resolve(gltf.scene), undefined, reject);
+  });
+}
 
 export function makeGirl({ hairColor = 0x2b1b12, dressColor = 0x7ad7f0 } = {}) {
   const root = new THREE.Group();

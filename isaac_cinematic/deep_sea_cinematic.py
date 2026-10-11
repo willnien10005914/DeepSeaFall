@@ -54,49 +54,50 @@ def spawn_scene():
     bio = sim_utils.SphereLightCfg(intensity=12000.0, color=(0.3, 0.95, 1.0), radius=0.35)
     bio.func("/World/BioLight", bio, translation=(0.4, 1.6, 1.0))
 
-    skin = sim_utils.PreviewSurfaceCfg(diffuse_color=(0.98, 0.84, 0.76), roughness=0.45)
-    hair = sim_utils.PreviewSurfaceCfg(diffuse_color=(0.14, 0.07, 0.05), roughness=0.7)
-    dress = sim_utils.PreviewSurfaceCfg(diffuse_color=(0.42, 0.84, 0.94), roughness=0.35, metallic=0.05)
-    whale_m = sim_utils.PreviewSurfaceCfg(diffuse_color=(0.4, 0.54, 0.64), roughness=0.4, metallic=0.12)
-    belly_m = sim_utils.PreviewSurfaceCfg(diffuse_color=(0.9, 0.95, 1.0), roughness=0.5)
     rock_m = sim_utils.PreviewSurfaceCfg(diffuse_color=(0.16, 0.2, 0.26), roughness=0.95)
     lava_m = sim_utils.PreviewSurfaceCfg(diffuse_color=(0.4, 0.12, 0.06), roughness=0.85)
     orb_m = sim_utils.PreviewSurfaceCfg(diffuse_color=(0.45, 1.0, 0.75), roughness=0.2)
 
-    # Girl
-    sim_utils.SphereCfg(radius=0.14, visual_material=skin).func(
-        "/World/Girl/Head", sim_utils.SphereCfg(radius=0.14, visual_material=skin), translation=(0.0, 1.55, 0.0)
-    )
-    sim_utils.SphereCfg(radius=0.17, visual_material=hair).func(
-        "/World/Girl/Hair", sim_utils.SphereCfg(radius=0.17, visual_material=hair), translation=(0.0, 1.58, -0.03)
-    )
-    sim_utils.CuboidCfg(size=(0.22, 0.48, 0.16), visual_material=dress).func(
-        "/World/Girl/Body",
-        sim_utils.CuboidCfg(size=(0.22, 0.48, 0.16), visual_material=dress),
-        translation=(0.0, 1.15, 0.0),
-    )
+    # Original USD assets (visual reference only — avoid UsdFileCfg physics path)
+    assets = Path(__file__).resolve().parents[1] / "assets" / "usd"
+    girl_usd = assets / "girl.usda"
+    whale_usd = assets / "whale.usda"
+    if girl_usd.exists() and whale_usd.exists():
+        print(f"[cinematic] referencing USD assets from {assets}", flush=True)
+        import omni.usd
+        from pxr import Gf, UsdGeom
 
-    # Whale (elongated cuboid + spheres as cinematic proxy)
-    sim_utils.SphereCfg(radius=0.95, visual_material=whale_m).func(
-        "/World/Whale/Body",
-        sim_utils.SphereCfg(radius=0.95, visual_material=whale_m),
-        translation=(1.9, 1.05, -0.7),
-    )
-    sim_utils.SphereCfg(radius=0.6, visual_material=belly_m).func(
-        "/World/Whale/Belly",
-        sim_utils.SphereCfg(radius=0.6, visual_material=belly_m),
-        translation=(2.0, 0.72, -0.55),
-    )
-    sim_utils.CuboidCfg(size=(0.14, 1.0, 0.5), visual_material=whale_m).func(
-        "/World/Whale/Tail",
-        sim_utils.CuboidCfg(size=(0.14, 1.0, 0.5), visual_material=whale_m),
-        translation=(0.35, 1.05, -0.7),
-    )
-    sim_utils.SphereCfg(radius=0.08, visual_material=sim_utils.PreviewSurfaceCfg(diffuse_color=(0.05, 0.08, 0.1))).func(
-        "/World/Whale/Eye",
-        sim_utils.SphereCfg(radius=0.08, visual_material=sim_utils.PreviewSurfaceCfg(diffuse_color=(0.05, 0.08, 0.1))),
-        translation=(2.55, 1.2, -0.35),
-    )
+        stage = omni.usd.get_context().get_stage()
+
+        def _ref(path: str, usd_file: Path, translate, scale=1.0):
+            prim = stage.DefinePrim(path, "Xform")
+            prim.GetReferences().AddReference(str(usd_file))
+            xform = UsdGeom.Xformable(prim)
+            xform.ClearXformOpOrder()
+            xform.AddTranslateOp().Set(Gf.Vec3d(*translate))
+            xform.AddScaleOp().Set(Gf.Vec3f(scale, scale, scale))
+
+        _ref("/World/Girl", girl_usd, (0.0, 0.0, 0.0), 1.0)
+        _ref("/World/Whale", whale_usd, (0.8, 0.15, -1.0), 1.1)
+        print("[cinematic] USD references attached", flush=True)
+    else:
+        print("[cinematic] USD missing — fallback proxies. Run assets/scripts/generate_usd_from_style.py", flush=True)
+        skin = sim_utils.PreviewSurfaceCfg(diffuse_color=(0.98, 0.84, 0.76), roughness=0.45)
+        dress = sim_utils.PreviewSurfaceCfg(diffuse_color=(0.42, 0.84, 0.94), roughness=0.35)
+        whale_m = sim_utils.PreviewSurfaceCfg(diffuse_color=(0.4, 0.54, 0.64), roughness=0.4)
+        sim_utils.SphereCfg(radius=0.14, visual_material=skin).func(
+            "/World/Girl/Head", sim_utils.SphereCfg(radius=0.14, visual_material=skin), translation=(0.0, 1.55, 0.0)
+        )
+        sim_utils.CuboidCfg(size=(0.22, 0.48, 0.16), visual_material=dress).func(
+            "/World/Girl/Body",
+            sim_utils.CuboidCfg(size=(0.22, 0.48, 0.16), visual_material=dress),
+            translation=(0.0, 1.15, 0.0),
+        )
+        sim_utils.SphereCfg(radius=0.95, visual_material=whale_m).func(
+            "/World/Whale/Body",
+            sim_utils.SphereCfg(radius=0.95, visual_material=whale_m),
+            translation=(1.9, 1.05, -0.7),
+        )
 
     for i, x in enumerate((-2.5, -1.7, 2.1, 2.9, -3.0, 3.3)):
         h = 1.3 + (i % 3) * 0.75
