@@ -636,20 +636,15 @@ export class Game {
     ctx.fillStyle = g;
     ctx.fillRect(0, 0, this.w, this.h);
 
-    // light shafts near surface
-    if (this.depth < 150) {
+    // soft volumetric glow near surface (avoid harsh stripe bands)
+    if (this.depth < 160) {
       ctx.save();
-      ctx.globalAlpha = 0.08 * (1 - this.depth / 150);
-      ctx.fillStyle = "#e8fbff";
-      for (let i = 0; i < 5; i++) {
-        const x = ((i * 90 + this.t * 12) % (this.w + 80)) - 40;
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x + 40, 0);
-        ctx.lineTo(x + 10, this.h);
-        ctx.lineTo(x - 30, this.h);
-        ctx.fill();
-      }
+      const glow = ctx.createRadialGradient(this.w * 0.5, 0, 10, this.w * 0.5, 0, this.h * 0.7);
+      glow.addColorStop(0, `rgba(232,251,255,${0.28 * (1 - this.depth / 160)})`);
+      glow.addColorStop(0.45, `rgba(122,215,240,${0.1 * (1 - this.depth / 160)})`);
+      glow.addColorStop(1, "rgba(15,63,102,0)");
+      ctx.fillStyle = glow;
+      ctx.fillRect(0, 0, this.w, this.h);
       ctx.restore();
     }
 

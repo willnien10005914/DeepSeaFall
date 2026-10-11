@@ -103,11 +103,31 @@ async function main() {
   // Periodically trigger expressive actions while recording
   const actions = [
     () => page.evaluate(() => window.__deepSeaFall?.summonWhale()),
-    () => page.evaluate(() => window.__deepSeaFall?.triggerBoost()),
+    () => page.evaluate(() => {
+      const g = window.__deepSeaFall;
+      g?.triggerBoost();
+      if (g?.girl) {
+        g.girl.outfit = g.girl.outfit?.id === "dress"
+          ? { id: "diver", label: "潛水衣", main: "#1aa7a0", accent: "#ffd166" }
+          : { id: "mage", label: "氣功袍", main: "#c9a7ff", accent: "#9dffb0" };
+        g.girl.weapon = { id: "finblade", label: "鰭刃", color: "#5ce1ff", reach: 54, dmg: 14 };
+        g.ui.setEquip(g.girl);
+        g.audio.sfxEquip();
+      }
+    }),
     () => page.evaluate(() => window.__deepSeaFall?.placeMagic()),
     () => page.evaluate(() => window.__deepSeaFall?.attack()),
     () => page.evaluate(() => window.__deepSeaFall?.setPrompt("treasure")),
-    () => page.evaluate(() => window.__deepSeaFall?.audio.sfxRock()),
+    () => page.evaluate(() => {
+      const g = window.__deepSeaFall;
+      g?.audio.sfxRock();
+      if (g?.girl) {
+        g.girl.hair = { id: "glow", label: "螢光藍", color: "#5ce1ff" };
+        g.ui.setEquip(g.girl);
+        g.audio.sfxTreasure();
+        g._toast("新髮型：螢光藍");
+      }
+    }),
     () => page.evaluate(() => window.__deepSeaFall?.setPrompt("careful")),
     () => page.evaluate(() => window.__deepSeaFall?.toggleSleep()),
   ];
