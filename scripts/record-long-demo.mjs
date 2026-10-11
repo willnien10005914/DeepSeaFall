@@ -135,8 +135,23 @@ async function main() {
     }, hairs[1]),
     async () => page.evaluate(() => { if (window.__deepSeaFall.sleeping) window.__deepSeaFall.toggleSleep(); }),
     async () => page.evaluate(() => { window.__deepSeaFall.setPrompt("explore"); window.__deepSeaFall.triggerBoost(); }),
-    async () => page.evaluate(() => { window.__deepSeaFall.audio.sfxRock(); window.__deepSeaFall._toast("石頭撞擊！"); window.__deepSeaFall._hurt(8, "rock"); }),
-    async () => page.evaluate(() => { window.__deepSeaFall.seaweed += 1; window.__deepSeaFall.audio.sfxSeaweed(); window.__deepSeaFall._toast("海草！可復活"); }),
+    async () => page.evaluate(() => {
+      const g = window.__deepSeaFall;
+      g.audio.sfxRock();
+      g._toast("石頭撞擊！（鯨保護）");
+      g.shake = 0.2;
+      g._burst(g.girl.x, g.girl.y, "#ff6b6b");
+      // light chip only — keep run alive for long demo
+      g.stamina = Math.max(35, g.stamina - 4);
+      g.summonWhale();
+    }),
+    async () => page.evaluate(() => {
+      const g = window.__deepSeaFall;
+      g.seaweed += 1;
+      g.stamina = Math.min(100, g.stamina + 25);
+      g.audio.sfxSeaweed();
+      g._toast("海草！回復 + 可復活");
+    }),
     async () => page.evaluate(({ o, w }) => {
       const g = window.__deepSeaFall;
       g.girl.outfit = o; g.girl.weapon = w; g.ui.setEquip(g.girl);
@@ -176,6 +191,18 @@ async function main() {
   const started = Date.now();
   let i = 0;
   while (Date.now() - started < RECORD_MS) {
+    // Keep the run alive so features stay visible for the full 3–5 minutes
+    await page.evaluate(() => {
+      const g = window.__deepSeaFall;
+      if (!g) return;
+      if (!g.running) {
+        g.seaweed = Math.max(1, g.seaweed);
+        g.revive();
+        g._toast("海草復活，繼續下潛");
+      }
+      if (g.stamina < 40) g.stamina = 85;
+      if (!g.whale?.present) g.summonWhale();
+    });
     const step = steps[i % steps.length];
     try { await step(); } catch (e) { console.warn("step warn", e.message); }
     // Extra ambient actions every few cycles
