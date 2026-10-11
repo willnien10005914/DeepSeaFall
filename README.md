@@ -44,6 +44,21 @@ python assets/scripts/generate_usd_from_style.py
 
 Isaac cinematic 會自動載入這些 USD；Web 3D 會載入對應 `.glb`。
 
+### 角色預覽（PBR 材質 · 看少女與鯨）
+
+寫實傾向 UsdPreviewSurface：skin / hair / dress / 濕鯨 clearcoat（ior + specular）。
+
+```bash
+cd isaac_cinematic && ./export_character_previews.sh
+# 產出 assets/previews/character_*.png + character_orbit.mp4
+```
+
+| Front | Orbit | Side |
+|:-----:|:-----:|:----:|
+| ![front](assets/previews/character_front.png) | ![orbit](assets/previews/character_orbit_b.png) | ![side](assets/previews/character_side.png) |
+
+短片：[`assets/previews/character_orbit.mp4`](assets/previews/character_orbit.mp4)
+
 ## Demo 錄影
 
 ```bash

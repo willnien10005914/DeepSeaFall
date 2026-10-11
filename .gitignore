@@ -6,9 +6,9 @@ demo/frames/
 demo/*.webm
 .DS_Store
 isaac_cinematic/output/frames/
+isaac_cinematic/output/showcase_frames/
 isaac_cinematic/output/*.log
 *.log
 node_modules/
 .playwright/
-isaac_cinematic/output/frames/
 !isaac_cinematic/output/deep_sea_isaac_cinematic.mp4
