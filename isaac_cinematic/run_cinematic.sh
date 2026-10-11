@@ -24,18 +24,23 @@ rm -f "$FRAMES_DIR"/frame_*.png
 echo "[run] IsaacLab=$ISAACLAB_PATH frames=$NUM_FRAMES"
 cd "$ISAACLAB_PATH"
 # Avoid piping through `tail` (buffers forever). Log to file + stdout.
-./isaaclab.sh -p "$ROOT/deep_sea_cinematic.py" \
+# Isaac Sim app.close() can hang headless on this host — time-box the render.
+set +e
+timeout 240 ./isaaclab.sh -p "$ROOT/deep_sea_cinematic.py" \
   --headless --enable_cameras \
   --frames "$NUM_FRAMES" \
   --width 720 --height 1280 \
   --out "$FRAMES_DIR" 2>&1 | tee "$OUT/isaac_run.log"
+set -e
 
-if [[ ! -f "$FRAMES_DIR/frame_0000.png" ]]; then
+COUNT=$(ls "$FRAMES_DIR"/frame_*.png 2>/dev/null | wc -l | tr -d ' ')
+if [[ "$COUNT" -lt 1 ]]; then
   echo "[run] ERROR: no frames written" >&2
   exit 2
 fi
+echo "[run] got $COUNT frames (timeout/hang on close is OK if frames exist)"
 
-"$FFMPEG" -y -framerate 30 -i "$FRAMES_DIR/frame_%04d.png" \
+"$FFMPEG" -y -framerate 24 -i "$FRAMES_DIR/frame_%04d.png" \
   -c:v libx264 -pix_fmt yuv420p -crf 18 -movflags +faststart \
   "$VIDEO"
 
