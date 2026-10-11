@@ -1,0 +1,9 @@
+node_modules/
+.playwright/
+*.log
+.DS_Store
+demo/*.webm
+!demo/deep_sea_fall_demo.mp4
+!demo/deep_sea_fall_demo_audio.wav
+demo/frames/
+demo/*.webm

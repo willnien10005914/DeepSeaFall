@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#0a2744" />
+  <title>Deep Sea Fall — 少女與鯨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="390" height="844"></canvas>
+
+    <div id="hud" class="hud hidden">
+      <div class="hud-top">
+        <div class="depth-pill">
+          <span class="label">DEPTH</span>
+          <span id="depthValue">0</span><span class="unit">m</span>
+        </div>
+        <div class="best-pill">BEST <span id="bestValue">0</span>m</div>
+      </div>
+      <div class="stamina-wrap">
+        <div class="stamina-label">STAMINA</div>
+        <div class="stamina-bar"><div id="staminaFill"></div></div>
+      </div>
+      <div id="equipStrip" class="equip-strip"></div>
+      <div id="toast" class="toast"></div>
+      <div id="whaleLine" class="whale-line"></div>
+    </div>
+
+    <div id="controls" class="controls hidden">
+      <button type="button" id="btnSleep" class="ctl">睡著補力</button>
+      <button type="button" id="btnWhale" class="ctl">召喚鯨</button>
+      <button type="button" id="btnBoost" class="ctl">加速</button>
+      <button type="button" id="btnMagic" class="ctl">氣功標記</button>
+      <button type="button" id="btnAttack" class="ctl attack">攻擊</button>
+      <button type="button" id="btnMode" class="ctl mode">手動</button>
+    </div>
+
+    <div id="aiPanel" class="ai-panel hidden">
+      <div class="ai-title">AI Agent Mode</div>
+      <div class="ai-prompts">
+        <button type="button" data-prompt="proactive" class="prompt-btn active">Be Proactive</button>
+        <button type="button" data-prompt="careful" class="prompt-btn">Be Careful</button>
+        <button type="button" data-prompt="treasure" class="prompt-btn">Hunt Treasure</button>
+        <button type="button" data-prompt="explore" class="prompt-btn">Wander Deep</button>
+      </div>
+      <p id="aiStatus" class="ai-status">少女自主潛行中…</p>
+    </div>
+
+    <div id="titleScreen" class="screen">
+      <div class="title-bg"></div>
+      <div class="title-content">
+        <p class="brand">DEEP SEA FALL</p>
+        <h1>少女與鯨</h1>
+        <p class="tagline">從水面一直往下墜——無止境的深海旅程</p>
+        <div class="title-actions">
+          <button type="button" id="btnStartManual" class="primary">手動遊玩</button>
+          <button type="button" id="btnStartAI" class="secondary">AI Mode</button>
+          <button type="button" id="btnDemo" class="ghost">自動示範</button>
+        </div>
+        <p class="hint">拖曳螢幕游動 · 往上滑可回頭撿寶 · 鯨會推你避開危險</p>
+      </div>
+    </div>
+
+    <div id="gameOver" class="screen hidden">
+      <div class="over-card">
+        <p class="brand-sm">DEEP SEA FALL</p>
+        <h2>沉眠於深海</h2>
+        <p class="over-stat">最深 <span id="finalDepth">0</span> m</p>
+        <p class="over-stat">寶物 <span id="finalLoot">0</span></p>
+        <p id="reviveHint" class="revive-hint hidden">海草還能復活一次</p>
+        <div class="title-actions">
+          <button type="button" id="btnRevive" class="secondary hidden">使用海草復活</button>
+          <button type="button" id="btnRetry" class="primary">再潛一次</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

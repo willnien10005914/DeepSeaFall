@@ -1,0 +1,13 @@
+{
+  "name": "deep-sea-fall",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vertical mobile web game — girl and whale diving endlessly",
+  "scripts": {
+    "start": "python3 -m http.server 8765",
+    "record": "node scripts/record-demo.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.49.1"
+  }
+}
