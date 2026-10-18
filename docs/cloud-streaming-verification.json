@@ -229,5 +229,74 @@
       "error": null
     },
     "errors": []
+  },
+  "publicPinggy": {
+    "browser": "Chromium mobile emulation, WebGL disabled; not a physical iPhone test",
+    "pinggyScreenAccepted": true,
+    "h264": {
+      "stats": {
+        "bytes": 922136,
+        "frames": 184,
+        "codec": "mp4",
+        "reconnects": 0,
+        "firstFrameMs": 685.3000001907349,
+        "bufferSeconds": 0.06769999999999854
+      },
+      "ready": 2,
+      "paused": false,
+      "width": 480,
+      "height": 864,
+      "totalEntryMs": 4643.502528000001
+    },
+    "fallback": {
+      "stats": {
+        "bytes": 98034,
+        "frames": 4,
+        "codec": "jpeg",
+        "reconnects": 0,
+        "firstFrameMs": 771.0999999046326
+      },
+      "width": 480,
+      "height": 864,
+      "totalEntryMs": 15006.133312
+    },
+    "sharedControls": {
+      "chat": true,
+      "whale": true,
+      "attack": true,
+      "videoReconnectKeepsIdentity": true,
+      "projectedPositionBefore": 0.6198,
+      "projectedPositionAfter": 0.6516
+    },
+    "health": {
+      "ready": true,
+      "players": 2,
+      "depth": 20.160000000000135,
+      "gpu": {
+        "ready": true,
+        "device": "NVIDIA GB10",
+        "policy": "swim-ppo-v42",
+        "asr": "Whisper small multilingual",
+        "cuda": true
+      },
+      "streaming": {
+        "ready": true,
+        "renderer": "ANGLE (NVIDIA Corporation, NVIDIA GB10/PCIe, OpenGL ES 3.2)",
+        "width": 480,
+        "height": 864,
+        "fps": 20,
+        "viewers": 2,
+        "capturedFrames": 36,
+        "fragments": 219,
+        "codec": "h264",
+        "error": null
+      },
+      "gpuBatches": 448,
+      "lastStepMs": 26,
+      "error": null
+    },
+    "forbiddenAssetRequests": [],
+    "errors": [],
+    "idleRenderingPauses": true
   }
 }

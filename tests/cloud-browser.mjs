@@ -22,7 +22,12 @@ async function phone(name,legacy=false){
  await network.send('Network.enable');
  await network.send('Network.emulateNetworkConditions',{offline:false,latency:100,downloadThroughput:300000,uploadThroughput:100000});
  const start=performance.now();
- await p.goto(base);await p.locator('#playerName').waitFor();
+ await p.goto(base);
+ // Free Pinggy browsers see the provider's one-time consent screen. Follow
+ // the same visible Enter site action a real phone user must take.
+ const enter=p.getByText('Enter site',{exact:true});
+ if(await enter.isVisible()){await enter.click();report.pinggyScreenAccepted=true;}
+ await p.locator('#playerName').waitFor();
  await p.fill('#playerName',name);await p.click('#btnStartManual');
  await p.waitForFunction(()=>__deepSeaFall.player?.stats.frames>3,null,{timeout:45000});
  assert(await p.evaluate(()=>__deepSeaFall.remote));

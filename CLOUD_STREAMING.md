@@ -1,7 +1,10 @@
 # Spark-rendered mobile play (v50)
 
 Phones now default to the cloud view. An explicit `?render=cloud` URL also works
-on desktop; `?render=local` keeps the original browser-rendered 3D mode. The title
+on desktop; `?render=local` keeps the original browser-rendered 3D mode.
+A fresh browser on a free Pinggy URL must first click **Enter site** on Pinggy's
+one-time safety/consent screen, then enter a name and join the sea. Programmatic
+HTTP checks do not show this screen. The title
 screen offers a link to switch modes.
 
 The original authored models are 38.72MB / 1,001,116 triangles for the girl and
@@ -74,6 +77,15 @@ GPU endpoint is opened. The Node and GPU services still use ports 8765 and 8877.
 References: [WebKit iPhone ManagedMediaSource support](https://webkit.org/blog/14735/webkit-features-in-safari-17-1/),
 [WebKit media source and remote playback](https://webkit.org/blog/15036/how-to-use-media-source-extensions-with-airplay/),
 [Pinggy tunnel types](https://pinggy.io/docs/cli/),
+[Pinggy browser screening](https://pinggy.io/docs/http_tunnels/screening/),
 [FFmpeg format options](https://ffmpeg.org/ffmpeg-formats.html).
 
 [Actual mobile-emulation screenshot](assets/previews/v50/cloud-phone.png).
+
+The actual public Pinggy flow was also tested with a standard browser user
+agent: accept **Enter site**, load the light entry, join, decode H.264 and test
+shared commands. The mobile-emulation run entered video in about 4.6 seconds;
+the forced legacy JPEG client took about 15 seconds including its separate
+first-visit page and HTTP loading. Both made zero model/Three.js requests.
+These measured emulated browser timings are not a guarantee for a physical
+phone, and free Pinggy expires after 60 minutes from tunnel creation.
