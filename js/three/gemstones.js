@@ -1,5 +1,5 @@
 import * as T from "three";
-import { chooseGem, gemType } from "./treasure-rules.js?v=48";
+import { chooseGem, gemType } from "./treasure-rules.js?v=49";
 let haloTexture;
 function texture() {
   if (haloTexture) return haloTexture;

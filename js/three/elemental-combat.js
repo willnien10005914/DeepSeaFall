@@ -1,6 +1,6 @@
-import {AttackAdvection} from './attack-advection.js?v=48';
+import {AttackAdvection} from './attack-advection.js?v=49';
 import * as THREE from 'three';
-import { FlowGrains } from './attack-particles.js?v=48';
+import { FlowGrains } from './attack-particles.js?v=49';
 
 const ANCHORS = ['chest', 'l_wrist', 'r_wrist', 'l_ankle', 'r_ankle'];
 const FIRE_ANCHORS = {

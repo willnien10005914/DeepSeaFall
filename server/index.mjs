@@ -87,6 +87,7 @@ const server = http.createServer(async (req, res) => {
         protocol: 2,
         ready,
         seed: room.seed,
+        generation: room.generation,
         roster: room.roster(),
         names: room.available(),
         maxPlayers: room.maxPlayers,
@@ -219,6 +220,7 @@ wss.on("connection", (ws) => {
             type: "welcome",
             id: ws.player.id,
             token: ws.player.token,
+            generation: room.generation,
             roster: room.roster(),
             history: room.history,
             notices: room.notices,
@@ -280,8 +282,13 @@ async function tick() {
   const begin = performance.now();
   try {
     if (room.players.size) {
-      const state = await sim.step(room.roster(), room.takeCommands(), 1 / 20);
-      if (state) {
+      const generation = room.generation;
+      const state = await sim.step(
+        room.roster(), room.takeCommands(), 1 / 20, generation,
+      );
+      // A close/join can happen while Chromium is stepping. Never publish the
+      // previous run into the room after its final player has disconnected.
+      if (state && room.players.size && generation === room.generation) {
         state.notices = room.notices;
         room.snapshot = state;
         if (state.tick % 2 === 0) broadcast({ type: "snapshot", state });

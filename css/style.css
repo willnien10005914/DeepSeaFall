@@ -385,3 +385,46 @@ html, body {
 .ctl.attack.charging {background:linear-gradient(90deg,rgba(106,216,239,.5) var(--attack-fill),rgba(6,30,48,.8) var(--attack-fill));color:#efffff;}
 
 .ai-panel { bottom:calc(230px + env(safe-area-inset-bottom));max-height:35vh;overflow:auto; }
+
+/* Bottom dock: one compact toolbar remains when the action grid is folded. */
+.bottom-dock {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: calc(10px + env(safe-area-inset-bottom) + var(--keyboard-inset, 0px));
+  z-index: 24;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.dock-toolbar {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  gap: 6px;
+}
+.dock-toggle {
+  flex: 0 0 auto;
+  min-height: 36px;
+  padding: 7px 12px;
+  border: 1px solid #72c9dd66;
+  border-radius: 12px;
+  background: #0b354bdf;
+  color: #d8f6fb;
+  font: 600 12px system-ui;
+  cursor: pointer;
+}
+.bottom-dock .controls {
+  position: relative;
+  inset: auto;
+  padding: 0;
+  gap: 6px;
+  max-height: 42dvh;
+  overflow-y: auto;
+  touch-action: pan-y;
+  overscroll-behavior: contain;
+}
+.bottom-dock .ctl { padding: 10px 6px; }
+.bottom-dock.controls-collapsed .controls { display: none; }
+.bottom-dock button:focus-visible { outline: 2px solid #a2eaf8; outline-offset: -3px; }

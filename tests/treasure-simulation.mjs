@@ -37,7 +37,17 @@ try {
       { roster, commands: [{ id: "qa-a", type: "action", action: "restart" }] },
       0.05,
     );
-    return { first, second, again, away, back, restart };
+    // The room changes generation only when everybody leaves. Start from an
+    // abandoned dead dive to verify its depth, scores and cooldowns cannot leak.
+    await s.step({ roster, generation: "old-room" }, 0.05);
+    g.depth = 180;
+    g.running = false;
+    g.stamina = 0;
+    g.whaleCd = 10;
+    a.score.points = 500;
+    const freshRoster = [{ id: "qa-new", name: "Athena", color: "#b4d88e" }];
+    const fresh = await s.step({ roster: freshRoster, generation: "new-room" }, 0.05);
+    return { first, second, again, away, back, restart, fresh };
   }, roster);
   const score = (s, id) => s.players.find((p) => p.id === id);
   assert.equal(score(result.first, "qa-a").points, 10);
@@ -52,6 +62,15 @@ try {
     result.restart.players.every((p) => p.points === 0 && p.treasures === 0),
   );
   assert.equal(result.restart.runId, 2);
+  assert(result.fresh.running && result.fresh.depth < 1);
+  assert(result.fresh.stamina > 99);
+  assert.equal(result.fresh.whaleCd, 0);
+  assert.equal(result.fresh.combat.stage, "ready");
+  assert.equal(result.fresh.scoreboard.length, 1);
+  assert.equal(result.fresh.scoreboard[0].id, "qa-new");
+  assert(result.fresh.players[0].points <= 60);
+  assert(result.fresh.players[0].treasures <= 1);
+  assert.equal(result.fresh.runId, 3);
   const report = {
     personalScores: [
       { name: "Athena", points: 10, treasures: 1 },
@@ -61,6 +80,7 @@ try {
     duplicateAwardPrevented: true,
     reconnectPreservesScore: true,
     restartClearsRun: true,
+    emptyRoomReplacesDeadRunAndClearsCooldowns: true,
     authority: "actual server-owned game, with test-positioned jewels",
   };
   await writeFile(

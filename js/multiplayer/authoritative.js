@@ -2,7 +2,7 @@ import {
   awardGem,
   freshScore,
   nearestCollector,
-} from "../three/treasure-rules.js?v=48";
+} from "../three/treasure-rules.js?v=49";
 // Runs only inside the server-owned, non-rendering Chromium simulation.
 // Clients submit destinations/actions, never transforms, health or cooldowns.
 import * as T from "three";
@@ -13,15 +13,15 @@ import {
   transform,
   withSeed,
   staticRocks,
-} from "./common.js?v=48";
-import { TapSwim } from "../three/tap-swim.js?v=48";
-import { SwimPropulsion } from "../three/swim-propulsion.js?v=48";
-import { animateCharacter } from "../three/authored.js?v=48";
+} from "./common.js?v=49";
+import { TapSwim } from "../three/tap-swim.js?v=49";
+import { SwimPropulsion } from "../three/swim-propulsion.js?v=49";
+import { animateCharacter } from "../three/authored.js?v=49";
 import {
   resolveGirlShark,
   girlContactSpheres,
-} from "../three/shark-contacts.js?v=48";
-import { makeTreasure } from "../three/meshes.js?v=48";
+} from "../three/shark-contacts.js?v=49";
+import { makeTreasure } from "../three/meshes.js?v=49";
 
 const owned = [
   "girl",
@@ -138,6 +138,8 @@ export class AuthoritativeDive {
     this.g.audio.track.pause();
     this.g.audio.ctx?.suspend();
     this.base = this.g.girl;
+    this.baseState = {};
+    this.capture(this.baseState);
     this.quiet(this.base);
     this.rocks = staticRocks(this.g);
     for (const e of this.g.entities)
@@ -150,6 +152,32 @@ export class AuthoritativeDive {
           index: 0,
           args: [e.mesh.userData.gemId],
         };
+  }
+  async resetEmptyRun() {
+    // Reuse the loaded base character and world: no new browser/GLB load is
+    // needed when a new player opens an empty sea.
+    for (const p of this.players.values()) {
+      this.g.scene.remove(p.girl);
+      if (p.girl !== this.base) p.girl.traverse((o) => {
+        if (!o.isMesh) return;
+        o.geometry?.dispose();
+        for (const m of Array.isArray(o.material) ? o.material : [o.material]) m.dispose();
+      });
+    }
+    this.players.clear();
+    this.scores.clear();
+    this.events = [];
+    this.attacker = null;
+    this.restartRequested = false;
+    this.collisionCount = 0;
+    this.nextTreasureAt = 2;
+    this.runId++;
+    this.baseUsed = false;
+    this.use(this.baseState);
+    this.g.scene.add(this.base);
+    await this.g.start("manual");
+    this.quiet(this.base);
+    this.capture(this.baseState);
   }
   async sync(roster) {
     const ids = new Set(roster.map((p) => p.id));
@@ -252,7 +280,11 @@ export class AuthoritativeDive {
     if (accepted) this.emit(c.action, { playerId: p.id });
     this.capture(p);
   }
-  async step({ roster, commands = [], actions = {} }, dt) {
+  async step({ roster, commands = [], actions = {}, generation }, dt) {
+    if (generation && generation !== this.generation) {
+      if (this.generation) await this.resetEmptyRun();
+      this.generation = generation;
+    }
     await this.sync(roster);
     if (!this.players.size) return null;
     for (const p of this.players.values())
@@ -460,6 +492,7 @@ export class AuthoritativeDive {
           }
     return {
       tick: ++this.tick,
+      generation: this.generation,
       t: g.t,
       runId: this.runId,
       scoreboard: [...this.scores.values()].map((p) => ({

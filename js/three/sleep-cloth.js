@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import {ConvexHull} from 'three/addons/math/ConvexHull.js';
 import {mergeVertices} from 'three/addons/utils/BufferGeometryUtils.js';
 import {MeshBVH,CENTER} from '../vendor/three-mesh-bvh.js';
-import {installFabricDamage} from './injury-effects.js?v=48';
+import {installFabricDamage} from './injury-effects.js?v=49';
 // A shorter, pose-fitted sleep gown crossfades as the knees gather.
 // The neckline and limb openings are rebuilt against the current posed skin.
 export class SleepCloth{

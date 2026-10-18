@@ -1,37 +1,37 @@
-import {animateGemstone} from './gemstones.js?v=48';
-import {gemType} from './treasure-rules.js?v=48';
-import {LearnedSwimmer,loadSwimPPO} from './ppo-swimmer.js?v=48';
-import {OceanDetails} from './ocean-details.js?v=48';
-import {CombatActor,loadCombatPPO} from './combat-ppo.js?v=48';
-import {CombatSystem} from './combat.js?v=48';
-import {combatMoves} from './combat-moves.js?v=48';
-import {descentTravel} from './descent-motion.js?v=48';
-import {DepthBiomes} from './depth-biomes.js?v=48';
-import {resolveGirlShark} from './shark-contacts.js?v=48';
-import {makeMarineEncounter,updateMarineEncounter} from './marine-encounters.js?v=48';
-import {TapSwim} from './tap-swim.js?v=48';
-import {makePredator,updatePredator,preparePredatorEntry,predatorBodySpheres,scarePredator} from './predators.js?v=48';
-import {InjuryEffects} from './injury-effects.js?v=48';
-import {WhaleEncounter} from './whale-encounter.js?v=48';
-import {WhaleContacts} from './whale-contacts.js?v=48';
-import {RockFragments} from './rock-fragments.js?v=48';
-import {SwimPropulsion} from './swim-propulsion.js?v=48';
-import {GameFeedback} from './game-feedback.js?v=48';
-import {RockContacts} from './rock-contacts.js?v=48';
-import {WaterSwipe} from './water-swipe.js?v=48';
-import {SwimReactions} from './swim-reactions.js?v=48';
+import {animateGemstone} from './gemstones.js?v=49';
+import {gemType} from './treasure-rules.js?v=49';
+import {LearnedSwimmer,loadSwimPPO} from './ppo-swimmer.js?v=49';
+import {OceanDetails} from './ocean-details.js?v=49';
+import {CombatActor,loadCombatPPO} from './combat-ppo.js?v=49';
+import {CombatSystem} from './combat.js?v=49';
+import {combatMoves} from './combat-moves.js?v=49';
+import {descentTravel} from './descent-motion.js?v=49';
+import {DepthBiomes} from './depth-biomes.js?v=49';
+import {resolveGirlShark} from './shark-contacts.js?v=49';
+import {makeMarineEncounter,updateMarineEncounter} from './marine-encounters.js?v=49';
+import {TapSwim} from './tap-swim.js?v=49';
+import {makePredator,updatePredator,preparePredatorEntry,predatorBodySpheres,scarePredator} from './predators.js?v=49';
+import {InjuryEffects} from './injury-effects.js?v=49';
+import {WhaleEncounter} from './whale-encounter.js?v=49';
+import {WhaleContacts} from './whale-contacts.js?v=49';
+import {RockFragments} from './rock-fragments.js?v=49';
+import {SwimPropulsion} from './swim-propulsion.js?v=49';
+import {GameFeedback} from './game-feedback.js?v=49';
+import {RockContacts} from './rock-contacts.js?v=49';
+import {WaterSwipe} from './water-swipe.js?v=49';
+import {SwimReactions} from './swim-reactions.js?v=49';
 import * as THREE from "three";
-import {SwimBubbles} from "./swim-bubbles.js?v=48";
-import {animateMarine} from "./marine-life.js?v=48";
-import { prepareCharacter, animateCharacter } from "./authored.js?v=48";
-import { makeOcean, oceanEnvironment } from "./ocean-real.js?v=48";
-import { WaterRenderer } from "./water.js?v=48";
-import { SeaAudio } from "../audio.js?v=48";
+import {SwimBubbles} from "./swim-bubbles.js?v=49";
+import {animateMarine} from "./marine-life.js?v=49";
+import { prepareCharacter, animateCharacter } from "./authored.js?v=49";
+import { makeOcean, oceanEnvironment } from "./ocean-real.js?v=49";
+import { WaterRenderer } from "./water.js?v=49";
+import { SeaAudio } from "../audio.js?v=49";
 import { zoneAt } from "../zones.js";
 import {
   makeFish, makeJelly, makeRock, makeTreasure,
   loadGlb, HAIR_COLORS, DRESS_COLORS,
-} from "./meshes.js?v=48";
+} from "./meshes.js?v=49";
 
 const BEST_KEY = "deepSeaFall3dBest";
 const WHALE_LINES = [
@@ -217,8 +217,8 @@ export class Game3D {
   async _tryLoadAuthoredAssets() {
     try {
       const [girlScene, whaleScene,swimPolicy,combatPolicy] = await Promise.all([
-        loadGlb("assets/usd/girl.glb?v=48"),
-        loadGlb("assets/usd/whale.glb?v=48"),
+        loadGlb("assets/usd/girl.glb?v=49"),
+        loadGlb("assets/usd/whale.glb?v=49"),
         loadSwimPPO(),
         loadCombatPPO(),
         this.combat.dynamicsReady,
@@ -318,10 +318,10 @@ export class Game3D {
     const tagline=document.querySelector('#titleScreen .tagline');
     if(tagline)tagline.textContent='正在載入海底旅程…';
     try{
-    const audioUnlocked=this.audio.unlock().catch(error=>console.info('Audio unavailable; the game remains playable',error.message));
+    // Browser audio permission/network loading must never block entering a dive.
+    void this.audio.unlock().catch(error=>console.info('Audio unavailable; the game remains playable',error.message));
     await this.assetsReady;
     if (!this._authoredAssets){this.audio.track.pause();return}
-    await audioUnlocked;
     this.mode = mode;
     this.t=0;this.swimPhase=0;this.lastDemoSecond=undefined;this.swimMotor.reset();this.feedback.clear();this.hurtCooldown=0;this.hurtTime=0;if(this.girl?.userData.aura)this.girl.userData.aura.visible=false;this.lastDamage=null;this.lastPickup=null;
     this.running = true;

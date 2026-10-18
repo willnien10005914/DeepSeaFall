@@ -1,9 +1,12 @@
-import {bootstrap,MultiplayerClient} from './multiplayer/client.js?v=48';
-import {seeded} from './multiplayer/common.js?v=48';
-import { Game3D } from "./three/game3d.js?v=48";
+import {bootstrap,MultiplayerClient} from './multiplayer/client.js?v=49';
+import {seeded} from './multiplayer/common.js?v=49';
+import { setupBottomDock } from "./three/bottom-dock.js?v=49";
+import { Game3D } from "./three/game3d.js?v=49";
 
 const canvas = document.getElementById("game");
 const $ = (id) => document.getElementById(id);
+
+setupBottomDock();
 
 const ui = {
   btnSleep: $("btnSleep"),
@@ -20,6 +23,7 @@ const ui = {
     $("gameOver").classList.add("hidden");
     $("hud").classList.remove("hidden");
     $("controls").classList.remove("hidden");
+    $("bottomDock").classList.remove("hidden");
     this.toggleAi(game.mode === "ai" || game.mode === "demo");
   },
   toggleAi(on) { $("aiPanel").classList.toggle("hidden", !on); },
@@ -68,6 +72,7 @@ const ui = {
   showGameOver({ depth, loot, score=0, canRevive }) {
     $("gameOver").classList.remove("hidden");
     $("controls").classList.add("hidden");
+    $("bottomDock").classList.add("hidden");
     $("aiPanel").classList.add("hidden");
     $("finalDepth").textContent = String(depth);
     $("finalLoot").textContent = String(loot);

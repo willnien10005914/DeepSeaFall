@@ -2,7 +2,7 @@
 
 Open the same Pinggy HTTPS URL on each phone. Enter a name, then choose **加入同一片海**. Suggested names come from Greek, Japanese, Norse, Egyptian, Celtic, Indian and Taiwanese goddesses. The server rejects occupied names and assigns a distinct dress colour. One shared sea supports up to eight connected girls; a full room gives a clear message.
 
-Each player steers her own girl. Depth, health/stamina, sleep, dress repair, affection, whale visits and attack cooldowns are shared. Jewel counts and points are individual; see [ABYSS_RELICS.md](ABYSS_RELICS.md). Attack animation belongs to the girl who requested it. A late joiner receives the existing sea, not a new dive. The sea pauses while nobody is online; a service restart starts a new sea. No database or external account is needed.
+Each player steers her own girl. Depth, health/stamina, sleep, dress repair, affection, whale visits and attack cooldowns are shared. Jewel counts and points are individual; see [ABYSS_RELICS.md](ABYSS_RELICS.md). Attack animation belongs to the girl who requested it. A late joiner receives the existing sea, not a new dive. When nobody remains online, the run ends; the next girl starts a fresh dive at 0m. A service restart also starts a new sea. No database or external account is needed.
 
 ```mermaid
 flowchart LR
@@ -19,7 +19,7 @@ The server runs the existing Three.js game's simulation without rendering frames
 
 The first girl has no host authority: closing her browser does not stop the world. Clients can submit only bounded destinations, allowlisted actions and chat. They cannot submit health, positions, rewards or cooldown values. Duplicate action requests still pass the original server-side combat/cooldown checks. Server-side CUDA actor inference batches all girls, with the identical local JS actor as a short-lived inference-error fallback. Physics/contact resolution remains on CPU; GPU use is for the actual learned actor and speech model, not a claim of full fluid CFD.
 
-Typed chat appears in the common log and above the speaker. Messages are rendered with `textContent`, have length/rate/history limits, and are kept only in server memory. Disconnect notifications vary their wording. A 30-second reconnect token reservation retains a girl's identity; it never gives authority over another girl's avatar.
+Typed chat appears in the common log and above the speaker. Messages are rendered with `textContent`, have length/rate/history limits, and are kept only in server memory. Disconnect notifications vary their wording. While another girl remains online, a 30-second reconnect token reservation retains a girl's identity; it never gives authority over another girl's avatar.
 
 The microphone button records only after a click and browser permission. Click again to stop, or it stops after 12 seconds. Audio goes to the same Spark server, is decoded in memory with ffmpeg, and is transcribed by local Whisper CUDA. The returned text is an editable draft; press **送出** to share it. Audio is not stored. The GPU worker is bound to loopback, and transcription requests require a currently joined session, bounded upload size and rate limits. Modern phone browsers require the HTTPS Pinggy address for microphone access.
 
@@ -46,3 +46,29 @@ For development, run `python server/gpu_worker.py` in a CUDA environment, then `
 `npm test` covers unique names/colours, reconnect reservations, varying disconnect messages, bounded/stale commands, unsupported state mutations and chat limits. `node tests/multiplayer-browser.mjs` exercises two independent browsers, late joining, labels/colours, literal-text chat, peer clearance, shared whale/attack and disconnect. `node tests/microphone-browser.mjs` uses an explicit fake microphone fixture to exercise MediaRecorder → authenticated upload → CUDA transcription → editable draft → shared chat. Set `TEST_URL`, `TEST_OUT` and `TEST_AUDIO` as needed. Runtime reports/screenshots are written under ignored `.runtime/`.
 
 Implementation references: [ws WebSocket API](https://github.com/websockets/ws/blob/master/doc/ws.md), [Whisper](https://github.com/openai/whisper), [Transformers Whisper API](https://huggingface.co/docs/transformers/model_doc/whisper).
+
+## Empty room and mobile controls (v49)
+
+- When the last online girl leaves, the run ends immediately: old snapshots,
+  commands, chat, notices and 30-second name/token reservations are cleared.
+  The next girl starts at 0m with fresh shared stamina/cooldowns and personal
+  scores. If somebody is still online, the existing 30-second reconnection
+  window and ongoing dive remain available.
+- Each room generation has a unique ID. In-flight snapshots and CUDA replies
+  from the abandoned run cannot overwrite a new run. The loaded simulation and
+  base character are reused; the service does not need restarting.
+- Pending music playback no longer delays joining. Interrupted initial joins
+  return to the join screen with a retry message; restored mobile browser tabs
+  reconnect to the appropriate run.
+- Chat starts folded in the bottom toolbar. Tap **聊天** to open messages,
+  rankings, typing and microphone transcription. **收起操作 / 展開操作** independently
+  folds the action grid and remembers the preference on that device. The chat
+  composer follows the mobile software keyboard.
+
+Validation: `node --test tests/*.test.mjs`,
+`node tests/empty-room-browser.mjs`, `node tests/treasure-simulation.mjs` and
+`node tests/multiplayer-browser.mjs` against an isolated test server. The mobile
+regression covers 390×844, 360×640, 320×568 and 844×390 layouts, an interrupted
+initial WebSocket, never-resolving audio, same-tab reload after the room empties,
+partial reconnection while another girl remains, and a new visitor after all
+players quit.

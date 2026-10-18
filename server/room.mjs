@@ -50,6 +50,7 @@ export class DiveRoom {
     this.notices = [];
     this.serial = 0;
     this.snapshot = null;
+    this.generation = randomUUID();
     this.seed = randomBytes(4).readUInt32LE();
   }
   roster() {
@@ -109,6 +110,17 @@ export class DiveRoom {
     if (!p) return;
     this.players.delete(id);
     p.socket = null;
+    if (!this.players.size) {
+      // An empty sea ends the run immediately. A stale resume token must not
+      // reserve a name or bring an abandoned/dead run into the next dive.
+      this.reservations.clear();
+      this.commands = [];
+      this.history = [];
+      this.notices = [];
+      this.snapshot = null;
+      this.generation = randomUUID();
+      return;
+    }
     p.expires = this.now() + 30000;
     this.reservations.set(p.token, p);
     const lines = [

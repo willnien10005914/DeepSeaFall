@@ -1,4 +1,4 @@
-import { animateGemstone } from "../three/gemstones.js?v=48";
+import { animateGemstone } from "../three/gemstones.js?v=49";
 // Render-only replica. All gameplay mutations and actor decisions come from Spark.
 import * as T from "three";
 import {
@@ -8,12 +8,12 @@ import {
   applyTransform,
   withSeed,
   staticRocks,
-} from "./common.js?v=48";
-import { animateCharacter } from "../three/authored.js?v=48";
-import { animateMarine } from "../three/marine-life.js?v=48";
-import { makeTreasure } from "../three/meshes.js?v=48";
-import { SwimBubbles } from "../three/swim-bubbles.js?v=48";
-import { combatMoves } from "../three/combat-moves.js?v=48";
+} from "./common.js?v=49";
+import { animateCharacter } from "../three/authored.js?v=49";
+import { animateMarine } from "../three/marine-life.js?v=49";
+import { makeTreasure } from "../three/meshes.js?v=49";
+import { SwimBubbles } from "../three/swim-bubbles.js?v=49";
+import { combatMoves } from "../three/combat-moves.js?v=49";
 
 export class SeaReplica {
   constructor(game, id, onRoster) {
@@ -41,6 +41,18 @@ export class SeaReplica {
     game._update = (dt) => this.update(dt);
   }
   receive(state) {
+    if (this.generation !== state.generation) {
+      this.generation = state.generation;
+      this.latest = null;
+      this.eventId = null;
+      this.g.depth = 0;
+      this.g.maxDepth = 0;
+      this.g.feedback.clear();
+      for (const e of this.g.entities) this.g.world.remove(e.mesh);
+      this.g.entities = [];
+      this.entityMap.clear();
+      this.groups.clear();
+    }
     if (this.latest && state.tick <= this.latest.tick) return;
     this.latest = state;
     this.receivedAt = performance.now();

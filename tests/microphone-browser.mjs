@@ -35,6 +35,7 @@ try {
     null,
     { timeout: 120000 },
   );
+  await p.locator(".mp-chat-toggle").click();
   await p.locator(".mp-mic").click();
   await p.waitForTimeout(4500);
   await p.locator(".mp-mic").click();

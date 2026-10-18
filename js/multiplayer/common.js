@@ -1,7 +1,7 @@
 import * as T from "three";
-import { prepareCharacter } from "../three/authored.js?v=48";
-import { LearnedSwimmer, loadSwimPPO } from "../three/ppo-swimmer.js?v=48";
-import { CombatActor, loadCombatPPO } from "../three/combat-ppo.js?v=48";
+import { prepareCharacter } from "../three/authored.js?v=49";
+import { LearnedSwimmer, loadSwimPPO } from "../three/ppo-swimmer.js?v=49";
+import { CombatActor, loadCombatPPO } from "../three/combat-ppo.js?v=49";
 
 export function seeded(seed) {
   let n = seed >>> 0;

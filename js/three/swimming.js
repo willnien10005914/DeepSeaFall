@@ -1,9 +1,9 @@
-import {prepareSwimTurn,finishSwimTurn} from './swim-turns.js?v=48';
-import {applySwimAccents} from './swim-accents.js?v=48';
-import {blendSleepPose,hugSleepLegs} from './sleep-curl.js?v=48';
+import {prepareSwimTurn,finishSwimTurn} from './swim-turns.js?v=49';
+import {applySwimAccents} from './swim-accents.js?v=49';
+import {blendSleepPose,hugSleepLegs} from './sleep-curl.js?v=49';
 import * as THREE from 'three';
-import {rigData} from './rig-data.js?v=48';
-import {swimClips} from './swim-clips.js?v=48';
+import {rigData} from './rig-data.js?v=49';
+import {swimClips} from './swim-clips.js?v=49';
 const smooth=THREE.MathUtils.smoothstep;
 const windowWeight=(t,start,end)=>smooth(t,start,start+.9)*(1-smooth(t,end-.9,end));
 const sampled=new THREE.Quaternion(),a=new THREE.Quaternion(),b=new THREE.Quaternion(),inverse=new THREE.Quaternion(),direction=new THREE.Vector3();

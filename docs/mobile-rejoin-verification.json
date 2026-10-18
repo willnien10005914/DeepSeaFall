@@ -1,0 +1,183 @@
+{
+  "initialConnectionFailureIsRetryable": true,
+  "unresolvedAudioDoesNotBlockJoin": true,
+  "emptyRoomRejoin": {
+    "depth": 0.09,
+    "runId": 4,
+    "running": true,
+    "points": 60
+  },
+  "mobileDock": {
+    "fullHeight": 183,
+    "foldedHeight": 36,
+    "chatWorksWhenControlsFolded": true,
+    "layouts": [
+      {
+        "width": 390,
+        "height": 844,
+        "panel": {
+          "x": 10,
+          "y": 669.109375,
+          "right": 380,
+          "bottom": 792,
+          "height": 122.890625
+        },
+        "toolbar": {
+          "x": 10,
+          "y": 798,
+          "right": 380,
+          "bottom": 834,
+          "height": 36
+        },
+        "app": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "height": 844
+        }
+      },
+      {
+        "width": 360,
+        "height": 640,
+        "panel": {
+          "x": 10,
+          "y": 465.109375,
+          "right": 350,
+          "bottom": 588,
+          "height": 122.890625
+        },
+        "toolbar": {
+          "x": 10,
+          "y": 594,
+          "right": 350,
+          "bottom": 630,
+          "height": 36
+        },
+        "app": {
+          "x": 0,
+          "y": 0,
+          "right": 360,
+          "bottom": 640,
+          "height": 640
+        }
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "panel": {
+          "x": 10,
+          "y": 393.109375,
+          "right": 310,
+          "bottom": 516,
+          "height": 122.890625
+        },
+        "toolbar": {
+          "x": 10,
+          "y": 522,
+          "right": 310,
+          "bottom": 558,
+          "height": 36
+        },
+        "app": {
+          "x": 0,
+          "y": 0,
+          "right": 320,
+          "bottom": 568,
+          "height": 568
+        }
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "panel": {
+          "x": 192,
+          "y": 215.109375,
+          "right": 652,
+          "bottom": 338,
+          "height": 122.890625
+        },
+        "toolbar": {
+          "x": 192,
+          "y": 344,
+          "right": 652,
+          "bottom": 380,
+          "height": 36
+        },
+        "app": {
+          "x": 182,
+          "y": 0,
+          "right": 662,
+          "bottom": 390,
+          "height": 390
+        }
+      }
+    ]
+  },
+  "partialDisconnectResumesRun": true,
+  "controlsPreferencePersists": true,
+  "newVisitorAfterAllQuit": true,
+  "health": {
+    "ready": true,
+    "players": 1,
+    "depth": 0.18,
+    "gpu": {
+      "ready": true,
+      "device": "NVIDIA GB10",
+      "policy": "swim-ppo-v42",
+      "asr": "Whisper small multilingual",
+      "cuda": true
+    },
+    "gpuBatches": 384,
+    "lastStepMs": 7,
+    "error": null
+  },
+  "errors": [],
+  "release": "v49",
+  "authorityRegression": {
+    "personalScores": [
+      {
+        "name": "Athena",
+        "points": 10,
+        "treasures": 1
+      },
+      {
+        "name": "Selene",
+        "points": 60,
+        "treasures": 1
+      }
+    ],
+    "sharedStaminaAfter": 65.035,
+    "duplicateAwardPrevented": true,
+    "reconnectPreservesScore": true,
+    "restartClearsRun": true,
+    "emptyRoomReplacesDeadRunAndClearsCooldowns": true,
+    "authority": "actual server-owned game, with test-positioned jewels"
+  },
+  "multiplayerRegression": {
+    "collisions": 2,
+    "clearance": 0.3415,
+    "attack": {
+      "state": "strike",
+      "disabled": true
+    },
+    "health": {
+      "ready": true,
+      "players": 2,
+      "depth": 24.120000000000285,
+      "gpu": {
+        "ready": true,
+        "device": "NVIDIA GB10",
+        "policy": "swim-ppo-v42",
+        "asr": "Whisper small multilingual",
+        "cuda": true
+      },
+      "gpuBatches": 920,
+      "lastStepMs": 27,
+      "error": null
+    },
+    "leave": "Athena 測試 已離線，海裡的夥伴會等妳回來。",
+    "errors": []
+  },
+  "validationContext": "Real headless Chromium/WebGL clients against an isolated Spark server; network interruption and pending audio intentionally injected. Not a recorded gameplay video."
+}

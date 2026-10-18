@@ -1,4 +1,4 @@
-import { SeaReplica } from "./replica.js?v=48";
+import { SeaReplica } from "./replica.js?v=49";
 export async function bootstrap() {
   if (window.__MP_SIMULATION) return null;
   try {
@@ -18,7 +18,7 @@ export class MultiplayerClient {
     this.connected = false;
     this.joined = false;
     this.retry = 0;
-    this.chatOpen = true;
+    this.chatOpen = false;
     this.buildUI();
     this.bind();
   }
@@ -59,11 +59,15 @@ export class MultiplayerClient {
     const toggle = document.createElement("button");
     toggle.type = "button";
     toggle.className = "mp-chat-toggle";
-    toggle.textContent = "海裡聊天";
+    toggle.textContent = "聊天 ▴";
+    toggle.setAttribute("aria-controls", "mpChatContents");
+    toggle.setAttribute("aria-expanded", "false");
     this.online = document.createElement("span");
     toggle.append(this.online);
     this.contents = document.createElement("div");
     this.contents.className = "mp-chat-contents";
+    this.contents.id = "mpChatContents";
+    this.contents.hidden = true;
     this.messages = document.createElement("div");
     this.messages.className = "mp-messages";
     this.messages.setAttribute("role", "log");
@@ -93,10 +97,11 @@ export class MultiplayerClient {
     this.scores.append(heading, this.scoreRows);
     this.contents.append(this.scores, this.messages, form, this.speechStatus);
     this.panel.append(toggle, this.contents);
-    document.querySelector("#app").append(this.panel);
+    document.querySelector("#dockToolbar").prepend(this.panel);
     toggle.onclick = () => {
       this.chatOpen = !this.chatOpen;
       this.contents.hidden = !this.chatOpen;
+      toggle.setAttribute("aria-expanded", String(this.chatOpen));
     };
     form.onsubmit = (e) => {
       e.preventDefault();
@@ -129,8 +134,14 @@ export class MultiplayerClient {
           move: document.querySelector("#attackStyle").value,
         });
     g.cycleMode = () => g.ui.toast("多人海域 · 每人操作自己的少女");
+    window.addEventListener("pageshow", (e) => {
+      if (!e.persisted) return;
+      this.leaving = false;
+      if (this.joined && this.ws?.readyState === WebSocket.CLOSED) this.connect();
+    });
     window.addEventListener("pagehide", () => {
       this.leaving = true;
+      clearTimeout(this.retryTimer);
       this.ws?.close();
       this.stopRecording();
     });
@@ -167,32 +178,73 @@ export class MultiplayerClient {
     }
     if (this.joining) return;
     this.joining = true;
-    this.status.textContent = "正在加入共用海域…";
+    this.status.textContent = "正在載入 3D 少女…";
+    let assetTimer;
     try {
+      // Start permission-sensitive audio from the tap, without waiting for it.
+      void this.g.audio.unlock().catch(() => {});
+      await Promise.race([
+        this.g.assetsReady,
+        new Promise((_, reject) => {
+          assetTimer = setTimeout(() => reject(Error("3D 載入較久，請確認網路後重試。")), 90000);
+        }),
+      ]);
+      clearTimeout(assetTimer);
+      if (!this.g._authoredAssets) throw Error("3D 角色載入失敗，請重新整理後再加入。");
       await this.g.start("manual");
       this.g.running = true;
       this.g._update = () => {};
+      this.status.textContent = "正在加入共用海域…";
+      document.querySelector("#titleScreen").classList.remove("hidden");
+      document.querySelector("#bottomDock").classList.add("hidden");
       this.connect();
     } catch (e) {
-      this.status.textContent = e.message;
-      this.joining = false;
+      this.joinFailed(e.message);
+    } finally {
+      clearTimeout(assetTimer);
     }
   }
+  joinFailed(message) {
+    this.status.textContent = message;
+    this.joining = false;
+    this.g.running = false;
+    document.querySelector("#titleScreen").classList.remove("hidden");
+    document.querySelector("#hud").classList.add("hidden");
+    document.querySelector("#bottomDock").classList.add("hidden");
+  }
   connect() {
-    this.ws = new WebSocket(
+    clearTimeout(this.retryTimer);
+    this.leaving = false;
+    this.connected = false;
+    const ws = this.ws = new WebSocket(
       `${location.protocol === "https:" ? "wss:" : "ws:"}//${location.host}/ws`,
     );
-    this.ws.onopen = () =>
-      this.ws.send(
+    const joinTimer = setTimeout(() => {
+      if (ws === this.ws && !this.connected) ws.close(4000, "Join timed out");
+    }, 20000);
+    ws.onopen = () =>
+      ws.send(
         JSON.stringify({
           type: "join",
           name: this.name.value,
           resumeToken: sessionStorage.getItem("diveResumeToken") || "",
         }),
       );
-    this.ws.onmessage = (e) => {
+    ws.onmessage = (e) => {
+      if (ws !== this.ws) return;
       const m = JSON.parse(e.data);
       if (m.type === "welcome") {
+        clearTimeout(joinTimer);
+        if (this.generation !== m.generation) {
+          this.generation = m.generation;
+          this.lastNoticeId = m.notices?.at(-1)?.id || 0;
+          this.seen = new Set();
+          this.messages.replaceChildren();
+          this.scoreRows.replaceChildren();
+          this.noticeQueue = [];
+          clearTimeout(this.noticeTimer);
+          this.notice.classList.remove("show");
+        }
         this.lastNoticeId ??= m.notices?.at(-1)?.id || 0;
         for (const n of m.notices || []) this.showNotice(n);
         this.connected = true;
@@ -247,25 +299,29 @@ export class MultiplayerClient {
         this.status.textContent = m.message;
         this.g.ui.toast(m.message);
         if (!this.joined) {
-          this.joining = false;
-          document.querySelector("#titleScreen").classList.remove("hidden");
-          this.g.running = false;
-          this.ws.close();
+          this.joinError = m.message;
+          this.joinFailed(m.message);
+          ws.close();
         }
       }
     };
-    this.ws.onclose = () => {
+    ws.onclose = () => {
+      clearTimeout(joinTimer);
+      if (ws !== this.ws) return;
       this.connected = false;
       this.stopRecording();
       if (this.joined && !this.leaving) {
         this.announce("連線暫時中斷，正在回到海裡…");
-        setTimeout(
+        this.retryTimer = setTimeout(
           () => this.connect(),
           Math.min(8000, 750 * 2 ** this.retry++),
         );
+      } else if (!this.leaving) {
+        this.joinFailed(this.joinError || "連線尚未成功，請點加入再試一次。");
+        this.joinError = null;
       }
     };
-    this.ws.onerror = () => {};
+    ws.onerror = () => {};
   }
   showNotice(m) {
     if (!this.joined || m.id <= (this.lastNoticeId || 0)) return;

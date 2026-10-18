@@ -76,6 +76,8 @@ try {
   assert(late.depth > before);
   assert.equal(new Set(late.players.map((p) => p.name)).size, 2);
   assert.equal(new Set(late.players.map((p) => p.color)).size, 2);
+  await a.locator(".mp-chat-toggle").click();
+  await b.locator(".mp-chat-toggle").click();
   await a.fill(".mp-chat-form input", "一起下潛！<img src=x onerror=alert(1)>");
   await a.locator(".mp-chat-form button[type=submit]").click();
   await b.waitForFunction(() =>

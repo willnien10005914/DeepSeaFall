@@ -19,6 +19,7 @@ test("disconnect announcements vary; a token resumes only its own identity", () 
     r = new DiveRoom({ now: () => t, broadcast: (e) => events.push(e) }),
     a = r.join({}, { name: "Selene" }),
     b = r.join({}, { name: "Mazu" });
+  r.join({}, { name: "Artemis" });
   r.leave(a.id);
   r.leave(b.id);
   const notices = events.filter((e) => e.event === "leave");
@@ -74,4 +75,29 @@ test("chat has bounded history, rate limit and safe text without HTML execution"
   }
   assert.equal(r.history.length, 40);
   assert.equal(r.history.at(-1).text.length, 180);
+});
+
+
+test("last disconnect ends the run, clears stale commands/chat/reservations and releases names", () => {
+  const room = new DiveRoom();
+  const a = room.join({}, { name: "Athena" });
+  const b = room.join({}, { name: "Mazu" });
+  const generation = room.generation;
+  room.snapshot = { depth: 120, running: false };
+  room.receive(a, { type: "chat", text: "Previous dive" });
+  room.receive(a, { type: "action", action: "attack" });
+  room.leave(a.id);
+  assert.equal(room.generation, generation, "a remaining swimmer keeps the same run");
+  assert.equal(room.reservations.size, 1);
+  room.leave(b.id);
+  assert.notEqual(room.generation, generation);
+  assert.equal(room.snapshot, null);
+  assert.equal(room.reservations.size, 0);
+  assert.deepEqual(room.takeCommands(), []);
+  assert.deepEqual(room.history, []);
+  assert.deepEqual(room.notices, []);
+  assert(room.available().includes("Athena 雅典娜"));
+  const fresh = room.join({}, { name: "Athena", resumeToken: a.token });
+  assert.notEqual(fresh.id, a.id, "an empty sea does not resume the abandoned identity");
+  assert.equal(fresh.name, "Athena");
 });

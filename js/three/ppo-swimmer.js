@@ -1,4 +1,4 @@
-import {constrainArms} from './arm-clearance.js?v=48';
+import {constrainArms} from './arm-clearance.js?v=49';
 import * as THREE from 'three';
 const PI=Math.PI,TAU=PI*2,clamp=THREE.MathUtils.clamp,wrap=a=>Math.atan2(Math.sin(a),Math.cos(a)),approach=(a,b,d)=>a+clamp(b-a,-d,d);
 const axisZ=new THREE.Vector3(0,0,1),q=new THREE.Quaternion(),inverse=new THREE.Quaternion(),euler=new THREE.Euler(0,0,0,'XYZ'),v=new THREE.Vector3();

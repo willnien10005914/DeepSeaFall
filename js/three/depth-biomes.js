@@ -1,9 +1,9 @@
-import { scheduleAt } from "./biome-schedule.js?v=48";
-import { DepthLandmarks } from "./depth-landmarks.js?v=48";
-import { descentTravel, movingSlice } from "./descent-motion.js?v=48";
+import { scheduleAt } from "./biome-schedule.js?v=49";
+import { DepthLandmarks } from "./depth-landmarks.js?v=49";
+import { descentTravel, movingSlice } from "./descent-motion.js?v=49";
 import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
 import * as THREE from "three";
-import { makeDeepSeaFish, animateMarine } from "./marine-life.js?v=48";
+import { makeDeepSeaFish, animateMarine } from "./marine-life.js?v=49";
 export const BIOME_METRES = 10;
 export const depthThemes = Object.freeze([
   {

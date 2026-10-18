@@ -40,15 +40,19 @@ export class Simulation {
     });
     await this.page.evaluate(async () => {
       const { AuthoritativeDive } =
-        await import("/js/multiplayer/authoritative.js?v=48");
+        await import("/js/multiplayer/authoritative.js?v=49");
       window.diveSimulation = new AuthoritativeDive(window.__deepSeaFall);
       await diveSimulation.start();
     });
   }
-  async step(roster, commands, dt) {
+  async step(roster, commands, dt, generation) {
+    if (generation !== this.generation) {
+      this.generation = generation;
+      this.actions = {};
+    }
     const data = await this.page.evaluate(
       async (a) => diveSimulation.step(a, a.dt),
-      { roster, commands, actions: this.actions, dt },
+      { roster, commands, actions: this.actions, dt, generation },
     );
     if (data && !this.gpuBusy) {
       const active = data.players.filter((p) => p.observation);
@@ -67,13 +71,14 @@ export class Simulation {
             return r.json();
           })
           .then((r) => {
+            if (generation !== this.generation) return;
             this.actions = Object.fromEntries(
               active.map((p, i) => [p.id, r.actions[i]]),
             );
             this.gpuBatches++;
           })
           .catch((e) => {
-            this.actions = {};
+            if (generation === this.generation) this.actions = {};
             console.warn("GPU policy fallback:", e.message);
           })
           .finally(() => (this.gpuBusy = false));

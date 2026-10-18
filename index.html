@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=48" />
+  <link rel="stylesheet" href="css/style.css?v=49" />
   <script type="importmap">
   {
     "imports": {
@@ -18,7 +18,7 @@
     }
   }
   </script>
-  <link rel="stylesheet" href="css/multiplayer.css?v=48" />
+  <link rel="stylesheet" href="css/multiplayer.css?v=49" />
 </head>
 <body>
   <div id="app">
@@ -41,16 +41,21 @@
       <div id="whaleLine" class="whale-line"></div>
     </div>
 
-    <div id="controls" class="controls hidden">
-      <button type="button" id="btnSleep" class="ctl">睡著補力</button>
-      <button type="button" id="btnWhale" class="ctl">召喚鯨</button>
-      <button type="button" id="btnBoost" class="ctl">加速</button>
-      <button type="button" id="btnMagic" class="ctl">氣功標記</button>
-      <button type="button" id="btnAttack" class="ctl attack">蓄力攻擊</button>
-      <button type="button" id="btnMusic" class="ctl">音樂：開</button>
-      <label class="combat-selector">攻擊招式 <select id="attackStyle" aria-label="選擇攻擊招式"><option value="auto">隨機招式（十招輪換）</option></select></label>
-      <div id="attackStatus" class="combat-status" aria-live="polite">選招式後點攻擊，蓄力完成會自動出招</div>
-      <button type="button" id="btnMode" class="ctl mode">手動</button>
+    <div id="bottomDock" class="bottom-dock hidden">
+      <div id="dockToolbar" class="dock-toolbar">
+        <button type="button" id="btnToggleControls" class="dock-toggle" aria-expanded="true" aria-controls="controls">收起操作 ▾</button>
+      </div>
+      <div id="controls" class="controls hidden">
+        <button type="button" id="btnSleep" class="ctl">睡著補力</button>
+        <button type="button" id="btnWhale" class="ctl">召喚鯨</button>
+        <button type="button" id="btnBoost" class="ctl">加速</button>
+        <button type="button" id="btnMagic" class="ctl">氣功標記</button>
+        <button type="button" id="btnAttack" class="ctl attack">蓄力攻擊</button>
+        <button type="button" id="btnMusic" class="ctl">音樂：開</button>
+        <label class="combat-selector">攻擊招式 <select id="attackStyle" aria-label="選擇攻擊招式"><option value="auto">隨機招式（十招輪換）</option></select></label>
+        <div id="attackStatus" class="combat-status" aria-live="polite">選招式後點攻擊，蓄力完成會自動出招</div>
+        <button type="button" id="btnMode" class="ctl mode">手動</button>
+      </div>
     </div>
 
     <div id="aiPanel" class="ai-panel hidden">
@@ -74,9 +79,9 @@
           <button type="button" id="btnStartManual" class="primary">手動遊玩</button>
           <button type="button" id="btnStartAI" class="secondary">AI Mode</button>
           <button type="button" id="btnDemo" class="ghost">自動示範</button>
-          <a href="cinematic.html?v=48" class="ghost" style="color:#a8d0d6;text-decoration:none;padding:12px">深海相遇動畫 ↗</a>
+          <a href="cinematic.html?v=49" class="ghost" style="color:#a8d0d6;text-decoration:none;padding:12px">深海相遇動畫 ↗</a>
         </div>
-        <p class="hint">輕點目標後自動游幾秒 · 自由式／蛙式交替 · 收集金色寶石補體力 · 避開礁石 · <a href="model-review.html?v=48" style="color:#a8d0d6">旋轉檢視 3D 海景</a> · <a href="2d.html" style="color:#5ce1ff">2D 版</a></p>
+        <p class="hint">輕點目標後自動游幾秒 · 自由式／蛙式交替 · 收集金色寶石補體力 · 避開礁石 · <a href="model-review.html?v=49" style="color:#a8d0d6">旋轉檢視 3D 海景</a> · <a href="2d.html" style="color:#5ce1ff">2D 版</a></p>
       </div>
     </div>
 
@@ -96,6 +101,6 @@
     </div>
   </div>
 
-  <script type="module" src="js/main3d.js?v=48"></script>
+  <script type="module" src="js/main3d.js?v=49"></script>
 </body>
 </html>
