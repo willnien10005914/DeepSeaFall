@@ -1,0 +1,44 @@
+{
+  "release": "6",
+  "errors": [],
+  "loaded": [
+    "http://127.0.0.1:8765/js/main3d.js?v=6",
+    "http://127.0.0.1:8765/js/three/game3d.js?v=6",
+    "http://127.0.0.1:8765/js/three/authored.js?v=6",
+    "http://127.0.0.1:8765/js/three/marine-life.js?v=6",
+    "http://127.0.0.1:8765/js/three/ocean-real.js?v=6",
+    "http://127.0.0.1:8765/js/three/water.js?v=6",
+    "http://127.0.0.1:8765/js/three/swim-bubbles.js?v=6",
+    "http://127.0.0.1:8765/js/audio.js",
+    "http://127.0.0.1:8765/js/zones.js",
+    "http://127.0.0.1:8765/js/three/rig-data.js",
+    "http://127.0.0.1:8765/js/three/meshes.js?v=6",
+    "http://127.0.0.1:8765/js/three/whale-motion.js?v=5",
+    "http://127.0.0.1:8765/js/three/swimming.js?v=5"
+  ],
+  "whale": "following",
+  "bones": 9,
+  "bubbles": {
+    "rate": 115.88180579123136,
+    "alive": 197,
+    "boosted": true,
+    "swimming": true
+  },
+  "finite": true,
+  "arches": 2,
+  "fish": 12,
+  "jelly": 3,
+  "creatures": 2,
+  "scene": {
+    "frame": 51,
+    "calls": 165,
+    "triangles": 922882,
+    "points": 1600,
+    "lines": 0
+  },
+  "restart": {
+    "resting": 8,
+    "cleared": true,
+    "resummoned": true
+  }
+}

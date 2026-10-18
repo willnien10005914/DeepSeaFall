@@ -1,0 +1,15 @@
+# Revision 33: gemstone repair, predators and curled sleep
+
+Gold ingots are replaced by gold octahedral gemstones, including the HUD pickup sprite. Every gem retains its capped +20 stamina reward and also resets garment damage to zero. The HUD labels the gemstone count and current dress condition. Repair applies to both the regular gown and the folded sleeping gown through one shared damage uniform.
+
+Great-white and grey-reef shark variants use countershaded parametric bodies, thick dorsal/pectoral/pelvic and asymmetric caudal fins, gill slits, small eyes, hinged lower jaws and lateral tail waves. Fins, gills and teeth are merged so each variant has eleven draw objects. These are authored runtime 3D meshes, not scanned assets. At most two predators stalk, telegraph a short lunge, test a swept mouth region against the girl's posed body, then retreat. Each predator leaves after two attempts or eighteen seconds. Existing avoidance policy receives them as dangerous creatures.
+
+A successful mouth hit deducts 18 stamina for a great white or 14 for a grey reef shark, subject to existing whale protection and injury cooldown. Fourteen small, low-opacity red wisps disperse in roughly 1–1.4 seconds. Damage affects only the dress hem: bounded notches and worn fibres stay below the main skirt body. A gemstone repairs them instantly. Normal creature proximity alone does not trigger a shark bite.
+
+Sleep blends the torso and neck forward, brings both knees up, and uses two-bone arm IK to wrap both hands around the shins. Small current drift replaces active thrust while stamina regenerates. For this deep curl, a dedicated pose-fitted folded gown replaces the upright garment. Its envelope includes the full anatomical shell and sampled rendered skin, keeps the neckline open and cuts precise arm openings after fine tessellation. Awake/normal dress geometry and the previous garment contacts return on waking. This is a pose-specific cloth representation, not a fabric dynamics simulation. Native character/hair Blender assets remain unchanged by this gameplay revision.
+
+The envelope is audited against the fully posed rendered skin, rather than only a collision proxy. Four entry blends and waking are checked, along with hand target errors, raised knees and the head-facing-knees direction. Bite/miss, cooldown, brief blood lifetime, gemstone restoration, spawn cap, sleep drift, restart cleanup and previous whale interactions are separately verified.
+
+Whale stays are now ten seconds after a three-second arrival, then a 2.8-second departure. The summon cooldown and HUD countdown match. The deterministic timing test also checks monotonic wall-clock expiry at slow frame rates. Prior garment-contact performance limits for ordinary swimming are not solved by this revision.
+
+Official dependency added: Three.js r170 ConvexHull (MIT), matching the existing vendor release. Its source and SHA-256 are recorded in dependency-provenance.json; the existing vendor/LICENSE.three.txt applies.

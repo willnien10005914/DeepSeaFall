@@ -1,0 +1,26 @@
+{
+  "groups": [
+    {
+      "name": "hair_long_sculpted_back",
+      "watertight": true,
+      "winding": true,
+      "components": 32,
+      "volume": 0.0003660298041967361
+    },
+    {
+      "name": "hair_long_sculpted_l",
+      "watertight": true,
+      "winding": true,
+      "components": 8,
+      "volume": 0.0001093425336885447
+    },
+    {
+      "name": "hair_long_sculpted_r",
+      "watertight": true,
+      "winding": true,
+      "components": 8,
+      "volume": 9.022547619999594e-05
+    }
+  ],
+  "closed_locks": 48
+}

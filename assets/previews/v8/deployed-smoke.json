@@ -1,0 +1,34 @@
+{
+  "approach": {
+    "intent": "approach",
+    "action": "breaststroke",
+    "dx": 0.77877917589243,
+    "distance": 2.609222312083137
+  },
+  "avoid": {
+    "intent": "avoid",
+    "kind": "jelly",
+    "action": "evade"
+  },
+  "manual": {
+    "dx": 0.43693956104720155,
+    "pointerActive": true
+  },
+  "whale": {
+    "visible": true,
+    "state": "following"
+  },
+  "music": {
+    "readyState": 4,
+    "playing": true
+  },
+  "muted": true,
+  "resumed": true,
+  "restart": {
+    "visitors": 0,
+    "nextVisitorAt": 4,
+    "whaleHidden": true,
+    "mode": "manual"
+  },
+  "errors": []
+}

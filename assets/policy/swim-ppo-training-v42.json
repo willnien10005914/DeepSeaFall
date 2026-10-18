@@ -1,0 +1,78 @@
+{
+  "algorithm": "Clipped PPO with GAE and actor-critic, optional calibrated motion-velocity warm start and auxiliary reference prior",
+  "backend": "Isaac Lab DirectRLEnv / PhysX, native 19-link 54-DOF capsule rig",
+  "seed": 4201,
+  "evaluation_seed": 9421,
+  "num_envs": 256,
+  "rollout_steps": 24,
+  "iterations": 200,
+  "prior_checkpoint_iterations": 100,
+  "iterations_this_run": 100,
+  "warmstart": {
+    "method": "Analytical actuator lag calibrated in PhysX, then motion-reference velocity feedforward warm start",
+    "calibration": [
+      {
+        "lead_seconds": 0.02,
+        "pose_rmse": 0.08243585967769225,
+        "velocity_rmse": 0.6304668101999494,
+        "action_change": 0.000513520019740099,
+        "reward": 2.9321010324690078
+      },
+      {
+        "lead_seconds": 0.04,
+        "pose_rmse": 0.07757760195268525,
+        "velocity_rmse": 0.6270462065935135,
+        "action_change": 0.0018314528317811588,
+        "reward": 2.940020924144321
+      },
+      {
+        "lead_seconds": 0.07,
+        "pose_rmse": 0.07221537542839845,
+        "velocity_rmse": 0.6261691583527459,
+        "action_change": 0.003986869518282927,
+        "reward": 2.9472339855300054
+      },
+      {
+        "lead_seconds": 0.1,
+        "pose_rmse": 0.06880943139808046,
+        "velocity_rmse": 0.6255672640270658,
+        "action_change": 0.006085618902256506,
+        "reward": 2.9513498610920377
+      }
+    ],
+    "lead_seconds": 0.1,
+    "supervised_samples": 24576,
+    "supervised_epochs": 12,
+    "before_ppo": {
+      "pose_rmse": 0.07270842658148871,
+      "velocity_rmse": 0.6169334295723173,
+      "action_change": 0.0032090665610869313,
+      "reward": 2.94855635298623
+    }
+  },
+  "tracking_focus": true,
+  "auxiliary_prior_weight": 0.8,
+  "transitions": 1228800,
+  "optimizer_updates": 1600,
+  "baseline_zero_residual": {
+    "pose_rmse": 0.08634963579889801,
+    "velocity_rmse": 0.6190935651461283,
+    "action_change": 0.0,
+    "reward": -0.16187015780144268
+  },
+  "trained": {
+    "pose_rmse": 0.0739697788324621,
+    "velocity_rmse": 0.6138408038351271,
+    "action_change": 0.0032248673022776428,
+    "reward": -0.11891611458526717
+  },
+  "pose_rmse_improvement_fraction": 0.1433689540424663,
+  "elapsed_seconds": 268.38708114624023,
+  "checkpoint": "best.pt",
+  "limitations": [
+    "Approximate neutral-buoyancy and per-link drag, not full fluid CFD.",
+    "Root direction uses bounded external angular stabilization; PPO controls residual joint targets.",
+    "Runtime browser uses the exported actor with joint springs and the existing collision-aware locomotion motor, not PhysX.",
+    "Single-view inferred depth and interpolated occlusions cannot provide ground-truth 3D motion."
+  ]
+}

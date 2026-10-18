@@ -1,0 +1,440 @@
+{
+  "base": "http://127.0.0.1:8765/",
+  "automatic": {
+    "before": {
+      "active": false,
+      "kind": null,
+      "progress": 0,
+      "envelope": 0,
+      "waistEffort": 0.11059335077467036,
+      "steer": 0,
+      "angle": 0.1586552621864005,
+      "count": 0,
+      "finite": true
+    },
+    "triggered": {
+      "active": true,
+      "kind": "backflip",
+      "progress": 0.010000000000000009,
+      "envelope": 0.03141075907812832,
+      "waistEffort": 0.11059335077467143,
+      "steer": 0,
+      "angle": 2.982937391403391,
+      "count": 1
+    },
+    "after": {
+      "active": false,
+      "kind": "backflip",
+      "progress": 0,
+      "envelope": 0,
+      "waistEffort": 0.11062467673957023,
+      "steer": 0,
+      "angle": 0.15870058292696052,
+      "count": 1
+    },
+    "maxStep": 0.3671330711057159,
+    "peak": 1
+  },
+  "turns": [
+    {
+      "kind": "frontflip",
+      "progress": 0.25,
+      "stats": {
+        "active": true,
+        "kind": "frontflip",
+        "progress": 0.25,
+        "envelope": 0.7071067811865475,
+        "waistEffort": 0.7071067811865475,
+        "steer": 0,
+        "angle": 0.1586552621864005,
+        "count": 1
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.003110340031953875,
+        "penetratingVertices": 0,
+        "checked": 5730,
+        "triangleIntersections": []
+      },
+      "knees": [
+        0.7849693682799405,
+        0.8179965278877788
+      ],
+      "finite": true
+    },
+    {
+      "kind": "frontflip",
+      "progress": 0.5,
+      "stats": {
+        "active": true,
+        "kind": "frontflip",
+        "progress": 0.5,
+        "envelope": 1,
+        "waistEffort": 1,
+        "steer": 0,
+        "angle": 0.1586552621864005,
+        "count": 1
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.000036481855643216536,
+        "penetratingVertices": 0,
+        "checked": 5734,
+        "triangleIntersections": []
+      },
+      "knees": [
+        1.0829296723008297,
+        1.0920124000993159
+      ],
+      "finite": true
+    },
+    {
+      "kind": "frontflip",
+      "progress": 0.75,
+      "stats": {
+        "active": true,
+        "kind": "frontflip",
+        "progress": 0.75,
+        "envelope": 0.7071067811865476,
+        "waistEffort": 0.7071067811865476,
+        "steer": 0,
+        "angle": 0.1586552621864005,
+        "count": 1
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.0006055678332745461,
+        "penetratingVertices": 0,
+        "checked": 5730,
+        "triangleIntersections": []
+      },
+      "knees": [
+        0.7849722078802213,
+        0.8179973600512149
+      ],
+      "finite": true
+    },
+    {
+      "kind": "backflip",
+      "progress": 0.25,
+      "stats": {
+        "active": true,
+        "kind": "backflip",
+        "progress": 0.25,
+        "envelope": 0.7071067811865475,
+        "waistEffort": 0.7071067811865475,
+        "steer": 0,
+        "angle": 0.1586552621864005,
+        "count": 1
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.0007380083104418015,
+        "penetratingVertices": 0,
+        "checked": 5731,
+        "triangleIntersections": []
+      },
+      "knees": [
+        0.784972207880223,
+        0.8179973600512156
+      ],
+      "finite": true
+    },
+    {
+      "kind": "backflip",
+      "progress": 0.5,
+      "stats": {
+        "active": true,
+        "kind": "backflip",
+        "progress": 0.5,
+        "envelope": 1,
+        "waistEffort": 1,
+        "steer": 0,
+        "angle": 0.1586552621864005,
+        "count": 1
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.00032526360894034444,
+        "penetratingVertices": 0,
+        "checked": 5736,
+        "triangleIntersections": []
+      },
+      "knees": [
+        1.082929672321091,
+        1.0920124001052651
+      ],
+      "finite": true
+    },
+    {
+      "kind": "backflip",
+      "progress": 0.75,
+      "stats": {
+        "active": true,
+        "kind": "backflip",
+        "progress": 0.75,
+        "envelope": 0.7071067811865476,
+        "waistEffort": 0.7071067811865476,
+        "steer": 0,
+        "angle": 0.1586552621864005,
+        "count": 1
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.0005354355830549662,
+        "penetratingVertices": 0,
+        "checked": 5731,
+        "triangleIntersections": []
+      },
+      "knees": [
+        0.7849722078802233,
+        0.8179973600512159
+      ],
+      "finite": true
+    },
+    {
+      "kind": "pirouette",
+      "progress": 0.25,
+      "stats": {
+        "active": true,
+        "kind": "pirouette",
+        "progress": 0.25,
+        "envelope": 0.7071067811865475,
+        "waistEffort": 0.7071067811865475,
+        "steer": 0,
+        "angle": 0.1586552621864005,
+        "count": 1
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.000999833844949611,
+        "penetratingVertices": 0,
+        "checked": 5731,
+        "triangleIntersections": []
+      },
+      "knees": [
+        0.7849722078802233,
+        0.5126483342842425
+      ],
+      "finite": true
+    },
+    {
+      "kind": "pirouette",
+      "progress": 0.5,
+      "stats": {
+        "active": true,
+        "kind": "pirouette",
+        "progress": 0.5,
+        "envelope": 1,
+        "waistEffort": 1,
+        "steer": 0,
+        "angle": 0.1586552621864005,
+        "count": 1
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.0008491887407335729,
+        "penetratingVertices": 0,
+        "checked": 5736,
+        "triangleIntersections": []
+      },
+      "knees": [
+        1.082929672321091,
+        0.5745124001052654
+      ],
+      "finite": true
+    },
+    {
+      "kind": "pirouette",
+      "progress": 0.75,
+      "stats": {
+        "active": true,
+        "kind": "pirouette",
+        "progress": 0.75,
+        "envelope": 0.7071067811865476,
+        "waistEffort": 0.7071067811865476,
+        "steer": 0,
+        "angle": 0.1586552621864005,
+        "count": 1
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.0009998590133795623,
+        "penetratingVertices": 0,
+        "checked": 5731,
+        "triangleIntersections": []
+      },
+      "knees": [
+        0.7849722078802233,
+        0.5126483342842426
+      ],
+      "finite": true
+    }
+  ],
+  "wildlife": [
+    {
+      "species": "clownfish",
+      "meshes": 16,
+      "vertices": 5467,
+      "danger": false,
+      "capsules": 0,
+      "cups": 0,
+      "tentacleTravel": 0
+    },
+    {
+      "species": "cutlassfish",
+      "meshes": 11,
+      "vertices": 6869,
+      "danger": true,
+      "capsules": 10,
+      "cups": 0,
+      "tentacleTravel": 0
+    },
+    {
+      "species": "sea-snake",
+      "meshes": 9,
+      "vertices": 5920,
+      "danger": true,
+      "capsules": 10,
+      "cups": 0,
+      "tentacleTravel": 0
+    },
+    {
+      "species": "kraken",
+      "meshes": 18,
+      "vertices": 9061,
+      "danger": true,
+      "capsules": 49,
+      "cups": 96,
+      "tentacleTravel": 0.22344160079956055
+    }
+  ],
+  "contacts": [
+    {
+      "orientation": 0,
+      "hit": true,
+      "correction": 1.17021875,
+      "gap": 0.02647978692609254,
+      "depth": -0.09210949224312903,
+      "playerDepth": 0,
+      "noBodyDamage": true
+    },
+    {
+      "orientation": 1,
+      "hit": true,
+      "correction": 1.0500210441748756,
+      "gap": 0.02576108100529595,
+      "depth": -0.09210949224312903,
+      "playerDepth": 0,
+      "noBodyDamage": true
+    },
+    {
+      "orientation": 2,
+      "hit": true,
+      "correction": 1.516580071593243,
+      "gap": 0.02581511957473223,
+      "depth": -0.09210949224312903,
+      "playerDepth": 0,
+      "noBodyDamage": true
+    },
+    {
+      "orientation": 3,
+      "hit": true,
+      "correction": 1.1434670150690118,
+      "gap": 0.025532083318136334,
+      "depth": -0.09210949224312903,
+      "playerDepth": 0,
+      "noBodyDamage": true
+    },
+    {
+      "orientation": 4,
+      "hit": true,
+      "correction": 1.022395367254416,
+      "gap": 0.025654584318679563,
+      "depth": -0.09210949224312903,
+      "playerDepth": 0,
+      "noBodyDamage": true
+    },
+    {
+      "orientation": 5,
+      "hit": true,
+      "correction": 0.7704531250000001,
+      "gap": 0.026072930092026103,
+      "depth": -0.09210949224312903,
+      "playerDepth": 0,
+      "noBodyDamage": true
+    },
+    {
+      "orientation": 6,
+      "hit": true,
+      "correction": 1.275099215306399,
+      "gap": 0.02599924568908729,
+      "depth": -0.09210949224312903,
+      "playerDepth": 0,
+      "noBodyDamage": true
+    },
+    {
+      "orientation": 7,
+      "hit": true,
+      "correction": 1.0157381916278663,
+      "gap": 0.025925547856971487,
+      "depth": -0.09210949224312903,
+      "playerDepth": 0,
+      "noBodyDamage": true
+    }
+  ],
+  "extra": {
+    "twoSharks": {
+      "hit": true,
+      "gap": 0.026507075542809233,
+      "depth": 0,
+      "fallback": true
+    },
+    "snake": {
+      "once": 63,
+      "twice": 63
+    }
+  },
+  "live": {
+    "turn": {
+      "active": true,
+      "kind": "pirouette",
+      "progress": 0.030769230769230795,
+      "envelope": 0.09651392091451519,
+      "waistEffort": 0.4592150723315249,
+      "steer": -1,
+      "angle": 2.4260573433285106,
+      "count": 1
+    },
+    "spawned": [
+      {
+        "name": "clownfish",
+        "hostile": false
+      },
+      {
+        "name": "cutlassfish",
+        "hostile": true
+      },
+      {
+        "name": "sea-snake",
+        "hostile": true
+      },
+      {
+        "name": "kraken",
+        "hostile": true
+      }
+    ],
+    "running": true,
+    "style": "breaststroke",
+    "leg": "open-kick",
+    "contact": {
+      "touching": false,
+      "contacts": 0,
+      "correction": 0,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "normal": [
+        0,
+        0,
+        0
+      ],
+      "fallback": false
+    },
+    "finite": true
+  },
+  "errors": []
+}

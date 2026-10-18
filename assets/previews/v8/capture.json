@@ -1,0 +1,326 @@
+{
+  "file": "trained-swimmer-30s.mp4",
+  "source": "actual WebGL game with fixed simulation steps",
+  "seconds": 30,
+  "frames": 720,
+  "encodedFps": 24,
+  "performanceBenchmark": false,
+  "renderer": "NVIDIA GB10 via ANGLE OpenGL ES EGL",
+  "audio": {
+    "source": "https://www.youtube.com/watch?v=m6SOJlkN1zU",
+    "excerptSeconds": [
+      0,
+      30
+    ],
+    "codec": "AAC",
+    "sampleRate": 48000
+  },
+  "events": {
+    "summonSeconds": 1,
+    "boostSeconds": 4.42,
+    "mode": "AI with trained local steering",
+    "visitorsSeconds": [
+      4,
+      16,
+      28
+    ],
+    "sleepSeconds": 28.33,
+    "wakeSeconds": 29.33,
+    "largeShoalsSeconds": [
+      [
+        6,
+        14.5
+      ],
+      [
+        23,
+        30
+      ]
+    ],
+    "closeWhaleSeconds": [
+      11,
+      21
+    ],
+    "girlActions": [
+      "flutter",
+      "glide",
+      "breaststroke",
+      "dive",
+      "turn",
+      "reach",
+      "evade"
+    ]
+  },
+  "states": [
+    {
+      "time": 0.041666666666666664,
+      "position": [
+        0,
+        -0.4,
+        0
+      ],
+      "reaction": {
+        "intent": "cruise",
+        "kind": null,
+        "distance": null,
+        "target": null,
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "action": "flutter",
+      "whaleNear": 0
+    },
+    {
+      "time": 2.041666666666664,
+      "position": [
+        0,
+        -0.4,
+        0
+      ],
+      "reaction": {
+        "intent": "cruise",
+        "kind": null,
+        "distance": null,
+        "target": null,
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "action": "flutter",
+      "whaleNear": 0
+    },
+    {
+      "time": 4.041666666666677,
+      "position": [
+        0.0014099948142833208,
+        -0.4001706806760229,
+        0
+      ],
+      "reaction": {
+        "intent": "approach",
+        "kind": "fish",
+        "distance": 2.4407146898542833,
+        "target": "Curious reef fish",
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "action": "breaststroke",
+      "whaleNear": 0
+    },
+    {
+      "time": 6.041666666666648,
+      "position": [
+        0.4884373174650701,
+        -0.12092543201691186,
+        0
+      ],
+      "reaction": {
+        "intent": "approach",
+        "kind": "whale",
+        "distance": 2.126975812108199,
+        "target": null,
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "action": "breaststroke",
+      "whaleNear": 0
+    },
+    {
+      "time": 8.041666666666622,
+      "position": [
+        0.663312442497485,
+        -0.13436672408267034,
+        0
+      ],
+      "reaction": {
+        "intent": "probe",
+        "kind": "whale",
+        "distance": 2.0964628149438616,
+        "target": null,
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "action": "reach",
+      "whaleNear": 0
+    },
+    {
+      "time": 10.041666666666679,
+      "position": [
+        0.7775147237195976,
+        -0.22845137285939218,
+        0
+      ],
+      "reaction": {
+        "intent": "probe",
+        "kind": "whale",
+        "distance": 2.093257290854734,
+        "target": null,
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "action": "reach",
+      "whaleNear": 0.013408818102178472
+    },
+    {
+      "time": 12.041666666666735,
+      "position": [
+        0.8770730883561499,
+        -0.29827724791201254,
+        0
+      ],
+      "reaction": {
+        "intent": "probe",
+        "kind": "whale",
+        "distance": 0.8495714033676086,
+        "target": null,
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "action": "reach",
+      "whaleNear": 0.6755415936057723
+    },
+    {
+      "time": 14.041666666666792,
+      "position": [
+        1.0134698038516372,
+        -0.31509250029606223,
+        0
+      ],
+      "reaction": {
+        "intent": "approach",
+        "kind": "loot",
+        "distance": 1.7276180533336183,
+        "target": null,
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "action": "breaststroke",
+      "whaleNear": 0.9879559189600561
+    },
+    {
+      "time": 16.041666666666845,
+      "position": [
+        1.0016729303690988,
+        -0.20043700898276956,
+        0
+      ],
+      "reaction": {
+        "intent": "avoid",
+        "kind": "jelly",
+        "distance": 2.5342284243143274,
+        "target": "Drifting near-field jellyfish",
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "action": "evade",
+      "whaleNear": 0.99959804963203
+    },
+    {
+      "time": 18.041666666666732,
+      "position": [
+        1.828953717233592,
+        0.08220193491454365,
+        0
+      ],
+      "reaction": {
+        "intent": "avoid",
+        "kind": "jelly",
+        "distance": 3.2168315185005403,
+        "target": "Moon jellyfish",
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "action": "evade",
+      "whaleNear": 0.992284588075434
+    },
+    {
+      "time": 20.041666666666618,
+      "position": [
+        2.363703871709337,
+        1.257139020287042,
+        0
+      ],
+      "reaction": {
+        "intent": "avoid",
+        "kind": "jelly",
+        "distance": 3.031337513175423,
+        "target": "Moon jellyfish",
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "action": "evade",
+      "whaleNear": 0.5364597330528914
+    },
+    {
+      "time": 22.041666666666504,
+      "position": [
+        3.156556935874381,
+        1.7406178091020843,
+        0
+      ],
+      "reaction": {
+        "intent": "avoid",
+        "kind": "jelly",
+        "distance": 3.0607307009799842,
+        "target": "Moon jellyfish",
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "action": "evade",
+      "whaleNear": 0.04255993914840092
+    },
+    {
+      "time": 24.04166666666639,
+      "position": [
+        3.2,
+        1.709266341300461,
+        0
+      ],
+      "reaction": {
+        "intent": "avoid",
+        "kind": "rock",
+        "distance": 3.4662056687069254,
+        "target": "Scanned stone obstacle",
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "action": "evade",
+      "whaleNear": 0.0014203643386946306
+    },
+    {
+      "time": 26.041666666666277,
+      "position": [
+        3.1823350023902535,
+        1.574822104751224,
+        0
+      ],
+      "reaction": {
+        "intent": "probe",
+        "kind": "fish",
+        "distance": 1.3661427102922983,
+        "target": "Silver reef fish",
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "action": "reach",
+      "whaleNear": 0.00004740220251727576
+    },
+    {
+      "time": 28.041666666666163,
+      "position": [
+        3.131082531153477,
+        1.8,
+        0
+      ],
+      "reaction": {
+        "intent": "avoid",
+        "kind": "rock",
+        "distance": 3.078985069390306,
+        "target": "Scanned stone obstacle",
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "action": "evade",
+      "whaleNear": 0.000001581966501323087
+    }
+  ],
+  "errors": []
+}

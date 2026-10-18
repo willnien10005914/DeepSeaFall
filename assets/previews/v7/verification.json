@@ -1,0 +1,166 @@
+{
+  "audio": {
+    "playing": true,
+    "ready": 4,
+    "duration": 120.048,
+    "requestedSource": true,
+    "error": null,
+    "proceduralBed": 0,
+    "context": "running"
+  },
+  "muted": true,
+  "poses": [
+    {
+      "time": 2,
+      "action": "freestyle",
+      "near": 0,
+      "whale": "approaching",
+      "cameraToWhaleNose": 18.27803999700676,
+      "headRelativeHeight": 0.5683186967215326,
+      "headNDC": [
+        -0.07847781392284703,
+        0.23851699536996024,
+        0.98493494439577
+      ],
+      "shoal": {
+        "active": false,
+        "count": 0,
+        "pass": 0
+      },
+      "finite": true,
+      "bubbles": 104
+    },
+    {
+      "time": 5.499999999999988,
+      "action": "glide",
+      "near": 0,
+      "whale": "following",
+      "cameraToWhaleNose": 13.636553200399176,
+      "headRelativeHeight": 0.14408790133206523,
+      "headNDC": [
+        -0.16214717862596117,
+        0.20946521629185766,
+        0.9861320727621066
+      ],
+      "shoal": {
+        "active": false,
+        "count": 0,
+        "pass": 0
+      },
+      "finite": true,
+      "bubbles": 74
+    },
+    {
+      "time": 9.999999999999972,
+      "action": "breaststroke",
+      "near": 0.0016797377086251318,
+      "whale": "following",
+      "cameraToWhaleNose": 13.662920700822658,
+      "headRelativeHeight": 0.5626170630073823,
+      "headNDC": [
+        -0.09099284369413731,
+        0.26792198343153745,
+        0.98564102847367
+      ],
+      "shoal": {
+        "active": true,
+        "count": 144,
+        "pass": 1
+      },
+      "finite": true,
+      "bubbles": 74
+    },
+    {
+      "time": 15.499999999999952,
+      "action": "dive",
+      "near": 0.9985966495651631,
+      "whale": "following",
+      "cameraToWhaleNose": 6.630046298930871,
+      "headRelativeHeight": -0.4216863897060541,
+      "headNDC": [
+        -0.2089664104114807,
+        0.10200670628883003,
+        0.9819208233055163
+      ],
+      "shoal": {
+        "active": false,
+        "count": 0,
+        "pass": 0
+      },
+      "finite": true,
+      "bubbles": 77
+    },
+    {
+      "time": 21,
+      "action": "turn",
+      "near": 0.2805095462465172,
+      "whale": "following",
+      "cameraToWhaleNose": 9.898183883280232,
+      "headRelativeHeight": 0.6005132466008517,
+      "headNDC": [
+        -0.20098606734587224,
+        0.28347109512903285,
+        0.9839152556297862
+      ],
+      "shoal": {
+        "active": false,
+        "count": 0,
+        "pass": 0
+      },
+      "finite": true,
+      "bubbles": 75
+    },
+    {
+      "time": 25.5,
+      "action": "reach",
+      "near": 0.00016549781451369615,
+      "whale": "following",
+      "cameraToWhaleNose": 13.725083152416044,
+      "headRelativeHeight": 0.5826830407743343,
+      "headNDC": [
+        -0.09654554775290324,
+        0.27090442229681033,
+        0.9855593500247471
+      ],
+      "shoal": {
+        "active": true,
+        "count": 144,
+        "pass": 2
+      },
+      "finite": true,
+      "bubbles": 80
+    },
+    {
+      "time": 29.8,
+      "action": "freestyle",
+      "near": 1.1068776042741214e-7,
+      "whale": "following",
+      "cameraToWhaleNose": 13.709853541519422,
+      "headRelativeHeight": 0.5570114243853083,
+      "headNDC": [
+        -0.0892268500215758,
+        0.2669420962390042,
+        0.9856660521015953
+      ],
+      "shoal": {
+        "active": true,
+        "count": 144,
+        "pass": 2
+      },
+      "finite": true,
+      "bubbles": 75
+    }
+  ],
+  "school": {
+    "capacity": 144,
+    "drawMeshes": 4,
+    "distinctPhases": 144
+  },
+  "restart": {
+    "near": 0,
+    "hidden": true
+  },
+  "errors": [],
+  "musicResumed": true,
+  "validated": true
+}

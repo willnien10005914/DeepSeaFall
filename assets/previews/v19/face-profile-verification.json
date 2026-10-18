@@ -1,0 +1,9 @@
+{
+  "release": 19,
+  "chin_sample_count": 50,
+  "chin_mean_lift_m": 0.0009502983800192055,
+  "lateral_cheek_width_ratio": 0.9776528266784368,
+  "apple_mean_forward_volume_m": 0.0008261019036678363,
+  "finite": true,
+  "no_teeth": true
+}

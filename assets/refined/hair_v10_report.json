@@ -1,0 +1,28 @@
+{
+  "revision": 10,
+  "guide_count": 1021,
+  "parts": [
+    "hair_cap",
+    "hair_knot",
+    "hair_ponytail_core",
+    "hair_swept",
+    "hair_side_l",
+    "hair_side_r",
+    "hair_back",
+    "hair_fringe",
+    "hair_loose_l",
+    "hair_loose_r",
+    "hair_nape",
+    "hair_knot_wrap",
+    "hair_ponytail",
+    "hair_collected_locks",
+    "hair_gather"
+  ],
+  "pony_pivot": [
+    0,
+    1.429,
+    -0.067
+  ],
+  "source": "User front/side/back reference photographs",
+  "fitting": "Anatomical scalp surface fitted to existing unchanged character head; side, nape and back coverage added"
+}

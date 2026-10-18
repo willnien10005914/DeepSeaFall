@@ -1,0 +1,15 @@
+{
+  "extension": "Rigify",
+  "rig_controls": 222,
+  "actions": [
+    "tuck",
+    "extend",
+    "roll",
+    "dolphin",
+    "headfirst",
+    "breaststroke"
+  ],
+  "sample_rate": 30,
+  "frames": 582,
+  "retarget": "evaluated DEF world deltas -> swimmer parent-local XYZW"
+}

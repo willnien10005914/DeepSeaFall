@@ -1,0 +1,20 @@
+{
+  "revision": 11,
+  "style": "deep brown-black layered long straight hair with airy curtain bangs",
+  "guide_count": 1608,
+  "fine_geometric_strands": 770,
+  "hair_meshes": [
+    "hair_cap",
+    "hair_long_core",
+    "hair_long_layers",
+    "hair_crown",
+    "hair_fringe",
+    "hair_loose_l",
+    "hair_loose_r",
+    "hair_fine_long",
+    "hair_fine_crown",
+    "hair_fine_fringe"
+  ],
+  "min_hair_y": 0.8990162293568226,
+  "maximum_head_y": 1.5563722033249818
+}

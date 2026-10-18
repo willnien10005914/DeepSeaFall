@@ -287,4 +287,6 @@ python assets/scripts/generate_usd_from_style.py
 
 
 if __name__ == "__main__":
-    main()
+    # Preserve the historical command while generating the rebuilt anatomy.
+    from rebuild_realistic import main as rebuild
+    rebuild()

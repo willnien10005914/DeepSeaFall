@@ -1,0 +1,1526 @@
+{
+  "results": [
+    {
+      "action": "float",
+      "rows": [
+        {
+          "phase": 0,
+          "audit": {
+            "minimumSignedDistance": 0.005458434055613701,
+            "penetratingVertices": 0,
+            "checked": 5751,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2679,
+            "queries": 6336,
+            "maxCorrection": 0.04456898943372169,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 66,
+              "last": 0,
+              "passes": 4
+            },
+            "milliseconds": 72.29999995231628
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9999580499976053
+          }
+        },
+        {
+          "phase": 0.25,
+          "audit": {
+            "minimumSignedDistance": 0.00514872312562341,
+            "penetratingVertices": 0,
+            "checked": 5738,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2589,
+            "queries": 6392,
+            "maxCorrection": 0.05249703201480077,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 320,
+              "last": 0,
+              "passes": 5
+            },
+            "milliseconds": 83.70000004768372
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9967208938295689
+          }
+        },
+        {
+          "phase": 0.5,
+          "audit": {
+            "minimumSignedDistance": 0.005941632336957827,
+            "penetratingVertices": 0,
+            "checked": 5723,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2674,
+            "queries": 6306,
+            "maxCorrection": 0.04477232787980894,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 0,
+              "last": 0,
+              "passes": 3
+            },
+            "milliseconds": 51
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9990668407406939
+          }
+        },
+        {
+          "phase": 0.75,
+          "audit": {
+            "minimumSignedDistance": 0.005287776033510855,
+            "penetratingVertices": 0,
+            "checked": 5722,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2565,
+            "queries": 6281,
+            "maxCorrection": 0.04260552440895574,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 0,
+              "last": 0,
+              "passes": 3
+            },
+            "milliseconds": 49.40000009536743
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9992553688327533
+          }
+        }
+      ]
+    },
+    {
+      "action": "flutter",
+      "rows": [
+        {
+          "phase": 0,
+          "audit": {
+            "minimumSignedDistance": 0.0002112412545437431,
+            "penetratingVertices": 0,
+            "checked": 5747,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2715,
+            "queries": 6451,
+            "maxCorrection": 0.044831737851570866,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 439,
+              "last": 0,
+              "passes": 6
+            },
+            "milliseconds": 99.60000014305115
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.8493789938278489
+          }
+        },
+        {
+          "phase": 0.25,
+          "audit": {
+            "minimumSignedDistance": 0.0013977487916036508,
+            "penetratingVertices": 0,
+            "checked": 5736,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2611,
+            "queries": 6570,
+            "maxCorrection": 0.06439156935812879,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 257,
+              "last": 0,
+              "passes": 8
+            },
+            "milliseconds": 96.60000014305115
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.917797007887098
+          }
+        },
+        {
+          "phase": 0.5,
+          "audit": {
+            "minimumSignedDistance": 0.002536249198164463,
+            "penetratingVertices": 0,
+            "checked": 5745,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2589,
+            "queries": 6529,
+            "maxCorrection": 0.05649080396708503,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 1457,
+              "last": 0,
+              "passes": 11
+            },
+            "milliseconds": 127.5
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9321715654180897
+          }
+        },
+        {
+          "phase": 0.75,
+          "audit": {
+            "minimumSignedDistance": 0.0002452181069317091,
+            "penetratingVertices": 0,
+            "checked": 5740,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2682,
+            "queries": 6511,
+            "maxCorrection": 0.054295748314222576,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 569,
+              "last": 0,
+              "passes": 9
+            },
+            "milliseconds": 103.19999980926514
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9014786706115264
+          }
+        }
+      ]
+    },
+    {
+      "action": "glide",
+      "rows": [
+        {
+          "phase": 0,
+          "audit": {
+            "minimumSignedDistance": 0.0005027292988743809,
+            "penetratingVertices": 0,
+            "checked": 5732,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2706,
+            "queries": 6406,
+            "maxCorrection": 0.04495139696688445,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 1915,
+              "last": 0,
+              "passes": 14
+            },
+            "milliseconds": 135.70000004768372
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.46607332758354875
+          }
+        },
+        {
+          "phase": 0.25,
+          "audit": {
+            "minimumSignedDistance": 0.00006458467105148382,
+            "penetratingVertices": 0,
+            "checked": 5732,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2579,
+            "queries": 6385,
+            "maxCorrection": 0.059725489902003444,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 1537,
+              "last": 0,
+              "passes": 12
+            },
+            "milliseconds": 140.20000004768372
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.6142931984527643
+          }
+        },
+        {
+          "phase": 0.5,
+          "audit": {
+            "minimumSignedDistance": 0.0002838863773544744,
+            "penetratingVertices": 0,
+            "checked": 5744,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2670,
+            "queries": 6417,
+            "maxCorrection": 0.05490846940853989,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 1373,
+              "last": 0,
+              "passes": 10
+            },
+            "milliseconds": 132.70000004768372
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.6180199458085026
+          }
+        },
+        {
+          "phase": 0.75,
+          "audit": {
+            "minimumSignedDistance": 0.0038191236752073802,
+            "penetratingVertices": 0,
+            "checked": 5721,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2596,
+            "queries": 6325,
+            "maxCorrection": 0.045145766278455866,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 1529,
+              "last": 0,
+              "passes": 12
+            },
+            "milliseconds": 102.59999990463257
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.48978920359771205
+          }
+        }
+      ]
+    },
+    {
+      "action": "dive",
+      "rows": [
+        {
+          "phase": 0,
+          "audit": {
+            "minimumSignedDistance": 0.0018144478107665972,
+            "penetratingVertices": 0,
+            "checked": 5750,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2707,
+            "queries": 6578,
+            "maxCorrection": 0.04470905397570514,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 2411,
+              "last": 0,
+              "passes": 17
+            },
+            "milliseconds": 155.30000019073486
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": true,
+            "verticalAlignment": 0.7191218745766453
+          }
+        },
+        {
+          "phase": 0.25,
+          "audit": {
+            "minimumSignedDistance": 0.005030278790143768,
+            "penetratingVertices": 0,
+            "checked": 5755,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2595,
+            "queries": 6388,
+            "maxCorrection": 0.05972548677320933,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 289,
+              "last": 0,
+              "passes": 5
+            },
+            "milliseconds": 117.29999995231628
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": true,
+            "verticalAlignment": 0.6775149819315869
+          }
+        },
+        {
+          "phase": 0.5,
+          "audit": {
+            "minimumSignedDistance": 0.0012967669296340472,
+            "penetratingVertices": 0,
+            "checked": 5741,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2672,
+            "queries": 6583,
+            "maxCorrection": 0.0549084673122098,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 2352,
+              "last": 0,
+              "passes": 17
+            },
+            "milliseconds": 169.20000004768372
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": true,
+            "verticalAlignment": 0.69586505151816
+          }
+        },
+        {
+          "phase": 0.75,
+          "audit": {
+            "minimumSignedDistance": 0.00008016721497769387,
+            "penetratingVertices": 0,
+            "checked": 5748,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2601,
+            "queries": 6550,
+            "maxCorrection": 0.04259026288996249,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 712,
+              "last": 0,
+              "passes": 9
+            },
+            "milliseconds": 141.19999980926514
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": true,
+            "verticalAlignment": 0.7525363801755965
+          }
+        }
+      ]
+    },
+    {
+      "action": "breaststroke",
+      "rows": [
+        {
+          "phase": 0,
+          "audit": {
+            "minimumSignedDistance": 0.0010115561389464787,
+            "penetratingVertices": 0,
+            "checked": 5741,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2607,
+            "queries": 6533,
+            "maxCorrection": 0.05325484467751633,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 309,
+              "last": 0,
+              "passes": 6
+            },
+            "milliseconds": 92.5
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9432700722262388
+          }
+        },
+        {
+          "phase": 0.25,
+          "audit": {
+            "minimumSignedDistance": 0.00024992093477118845,
+            "penetratingVertices": 0,
+            "checked": 5741,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2424,
+            "queries": 6840,
+            "maxCorrection": 0.06578135333152907,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 1516,
+              "last": 0,
+              "passes": 13
+            },
+            "milliseconds": 134
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9827861187829332
+          }
+        },
+        {
+          "phase": 0.5,
+          "audit": {
+            "minimumSignedDistance": 0.0006210845196002257,
+            "penetratingVertices": 0,
+            "checked": 5744,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2453,
+            "queries": 6750,
+            "maxCorrection": 0.06251559174021055,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 734,
+              "last": 0,
+              "passes": 7
+            },
+            "milliseconds": 109.79999995231628
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9867333397907573
+          }
+        },
+        {
+          "phase": 0.75,
+          "audit": {
+            "minimumSignedDistance": 0.0018092542621604153,
+            "penetratingVertices": 0,
+            "checked": 5729,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2584,
+            "queries": 6457,
+            "maxCorrection": 0.051244876131693484,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 61,
+              "last": 0,
+              "passes": 5
+            },
+            "milliseconds": 83.59999990463257
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9676663603436818
+          }
+        }
+      ]
+    },
+    {
+      "action": "reach",
+      "rows": [
+        {
+          "phase": 0,
+          "audit": {
+            "minimumSignedDistance": 0.0005656720843732727,
+            "penetratingVertices": 0,
+            "checked": 5752,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2725,
+            "queries": 6465,
+            "maxCorrection": 0.04520024170604633,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 166,
+              "last": 0,
+              "passes": 8
+            },
+            "milliseconds": 86.20000004768372
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9788354470778765
+          }
+        },
+        {
+          "phase": 0.25,
+          "audit": {
+            "minimumSignedDistance": 0.0006503244969199042,
+            "penetratingVertices": 0,
+            "checked": 5737,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2583,
+            "queries": 6571,
+            "maxCorrection": 0.0622222284759315,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 970,
+              "last": 0,
+              "passes": 12
+            },
+            "milliseconds": 111
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.996486691786145
+          }
+        },
+        {
+          "phase": 0.5,
+          "audit": {
+            "minimumSignedDistance": 0.001615643161038544,
+            "penetratingVertices": 0,
+            "checked": 5740,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2675,
+            "queries": 6508,
+            "maxCorrection": 0.05491249087706303,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 444,
+              "last": 0,
+              "passes": 9
+            },
+            "milliseconds": 98
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9981148442744221
+          }
+        },
+        {
+          "phase": 0.75,
+          "audit": {
+            "minimumSignedDistance": 0.000581120254111329,
+            "penetratingVertices": 0,
+            "checked": 5739,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2572,
+            "queries": 6399,
+            "maxCorrection": 0.04327220681430023,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 64,
+              "last": 0,
+              "passes": 5
+            },
+            "milliseconds": 63.60000014305115
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9831785975886739
+          }
+        }
+      ]
+    },
+    {
+      "action": "evade",
+      "rows": [
+        {
+          "phase": 0,
+          "audit": {
+            "minimumSignedDistance": 0.002202697533609979,
+            "penetratingVertices": 0,
+            "checked": 5745,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2717,
+            "queries": 6382,
+            "maxCorrection": 0.04483173325869612,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 103,
+              "last": 0,
+              "passes": 7
+            },
+            "milliseconds": 91.40000009536743
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.8219428060047655
+          }
+        },
+        {
+          "phase": 0.25,
+          "audit": {
+            "minimumSignedDistance": 0.005373344702235672,
+            "penetratingVertices": 0,
+            "checked": 5740,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2612,
+            "queries": 6560,
+            "maxCorrection": 0.06352873216731605,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 138,
+              "last": 0,
+              "passes": 4
+            },
+            "milliseconds": 98.60000014305115
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.8180594191907171
+          }
+        },
+        {
+          "phase": 0.5,
+          "audit": {
+            "minimumSignedDistance": 0.0011912367852103078,
+            "penetratingVertices": 0,
+            "checked": 5738,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2605,
+            "queries": 6412,
+            "maxCorrection": 0.05467551655257646,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 444,
+              "last": 0,
+              "passes": 8
+            },
+            "milliseconds": 124.70000004768372
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9052331269665083
+          }
+        },
+        {
+          "phase": 0.75,
+          "audit": {
+            "minimumSignedDistance": 0.0010172345201020323,
+            "penetratingVertices": 0,
+            "checked": 5745,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2667,
+            "queries": 6520,
+            "maxCorrection": 0.06227396197209053,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 310,
+              "last": 0,
+              "passes": 6
+            },
+            "milliseconds": 124.5
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.8643149770579264
+          }
+        }
+      ]
+    },
+    {
+      "action": "turn",
+      "rows": [
+        {
+          "phase": 0,
+          "audit": {
+            "minimumSignedDistance": 0.0007883239266447195,
+            "penetratingVertices": 0,
+            "checked": 5750,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2728,
+            "queries": 6396,
+            "maxCorrection": 0.04569258983613643,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 999,
+              "last": 0,
+              "passes": 9
+            },
+            "milliseconds": 98.40000009536743
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.937288780067304
+          }
+        },
+        {
+          "phase": 0.25,
+          "audit": {
+            "minimumSignedDistance": 0.0017639544146779225,
+            "penetratingVertices": 0,
+            "checked": 5745,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2531,
+            "queries": 6546,
+            "maxCorrection": 0.06238042834383582,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 239,
+              "last": 0,
+              "passes": 5
+            },
+            "milliseconds": 109.79999995231628
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9183322832595063
+          }
+        },
+        {
+          "phase": 0.5,
+          "audit": {
+            "minimumSignedDistance": 0.0027718162822959105,
+            "penetratingVertices": 0,
+            "checked": 5754,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2608,
+            "queries": 6561,
+            "maxCorrection": 0.062317376865054924,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 264,
+              "last": 0,
+              "passes": 5
+            },
+            "milliseconds": 123
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.7914154059917698
+          }
+        },
+        {
+          "phase": 0.75,
+          "audit": {
+            "minimumSignedDistance": 0.0010352862613554642,
+            "penetratingVertices": 0,
+            "checked": 5744,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2607,
+            "queries": 6413,
+            "maxCorrection": 0.04298005158786144,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 95,
+              "last": 0,
+              "passes": 5
+            },
+            "milliseconds": 74.09999990463257
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9010857413807132
+          }
+        }
+      ]
+    },
+    {
+      "action": "tuck",
+      "rows": [
+        {
+          "phase": 0,
+          "audit": {
+            "minimumSignedDistance": 0.00037099030488718394,
+            "penetratingVertices": 0,
+            "checked": 5735,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2578,
+            "queries": 6588,
+            "maxCorrection": 0.06042424420280183,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 348,
+              "last": 0,
+              "passes": 12
+            },
+            "milliseconds": 199.20000004768372
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9978763262461798
+          }
+        },
+        {
+          "phase": 0.25,
+          "audit": {
+            "minimumSignedDistance": 0.0005588255904295412,
+            "penetratingVertices": 0,
+            "checked": 5696,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2594,
+            "queries": 6628,
+            "maxCorrection": 0.05366553577103832,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 1681,
+              "last": 0,
+              "passes": 31
+            },
+            "milliseconds": 538.5999999046326
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.995302410229241
+          }
+        },
+        {
+          "phase": 0.5,
+          "audit": {
+            "minimumSignedDistance": 0.000991522206557018,
+            "penetratingVertices": 0,
+            "checked": 5673,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2558,
+            "queries": 6664,
+            "maxCorrection": 0.0594574204991856,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 1120,
+              "last": 0,
+              "passes": 26
+            },
+            "milliseconds": 432
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9760964099983594
+          }
+        },
+        {
+          "phase": 0.75,
+          "audit": {
+            "minimumSignedDistance": 0.000506620574201393,
+            "penetratingVertices": 0,
+            "checked": 5725,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2535,
+            "queries": 6635,
+            "maxCorrection": 0.06962464301616883,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 1077,
+              "last": 0,
+              "passes": 19
+            },
+            "milliseconds": 341
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9879107456462335
+          }
+        }
+      ]
+    },
+    {
+      "action": "extend",
+      "rows": [
+        {
+          "phase": 0,
+          "audit": {
+            "minimumSignedDistance": 0.0008869135069818953,
+            "penetratingVertices": 0,
+            "checked": 5734,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2567,
+            "queries": 6617,
+            "maxCorrection": 0.05486640285980669,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 1852,
+              "last": 0,
+              "passes": 13
+            },
+            "milliseconds": 153.79999995231628
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.891438140732526
+          }
+        },
+        {
+          "phase": 0.25,
+          "audit": {
+            "minimumSignedDistance": 0.0014714022581211014,
+            "penetratingVertices": 0,
+            "checked": 5739,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2365,
+            "queries": 6860,
+            "maxCorrection": 0.06657643210533537,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 2272,
+              "last": 0,
+              "passes": 12
+            },
+            "milliseconds": 152.19999980926514
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9367572487958828
+          }
+        },
+        {
+          "phase": 0.5,
+          "audit": {
+            "minimumSignedDistance": 0.00014896401242368395,
+            "penetratingVertices": 0,
+            "checked": 5745,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2453,
+            "queries": 6908,
+            "maxCorrection": 0.06532654221655584,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 2159,
+              "last": 0,
+              "passes": 11
+            },
+            "milliseconds": 141.29999995231628
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.948192781849574
+          }
+        },
+        {
+          "phase": 0.75,
+          "audit": {
+            "minimumSignedDistance": 0.00016488543453677075,
+            "penetratingVertices": 0,
+            "checked": 5720,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2531,
+            "queries": 6718,
+            "maxCorrection": 0.050522266853662595,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 1926,
+              "last": 0,
+              "passes": 13
+            },
+            "milliseconds": 126.90000009536743
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9250558582016882
+          }
+        }
+      ]
+    },
+    {
+      "action": "roll",
+      "rows": [
+        {
+          "phase": 0,
+          "audit": {
+            "minimumSignedDistance": 0.0017250268320129357,
+            "penetratingVertices": 0,
+            "checked": 5746,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2611,
+            "queries": 6393,
+            "maxCorrection": 0.051781731941434546,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 162,
+              "last": 0,
+              "passes": 6
+            },
+            "milliseconds": 85.29999995231628
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.973174552381379
+          }
+        },
+        {
+          "phase": 0.25,
+          "audit": {
+            "minimumSignedDistance": 0.0008328819834508446,
+            "penetratingVertices": 0,
+            "checked": 5754,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2417,
+            "queries": 6668,
+            "maxCorrection": 0.06389067489451346,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 646,
+              "last": 0,
+              "passes": 10
+            },
+            "milliseconds": 134.5
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.944735222534101
+          }
+        },
+        {
+          "phase": 0.5,
+          "audit": {
+            "minimumSignedDistance": 0.00035319419024191286,
+            "penetratingVertices": 0,
+            "checked": 5745,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2441,
+            "queries": 6555,
+            "maxCorrection": 0.061803372689825525,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 482,
+              "last": 0,
+              "passes": 7
+            },
+            "milliseconds": 99.79999995231628
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9967723346092531
+          }
+        },
+        {
+          "phase": 0.75,
+          "audit": {
+            "minimumSignedDistance": 0.0012189263091182706,
+            "penetratingVertices": 0,
+            "checked": 5738,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2566,
+            "queries": 6525,
+            "maxCorrection": 0.05424114340830984,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 220,
+              "last": 0,
+              "passes": 6
+            },
+            "milliseconds": 102.20000004768372
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9639713965362812
+          }
+        }
+      ]
+    },
+    {
+      "action": "dolphin",
+      "rows": [
+        {
+          "phase": 0,
+          "audit": {
+            "minimumSignedDistance": 0.0007146608435337869,
+            "penetratingVertices": 0,
+            "checked": 5734,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2575,
+            "queries": 6599,
+            "maxCorrection": 0.0545882853227007,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 1423,
+              "last": 0,
+              "passes": 10
+            },
+            "milliseconds": 116.20000004768372
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9262677480044234
+          }
+        },
+        {
+          "phase": 0.25,
+          "audit": {
+            "minimumSignedDistance": 0.000026853603695834068,
+            "penetratingVertices": 0,
+            "checked": 5737,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2412,
+            "queries": 6824,
+            "maxCorrection": 0.06917989563206234,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 2245,
+              "last": 0,
+              "passes": 13
+            },
+            "milliseconds": 140.79999995231628
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.991513406174948
+          }
+        },
+        {
+          "phase": 0.5,
+          "audit": {
+            "minimumSignedDistance": 0.0008923051859867958,
+            "penetratingVertices": 0,
+            "checked": 5743,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2389,
+            "queries": 6870,
+            "maxCorrection": 0.06249105353222515,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 2208,
+              "last": 0,
+              "passes": 13
+            },
+            "milliseconds": 160.29999995231628
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.9839295045079102
+          }
+        },
+        {
+          "phase": 0.75,
+          "audit": {
+            "minimumSignedDistance": 0.00008353411882021139,
+            "penetratingVertices": 0,
+            "checked": 5735,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2609,
+            "queries": 6754,
+            "maxCorrection": 0.05197474914165376,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 2424,
+              "last": 0,
+              "passes": 17
+            },
+            "milliseconds": 137.5
+          },
+          "dive": {
+            "blend": 0,
+            "headBelowHips": false,
+            "verticalAlignment": -0.94052830839209
+          }
+        }
+      ]
+    },
+    {
+      "action": "headfirst",
+      "rows": [
+        {
+          "phase": 0,
+          "audit": {
+            "minimumSignedDistance": 0.00040840534122604886,
+            "penetratingVertices": 0,
+            "checked": 5752,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2664,
+            "queries": 6404,
+            "maxCorrection": 0.04643381866973944,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 2073,
+              "last": 0,
+              "passes": 17
+            },
+            "milliseconds": 112
+          },
+          "dive": {
+            "blend": 1,
+            "headBelowHips": true,
+            "verticalAlignment": 0.9950371902099892
+          }
+        },
+        {
+          "phase": 0.25,
+          "audit": {
+            "minimumSignedDistance": 0.0032397289641962227,
+            "penetratingVertices": 0,
+            "checked": 5734,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2575,
+            "queries": 6412,
+            "maxCorrection": 0.05693566071281511,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 2426,
+              "last": 0,
+              "passes": 19
+            },
+            "milliseconds": 119
+          },
+          "dive": {
+            "blend": 1,
+            "headBelowHips": true,
+            "verticalAlignment": 0.9950371902099892
+          }
+        },
+        {
+          "phase": 0.5,
+          "audit": {
+            "minimumSignedDistance": 0.001707879602862852,
+            "penetratingVertices": 0,
+            "checked": 5742,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2549,
+            "queries": 6441,
+            "maxCorrection": 0.056508113850684855,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 43504,
+              "last": 0,
+              "passes": 145
+            },
+            "milliseconds": 726.6000001430511
+          },
+          "dive": {
+            "blend": 1,
+            "headBelowHips": true,
+            "verticalAlignment": 0.9950371902099892
+          }
+        },
+        {
+          "phase": 0.75,
+          "audit": {
+            "minimumSignedDistance": 0.0021410330009642995,
+            "penetratingVertices": 0,
+            "checked": 5737,
+            "triangleIntersections": [],
+            "actualVisibleSkin": []
+          },
+          "stats": {
+            "steps": 1,
+            "corrected": 2664,
+            "queries": 6402,
+            "maxCorrection": 0.048926922914659776,
+            "clearance": 0.006,
+            "faceStats": {
+              "constraints": 1183,
+              "last": 0,
+              "passes": 9
+            },
+            "milliseconds": 94
+          },
+          "dive": {
+            "blend": 1,
+            "headBelowHips": true,
+            "verticalAlignment": 0.9950371902099892
+          }
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

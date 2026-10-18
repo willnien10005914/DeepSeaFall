@@ -1,0 +1,30 @@
+{
+  "isolatedHairMotion": true,
+  "names": [
+    "hair_ear_wisp_volume_l",
+    "hair_ear_wisp_volume_r",
+    "hair_crown_lift_volume",
+    "hair_ear_wisp_fine_l",
+    "hair_ear_wisp_fine_r",
+    "hair_crown_lift_fine"
+  ],
+  "rootMax": 0,
+  "tipMax": 0.009400065082749673,
+  "finite": true,
+  "weights": true,
+  "motion": {
+    "hairTravel": 0,
+    "longHairTipEnvelope": 0.0346372107336871,
+    "fringeTravel": 0.007389270848534004,
+    "sideTravel": 0.009543096961473567,
+    "clothTravel": 0.07624347868793294,
+    "crownTravel": 0.0033349019649255053,
+    "earWispTravel": 0.00940006364015912,
+    "flow": [
+      -0.001037499956831212,
+      -0.00004202206527376946,
+      -0.0010336324428560828
+    ]
+  },
+  "errors": []
+}

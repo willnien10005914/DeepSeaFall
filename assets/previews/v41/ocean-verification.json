@@ -1,0 +1,467 @@
+{
+  "base": "http://127.0.0.1:8765/",
+  "plan": [
+    {
+      "i": 0,
+      "segment": 0,
+      "id": "violet-bloom",
+      "below": 0,
+      "above": 1
+    },
+    {
+      "i": 1,
+      "segment": 1,
+      "id": "blue-garden",
+      "below": 1,
+      "above": 2
+    },
+    {
+      "i": 2,
+      "segment": 2,
+      "id": "star-drift",
+      "below": 2,
+      "above": 3
+    },
+    {
+      "i": 3,
+      "segment": 3,
+      "id": "pink-meadow",
+      "below": 3,
+      "above": 4
+    },
+    {
+      "i": 4,
+      "segment": 4,
+      "id": "violet-bloom",
+      "below": 4,
+      "above": 5
+    },
+    {
+      "i": 5,
+      "segment": 5,
+      "id": "lantern-abyss",
+      "below": 5,
+      "above": 6
+    },
+    {
+      "i": 6,
+      "segment": 6,
+      "id": "pink-meadow",
+      "below": 6,
+      "above": 7
+    },
+    {
+      "i": 7,
+      "segment": 7,
+      "id": "violet-bloom",
+      "below": 7,
+      "above": 8
+    },
+    {
+      "i": 8,
+      "segment": 8,
+      "id": "lantern-abyss",
+      "below": 8,
+      "above": 9
+    },
+    {
+      "i": 9,
+      "segment": 9,
+      "id": "violet-bloom",
+      "below": 9,
+      "above": 10
+    },
+    {
+      "i": 10,
+      "segment": 10,
+      "id": "pink-meadow",
+      "below": 10,
+      "above": 11
+    },
+    {
+      "i": 11,
+      "segment": 11,
+      "id": "blue-garden",
+      "below": 11,
+      "above": 12
+    },
+    {
+      "i": 12,
+      "segment": 12,
+      "id": "lantern-abyss",
+      "below": 12,
+      "above": 13
+    },
+    {
+      "i": 13,
+      "segment": 13,
+      "id": "violet-bloom",
+      "below": 13,
+      "above": 14
+    },
+    {
+      "i": 14,
+      "segment": 14,
+      "id": "lantern-abyss",
+      "below": 14,
+      "above": 15
+    },
+    {
+      "i": 15,
+      "segment": 15,
+      "id": "jade-forest",
+      "below": 15,
+      "above": 16
+    },
+    {
+      "i": 16,
+      "segment": 16,
+      "id": "lantern-abyss",
+      "below": 16,
+      "above": 17
+    },
+    {
+      "i": 17,
+      "segment": 17,
+      "id": "blue-garden",
+      "below": 17,
+      "above": 18
+    },
+    {
+      "i": 18,
+      "segment": 18,
+      "id": "jade-forest",
+      "below": 18,
+      "above": 19
+    },
+    {
+      "i": 19,
+      "segment": 19,
+      "id": "violet-bloom",
+      "below": 19,
+      "above": 20
+    },
+    {
+      "i": 20,
+      "segment": 20,
+      "id": "jade-forest",
+      "below": 20,
+      "above": 21
+    },
+    {
+      "i": 21,
+      "segment": 21,
+      "id": "blue-garden",
+      "below": 21,
+      "above": 22
+    },
+    {
+      "i": 22,
+      "segment": 22,
+      "id": "lantern-abyss",
+      "below": 22,
+      "above": 23
+    },
+    {
+      "i": 23,
+      "segment": 23,
+      "id": "star-drift",
+      "below": 23,
+      "above": 24
+    },
+    {
+      "i": 24,
+      "segment": 24,
+      "id": "jade-forest",
+      "below": 24,
+      "above": 25
+    },
+    {
+      "i": 25,
+      "segment": 25,
+      "id": "lantern-abyss",
+      "below": 25,
+      "above": 26
+    },
+    {
+      "i": 26,
+      "segment": 26,
+      "id": "blue-garden",
+      "below": 26,
+      "above": 27
+    },
+    {
+      "i": 27,
+      "segment": 27,
+      "id": "pink-meadow",
+      "below": 27,
+      "above": 28
+    },
+    {
+      "i": 28,
+      "segment": 28,
+      "id": "star-drift",
+      "below": 28,
+      "above": 29
+    },
+    {
+      "i": 29,
+      "segment": 29,
+      "id": "pink-meadow",
+      "below": 29,
+      "above": 30
+    },
+    {
+      "i": 30,
+      "segment": 30,
+      "id": "lantern-abyss",
+      "below": 30,
+      "above": 31
+    },
+    {
+      "i": 31,
+      "segment": 31,
+      "id": "blue-garden",
+      "below": 31,
+      "above": 32
+    },
+    {
+      "i": 32,
+      "segment": 32,
+      "id": "pink-meadow",
+      "below": 32,
+      "above": 33
+    },
+    {
+      "i": 33,
+      "segment": 33,
+      "id": "violet-bloom",
+      "below": 33,
+      "above": 34
+    },
+    {
+      "i": 34,
+      "segment": 34,
+      "id": "lantern-abyss",
+      "below": 34,
+      "above": 35
+    },
+    {
+      "i": 35,
+      "segment": 35,
+      "id": "jade-forest",
+      "below": 35,
+      "above": 36
+    },
+    {
+      "i": 36,
+      "segment": 36,
+      "id": "blue-garden",
+      "below": 36,
+      "above": 37
+    },
+    {
+      "i": 37,
+      "segment": 37,
+      "id": "pink-meadow",
+      "below": 37,
+      "above": 38
+    },
+    {
+      "i": 38,
+      "segment": 38,
+      "id": "star-drift",
+      "below": 38,
+      "above": 39
+    },
+    {
+      "i": 39,
+      "segment": 39,
+      "id": "violet-bloom",
+      "below": 39,
+      "above": 40
+    }
+  ],
+  "frames": [
+    {
+      "segment": 11,
+      "range": [
+        330,
+        360
+      ],
+      "id": "blue-garden",
+      "name": "湛藍海庭",
+      "light": 1,
+      "stars": 0.12,
+      "lantern": 0,
+      "weeds": 0.18,
+      "visibleWeeds": 0,
+      "grove": 0,
+      "groveCentre": 13.35547368740663,
+      "travel": 158.55999999999997,
+      "ambient": 0.65,
+      "sun": 3.6,
+      "environment": 0.75,
+      "key": 10,
+      "details": {
+        "submarineVisible": true,
+        "submarineDepth": -19,
+        "crabs": 6,
+        "shrimp": 6,
+        "patchLights": 3,
+        "keyDistance": 1.8227726133558184
+      },
+      "exposure": 1.13
+    },
+    {
+      "segment": 2,
+      "range": [
+        60,
+        90
+      ],
+      "id": "star-drift",
+      "name": "星河浮游帶",
+      "light": 0.6800001783649182,
+      "stars": 0.9999995094964751,
+      "lantern": 0.17999989966973354,
+      "weeds": 1.0033026646850239e-7,
+      "visibleWeeds": 0,
+      "grove": 0,
+      "groveCentre": 17.138977029826492,
+      "travel": 30.560000000000002,
+      "ambient": 0.420000128199785,
+      "sun": 1.4500011983892938,
+      "environment": 0.4000001950866294,
+      "key": 10.719999598678935,
+      "details": {
+        "submarineVisible": true,
+        "submarineDepth": -19,
+        "crabs": 6,
+        "shrimp": 6,
+        "patchLights": 3,
+        "keyDistance": 1.8227726133558184
+      },
+      "exposure": 1.13
+    },
+    {
+      "segment": 5,
+      "range": [
+        150,
+        180
+      ],
+      "id": "lantern-abyss",
+      "name": "燈籠魚幽谷",
+      "light": 0.4800001114781734,
+      "stars": 0.13000048492934785,
+      "lantern": 0.9999995429398413,
+      "weeds": 5.5923124275781654e-14,
+      "visibleWeeds": 0,
+      "grove": 0,
+      "groveCentre": 11.466654166579247,
+      "travel": 81.76,
+      "ambient": 0.3000000668869158,
+      "sun": 0.7500003901739265,
+      "environment": 0.280000066886953,
+      "key": 13.999998171759366,
+      "details": {
+        "submarineVisible": true,
+        "submarineDepth": -19,
+        "crabs": 6,
+        "shrimp": 6,
+        "patchLights": 3,
+        "keyDistance": 1.8227726133558184
+      },
+      "exposure": 1.13
+    },
+    {
+      "segment": 3,
+      "range": [
+        90,
+        120
+      ],
+      "id": "pink-meadow",
+      "name": "粉紅海草林",
+      "light": 0.8999997658961072,
+      "stars": 0.3999998495048707,
+      "lantern": 5.573901145085272e-7,
+      "weeds": 0.8999994983486678,
+      "visibleWeeds": 0,
+      "grove": 0,
+      "groveCentre": 18.375621787272394,
+      "travel": 56.160000000000004,
+      "ambient": 0.5599998550785413,
+      "sun": 2.7999988573499595,
+      "environment": 0.6499997937656007,
+      "key": 10.000002229560458,
+      "details": {
+        "submarineVisible": true,
+        "submarineDepth": -19,
+        "crabs": 6,
+        "shrimp": 6,
+        "patchLights": 3,
+        "keyDistance": 1.8227726133558184
+      },
+      "exposure": 1.13
+    }
+  ],
+  "details": {
+    "rows": [
+      {
+        "time": 0,
+        "visible": false,
+        "x": -3.0769230769230766,
+        "z": -19
+      },
+      {
+        "time": 5,
+        "visible": false,
+        "x": -3.0769230769230766,
+        "z": -19
+      },
+      {
+        "time": 6,
+        "visible": true,
+        "x": -8,
+        "z": -19
+      },
+      {
+        "time": 14,
+        "visible": true,
+        "x": -3.0769230769230766,
+        "z": -19
+      },
+      {
+        "time": 25,
+        "visible": true,
+        "x": 3.6923076923076916,
+        "z": -19
+      },
+      {
+        "time": 32,
+        "visible": false,
+        "x": 3.6923076923076916,
+        "z": -19
+      },
+      {
+        "time": 50,
+        "visible": false,
+        "x": 3.6923076923076916,
+        "z": -19
+      },
+      {
+        "time": 82,
+        "visible": true,
+        "x": -8,
+        "z": -19
+      }
+    ],
+    "crabs": 6,
+    "shrimp": 6,
+    "crabAnimated": true,
+    "shrimpDrift": true,
+    "lightFollows": true,
+    "noninteractive": true,
+    "subMeshes": 8
+  },
+  "errors": []
+}

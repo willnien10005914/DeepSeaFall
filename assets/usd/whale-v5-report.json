@@ -1,0 +1,10 @@
+{
+  "revision": 5,
+  "triangles": 165920,
+  "meshes": 19,
+  "glb_bytes": 9505564,
+  "skin": "UV-correct dorsal/ventral maps, scars, pores, variable wet roughness, fin-specific maps",
+  "motion": "9-joint GPU skinning, dorsoventral stroke, fluke feathering, independent pectorals",
+  "barnacle_count": 78,
+  "uv_v_flip_compensated": true
+}

@@ -1,0 +1,31 @@
+{
+  "status": "incomplete",
+  "reason": "Extended 900-step continuous validation exceeded 12 minutes; stopped due to excessive computational cost. No continuous-motion pass claimed.",
+  "actual_visible_skin_pose_checks": 52,
+  "actual_visible_skin_intersections": 0,
+  "installed_manual_headfirst_check": "passed",
+  "performance": "High CPU cost remains; video encoding FPS is not real-time game FPS.",
+  "installed_runtime_matches_tested_stage": true,
+  "installed_manual_down_test": {
+    "result": {
+      "action": "headfirst",
+      "dive": {
+        "blend": 0.9998528386341125,
+        "headBelowHips": true,
+        "verticalAlignment": 0.9950192838578299
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.003089854879471337,
+        "penetratingVertices": 0,
+        "checked": 5710,
+        "triangleIntersections": []
+      },
+      "velocity": [
+        0.08163367221335789,
+        -1.7999889404177638,
+        0
+      ]
+    },
+    "errors": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "result": {
+    "action": "headfirst",
+    "dive": {
+      "blend": 0.9998528386341125,
+      "headBelowHips": true,
+      "verticalAlignment": 0.9950192838578299
+    },
+    "cloth": {
+      "minimumSignedDistance": 0.003089854879471337,
+      "penetratingVertices": 0,
+      "checked": 5710,
+      "triangleIntersections": []
+    },
+    "velocity": [
+      0.08163367221335789,
+      -1.7999889404177638,
+      0
+    ]
+  },
+  "errors": []
+}

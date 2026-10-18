@@ -5,6 +5,9 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
  *  Optional: load authored GLB from /assets/usd/*.glb (same generator as USD).
  */
 
+import {makeRealFish,makeRealJelly} from './marine-life.js?v=42';
+import {makeScannedRock} from './ocean-real.js?v=42';
+
 const loader = new GLTFLoader();
 
 export function loadGlb(url) {
@@ -121,69 +124,13 @@ export function makeWhale() {
   return root;
 }
 
-export function makeFish(color = 0x5ce1ff, scale = 1) {
-  const g = new THREE.Group();
-  const mat = new THREE.MeshStandardMaterial({
-    color,
-    roughness: 0.35,
-    metalness: 0.2,
-    emissive: color,
-    emissiveIntensity: 0.25,
-  });
-  const body = new THREE.Mesh(new THREE.SphereGeometry(0.18, 14, 12), mat);
-  body.scale.set(1.6, 0.7, 0.9);
-  const tail = new THREE.Mesh(new THREE.ConeGeometry(0.12, 0.25, 8), mat);
-  tail.rotation.z = Math.PI / 2;
-  tail.position.x = -0.28;
-  g.add(body, tail);
-  g.scale.setScalar(scale);
-  return g;
-}
+export function makeFish(color,scale=1){return makeRealFish(color,scale)}
+export function makeJelly(){return makeRealJelly()}
+export function makeRock(volcanic=false){return makeScannedRock(volcanic)}
 
-export function makeJelly(color = 0xff8fab) {
-  const g = new THREE.Group();
-  const mat = new THREE.MeshStandardMaterial({
-    color,
-    transparent: true,
-    opacity: 0.65,
-    roughness: 0.2,
-    emissive: color,
-    emissiveIntensity: 0.35,
-  });
-  const dome = new THREE.Mesh(new THREE.SphereGeometry(0.28, 16, 12, 0, Math.PI * 2, 0, Math.PI / 2), mat);
-  g.add(dome);
-  for (let i = 0; i < 5; i++) {
-    const t = new THREE.Mesh(new THREE.CylinderGeometry(0.015, 0.01, 0.55, 6), mat);
-    t.position.set((i - 2) * 0.08, -0.28, 0);
-    g.add(t);
-  }
-  return g;
-}
-
-export function makeRock(volcanic = false) {
-  const geo = new THREE.DodecahedronGeometry(0.55 + Math.random() * 0.4, 0);
-  const mat = new THREE.MeshStandardMaterial({
-    color: volcanic ? 0x4a2218 : 0x3a4654,
-    roughness: 0.95,
-    flatShading: true,
-    emissive: volcanic ? 0xff4a1a : 0x000000,
-    emissiveIntensity: volcanic ? 0.35 : 0,
-  });
-  const m = new THREE.Mesh(geo, mat);
-  m.scale.set(1 + Math.random(), 0.8 + Math.random() * 0.8, 1 + Math.random() * 0.5);
-  return m;
-}
-
-export function makeTreasure() {
-  const mat = new THREE.MeshStandardMaterial({
-    color: 0xffd166,
-    emissive: 0xffaa33,
-    emissiveIntensity: 0.6,
-    metalness: 0.7,
-    roughness: 0.25,
-  });
-  const m = new THREE.Mesh(new THREE.OctahedronGeometry(0.22), mat);
-  return m;
+export function makeTreasure(){
+ const material=new THREE.MeshPhysicalMaterial({color:0xffd86e,emissive:0xb97a18,emissiveIntensity:.28,metalness:.58,roughness:.20,clearcoat:.55,clearcoatRoughness:.15,flatShading:true});
+ const gem=new THREE.Mesh(new THREE.OctahedronGeometry(.25,0),material);gem.scale.set(1,1.35,1);gem.name='Golden faceted gemstone';gem.userData.staminaRestore=20;gem.castShadow=true;return gem;
 }
 
 export function makeBubble() {

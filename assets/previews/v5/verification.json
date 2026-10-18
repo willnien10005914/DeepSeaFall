@@ -1,0 +1,93 @@
+{
+  "metrics": {
+    "meshes": 19,
+    "skinned": 19,
+    "bones": 9,
+    "invalidWeights": 0,
+    "materials": {
+      "whale": {
+        "roughness": 0.82,
+        "normalMap": true,
+        "mapSize": [
+          2048,
+          1024
+        ]
+      },
+      "pectoral": {
+        "roughness": 0.82,
+        "normalMap": true,
+        "mapSize": [
+          2048,
+          1024
+        ]
+      },
+      "fluke": {
+        "roughness": 0.82,
+        "normalMap": true,
+        "mapSize": [
+          2048,
+          1024
+        ]
+      },
+      "groove": {
+        "roughness": 0.6,
+        "normalMap": false,
+        "mapSize": null
+      },
+      "eye": {
+        "roughness": 0.12,
+        "normalMap": false,
+        "mapSize": null
+      },
+      "barnacle": {
+        "roughness": 0.85,
+        "normalMap": false,
+        "mapSize": null
+      },
+      "barnacle_core": {
+        "roughness": 0.85,
+        "normalMap": false,
+        "mapSize": null
+      }
+    },
+    "tailVerticalTravel": 1.1910803404265424,
+    "headVerticalTravel": 0,
+    "finite": true
+  },
+  "game": {
+    "state": "following",
+    "visible": true,
+    "phase": 8.986140102745077,
+    "position": [
+      0.5478255687402107,
+      -0.11618478579102293,
+      -3.994375649301055
+    ],
+    "rig": {
+      "phase": 8.986140102745077,
+      "effort": 0.5397055447135762,
+      "turn": 0.001305015497982521,
+      "lift": 0.006182785038548736
+    }
+  },
+  "turn": {
+    "girl": [
+      3.2,
+      0.8990829215635958,
+      0
+    ],
+    "whale": [
+      3.0838122966650254,
+      0.7125071159553403,
+      -3.9819835904491963
+    ],
+    "turn": 0.3859479638201779,
+    "lift": 0.15855536517069863,
+    "phase": 12.612384870187913
+  },
+  "restart": {
+    "hidden": true,
+    "resummoned": true
+  },
+  "errors": []
+}

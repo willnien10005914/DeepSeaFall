@@ -7,13 +7,14 @@
 
 def Xform "DeepSeaStage" {
     def Xform "Girl" ( prepend references = @girl.usda@ ) {
-        double3 xformOp:translate = (0, 0, 0)
-        float3 xformOp:scale = (1, 1, 1)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        double3 xformOp:translate = (0.5, 0.7, 2.8)
+        float xformOp:rotateY = 60
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateY"]
     }
     def Xform "Whale" ( prepend references = @whale.usda@ ) {
-        double3 xformOp:translate = (1.4, 0.05, -0.9)
-        float3 xformOp:scale = (1.15, 1.15, 1.15)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        double3 xformOp:translate = (0.6, -1, -2)
+        float xformOp:rotateY = -53
+        float xformOp:rotateZ = -8
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:rotateY"]
     }
 }

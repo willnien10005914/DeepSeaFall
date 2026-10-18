@@ -1,0 +1,165 @@
+{
+  "cases": [
+    {
+      "vertical": "down",
+      "stage": "gather",
+      "action": "tuck",
+      "handsAheadOfHead": [
+        -0.21819060582819164,
+        -0.21550710953555036
+      ],
+      "dive": {
+        "blend": 0,
+        "headBelowHips": false,
+        "verticalAlignment": -0.9877530862804209
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.0009162290039472432,
+        "penetratingVertices": 0,
+        "checked": 5677,
+        "triangleIntersections": []
+      }
+    },
+    {
+      "vertical": "down",
+      "stage": "reach",
+      "action": "headfirst",
+      "handsAheadOfHead": [
+        0.09153257908700145,
+        0.09781983901248442
+      ],
+      "dive": {
+        "blend": 0.7582032402026928,
+        "headBelowHips": true,
+        "verticalAlignment": 0.9804994754509702
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.002675245927799964,
+        "penetratingVertices": 0,
+        "checked": 5742,
+        "triangleIntersections": []
+      }
+    },
+    {
+      "vertical": "down",
+      "stage": "kick",
+      "action": "headfirst",
+      "handsAheadOfHead": [
+        0.09153257908700145,
+        0.09781983901248442
+      ],
+      "dive": {
+        "blend": 0.7582032402026928,
+        "headBelowHips": true,
+        "verticalAlignment": 0.9804994754509702
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.002675245927799964,
+        "penetratingVertices": 0,
+        "checked": 5741,
+        "triangleIntersections": []
+      }
+    },
+    {
+      "vertical": "down",
+      "stage": "glide",
+      "action": "headfirst",
+      "handsAheadOfHead": [
+        0.09153257908700145,
+        0.09781983901248442
+      ],
+      "dive": {
+        "blend": 0.7582032402026928,
+        "headBelowHips": true,
+        "verticalAlignment": 0.9804994754509702
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.002675245927799964,
+        "penetratingVertices": 0,
+        "checked": 5742,
+        "triangleIntersections": []
+      }
+    },
+    {
+      "vertical": "up",
+      "stage": "gather",
+      "action": "tuck",
+      "handsAheadOfHead": [
+        -0.21688541549890672,
+        -0.2141835437750029
+      ],
+      "dive": {
+        "blend": 0,
+        "headBelowHips": false,
+        "verticalAlignment": -0.9877394446467702
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.00022830843615166772,
+        "penetratingVertices": 0,
+        "checked": 5677,
+        "triangleIntersections": []
+      }
+    },
+    {
+      "vertical": "up",
+      "stage": "reach",
+      "action": "extend",
+      "handsAheadOfHead": [
+        0.12383099732085251,
+        0.13596603683780967
+      ],
+      "dive": {
+        "blend": 0.7582032402026928,
+        "headBelowHips": false,
+        "verticalAlignment": -0.9985714224595219
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.0006503212324964367,
+        "penetratingVertices": 0,
+        "checked": 5739,
+        "triangleIntersections": []
+      }
+    },
+    {
+      "vertical": "up",
+      "stage": "kick",
+      "action": "extend",
+      "handsAheadOfHead": [
+        0.12383099732085251,
+        0.13596603683780967
+      ],
+      "dive": {
+        "blend": 0.7582032402026928,
+        "headBelowHips": false,
+        "verticalAlignment": -0.9985714224595219
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.0006503212324964367,
+        "penetratingVertices": 0,
+        "checked": 5739,
+        "triangleIntersections": []
+      }
+    },
+    {
+      "vertical": "up",
+      "stage": "glide",
+      "action": "extend",
+      "handsAheadOfHead": [
+        0.12383099732085251,
+        0.13596603683780967
+      ],
+      "dive": {
+        "blend": 0.7582032402026928,
+        "headBelowHips": false,
+        "verticalAlignment": -0.9985714224595219
+      },
+      "cloth": {
+        "minimumSignedDistance": 0.0006503212324964367,
+        "penetratingVertices": 0,
+        "checked": 5739,
+        "triangleIntersections": []
+      }
+    }
+  ],
+  "errors": []
+}

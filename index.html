@@ -9,12 +9,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=42" />
   <script type="importmap">
   {
     "imports": {
-      "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
-      "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+      "three": "./vendor/three.module.js",
+      "three/addons/": "./vendor/addons/"
     }
   }
   </script>
@@ -32,10 +32,10 @@
         <div class="best-pill">BEST <span id="bestValue">0</span>m</div>
       </div>
       <div class="stamina-wrap">
-        <div class="stamina-label">STAMINA</div>
+        <div class="stamina-label"><span>STAMINA</span><span class="hud-rewards"><span class="treasure-total">寶石 <span id="treasureCount">0</span></span><span class="affection-total">♥ 好感 <span id="affectionCount">0</span></span></span></div>
         <div class="stamina-bar"><div id="staminaFill"></div></div>
       </div>
-      <div id="equipStrip" class="equip-strip"></div>
+      <div id="equipStrip" class="equip-strip"></div><span id="dressCondition" class="dress-condition">洋裝：完好</span>
       <div id="toast" class="toast"></div>
       <div id="whaleLine" class="whale-line"></div>
     </div>
@@ -45,7 +45,10 @@
       <button type="button" id="btnWhale" class="ctl">召喚鯨</button>
       <button type="button" id="btnBoost" class="ctl">加速</button>
       <button type="button" id="btnMagic" class="ctl">氣功標記</button>
-      <button type="button" id="btnAttack" class="ctl attack">攻擊</button>
+      <button type="button" id="btnAttack" class="ctl attack">蓄力攻擊</button>
+      <button type="button" id="btnMusic" class="ctl">音樂：開</button>
+      <label class="combat-selector">攻擊招式 <select id="attackStyle" aria-label="選擇攻擊招式"><option value="auto">隨機招式（十招輪換）</option></select></label>
+      <div id="attackStatus" class="combat-status" aria-live="polite">選招式後點攻擊，蓄力完成會自動出招</div>
       <button type="button" id="btnMode" class="ctl mode">手動</button>
     </div>
 
@@ -65,13 +68,14 @@
       <div class="title-content">
         <p class="brand">DEEP SEA FALL · WEB 3D</p>
         <h1>少女與鯨</h1>
-        <p class="tagline">手機可玩的 3D 深海墜落 · Isaac Sim 寫實過場另見 cinematic</p>
+        <p class="tagline">與座頭鯨一同潛入深海</p>
         <div class="title-actions">
           <button type="button" id="btnStartManual" class="primary">手動遊玩</button>
           <button type="button" id="btnStartAI" class="secondary">AI Mode</button>
           <button type="button" id="btnDemo" class="ghost">自動示範</button>
+          <a href="cinematic.html?v=42" class="ghost" style="color:#a8d0d6;text-decoration:none;padding:12px">深海相遇動畫 ↗</a>
         </div>
-        <p class="hint">拖曳游動 · 鯨會推開危險 · <a href="2d.html" style="color:#5ce1ff">切回 2D 版</a></p>
+        <p class="hint">輕點目標後自動游幾秒 · 自由式／蛙式交替 · 收集金色寶石補體力 · 避開礁石 · <a href="model-review.html?v=42" style="color:#a8d0d6">旋轉檢視 3D 海景</a> · <a href="2d.html" style="color:#5ce1ff">2D 版</a></p>
       </div>
     </div>
 
@@ -90,6 +94,6 @@
     </div>
   </div>
 
-  <script type="module" src="js/main3d.js"></script>
+  <script type="module" src="js/main3d.js?v=44"></script>
 </body>
 </html>

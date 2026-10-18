@@ -1,0 +1,17 @@
+{
+  "girl.usda": {
+    "meshes": 11,
+    "resolvedTextures": 5,
+    "normalsAndUV": "pass"
+  },
+  "whale.usda": {
+    "meshes": 38,
+    "resolvedTextures": 4,
+    "normalsAndUV": "pass"
+  },
+  "deep_sea_stage.usda": {
+    "meshes": 49,
+    "resolvedTextures": 9,
+    "normalsAndUV": "pass"
+  }
+}

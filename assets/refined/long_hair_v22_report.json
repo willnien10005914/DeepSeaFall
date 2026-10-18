@@ -1,0 +1,38 @@
+{
+  "revision": 22,
+  "style": "Swept-back natural hairline, compact rear-upper coiled bun and fine temple wisps",
+  "guide_count": 1068,
+  "temple_sideburn_guides": 90,
+  "hair_meshes": [
+    "hair_cap_swept",
+    "hair_bun_core",
+    "hair_crown_swept",
+    "hair_bun_coils",
+    "hair_fringe",
+    "hair_sideburn_l",
+    "hair_sideburn_r",
+    "hair_loose_l",
+    "hair_loose_r",
+    "hair_flyaways",
+    "hair_fine_crown_swept",
+    "hair_fine_bun",
+    "hair_fine_sideburn_l",
+    "hair_fine_sideburn_r",
+    "hair_fine_fringe",
+    "hair_fine_flyaways"
+  ],
+  "hair_vertices": 134016,
+  "min_hair_y": 1.4058725858137582,
+  "max_hair_y": 1.5624993250487014,
+  "bun_centre": [
+    -0.005,
+    1.525,
+    -0.043
+  ],
+  "bun_radii": [
+    0.034,
+    0.027,
+    0.032
+  ],
+  "finite": true
+}

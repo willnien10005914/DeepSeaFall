@@ -1,0 +1,7 @@
+# Expressive directed swimming, release 36
+
+Directional tap journeys retain their destination and propulsion, with seven leg/body accents layered over freestyle and breaststroke: alternating flutter, soft knees, gather/extend, a mild back arch, opening kicks, an asymmetric ballet reach and scissor kicks. Ankles point and flex with the kick. The torso keeps aiming toward the destination, while the spine/chest can curve and counter-twist.
+
+Each tap creates a new random seed. A shuffled seven-accent bag avoids consecutive repeats within the cycle. Accents change every 1.65 seconds with a 0.52-second analytic crossfade and damped pose state; retargeting and changing journeys do not snap the knees to a new target. Breaststroke accents use a lighter overlay to preserve the authored frog-stroke rhythm. Idle fades them out and sleep bypasses them. Restart clears the pose state. These are procedural skeletal accents, not a new training run.
+
+Verification: shuffled bags differ across seeds and cover all seven accents; boundary continuity; real WebGL rendering of all seven in each of two swim styles; bone finiteness/variation, head-to-hip heading alignment and independent garment vertex/triangle contact audits for fourteen representative poses. A complete touch-controlled journey and arrival braking, plus survival/reset regressions, are checked separately. Samples do not guarantee zero garment intersections at every possible instant. Previews/reports: assets/previews/v36.

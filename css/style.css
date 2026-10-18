@@ -361,3 +361,27 @@ html, body {
 }
 
 .revive-hint { color: #9dffb0; margin: 10px 0; font-size: 14px; }
+
+/* Treasure feedback follows the actual projected pickup point to STAMINA. */
+#gameFeedback{position:fixed;inset:0;pointer-events:none;z-index:45;overflow:hidden}
+.reward-token,.reward-spark,.feedback-label{position:absolute;left:0;top:0;will-change:transform,opacity;pointer-events:none}
+.reward-token{width:46px;height:34px;filter:drop-shadow(0 0 10px #ffd86c)}
+.reward-token svg{width:100%;height:100%}.reward-spark{width:4px;height:4px;border-radius:50%;background:#fff0b1;box-shadow:0 0 8px #ffd45e}
+.feedback-label{white-space:nowrap;color:#ffdf86;font-size:16px;font-weight:700;text-shadow:0 2px 8px #001b28}.feedback-label.hurt{color:#ff9b91}
+.damage-flash{position:absolute;inset:0;opacity:0;background:radial-gradient(ellipse at center,transparent 38%,#bd2834 100%)}
+.stamina-label{display:flex;justify-content:space-between;align-items:center}.treasure-total{color:#ffdd85;letter-spacing:.04em;opacity:1}
+.reward-arrived{animation:rewardPulse .55s ease-out}.stamina-hit{animation:damagePulse .45s ease-out}
+@keyframes rewardPulse{0%{box-shadow:0 0 0 0 #ffda60aa;border-color:#ffe094}100%{box-shadow:0 0 22px 9px #ffda6000}}
+@keyframes damagePulse{0%,40%{border-color:#ff8279;transform:translateX(-2px)}20%,60%{transform:translateX(2px)}100%{transform:translateX(0)}}
+
+.hud-rewards{display:flex;gap:12px}.affection-total{color:#ffb1c6;letter-spacing:.02em}.bond-heart{position:absolute;left:0;top:0;font-size:19px;color:#ffa0bd;text-shadow:0 0 9px #e874b5;will-change:transform,opacity}.feedback-label.bond{color:#ffc0d3;font-size:13px}.feedback-label.shatter{color:#d5ebef;font-size:13px}.bond-arrived{animation:bondPulse .6s ease-out}@keyframes bondPulse{0%{transform:scale(1.15);text-shadow:0 0 10px #ffa0bd}100%{transform:scale(1);text-shadow:none}}
+
+.dress-condition{display:inline-block;margin:0 14px 4px;padding:3px 7px;font-size:10px;color:#bad8db;background:#08253499;border-radius:6px}.dress-condition.worn{color:#ffb79e}.reward-token{width:30px;height:40px}
+
+.combat-selector { grid-column:span 3;display:flex;align-items:center;gap:8px;font-size:11px;color:#bddce7;padding:0 5px; }
+.combat-selector select {min-width:0;flex:1;border:1px solid #376477;border-radius:9px;padding:6px;background:#092435;color:#e4faff;font:inherit;}
+.combat-status {grid-column:span 3;text-align:center;min-height:14px;font-size:10px;color:#b8dbe8;pointer-events:none;}
+.ctl:disabled {opacity:.65;transform:none;}
+.ctl.attack.charging {background:linear-gradient(90deg,rgba(106,216,239,.5) var(--attack-fill),rgba(6,30,48,.8) var(--attack-fill));color:#efffff;}
+
+.ai-panel { bottom:calc(230px + env(safe-area-inset-bottom));max-height:35vh;overflow:auto; }

@@ -1,0 +1,161 @@
+{
+  "parityMaximumError": 4.1250180339569287e-7,
+  "closedLoopCases": [
+    {
+      "danger": true,
+      "x": 1.2,
+      "initial": 1.25,
+      "final": 2.642044539614349,
+      "minimum": 1.25,
+      "intents": [
+        "avoid",
+        "cruise"
+      ]
+    },
+    {
+      "danger": true,
+      "x": -1.2,
+      "initial": 1.25,
+      "final": 2.7031791985280083,
+      "minimum": 1.25,
+      "intents": [
+        "avoid",
+        "cruise"
+      ]
+    },
+    {
+      "danger": false,
+      "x": 2.6,
+      "initial": 2.623451924468981,
+      "final": 1.5995220129928918,
+      "minimum": 1.5995220129928918,
+      "intents": [
+        "approach",
+        "probe"
+      ]
+    },
+    {
+      "danger": false,
+      "x": -2.6,
+      "initial": 2.623451924468981,
+      "final": 1.5925146062351856,
+      "minimum": 1.5925146062351856,
+      "intents": [
+        "approach",
+        "probe"
+      ]
+    }
+  ],
+  "poses": [
+    {
+      "time": 2,
+      "intent": null,
+      "action": "flutter",
+      "finite": true,
+      "unit": true,
+      "source": "Blender baked local quaternions"
+    },
+    {
+      "time": 5.5,
+      "intent": null,
+      "action": "glide",
+      "finite": true,
+      "unit": true,
+      "source": "Blender baked local quaternions"
+    },
+    {
+      "time": 10,
+      "intent": null,
+      "action": "breaststroke",
+      "finite": true,
+      "unit": true,
+      "source": "Blender baked local quaternions"
+    },
+    {
+      "time": 15.5,
+      "intent": null,
+      "action": "dive",
+      "finite": true,
+      "unit": true,
+      "source": "Blender baked local quaternions"
+    },
+    {
+      "time": 21,
+      "intent": null,
+      "action": "turn",
+      "finite": true,
+      "unit": true,
+      "source": "Blender baked local quaternions"
+    },
+    {
+      "time": 25.5,
+      "intent": null,
+      "action": "reach",
+      "finite": true,
+      "unit": true,
+      "source": "Blender baked local quaternions"
+    },
+    {
+      "time": 3,
+      "intent": "avoid",
+      "action": "evade",
+      "finite": true,
+      "unit": true,
+      "source": "Blender baked local quaternions"
+    },
+    {
+      "time": 3,
+      "intent": "approach",
+      "action": "breaststroke",
+      "finite": true,
+      "unit": true,
+      "source": "Blender baked local quaternions"
+    },
+    {
+      "time": 3,
+      "intent": "probe",
+      "action": "reach",
+      "finite": true,
+      "unit": true,
+      "source": "Blender baked local quaternions"
+    }
+  ],
+  "materials": [
+    {
+      "name": "skin",
+      "bump": true,
+      "bumpScale": 0.0002,
+      "roughness": 0.53
+    },
+    {
+      "name": "dress",
+      "bump": true,
+      "bumpScale": 0.00032,
+      "roughness": 0.84
+    },
+    {
+      "name": "dress",
+      "bump": true,
+      "bumpScale": 0.00032,
+      "roughness": 0.84
+    },
+    {
+      "name": "dress",
+      "bump": true,
+      "bumpScale": 0.00032,
+      "roughness": 0.84
+    }
+  ],
+  "actions": [
+    "breaststroke",
+    "flutter",
+    "glide",
+    "dive",
+    "turn",
+    "reach",
+    "evade",
+    "float"
+  ],
+  "audioReady": 4,
+  "errors": []
+}

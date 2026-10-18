@@ -1,0 +1,16 @@
+{
+  "file": "bubbles-marine-and-rocks.mp4",
+  "source": "actual WebGL game with fixed simulation steps",
+  "seconds": 12,
+  "frames": 180,
+  "encodedFps": 15,
+  "performanceBenchmark": false,
+  "events": {
+    "summonSeconds": 1.2,
+    "boostSeconds": 4.4,
+    "dragSeconds": 4,
+    "sleepSeconds": 10.33,
+    "wakeSeconds": 11.13
+  },
+  "errors": []
+}

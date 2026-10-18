@@ -1,0 +1,1223 @@
+{
+  "base": "http://127.0.0.1:8899/",
+  "schedule": {
+    "bags": [
+      [
+        "dolphin-wave",
+        "side-sweep",
+        "back-arch",
+        "gather-extend",
+        "soft-knees",
+        "ballet-reach",
+        "reach-glide",
+        "open-kick",
+        "flutter",
+        "scissor"
+      ],
+      [
+        "flutter",
+        "reach-glide",
+        "open-kick",
+        "soft-knees",
+        "scissor",
+        "ballet-reach",
+        "back-arch",
+        "side-sweep",
+        "gather-extend",
+        "dolphin-wave"
+      ],
+      [
+        "reach-glide",
+        "ballet-reach",
+        "scissor",
+        "soft-knees",
+        "gather-extend",
+        "open-kick",
+        "side-sweep",
+        "back-arch",
+        "flutter",
+        "dolphin-wave"
+      ],
+      [
+        "back-arch",
+        "ballet-reach",
+        "open-kick",
+        "scissor",
+        "side-sweep",
+        "dolphin-wave",
+        "flutter",
+        "soft-knees",
+        "gather-extend",
+        "reach-glide"
+      ],
+      [
+        "ballet-reach",
+        "back-arch",
+        "dolphin-wave",
+        "side-sweep",
+        "gather-extend",
+        "flutter",
+        "open-kick",
+        "soft-knees",
+        "reach-glide",
+        "scissor"
+      ]
+    ],
+    "seen": [
+      "reach-glide",
+      "back-arch",
+      "flutter",
+      "open-kick",
+      "ballet-reach",
+      "dolphin-wave",
+      "scissor",
+      "soft-knees",
+      "side-sweep",
+      "gather-extend"
+    ],
+    "largestJump": 0.00004787197676830711
+  },
+  "poses": [
+    {
+      "style": "freestyle",
+      "accent": "dolphin-wave",
+      "active": "dolphin-wave",
+      "leftKnee": [
+        0.1209989628912008,
+        0,
+        0,
+        0.9926526335930681
+      ],
+      "rightKnee": [
+        0.13628997899051704,
+        0,
+        0,
+        0.9906689869107466
+      ],
+      "leftThigh": [
+        0.09539258498979586,
+        -0.002061168671905537,
+        0.021363030349827523,
+        0.995208333589979
+      ],
+      "rightThigh": [
+        0.07857915846720709,
+        0.0018543044332664492,
+        -0.021390659730352,
+        0.9966766361694022
+      ],
+      "spine": [
+        0.03391656653496008,
+        0.09798435461631333,
+        0.056529843286638265,
+        0.9930020692742247
+      ],
+      "heading": 0.9892707828884582,
+      "cloth": {
+        "minimumSignedDistance": 0.0006380984571917358,
+        "penetratingVertices": 0,
+        "checked": 5742,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 2,
+        "corrected": 2345,
+        "queries": 6402,
+        "maxCorrection": 0.04931622875506294,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 559,
+          "last": 0,
+          "remaining": 0,
+          "passes": 8
+        },
+        "milliseconds": 115.30000019073486
+      },
+      "finite": true
+    },
+    {
+      "style": "freestyle",
+      "accent": "side-sweep",
+      "active": "side-sweep",
+      "leftKnee": [
+        0.13908450221935653,
+        0,
+        0,
+        0.9902805164408689
+      ],
+      "rightKnee": [
+        0.1537749374357368,
+        0,
+        0,
+        0.9881058994949048
+      ],
+      "leftThigh": [
+        -0.052231533922453735,
+        0.00467235358364272,
+        0.07208077122768042,
+        0.9960192761163409
+      ],
+      "rightThigh": [
+        0.02492455299264868,
+        0.0025127800377185497,
+        -0.07217335649224321,
+        0.9970774589806163
+      ],
+      "spine": [
+        0.07460527596896233,
+        0.1250494556622371,
+        0.053874690147509216,
+        0.9878735770318402
+      ],
+      "heading": 0.9874744038611807,
+      "cloth": {
+        "minimumSignedDistance": 0.00015605215539908694,
+        "penetratingVertices": 0,
+        "checked": 5722,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 3,
+        "corrected": 1039,
+        "queries": 5916,
+        "maxCorrection": 0.03570733662131313,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 58,
+          "last": 0,
+          "remaining": 0,
+          "passes": 5
+        },
+        "milliseconds": 88.80000019073486
+      },
+      "finite": true
+    },
+    {
+      "style": "freestyle",
+      "accent": "back-arch",
+      "active": "back-arch",
+      "leftKnee": [
+        0.22018097637783277,
+        0,
+        0,
+        0.975459039448251
+      ],
+      "rightKnee": [
+        0.2705732021361411,
+        0,
+        0,
+        0.9626994039085073
+      ],
+      "leftThigh": [
+        0.12128644900240215,
+        -0.0057642953441983166,
+        0.04587484135322248,
+        0.991540150028424
+      ],
+      "rightThigh": [
+        0.07610098925570274,
+        0.004114755785896062,
+        -0.046081581865603724,
+        0.99602620248259
+      ],
+      "spine": [
+        0.033588567997984646,
+        0.12186461217971574,
+        0.05692528231430273,
+        0.9903435447518044
+      ],
+      "heading": 0.9874413481754442,
+      "cloth": {
+        "minimumSignedDistance": 0.003345955086419628,
+        "penetratingVertices": 0,
+        "checked": 5733,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 4,
+        "corrected": 714,
+        "queries": 5829,
+        "maxCorrection": 0.041293067091994914,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 70,
+          "last": 0,
+          "remaining": 0,
+          "passes": 4
+        },
+        "milliseconds": 65.7999997138977
+      },
+      "finite": true
+    },
+    {
+      "style": "freestyle",
+      "accent": "gather-extend",
+      "active": "gather-extend",
+      "leftKnee": [
+        0.4072971196759147,
+        0,
+        0,
+        0.9132957113135393
+      ],
+      "rightKnee": [
+        0.42081346701731814,
+        0,
+        0,
+        0.9071471909105293
+      ],
+      "leftThigh": [
+        -0.1458094770907637,
+        0.01111299937974438,
+        0.06579676093248112,
+        0.9870597164741844
+      ],
+      "rightThigh": [
+        -0.1775324053936344,
+        -0.012436425964294952,
+        -0.06547029849485161,
+        0.9818560079560444
+      ],
+      "spine": [
+        0.07597062023468072,
+        0.10028428895368481,
+        0.05232019875055694,
+        0.990673570381745
+      ],
+      "heading": 0.9874406421836764,
+      "cloth": {
+        "minimumSignedDistance": 0.004099258859223875,
+        "penetratingVertices": 0,
+        "checked": 5739,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 5,
+        "corrected": 521,
+        "queries": 5855,
+        "maxCorrection": 0.04307461831425185,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 74,
+          "last": 0,
+          "remaining": 0,
+          "passes": 4
+        },
+        "milliseconds": 71.40000009536743
+      },
+      "finite": true
+    },
+    {
+      "style": "freestyle",
+      "accent": "soft-knees",
+      "active": "soft-knees",
+      "leftKnee": [
+        0.2168938355412023,
+        0,
+        0,
+        0.9761951977469598
+      ],
+      "rightKnee": [
+        0.23136514984783088,
+        0,
+        0,
+        0.9728669834236798
+      ],
+      "leftThigh": [
+        -0.007959336173000263,
+        0.0005424614507389134,
+        0.03724474194515696,
+        0.9992743286508957
+      ],
+      "rightThigh": [
+        -0.06394099676442573,
+        -0.0023354365192495867,
+        -0.037168359749740545,
+        0.9972585460664399
+      ],
+      "spine": [
+        0.07597062023508078,
+        0.10028428895370595,
+        0.05232019875051644,
+        0.9906735703817143
+      ],
+      "heading": 0.9874406320955806,
+      "cloth": {
+        "minimumSignedDistance": 0.004254663712415862,
+        "penetratingVertices": 0,
+        "checked": 5734,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 6,
+        "corrected": 203,
+        "queries": 5808,
+        "maxCorrection": 0.03231749912386081,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 70,
+          "last": 0,
+          "remaining": 0,
+          "passes": 4
+        },
+        "milliseconds": 66.09999990463257
+      },
+      "finite": true
+    },
+    {
+      "style": "freestyle",
+      "accent": "ballet-reach",
+      "active": "ballet-reach",
+      "leftKnee": [
+        0.2851976848490853,
+        0,
+        0,
+        0.9584687165248127
+      ],
+      "rightKnee": [
+        0.07477937263375442,
+        0,
+        0,
+        0.9972001030026533
+      ],
+      "leftThigh": [
+        0.16195108801186892,
+        -0.013982149456179035,
+        0.08097684702176379,
+        0.983371290426343
+      ],
+      "rightThigh": [
+        -0.09447133909160277,
+        -0.010949794730719288,
+        -0.11297621184797906,
+        0.989035714037706
+      ],
+      "spine": [
+        0.04123099072192115,
+        0.14153632498417287,
+        0.056825208586679096,
+        0.9874403120103734
+      ],
+      "heading": 0.9874406319203575,
+      "cloth": {
+        "minimumSignedDistance": 0.0012902520377102915,
+        "penetratingVertices": 0,
+        "checked": 5718,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 7,
+        "corrected": 681,
+        "queries": 5846,
+        "maxCorrection": 0.045797432420881225,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 161,
+          "last": 0,
+          "remaining": 0,
+          "passes": 5
+        },
+        "milliseconds": 79.59999990463257
+      },
+      "finite": true
+    },
+    {
+      "style": "freestyle",
+      "accent": "reach-glide",
+      "active": "reach-glide",
+      "leftKnee": [
+        0.0599640064794446,
+        0,
+        0,
+        0.9982005399352042
+      ],
+      "rightKnee": [
+        0.10384246653410346,
+        0,
+        0,
+        0.9945937573422193
+      ],
+      "leftThigh": [
+        0.024028252670594507,
+        -0.0008972267581286698,
+        0.04622894671359163,
+        0.9986414384269735
+      ],
+      "rightThigh": [
+        -0.024028252670594545,
+        -0.0008972267581286716,
+        -0.04622894671359163,
+        0.9986414384269735
+      ],
+      "spine": [
+        0.04811243098456198,
+        0.1349403480044871,
+        0.056219729883214255,
+        0.9880868577392589
+      ],
+      "heading": 0.9874406319167672,
+      "cloth": {
+        "minimumSignedDistance": 0.0013201802358009404,
+        "penetratingVertices": 0,
+        "checked": 5728,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 8,
+        "corrected": 103,
+        "queries": 5784,
+        "maxCorrection": 0.03475869037809821,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 0,
+          "last": 0,
+          "remaining": 0,
+          "passes": 3
+        },
+        "milliseconds": 50.5
+      },
+      "finite": true
+    },
+    {
+      "style": "freestyle",
+      "accent": "open-kick",
+      "active": "open-kick",
+      "leftKnee": [
+        0.10067138283193858,
+        0,
+        0,
+        0.9949197317767426
+      ],
+      "rightKnee": [
+        0.11543354535519162,
+        0,
+        0,
+        0.9933152050616818
+      ],
+      "leftThigh": [
+        -0.00921575273089168,
+        0.0015469538600003231,
+        0.08637096778681753,
+        0.9962192192278396
+      ],
+      "rightThigh": [
+        -0.06243596819715563,
+        -0.0052590430469911485,
+        -0.08620238365892165,
+        0.9943054064989457
+      ],
+      "spine": [
+        0.07597062023508176,
+        0.100284288953706,
+        0.052320198750516335,
+        0.9906735703817142
+      ],
+      "heading": 0.9874406319167064,
+      "cloth": {
+        "minimumSignedDistance": 0.00570554840462018,
+        "penetratingVertices": 0,
+        "checked": 5724,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 9,
+        "corrected": 207,
+        "queries": 5783,
+        "maxCorrection": 0.02087481745632366,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 0,
+          "last": 0,
+          "remaining": 0,
+          "passes": 3
+        },
+        "milliseconds": 53.59999990463257
+      },
+      "finite": true
+    },
+    {
+      "style": "freestyle",
+      "accent": "flutter",
+      "active": "flutter",
+      "leftKnee": [
+        0.0734338403105878,
+        0,
+        0,
+        0.9973000907937588
+      ],
+      "rightKnee": [
+        0.13699381835782887,
+        0,
+        0,
+        0.9905719023532529
+      ],
+      "leftThigh": [
+        0.03729878697574938,
+        -0.0006121593221686481,
+        0.01698845665936112,
+        0.9991595558725518
+      ],
+      "rightThigh": [
+        -0.03729878697574945,
+        -0.0006121593221686493,
+        -0.01698845665936112,
+        0.9991595558725518
+      ],
+      "spine": [
+        0.07597062023508176,
+        0.100284288953706,
+        0.052320198750516335,
+        0.9906735703817142
+      ],
+      "heading": 0.9874406319167053,
+      "cloth": {
+        "minimumSignedDistance": 0.005566616864838944,
+        "penetratingVertices": 0,
+        "checked": 5736,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 10,
+        "corrected": 188,
+        "queries": 5784,
+        "maxCorrection": 0.013920742027402096,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 0,
+          "last": 0,
+          "remaining": 0,
+          "passes": 3
+        },
+        "milliseconds": 52.700000286102295
+      },
+      "finite": true
+    },
+    {
+      "style": "freestyle",
+      "accent": "scissor",
+      "active": "scissor",
+      "leftKnee": [
+        0.07792093205630146,
+        0,
+        0,
+        0.9969595419812569
+      ],
+      "rightKnee": [
+        0.1506351939768949,
+        0,
+        0,
+        0.9885894184824878
+      ],
+      "leftThigh": [
+        0.06100201346252813,
+        -0.004213447264213057,
+        0.07091601395555645,
+        0.9956063078246966
+      ],
+      "rightThigh": [
+        -0.061002013462528266,
+        -0.0042134472642130685,
+        -0.07091601395555645,
+        0.9956063078246966
+      ],
+      "spine": [
+        0.07597062023508176,
+        0.100284288953706,
+        0.052320198750516335,
+        0.9906735703817142
+      ],
+      "heading": 0.9874406319167053,
+      "cloth": {
+        "minimumSignedDistance": 0.005705548404620815,
+        "penetratingVertices": 0,
+        "checked": 5722,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 11,
+        "corrected": 66,
+        "queries": 5762,
+        "maxCorrection": 0.016112226427536153,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 4,
+          "last": 0,
+          "remaining": 0,
+          "passes": 4
+        },
+        "milliseconds": 59.40000009536743
+      },
+      "finite": true
+    },
+    {
+      "style": "breaststroke",
+      "accent": "dolphin-wave",
+      "active": "dolphin-wave",
+      "leftKnee": [
+        0.10987197688429559,
+        0,
+        0,
+        0.9939457473602554
+      ],
+      "rightKnee": [
+        0.11002069916277088,
+        0,
+        0,
+        0.9939292961552824
+      ],
+      "leftThigh": [
+        0.07099470475404393,
+        -0.0014189466101438186,
+        0.014571266620714163,
+        0.9973692479099564
+      ],
+      "rightThigh": [
+        0.0708454485493001,
+        0.0014208278761124271,
+        -0.014571370318605004,
+        0.9973798568424335
+      ],
+      "spine": [
+        0.20651214463649153,
+        0.0737870268612303,
+        0.06047482838940802,
+        0.9737818050856615
+      ],
+      "heading": 0.9874406319167053,
+      "cloth": {
+        "minimumSignedDistance": 0.0006743219615562509,
+        "penetratingVertices": 0,
+        "checked": 5741,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 12,
+        "corrected": 713,
+        "queries": 6005,
+        "maxCorrection": 0.03740997689200249,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 104,
+          "last": 0,
+          "remaining": 0,
+          "passes": 4
+        },
+        "milliseconds": 57.80000019073486
+      },
+      "finite": true
+    },
+    {
+      "style": "breaststroke",
+      "accent": "side-sweep",
+      "active": "side-sweep",
+      "leftKnee": [
+        0.12278343758335201,
+        0,
+        0,
+        0.9924334876732119
+      ],
+      "rightKnee": [
+        0.12278343758335201,
+        0,
+        0,
+        0.9924334876732119
+      ],
+      "leftThigh": [
+        -0.03579029286748377,
+        0.0034500052253169677,
+        0.05118232866738711,
+        0.9980418436281059
+      ],
+      "rightThigh": [
+        0.031725966566640305,
+        0.0018884312515191778,
+        -0.05122505358188714,
+        0.9981812915289254
+      ],
+      "spine": [
+        0.2465171501770679,
+        0.10040990982891428,
+        0.06315400243788362,
+        0.9618517124031138
+      ],
+      "heading": 0.9874406319167054,
+      "cloth": {
+        "minimumSignedDistance": 0.00002243343905283164,
+        "penetratingVertices": 0,
+        "checked": 5726,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 13,
+        "corrected": 533,
+        "queries": 5909,
+        "maxCorrection": 0.036458904388386275,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 0,
+          "last": 0,
+          "remaining": 0,
+          "passes": 3
+        },
+        "milliseconds": 55.59999990463257
+      },
+      "finite": true
+    },
+    {
+      "style": "breaststroke",
+      "accent": "back-arch",
+      "active": "back-arch",
+      "leftKnee": [
+        0.1816363308537502,
+        0,
+        0,
+        0.9833657729014099
+      ],
+      "rightKnee": [
+        0.20794437783363598,
+        0,
+        0,
+        0.9781406523232649
+      ],
+      "leftThigh": [
+        0.0896694188294648,
+        -0.004094519622159391,
+        0.032269281077680616,
+        0.9954402662814977
+      ],
+      "rightThigh": [
+        0.06868233059986961,
+        0.003044616036558705,
+        -0.03236734591401166,
+        0.9971087316311311
+      ],
+      "spine": [
+        0.2064861554247015,
+        0.09723522791011176,
+        0.06505743215513574,
+        0.971430032782894
+      ],
+      "heading": 0.9874406319167053,
+      "cloth": {
+        "minimumSignedDistance": 0.00024419767677850084,
+        "penetratingVertices": 0,
+        "checked": 5738,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 14,
+        "corrected": 100,
+        "queries": 5793,
+        "maxCorrection": 0.03562655780557009,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 22,
+          "last": 0,
+          "remaining": 0,
+          "passes": 4
+        },
+        "milliseconds": 56.59999990463257
+      },
+      "finite": true
+    },
+    {
+      "style": "breaststroke",
+      "accent": "gather-extend",
+      "active": "gather-extend",
+      "leftKnee": [
+        0.31957768533631425,
+        0,
+        0,
+        0.9475600788525673
+      ],
+      "rightKnee": [
+        0.31957768533631425,
+        0,
+        0,
+        0.9475600788525673
+      ],
+      "leftThigh": [
+        -0.10357955923504159,
+        0.008116390897810818,
+        0.04670308159367152,
+        0.9934909266204313
+      ],
+      "rightThigh": [
+        -0.11498122446618542,
+        -0.008947243693334755,
+        -0.04658455989419926,
+        0.9922344196962796
+      ],
+      "spine": [
+        0.2480525321874344,
+        0.07624581817131824,
+        0.057289350810764535,
+        0.9640406873003179
+      ],
+      "heading": 0.9874406319167054,
+      "cloth": {
+        "minimumSignedDistance": 0.0006430375809262723,
+        "penetratingVertices": 0,
+        "checked": 5740,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 15,
+        "corrected": 172,
+        "queries": 5862,
+        "maxCorrection": 0.035201907915089564,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 0,
+          "last": 0,
+          "remaining": 0,
+          "passes": 3
+        },
+        "milliseconds": 57
+      },
+      "finite": true
+    },
+    {
+      "style": "breaststroke",
+      "accent": "soft-knees",
+      "active": "soft-knees",
+      "leftKnee": [
+        0.17924340853130166,
+        0,
+        0,
+        0.983804757306083
+      ],
+      "rightKnee": [
+        0.17924340853130166,
+        0,
+        0,
+        0.983804757306083
+      ],
+      "leftThigh": [
+        -0.0037886198550967955,
+        0.00046522276983113785,
+        0.025996965823153056,
+        0.9996547342434576
+      ],
+      "rightThigh": [
+        -0.032502943989809165,
+        -0.0016146617623024634,
+        -0.02596477985397421,
+        0.9991330150217852
+      ],
+      "spine": [
+        0.2480525321874344,
+        0.07624581817131824,
+        0.057289350810764535,
+        0.9640406873003179
+      ],
+      "heading": 0.9874406319167054,
+      "cloth": {
+        "minimumSignedDistance": 0.0006430375809262723,
+        "penetratingVertices": 0,
+        "checked": 5732,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 16,
+        "corrected": 46,
+        "queries": 5773,
+        "maxCorrection": 0.022081221737926215,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 0,
+          "last": 0,
+          "remaining": 0,
+          "passes": 3
+        },
+        "milliseconds": 54
+      },
+      "finite": true
+    },
+    {
+      "style": "breaststroke",
+      "accent": "ballet-reach",
+      "active": "ballet-reach",
+      "leftKnee": [
+        0.22913864569832806,
+        0,
+        0,
+        0.9733937954638585
+      ],
+      "rightKnee": [
+        0.06560305873040531,
+        0,
+        0,
+        0.9978457990517449
+      ],
+      "leftThigh": [
+        0.11922902626428047,
+        -0.010049717714443601,
+        0.05772498431389092,
+        0.9911363522018011
+      ],
+      "rightThigh": [
+        -0.054638080933934643,
+        -0.007853989830048572,
+        -0.08089091293042519,
+        0.9951932752791732
+      ],
+      "spine": [
+        0.21375690811646414,
+        0.1165589842565068,
+        0.0685195567142311,
+        0.9674849134582235
+      ],
+      "heading": 0.9874406319167055,
+      "cloth": {
+        "minimumSignedDistance": 0.00032874373373667075,
+        "penetratingVertices": 0,
+        "checked": 5720,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 17,
+        "corrected": 232,
+        "queries": 5807,
+        "maxCorrection": 0.02316145534631576,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 0,
+          "last": 0,
+          "remaining": 0,
+          "passes": 3
+        },
+        "milliseconds": 56.80000019073486
+      },
+      "finite": true
+    },
+    {
+      "style": "breaststroke",
+      "accent": "reach-glide",
+      "active": "reach-glide",
+      "leftKnee": [
+        0.06560305873040531,
+        0,
+        0,
+        0.9978457990517449
+      ],
+      "rightKnee": [
+        0.08661652878886054,
+        0,
+        0,
+        0.9962417261591527
+      ],
+      "leftThigh": [
+        0.019318219080706585,
+        -0.000574642673171296,
+        0.03248926631518694,
+        0.9992852064208939
+      ],
+      "rightThigh": [
+        -0.003648265706180159,
+        -0.0005747301962542882,
+        -0.032494214713356395,
+        0.9994650998672745
+      ],
+      "spine": [
+        0.2205679798489854,
+        0.11007455378678678,
+        0.06685193348848358,
+        0.9668320318767004
+      ],
+      "heading": 0.9874406319167054,
+      "cloth": {
+        "minimumSignedDistance": 0.000597855120299372,
+        "penetratingVertices": 0,
+        "checked": 5730,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 18,
+        "corrected": 32,
+        "queries": 5782,
+        "maxCorrection": 0.037961990919056644,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 13,
+          "last": 0,
+          "remaining": 0,
+          "passes": 4
+        },
+        "milliseconds": 58.59999990463257
+      },
+      "finite": true
+    },
+    {
+      "style": "breaststroke",
+      "accent": "open-kick",
+      "active": "open-kick",
+      "leftKnee": [
+        0.095003861011477,
+        0,
+        0,
+        0.995476903997733
+      ],
+      "rightKnee": [
+        0.095003861011477,
+        0,
+        0,
+        0.995476903997733
+      ],
+      "leftThigh": [
+        -0.0047000578859270024,
+        0.001191368358889423,
+        0.06150725072528407,
+        0.9980948593222585
+      ],
+      "rightThigh": [
+        -0.0314204092869863,
+        -0.00372961953683623,
+        -0.06143612268658035,
+        0.9976093677625467
+      ],
+      "spine": [
+        0.2480525321874344,
+        0.07624581817131824,
+        0.057289350810764535,
+        0.9640406873003179
+      ],
+      "heading": 0.9874406319167054,
+      "cloth": {
+        "minimumSignedDistance": 0.0006239338816845912,
+        "penetratingVertices": 0,
+        "checked": 5724,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 19,
+        "corrected": 104,
+        "queries": 5779,
+        "maxCorrection": 0.026074292708509094,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 0,
+          "last": 0,
+          "remaining": 0,
+          "passes": 3
+        },
+        "milliseconds": 55.09999990463257
+      },
+      "finite": true
+    },
+    {
+      "style": "breaststroke",
+      "accent": "flutter",
+      "active": "flutter",
+      "leftKnee": [
+        0.07532878295742014,
+        0,
+        0,
+        0.9971587508807983
+      ],
+      "rightKnee": [
+        0.11061767388796091,
+        0,
+        0,
+        0.9938630339355705
+      ],
+      "leftThigh": [
+        0.02890142308695512,
+        -0.0003687434241286232,
+        0.011368886716405733,
+        0.9995175437112974
+      ],
+      "rightThigh": [
+        -0.013238941874679966,
+        -0.0003688464570309792,
+        -0.011372063368023875,
+        0.9998476236632678
+      ],
+      "spine": [
+        0.2480525321874344,
+        0.07624581817131824,
+        0.057289350810764535,
+        0.9640406873003179
+      ],
+      "heading": 0.9874406319167054,
+      "cloth": {
+        "minimumSignedDistance": 0.0006430432599804903,
+        "penetratingVertices": 0,
+        "checked": 5736,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 20,
+        "corrected": 85,
+        "queries": 5779,
+        "maxCorrection": 0.02176935724545868,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 0,
+          "last": 0,
+          "remaining": 0,
+          "passes": 3
+        },
+        "milliseconds": 53.700000286102295
+      },
+      "finite": true
+    },
+    {
+      "style": "breaststroke",
+      "accent": "scissor",
+      "active": "scissor",
+      "leftKnee": [
+        0.07856914536290255,
+        0,
+        0,
+        0.9969086665271515
+      ],
+      "rightKnee": [
+        0.12050661106223452,
+        0,
+        0,
+        0.9927125246970019
+      ],
+      "leftThigh": [
+        0.04604825288194266,
+        -0.0029713178724903376,
+        0.0503447493637245,
+        0.9976653426315485
+      ],
+      "rightThigh": [
+        -0.030380617252916953,
+        -0.0029728258451838844,
+        -0.050370299813242696,
+        0.9982639998009296
+      ],
+      "spine": [
+        0.2480525321874344,
+        0.07624581817131824,
+        0.057289350810764535,
+        0.9640406873003179
+      ],
+      "heading": 0.9874406319167054,
+      "cloth": {
+        "minimumSignedDistance": 0.0002577746630379474,
+        "penetratingVertices": 0,
+        "checked": 5726,
+        "triangleIntersections": []
+      },
+      "contactStats": {
+        "steps": 21,
+        "corrected": 35,
+        "queries": 5775,
+        "maxCorrection": 0.019510327896067586,
+        "clearance": 0.006,
+        "faceStats": {
+          "constraints": 0,
+          "last": 0,
+          "remaining": 0,
+          "passes": 3
+        },
+        "milliseconds": 55.799999713897705
+      },
+      "finite": true
+    }
+  ],
+  "errors": []
+}

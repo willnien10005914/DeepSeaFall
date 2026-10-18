@@ -1,0 +1,18 @@
+{
+  "release": 17,
+  "no_teeth": true,
+  "mask_vertices": 51154,
+  "mask_channels": 4,
+  "mask_minimum": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "mask_maximum": [
+    1.0,
+    1.0,
+    0.9562371252002747
+  ],
+  "finite": true,
+  "reference_workflow": "https://magazine.reallusion.com/2022/12/27/learn-from-winners-create-k-pop-avatar-with-game-modeler-in-seoul/amp/"
+}

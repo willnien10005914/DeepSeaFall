@@ -1,0 +1,7 @@
+{
+  "name": "Three.js ConvexHull",
+  "revision": "r170",
+  "source": "https://raw.githubusercontent.com/mrdoob/three.js/r170/examples/jsm/math/ConvexHull.js",
+  "sha256": "782e7e422c8d308cd686bacfd23356bda884f01727f9fc4a7a75bcff441bd1ad",
+  "license": "vendor/LICENSE.three.txt"
+}

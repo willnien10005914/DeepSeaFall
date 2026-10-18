@@ -1,0 +1,69 @@
+{
+  "release": "7",
+  "music": {
+    "playing": true,
+    "ready": 4,
+    "duration": 120.048,
+    "source": true,
+    "generatedBed": 0
+  },
+  "muted": true,
+  "snapshots": [
+    {
+      "time": 9.999999999999975,
+      "action": "breaststroke",
+      "near": 0.0016797377086252008,
+      "shoal": {
+        "active": true,
+        "count": 144,
+        "pass": 1
+      },
+      "whale": "following",
+      "finite": true
+    },
+    {
+      "time": 15.499999999999956,
+      "action": "dive",
+      "near": 0.9985966495651631,
+      "shoal": {
+        "active": false,
+        "count": 0,
+        "pass": 0
+      },
+      "whale": "following",
+      "finite": true
+    },
+    {
+      "time": 25.5,
+      "action": "reach",
+      "near": 0.00016549781451369566,
+      "shoal": {
+        "active": true,
+        "count": 144,
+        "pass": 2
+      },
+      "whale": "following",
+      "finite": true
+    }
+  ],
+  "restart": true,
+  "loaded": [
+    "http://127.0.0.1:8765/js/main3d.js?v=7",
+    "http://127.0.0.1:8765/js/three/game3d.js?v=7",
+    "http://127.0.0.1:8765/js/three/authored.js?v=7",
+    "http://127.0.0.1:8765/js/three/ocean-real.js?v=7",
+    "http://127.0.0.1:8765/js/three/marine-life.js?v=7",
+    "http://127.0.0.1:8765/js/three/swim-bubbles.js?v=7",
+    "http://127.0.0.1:8765/js/three/water.js?v=7",
+    "http://127.0.0.1:8765/js/zones.js",
+    "http://127.0.0.1:8765/js/audio.js?v=7",
+    "http://127.0.0.1:8765/js/three/rig-data.js",
+    "http://127.0.0.1:8765/js/three/meshes.js?v=7",
+    "http://127.0.0.1:8765/js/three/large-shoal.js?v=7",
+    "http://127.0.0.1:8765/js/three/whale-motion.js?v=5",
+    "http://127.0.0.1:8765/js/three/swimming.js?v=7",
+    "http://127.0.0.1:8765/js/three/ocean-real.js?v=6",
+    "http://127.0.0.1:8765/js/three/marine-life.js?v=6"
+  ],
+  "errors": []
+}

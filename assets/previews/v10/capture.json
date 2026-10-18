@@ -1,0 +1,20 @@
+{
+  "source": "Actual exported game character in the studio model viewer, with live hair motion",
+  "file": "reference-hair-side-back-30s.mp4",
+  "frames": 720,
+  "seconds": 30,
+  "fps": 24,
+  "dimensions": [
+    480,
+    960
+  ],
+  "audio": "requested-bgm.mp3",
+  "views": [
+    "front",
+    "side",
+    "back",
+    "other side",
+    "front with current response"
+  ],
+  "errors": []
+}

@@ -1,0 +1,27 @@
+{
+  "hairVertices": 552900,
+  "fineVertices": 107968,
+  "minimumHairY": 0.9045734405517578,
+  "longWeights": true,
+  "longHairTime": 1.4833333333333334,
+  "longHairFlow": [
+    0.02782771480257048,
+    -0.0008632027733156657,
+    -0.0003050692797911208
+  ],
+  "secondary": {
+    "hairTravel": 0,
+    "longHairTipEnvelope": 0.08211698781513076,
+    "fringeTravel": 0.004765527569770359,
+    "sideTravel": 0.009988929843924323,
+    "clothTravel": 0.08938943369350628,
+    "flow": [
+      0.02782771480257048,
+      -0.0008632027733156657,
+      -0.0003050692797911208
+    ]
+  },
+  "bones": 19,
+  "finite": true,
+  "errors": []
+}

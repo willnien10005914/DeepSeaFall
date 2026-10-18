@@ -1,0 +1,10 @@
+{
+  "revision": 27,
+  "max_corner_fill_mm": 1.248510550036677,
+  "central_upper_vertical_add_mm": 0.55,
+  "central_lower_vertical_add_mm": 0.7,
+  "smile_corner_lift_mm": 0.38,
+  "corner_seam_fades_to_zero_at_abs_x_m": 0.0185,
+  "no_teeth": true,
+  "body_below_neck_unchanged": true
+}

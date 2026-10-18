@@ -1,0 +1,10 @@
+{
+  "errors": [],
+  "broken": [],
+  "skeletal": {
+    "bones": 19,
+    "skinnedMeshes": 20,
+    "shoulderChanged": true
+  },
+  "gameDepth": "36"
+}

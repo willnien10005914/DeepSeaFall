@@ -1,0 +1,7 @@
+# Revision 30: preauricular hair and lifted crown layers
+
+Both ears have a fitted short preauricular lock in front of the pinna, plus four staggered wisps per side that release below the jaw. Twenty-eight additional closed ear locks and thirty smaller closed crown locks provide real cross-sections. Fine strands follow those curves. Crown layers use smooth root/tip joins and restrained middle lift; the short roots remain fixed while ends drift.
+
+The six new mesh groups use UV-length-based motion weights rather than height alone. The root fifth stays pinned; flexible tips respond to bounded water flow at different amplitudes for crown and ear hair. Existing long hair, face, body, garment contact code and thirteen swim actions are retained. The prior revision's high body/garment contact cost remains unresolved; this hair change does not claim to fix it.
+
+Validation: compare both ear closeups, front, crown and back; check finite positions and normalized skin weights; verify pinned root displacement is zero while tip motion is nonzero; verify 58 new closed components have consistent outward winding and positive volume. Compare all non-hair authored meshes byte-for-byte in structured data, and verify native Blender has nineteen bones and thirteen swim actions. The hair motion test isolates the groom by temporarily disabling garment contact only in its own preview page; deployed garment contact stays enabled. A short deployed-game smoke check is separate.

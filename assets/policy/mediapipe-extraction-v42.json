@@ -1,0 +1,13 @@
+{
+  "source": "https://www.youtube.com/watch?v=nZ3lfpCGimw",
+  "source_sha256": "8c40018a1cf5e09aef64b5bf9cc44eb7aee43d92489337f40428afe4c31976a8",
+  "model": "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/1/pose_landmarker_full.task",
+  "model_sha256": "5134a3aad27a58b93da0088d431f366da362b44e3ccfbe3462b3827a839011b1",
+  "mediapipe": "1.1.1",
+  "fps": 30.0,
+  "frames": 792,
+  "detected": 790,
+  "score_over_0.65": 743,
+  "seconds": 31.062435388565063,
+  "limitations": "Single-view inferred depth and occluded limbs are uncertain; confidence gating required before retargeting."
+}

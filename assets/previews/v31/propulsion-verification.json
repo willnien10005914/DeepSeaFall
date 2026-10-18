@@ -1,0 +1,237 @@
+{
+  "limits": {
+    "horizontal": 1.45,
+    "up": 0.46,
+    "down": 0.54,
+    "acceleration": 0.8,
+    "cycle": 2.05
+  },
+  "stageSequence": [
+    "gather",
+    "reach",
+    "kick",
+    "glide"
+  ],
+  "firstGatherDisplacement": 0.023822222222222234,
+  "downwardPeak": 0.5194666666666662,
+  "sixSecondDisplacement": -1.6924044444444462,
+  "reversalAndRest": true,
+  "samples": [
+    {
+      "stage": "gather",
+      "progress": 0.034722222222222224,
+      "phase": 0.016666666666666666,
+      "active": true,
+      "diveWeight": 0,
+      "ascentWeight": 0,
+      "target": {
+        "x": 0,
+        "y": -0.54,
+        "z": 0
+      },
+      "velocity": {
+        "x": 0,
+        "y": -0.013333333333333334,
+        "z": 0
+      }
+    },
+    {
+      "stage": "reach",
+      "progress": 0.09166666666666656,
+      "phase": 0.5166666666666666,
+      "active": true,
+      "diveWeight": 0.06599999999999992,
+      "ascentWeight": 0,
+      "target": {
+        "x": 0,
+        "y": -0.54,
+        "z": 0
+      },
+      "velocity": {
+        "x": 0,
+        "y": -0.09400000000000001,
+        "z": 0
+      }
+    },
+    {
+      "stage": "kick",
+      "progress": 0.3253968253968284,
+      "phase": 1.016666666666668,
+      "active": true,
+      "diveWeight": 1,
+      "ascentWeight": 0,
+      "target": {
+        "x": 0,
+        "y": -0.54,
+        "z": 0
+      },
+      "velocity": {
+        "x": 0,
+        "y": -0.29279999999999995,
+        "z": 0
+      }
+    },
+    {
+      "stage": "glide",
+      "progress": 0.28888888888888814,
+      "phase": 1.5166666666666662,
+      "active": true,
+      "diveWeight": 1,
+      "ascentWeight": 0,
+      "target": {
+        "x": 0,
+        "y": -0.54,
+        "z": 0
+      },
+      "velocity": {
+        "x": 0,
+        "y": -0.38880000000000003,
+        "z": 0
+      }
+    },
+    {
+      "stage": "glide",
+      "progress": 0.9555555555555525,
+      "phase": 2.0166666666666644,
+      "active": true,
+      "diveWeight": 1,
+      "ascentWeight": 0,
+      "target": {
+        "x": 0,
+        "y": -0.54,
+        "z": 0
+      },
+      "velocity": {
+        "x": 0,
+        "y": -0.38880000000000003,
+        "z": 0
+      }
+    },
+    {
+      "stage": "gather",
+      "progress": 0.9722222222222142,
+      "phase": 0.4666666666666628,
+      "active": true,
+      "diveWeight": 0,
+      "ascentWeight": 0,
+      "target": {
+        "x": 0,
+        "y": -0.54,
+        "z": 0
+      },
+      "velocity": {
+        "x": 0,
+        "y": -0.054000000000000006,
+        "z": 0
+      }
+    },
+    {
+      "stage": "kick",
+      "progress": 0.20634920634919288,
+      "phase": 0.966666666666661,
+      "active": true,
+      "diveWeight": 1,
+      "ascentWeight": 0,
+      "target": {
+        "x": 0,
+        "y": -0.54,
+        "z": 0
+      },
+      "velocity": {
+        "x": 0,
+        "y": -0.2528,
+        "z": 0
+      }
+    },
+    {
+      "stage": "glide",
+      "progress": 0.22222222222221225,
+      "phase": 1.4666666666666592,
+      "active": true,
+      "diveWeight": 1,
+      "ascentWeight": 0,
+      "target": {
+        "x": 0,
+        "y": -0.54,
+        "z": 0
+      },
+      "velocity": {
+        "x": 0,
+        "y": -0.38880000000000003,
+        "z": 0
+      }
+    },
+    {
+      "stage": "glide",
+      "progress": 0.8888888888888772,
+      "phase": 1.966666666666658,
+      "active": true,
+      "diveWeight": 1,
+      "ascentWeight": 0,
+      "target": {
+        "x": 0,
+        "y": -0.54,
+        "z": 0
+      },
+      "velocity": {
+        "x": 0,
+        "y": -0.38880000000000003,
+        "z": 0
+      }
+    },
+    {
+      "stage": "gather",
+      "progress": 0.868055555555534,
+      "phase": 0.4166666666666563,
+      "active": true,
+      "diveWeight": 0,
+      "ascentWeight": 0,
+      "target": {
+        "x": 0,
+        "y": -0.54,
+        "z": 0
+      },
+      "velocity": {
+        "x": 0,
+        "y": -0.055466666666666914,
+        "z": 0
+      }
+    },
+    {
+      "stage": "kick",
+      "progress": 0.08730158730155839,
+      "phase": 0.9166666666666545,
+      "active": true,
+      "diveWeight": 1,
+      "ascentWeight": 0,
+      "target": {
+        "x": 0,
+        "y": -0.54,
+        "z": 0
+      },
+      "velocity": {
+        "x": 0,
+        "y": -0.21280000000000002,
+        "z": 0
+      }
+    },
+    {
+      "stage": "glide",
+      "progress": 0.15555555555553693,
+      "phase": 1.4166666666666528,
+      "active": true,
+      "diveWeight": 1,
+      "ascentWeight": 0,
+      "target": {
+        "x": 0,
+        "y": -0.54,
+        "z": 0
+      },
+      "velocity": {
+        "x": 0,
+        "y": -0.42613333333333303,
+        "z": 0
+      }
+    }
+  ]
+}

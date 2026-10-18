@@ -1,0 +1,12 @@
+{
+  "renderer": "Blender Cycles",
+  "backend": "OPTIX",
+  "samples": 48,
+  "views": [
+    "portrait",
+    "front",
+    "side",
+    "back",
+    "face-front"
+  ]
+}

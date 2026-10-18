@@ -1,4 +1,4 @@
-import { Game3D } from "./three/game3d.js";
+import { Game3D } from "./three/game3d.js?v=44";
 
 const canvas = document.getElementById("game");
 const $ = (id) => document.getElementById(id);
@@ -10,6 +10,7 @@ const ui = {
   btnMagic: $("btnMagic"),
   btnAttack: $("btnAttack"),
   btnMode: $("btnMode"),
+  btnMusic: $("btnMusic"),
   aiPanel: $("aiPanel"),
 
   showGame() {
@@ -34,6 +35,9 @@ const ui = {
   setStamina(v) {
     $("staminaFill").style.width = `${Math.max(0, Math.min(100, v))}%`;
   },
+  setDressCondition(v) { const el=$('dressCondition');if(el){el.textContent=v>0?'洋裝：裙擺破損':'洋裝：完好';el.classList.toggle('worn',v>0);} },
+  setAffection(v) { $("affectionCount").textContent = String(v); },
+  setTreasure(v) { $("treasureCount").textContent = String(v); },
   setEquip(girl) {
     const strip = $("equipStrip");
     strip.innerHTML = "";

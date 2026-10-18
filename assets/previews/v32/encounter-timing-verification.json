@@ -1,0 +1,25 @@
+{
+  "timing": {
+    "arrival": 3,
+    "stay": 6,
+    "departure": 2.8
+  },
+  "indices": [
+    2,
+    1,
+    4,
+    3,
+    0,
+    5,
+    2,
+    1,
+    4,
+    3,
+    0,
+    5
+  ],
+  "uniqueStops": 6,
+  "variedScales": true,
+  "variedBodyPhases": true,
+  "wallClockLowFpsDeparture": true
+}

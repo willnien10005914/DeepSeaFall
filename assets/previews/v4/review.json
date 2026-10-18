@@ -1,0 +1,36 @@
+{
+  "before": {
+    "whaleVisible": false,
+    "state": "hidden"
+  },
+  "after": {
+    "beforeState": "hidden",
+    "whaleVisible": true,
+    "whaleState": "following",
+    "camera": [
+      0.8,
+      2.1815092086690524,
+      12.399945452319198
+    ],
+    "whale": [
+      0.44999999999999984,
+      -0.07916210083263316,
+      -4.1
+    ],
+    "girl": [
+      0,
+      -0.4,
+      0
+    ],
+    "render": {
+      "frame": 112,
+      "calls": 1,
+      "triangles": 2,
+      "points": 0,
+      "lines": 0
+    }
+  },
+  "errors": [],
+  "shaderErrors": [],
+  "broken": []
+}

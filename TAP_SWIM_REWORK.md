@@ -1,0 +1,11 @@
+# Tap swimming, release 35
+
+In manual mode, a short click/tap stores a bounded swim destination after pointer release. The next click changes the destination and alternates between freestyle and breaststroke. Dragging retargets the existing journey without changing its stroke or restarting the animation. Targets cover upper/lower diagonals, left/right and the centre. The horizontal extent adapts to portrait screens to keep the body visible. The camera follows manual movement only slightly, making movement through the scene visible. Whale encounter camera framing remains intact.
+
+Journeys last up to 7.4 simulation seconds, ending sooner when within 0.14 m of the target. Ordinary centre-to-edge journeys in the controller test take roughly 3–4 seconds. Propulsion eases in, pulses through a stroke and brakes on arrival/expiry. Sleep, mode changes, cancellation and restart clear the journey. Manual idle no longer follows a creature automatically; AI mode retains the existing reaction policy.
+
+Freestyle uses alternating arm circles, bent recovery elbows and opposite-phase flutter kicks. Breaststroke uses the existing Blender-authored synchronized arm/leg action. Both use a smoothed torso heading toward the target, with a fade into/out of the stroke. The existing hair/cloth motion, hand/foot bubbles and curved water wake continue throughout the journey after pointer release. These are authored/procedural skeletal animations, not newly trained physics policies.
+
+Sideways poses exposed expensive repeated garment contact solving. The garment collision frame now follows the hips orientation, keeping BVH queries aligned with the torso. Face contacts use a bounded twelve iterations per garment per frame and continue on subsequent frames. Representative freestyle and breaststroke poses are independently audited for penetrating vertices and triangle intersections; this does not promise zero intersections for every possible pose or collision.
+
+Verification: real pointer down/up persistence; seven directional routes and return to centre; alternating styles, drag retargeting, sleep cancellation; full live journey and deceleration; varying wrist/knee poses and heading alignment; rendered examples and garment audits; survival and whale interaction regressions. Reports: assets/previews/v35/.

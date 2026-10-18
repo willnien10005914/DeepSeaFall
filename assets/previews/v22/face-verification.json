@@ -1,0 +1,8 @@
+{
+  "chin_sample_vertices": 27,
+  "chin_mean_projection_change_mm": -3.15096919651597,
+  "chin_max_projection_change_mm": -3.759664528003262,
+  "body_below_1_35_unchanged": true,
+  "finite": true,
+  "no_teeth": true
+}

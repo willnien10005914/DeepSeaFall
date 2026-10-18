@@ -1,0 +1,202 @@
+{
+  "samples": [
+    {
+      "time": 2,
+      "running": true,
+      "shaderTime": 2,
+      "flow": [
+        -0.015944003555256735,
+        0.0042510372762687605,
+        -0.0036932473650433425
+      ],
+      "action": "flutter",
+      "bonesFinite": true,
+      "hair": {
+        "hairTravel": 0,
+        "longHairTipEnvelope": 0.06243664509428522,
+        "fringeTravel": 0.010976218276082937,
+        "sideTravel": 0.007056506454159519,
+        "clothTravel": 0.060105648479601065,
+        "flow": [
+          -0.015944003555256735,
+          0.0042510372762687605,
+          -0.0036932473650433425
+        ]
+      }
+    },
+    {
+      "time": 4.999999999999989,
+      "running": true,
+      "shaderTime": 4.999999999999989,
+      "flow": [
+        -0.0034501290025410933,
+        0.0027638001950152894,
+        0.0011944009836199912
+      ],
+      "action": "flutter",
+      "bonesFinite": true,
+      "hair": {
+        "hairTravel": 0,
+        "longHairTipEnvelope": 0.040242462263928046,
+        "fringeTravel": 0.01153822529846614,
+        "sideTravel": 0.005102418905675996,
+        "clothTravel": 0.04780802313303828,
+        "flow": [
+          -0.0034501290025410933,
+          0.0027638001950152894,
+          0.0011944009836199912
+        ]
+      }
+    },
+    {
+      "time": 9.999999999999972,
+      "running": true,
+      "shaderTime": 9.999999999999972,
+      "flow": [
+        -0.0023349504455112734,
+        0.0009719481698760404,
+        0.0005067723184818952
+      ],
+      "action": "breaststroke",
+      "bonesFinite": true,
+      "hair": {
+        "hairTravel": 0,
+        "longHairTipEnvelope": 0.036642986521051094,
+        "fringeTravel": 0.008348210064359865,
+        "sideTravel": 0.0051970428231573745,
+        "clothTravel": 0.047859192618178094,
+        "flow": [
+          -0.0023349504455112734,
+          0.0009719481698760404,
+          0.0005067723184818952
+        ]
+      }
+    },
+    {
+      "time": 15.499999999999952,
+      "running": true,
+      "shaderTime": 15.499999999999952,
+      "flow": [
+        0.0102201944869215,
+        -0.004139994026667099,
+        -0.0008502680102079391
+      ],
+      "action": "evade",
+      "bonesFinite": true,
+      "hair": {
+        "hairTravel": 0,
+        "longHairTipEnvelope": 0.051907290531885406,
+        "fringeTravel": 0.008321645629260977,
+        "sideTravel": 0.005972955541761772,
+        "clothTravel": 0.04684522391444289,
+        "flow": [
+          0.0102201944869215,
+          -0.004139994026667099,
+          -0.0008502680102079391
+        ]
+      }
+    },
+    {
+      "time": 21,
+      "running": true,
+      "shaderTime": 21,
+      "flow": [
+        -0.01187354525019804,
+        0.003144032083839782,
+        -0.006219284099585865
+      ],
+      "action": "flutter",
+      "bonesFinite": true,
+      "hair": {
+        "hairTravel": 0,
+        "longHairTipEnvelope": 0.05678159498530323,
+        "fringeTravel": 0.00892169826823641,
+        "sideTravel": 0.0050116322486107815,
+        "clothTravel": 0.053386430544055535,
+        "flow": [
+          -0.01187354525019804,
+          0.003144032083839782,
+          -0.006219284099585865
+        ]
+      }
+    },
+    {
+      "time": 26,
+      "running": true,
+      "shaderTime": 26,
+      "flow": [
+        -0.0016274911510833548,
+        0.002377679664900755,
+        0.003056852652138206
+      ],
+      "action": "flutter",
+      "bonesFinite": true,
+      "hair": {
+        "hairTravel": 0,
+        "longHairTipEnvelope": 0.03956137905406771,
+        "fringeTravel": 0.008574135274702787,
+        "sideTravel": 0.005124875533670991,
+        "clothTravel": 0.04768702591172006,
+        "flow": [
+          -0.0016274911510833548,
+          0.002377679664900755,
+          0.003056852652138206
+        ]
+      }
+    },
+    {
+      "time": 29.5,
+      "running": true,
+      "shaderTime": 29.5,
+      "flow": [
+        0.016598575428455987,
+        0.000059379697576765166,
+        0.009673946417626028
+      ],
+      "action": "flutter",
+      "bonesFinite": true,
+      "hair": {
+        "hairTravel": 0,
+        "longHairTipEnvelope": 0.06658162471081533,
+        "fringeTravel": 0.011892491861960118,
+        "sideTravel": 0.004730828345406628,
+        "clothTravel": 0.060527245879570896,
+        "flow": [
+          0.016598575428455987,
+          0.000059379697576765166,
+          0.009673946417626028
+        ]
+      }
+    }
+  ],
+  "names": [
+    "hair_cap_l",
+    "hair_cap_r",
+    "hair_long_core",
+    "hair_long_side_l",
+    "hair_sideburn_base_l",
+    "hair_sideburn_base_r",
+    "hair_long_layers",
+    "hair_long_side_layers",
+    "hair_crown",
+    "hair_fringe",
+    "hair_sideburn_l",
+    "hair_sideburn_r",
+    "hair_loose_l",
+    "hair_loose_r",
+    "hair_fine_long",
+    "hair_long_fine_side",
+    "hair_fine_crown",
+    "hair_fine_sideburn_l",
+    "hair_fine_sideburn_r"
+  ],
+  "oral": [],
+  "oralBind": true,
+  "bind": true,
+  "music": {
+    "ready": 4,
+    "playing": true
+  },
+  "restart": true,
+  "errors": []
+}

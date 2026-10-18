@@ -1,0 +1,38 @@
+{
+  "release": 25,
+  "mpfb": {
+    "addon": "MPFB",
+    "version": [
+      2,
+      0,
+      18
+    ],
+    "operation": "TargetService.load_target + bake_targets",
+    "eye_aperture": "upper lid lift and lower lid relaxation; eyeball dimensions preserved",
+    "target_vertices": 1326
+  },
+  "rigify": {
+    "extension": "Rigify",
+    "rig_controls": 222,
+    "actions": [
+      "tuck",
+      "extend",
+      "roll",
+      "dolphin"
+    ],
+    "sample_rate": 30,
+    "frames": 382,
+    "retarget": "evaluated DEF world deltas -> swimmer parent-local XYZW"
+  },
+  "restored_thigh_faces": 400,
+  "runtime_skirt": "hips/thigh blend plus pose-dependent clearance",
+  "cell_fluids": {
+    "installed": false,
+    "pending": "licensed installation package or official exported asset",
+    "fallback": "original runtime projected velocity field",
+    "adapter": "water.loadFlowMap"
+  },
+  "appearance_limit": "Authored mesh revision; not a face scan or exact reference reproduction",
+  "native_validation": "blender-verification.json",
+  "encounter_validation": "motion-encounter-verification.json"
+}

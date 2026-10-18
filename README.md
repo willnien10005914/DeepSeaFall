@@ -1,5 +1,27 @@
 # Deep Sea Fall — 少女與鯨（混合架構）
 
+## 2026-10-13 海景與游動重製 v4
+
+- 拖曳時角色有交替划水、手肘與手腕動作、踢腿、傾身與轉向；睡眠切換成放鬆漂浮。
+- 「召喚鯨」會讓座頭鯨從左側游入、移動到少女旁同行，鏡頭隨出場調整。重新開始可再次召喚。
+- 海景改為立體破碎海谷、前景岩塊、掃描岩石 PBR 材質、水下光線積分、岩壁與角色陰影、動態焦散與懸浮微粒。
+- 修正鯨體與鰭面朝內的法線，重新製作較寬的头部和正確的背腹色紋。
+- 實際遊戲錄影：[`assets/previews/v4/swimming-and-summon.mp4`](assets/previews/v4/swimming-and-summon.mp4)。
+- 檢查記錄與各頁截圖：`assets/previews/v4/`。詳見 [OCEAN_REWORK.md](OCEAN_REWORK.md)。
+
+## 少女精修 v3 資產
+
+- `model-review.html` — 少女、五官、座頭鯨與相遇場景，可旋轉／縮放。
+- `cinematic.html` — 36 秒互動動畫，下沉 → 浮現 → 相遇 → 上升。
+- `index.html` — 原有遊戲操作，使用同一套新版模型。
+- 重建：`/home/spark/env_isaaclab/bin/python assets/scripts/rebuild_realistic.py`。
+- 可編輯 Blender：`assets/refined/girl_reference_v3.blend`，貼圖已打包。
+- 少女棚拍、遊戲截圖與驗證：`assets/previews/v3/`。
+
+這版按照所提供的照片精修少女比例、五官、棕色低馬尾、分束瀏海與淡綠方領裙。
+仍與原作有外觀、渲染和動作差異，並非原作資產或一比一複製。
+詳見 [GIRL_REFINEMENT.md](GIRL_REFINEMENT.md)。下方是原專案使用方式。
+
 垂直手機深海墜落遊戲：**Web 3D 可玩** + **Isaac Sim 寫實過場**。
 
 靈感來自 [Incheon Airport Media Tower Girl and Whale](https://www.behance.net/gallery/248368373/Incheon-Airport-Media-Tower-Girl-and-Whale)。
@@ -53,11 +75,11 @@ cd isaac_cinematic && ./export_character_previews.sh
 # 產出 assets/previews/character_*.png + character_orbit.mp4
 ```
 
-| Front | Orbit | Side |
+| 正面 | 五官 | 側面 |
 |:-----:|:-----:|:----:|
-| ![front](assets/previews/character_front.png) | ![orbit](assets/previews/character_orbit_b.png) | ![side](assets/previews/character_side.png) |
+| ![girl](assets/previews/v3/front.png) | ![face](assets/previews/v3/portrait.png) | ![side](assets/previews/v3/side.png) |
 
-短片：[`assets/previews/character_orbit.mp4`](assets/previews/character_orbit.mp4)
+最新的海景與角色即時動畫：[`cinematic.html?v=4.1`](cinematic.html?v=4.1)。`assets/previews/v2/deep-sea-encounter.mp4` 與 `character_orbit.mp4` 均為舊版預覽。
 
 ## Demo 錄影
 

@@ -1,0 +1,36 @@
+{
+  "release": "5",
+  "errors": [],
+  "loaded": [
+    "http://127.0.0.1:8765/js/main3d.js?v=5",
+    "http://127.0.0.1:8765/js/three/game3d.js?v=5",
+    "http://127.0.0.1:8765/js/three/water.js?v=5",
+    "http://127.0.0.1:8765/js/zones.js",
+    "http://127.0.0.1:8765/js/three/ocean-real.js?v=5",
+    "http://127.0.0.1:8765/js/three/authored.js?v=5",
+    "http://127.0.0.1:8765/js/audio.js",
+    "http://127.0.0.1:8765/js/three/meshes.js",
+    "http://127.0.0.1:8765/js/three/rig-data.js",
+    "http://127.0.0.1:8765/js/three/whale-motion.js?v=5",
+    "http://127.0.0.1:8765/js/three/swimming.js?v=5"
+  ],
+  "whaleBones": 9,
+  "whalePhase": 0.17487994765865733,
+  "whaleRoll": -0.5972221695528566,
+  "whale": "following",
+  "visible": true,
+  "swim": "swim",
+  "phase": 0.48958000000000046,
+  "scene": {
+    "frame": 53,
+    "calls": 90,
+    "triangles": 679452,
+    "points": 1600,
+    "lines": 0
+  },
+  "sunDirection": [
+    -0.2790727860929738,
+    0.7814038010603267,
+    0.5581455721859476
+  ]
+}

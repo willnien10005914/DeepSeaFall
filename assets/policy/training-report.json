@@ -1,0 +1,78 @@
+{
+  "method": "supervised imitation learning of predictive steering; Blender provides authored motion, not physics RL",
+  "device": "CPU",
+  "training_samples": 96000,
+  "held_out_samples": 12000,
+  "epochs": 100,
+  "seed": 810,
+  "held_out_seed": 9810,
+  "velocity_rmse_m_per_s": 0.09245394170284271,
+  "output_rmse": 0.03716157749295235,
+  "predicted_hazard_away_direction_fraction": 0.9807280513918629,
+  "seconds": 21.177746295928955,
+  "log": [
+    {
+      "epoch": 1,
+      "validation_rmse": 0.13884352147579193
+    },
+    {
+      "epoch": 11,
+      "validation_rmse": 0.13311530649662018
+    },
+    {
+      "epoch": 21,
+      "validation_rmse": 0.09128523617982864
+    },
+    {
+      "epoch": 31,
+      "validation_rmse": 0.06108778342604637
+    },
+    {
+      "epoch": 41,
+      "validation_rmse": 0.05191602185368538
+    },
+    {
+      "epoch": 51,
+      "validation_rmse": 0.047091029584407806
+    },
+    {
+      "epoch": 61,
+      "validation_rmse": 0.04417837783694267
+    },
+    {
+      "epoch": 71,
+      "validation_rmse": 0.041978321969509125
+    },
+    {
+      "epoch": 81,
+      "validation_rmse": 0.0398385226726532
+    },
+    {
+      "epoch": 91,
+      "validation_rmse": 0.038341816514730453
+    },
+    {
+      "epoch": 100,
+      "validation_rmse": 0.03716157749295235
+    }
+  ],
+  "observation": [
+    "dx/4",
+    "dy/4",
+    "dz/4",
+    "object_vx/2",
+    "object_vy/2",
+    "self_vx/2",
+    "self_vy/2",
+    "danger",
+    "radius/1.4",
+    "curiosity"
+  ],
+  "outputs": [
+    "vx/2",
+    "vy/2",
+    "approach",
+    "avoid"
+  ],
+  "limitations": "Abstract steering data with depth and predicted separation, not full hydrodynamics or learned muscle control."
+}

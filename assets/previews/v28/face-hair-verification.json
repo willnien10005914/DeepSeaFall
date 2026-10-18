@@ -1,0 +1,15 @@
+{
+  "body_rig_and_hidden_helpers_unchanged": true,
+  "no_oral_mesh_or_teeth": true,
+  "mean_lip_retraction_mm": 0.6443894840701296,
+  "sideburn_guides": 244,
+  "sideburn_tip_z_range_m": [
+    0.04902608695652174,
+    0.05497391304347826
+  ],
+  "length_layers": 6,
+  "long_guides": 1904,
+  "extra_volume_locks": 16,
+  "maximum_guide_step_m": 0.02405145641159184,
+  "valid": true
+}

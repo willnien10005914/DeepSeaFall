@@ -1,0 +1,31 @@
+{
+  "active": {
+    "active": true,
+    "strokePoints": 30,
+    "wakePoints": 38,
+    "swishPoints": 0,
+    "bursts": 1
+  },
+  "body": {
+    "pitch": 0.10888444746290925,
+    "twist": 0.2994247932398711,
+    "roll": -0.012807670855305982
+  },
+  "hair": {
+    "hairTravel": 0.032919237174193074,
+    "fringeTravel": 0.004963097084371153,
+    "clothTravel": 0.05752852786308452,
+    "flow": [
+      -0.009743316583230794,
+      -0.00815550196335014,
+      -0.01525350816826732
+    ]
+  },
+  "music": {
+    "ready": 4,
+    "playing": true
+  },
+  "faded": true,
+  "restart": true,
+  "errors": []
+}

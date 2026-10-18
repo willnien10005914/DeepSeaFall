@@ -1,0 +1,19 @@
+{
+  "reference": "https://www.youtube.com/watch?v=lQ8CXVkkCdw",
+  "actions": [
+    "breaststroke",
+    "flutter",
+    "glide",
+    "dive",
+    "turn",
+    "reach",
+    "evade",
+    "float"
+  ],
+  "bones": 19,
+  "sample_rate": 30,
+  "frames": 920,
+  "body_fit": "localized shoulder/waist and limb centre-line sculpt; head preserved",
+  "motion": "visually authored finless strokes, not extracted mocap",
+  "editable_file": "assets/refined/girl_swim_v8.blend"
+}

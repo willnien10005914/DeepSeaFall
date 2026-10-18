@@ -1,0 +1,27 @@
+{
+  "source": "Actual exported game character in the studio model viewer",
+  "file": "rounded-chin-refinement-30s.mp4",
+  "seconds": 30,
+  "frames": 720,
+  "fps": 24,
+  "dimensions": [
+    720,
+    1440
+  ],
+  "audio": "requested-bgm.mp3",
+  "shots": {
+    "faceSeconds": [
+      0,
+      8
+    ],
+    "fullHairTurntableSeconds": [
+      8,
+      24
+    ],
+    "currentResponseSeconds": [
+      24,
+      30
+    ]
+  },
+  "errors": []
+}

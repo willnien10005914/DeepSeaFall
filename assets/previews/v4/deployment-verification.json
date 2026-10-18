@@ -1,0 +1,106 @@
+{
+  "revision": 4,
+  "backup": "/home/spark/will/DeepSeaFall-backup-20261013-ocean",
+  "installedFilesMatched": 47,
+  "changed_files": [
+    "OCEAN_REWORK.md",
+    "README.md",
+    "assets/environment/CREDITS.json",
+    "assets/environment/rock-albedo.jpg",
+    "assets/environment/rock-height.jpg",
+    "assets/environment/rock-normal.jpg",
+    "assets/environment/rock-roughness.jpg",
+    "assets/environment/rock-source.json",
+    "assets/previews/v4/capture.json",
+    "assets/previews/v4/cinematic-17.png",
+    "assets/previews/v4/cinematic-28.png",
+    "assets/previews/v4/cinematic-9.png",
+    "assets/previews/v4/landscape-game.png",
+    "assets/previews/v4/motion-verification.json",
+    "assets/previews/v4/ocean-review.png",
+    "assets/previews/v4/restart-verification.json",
+    "assets/previews/v4/review.json",
+    "assets/previews/v4/stroke-1.png",
+    "assets/previews/v4/stroke-2.png",
+    "assets/previews/v4/stroke-3.png",
+    "assets/previews/v4/studio-face.png",
+    "assets/previews/v4/swimming-and-summon.mp4",
+    "assets/previews/v4/swimming-start.png",
+    "assets/previews/v4/usd-verification.json",
+    "assets/previews/v4/whale-arriving.png",
+    "assets/previews/v4/whale-companion.png",
+    "assets/scripts/rebuild_realistic.py",
+    "assets/scripts/rebuild_refined.py",
+    "assets/scripts/refine_whale_for_ocean.py",
+    "assets/scripts/validate_refined_usd.py",
+    "assets/usd/rebuild_report.json",
+    "assets/usd/textures/whale_color.jpg",
+    "assets/usd/textures/whale_normal.png",
+    "assets/usd/textures/whale_roughness.png",
+    "assets/usd/whale.glb",
+    "assets/usd/whale.usda",
+    "cinematic.html",
+    "index.html",
+    "js/cinematic.js",
+    "js/main3d.js",
+    "js/model-review.js",
+    "js/three/authored.js",
+    "js/three/game3d.js",
+    "js/three/ocean-real.js",
+    "js/three/swimming.js",
+    "js/three/water.js",
+    "model-review.html"
+  ],
+  "endpoints": {
+    "index.html?v=4": {
+      "status": 200,
+      "bytes": 4329
+    },
+    "cinematic.html?v=4": {
+      "status": 200,
+      "bytes": 1504
+    },
+    "model-review.html?v=4": {
+      "status": 200,
+      "bytes": 2542
+    },
+    "js/three/water.js?v=4": {
+      "status": 200,
+      "bytes": 7319
+    },
+    "assets/environment/rock-albedo.jpg": {
+      "status": 200,
+      "bytes": 859211
+    },
+    "assets/usd/whale.glb?v=4": {
+      "status": 200,
+      "bytes": 4535584
+    },
+    "assets/previews/v4/swimming-and-summon.mp4": {
+      "status": 200,
+      "bytes": 1291476
+    }
+  },
+  "release": "4.1",
+  "finish_backup": "/home/spark/will/DeepSeaFall-backup-20261013-ocean-finish",
+  "finish_changed_files": [
+    "OCEAN_REWORK.md",
+    "README.md",
+    "assets/previews/v4/cinematic-17.png",
+    "assets/previews/v4/cinematic-28.png",
+    "assets/previews/v4/cinematic-9.png",
+    "assets/previews/v4/motion-verification.json",
+    "assets/previews/v4/ocean-review.png",
+    "assets/previews/v4/studio-face.png",
+    "assets/previews/v4/swimming-and-summon.mp4",
+    "cinematic.html",
+    "index.html",
+    "js/cinematic.js",
+    "js/main3d.js",
+    "js/model-review.js",
+    "js/three/authored.js",
+    "js/three/game3d.js",
+    "js/three/swimming.js",
+    "model-review.html"
+  ]
+}

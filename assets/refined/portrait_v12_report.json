@@ -1,0 +1,15 @@
+{
+  "revision": 12,
+  "maximum_face_vertex_change_m": 0.015073445292881047,
+  "body_below_1_35_unchanged": true,
+  "head_only_sculpt": true,
+  "reference_views": 1,
+  "features": [
+    "shorter soft oval jaw",
+    "opened almond eyes",
+    "compact nose",
+    "fuller upper lip",
+    "lighter straight brows"
+  ],
+  "limitations": "Reference-guided likeness; single 3/4 photograph does not determine exact hidden-side anatomy."
+}

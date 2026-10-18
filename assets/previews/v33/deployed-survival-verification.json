@@ -1,0 +1,69 @@
+{
+  "testedUrl": "http://127.0.0.1:8765/",
+  "types": {
+    "names": [
+      "Great white shark",
+      "Grey reef shark"
+    ],
+    "thirdRejected": true,
+    "types": [
+      "great-white",
+      "reef"
+    ]
+  },
+  "miss": {
+    "stamina": 75,
+    "bite": null
+  },
+  "bite": {
+    "first": 57,
+    "after": 57,
+    "last": {
+      "species": "great-white",
+      "time": 0.8200999999999999,
+      "point": [
+        0.02817374275856066,
+        0.6347045215862188,
+        -0.31465885934428706
+      ],
+      "dressDamage": 0.36
+    },
+    "damage": 0.36,
+    "uniform": 0.36,
+    "blood": 14,
+    "stage": "retreat",
+    "cooldown": 2.49,
+    "condition": "\u6d0b\u88dd\uff1a\u88d9\u64fa\u7834\u640d"
+  },
+  "gem": {
+    "stamina": 77,
+    "damage": 0,
+    "uniform": 0,
+    "repaired": true,
+    "name": "Golden faceted gemstone",
+    "geometry": "OctahedronGeometry",
+    "condition": "\u6d0b\u88dd\uff1a\u5b8c\u597d",
+    "gain": 20
+  },
+  "lifecycle": {
+    "dead": true,
+    "blood": 0
+  },
+  "drift": {
+    "sleeping": true,
+    "travel": 0.003762210181816371,
+    "stamina": 51.92,
+    "label": "\u9192\u4f86\u6e38\u6cf3",
+    "shell": true
+  },
+  "restart": {
+    "damage": 0,
+    "uniform": 0,
+    "sleeping": false,
+    "blood": 0,
+    "predators": 0,
+    "gemName": "Golden faceted gemstone"
+  },
+  "errors": [],
+  "installedGameplayMatchesTestedStage": true
+}

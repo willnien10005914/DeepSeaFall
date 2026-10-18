@@ -1,0 +1,40 @@
+{
+  "sleep": {
+    "stats": {
+      "blend": 0.9994469156298522,
+      "headToKnees": 0.14954460511894815,
+      "headFacingKnees": 0.9534552081548167,
+      "handToGripTargets": [
+        0.00014655633545383867,
+        0.00014656832430532963
+      ],
+      "kneesRaised": true
+    },
+    "cloth": {
+      "active": true,
+      "actualBodyTriangleIntersections": 0,
+      "example": null,
+      "selectedBodyPoints": 16048,
+      "faces": 7604,
+      "vertices": 4217,
+      "armOpeningVertices": 42,
+      "milliseconds": 55.40000009536743
+    },
+    "motion": "sleep-curl"
+  },
+  "sharks": [
+    {
+      "species": "great-white",
+      "meshes": 11,
+      "vertices": 8673,
+      "name": "Great white shark"
+    },
+    {
+      "species": "reef",
+      "meshes": 11,
+      "vertices": 8673,
+      "name": "Grey reef shark"
+    }
+  ],
+  "errors": []
+}

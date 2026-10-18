@@ -1,0 +1,789 @@
+{
+  "base": "http://127.0.0.1:8899/",
+  "rows": [
+    {
+      "id": "spiral-kick",
+      "charge": {
+        "initial": "charge",
+        "state": "charge",
+        "serial": 1,
+        "serialAfter": 1,
+        "hits": 0,
+        "rock": true,
+        "sharkHP": 48,
+        "button": "蓄力 80%",
+        "disabled": true
+      },
+      "strike": {
+        "stage": "strike",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "first": 4,
+        "second": 4,
+        "rockBroken": true,
+        "fragments": 24,
+        "shark": "flee",
+        "snake": true,
+        "kraken": true,
+        "friendSafe": true,
+        "farSafe": true,
+        "swords": 0,
+        "rings": 4,
+        "finite": true,
+        "protected": true
+      },
+      "finish": {
+        "move": "spiral-kick",
+        "name": "回旋踢",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "cooldown": 73,
+        "serial": 1,
+        "blocked": true,
+        "stillBlocked": true,
+        "expired": true,
+        "label": "冷卻 1:13",
+        "left": true
+      }
+    },
+    {
+      "id": "cross-blades",
+      "charge": {
+        "initial": "charge",
+        "state": "charge",
+        "serial": 1,
+        "serialAfter": 1,
+        "hits": 0,
+        "rock": true,
+        "sharkHP": 48,
+        "button": "蓄力 80%",
+        "disabled": true
+      },
+      "strike": {
+        "stage": "strike",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "first": 4,
+        "second": 4,
+        "rockBroken": true,
+        "fragments": 48,
+        "shark": "flee",
+        "snake": true,
+        "kraken": true,
+        "friendSafe": true,
+        "farSafe": true,
+        "swords": 2,
+        "rings": 5,
+        "finite": true,
+        "protected": true
+      },
+      "finish": {
+        "move": "cross-blades",
+        "name": "十字光劍",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "cooldown": 108,
+        "serial": 1,
+        "blocked": true,
+        "stillBlocked": true,
+        "expired": true,
+        "label": "冷卻 1:48",
+        "left": true
+      }
+    },
+    {
+      "id": "diagonal-slash",
+      "charge": {
+        "initial": "charge",
+        "state": "charge",
+        "serial": 1,
+        "serialAfter": 1,
+        "hits": 0,
+        "rock": true,
+        "sharkHP": 48,
+        "button": "蓄力 80%",
+        "disabled": true
+      },
+      "strike": {
+        "stage": "strike",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "first": 4,
+        "second": 4,
+        "rockBroken": true,
+        "fragments": 72,
+        "shark": "flee",
+        "snake": true,
+        "kraken": true,
+        "friendSafe": true,
+        "farSafe": true,
+        "swords": 1,
+        "rings": 2,
+        "finite": true,
+        "protected": true
+      },
+      "finish": {
+        "move": "diagonal-slash",
+        "name": "斜月劍",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "cooldown": 93,
+        "serial": 1,
+        "blocked": true,
+        "stillBlocked": true,
+        "expired": true,
+        "label": "冷卻 1:33",
+        "left": true
+      }
+    },
+    {
+      "id": "crescent-kick",
+      "charge": {
+        "initial": "charge",
+        "state": "charge",
+        "serial": 1,
+        "serialAfter": 1,
+        "hits": 0,
+        "rock": true,
+        "sharkHP": 48,
+        "button": "蓄力 80%",
+        "disabled": true
+      },
+      "strike": {
+        "stage": "strike",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "first": 4,
+        "second": 4,
+        "rockBroken": true,
+        "fragments": 96,
+        "shark": "flee",
+        "snake": true,
+        "kraken": true,
+        "friendSafe": true,
+        "farSafe": true,
+        "swords": 0,
+        "rings": 4,
+        "finite": true,
+        "protected": true
+      },
+      "finish": {
+        "move": "crescent-kick",
+        "name": "月牙腿",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "cooldown": 103,
+        "serial": 1,
+        "blocked": true,
+        "stillBlocked": true,
+        "expired": true,
+        "label": "冷卻 1:43",
+        "left": true
+      }
+    },
+    {
+      "id": "palm-wave",
+      "charge": {
+        "initial": "charge",
+        "state": "charge",
+        "serial": 1,
+        "serialAfter": 1,
+        "hits": 0,
+        "rock": true,
+        "sharkHP": 48,
+        "button": "蓄力 80%",
+        "disabled": true
+      },
+      "strike": {
+        "stage": "strike",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "first": 4,
+        "second": 4,
+        "rockBroken": true,
+        "fragments": 120,
+        "shark": "flee",
+        "snake": true,
+        "kraken": true,
+        "friendSafe": true,
+        "farSafe": true,
+        "swords": 0,
+        "rings": 4,
+        "finite": true,
+        "protected": true
+      },
+      "finish": {
+        "move": "palm-wave",
+        "name": "破浪掌",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "cooldown": 118,
+        "serial": 1,
+        "blocked": true,
+        "stillBlocked": true,
+        "expired": true,
+        "label": "冷卻 1:58",
+        "left": true
+      }
+    },
+    {
+      "id": "lotus-burst",
+      "charge": {
+        "initial": "charge",
+        "state": "charge",
+        "serial": 1,
+        "serialAfter": 1,
+        "hits": 0,
+        "rock": true,
+        "sharkHP": 48,
+        "button": "蓄力 80%",
+        "disabled": true
+      },
+      "strike": {
+        "stage": "strike",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "first": 4,
+        "second": 4,
+        "rockBroken": true,
+        "fragments": 144,
+        "shark": "flee",
+        "snake": true,
+        "kraken": true,
+        "friendSafe": true,
+        "farSafe": true,
+        "swords": 0,
+        "rings": 6,
+        "finite": true,
+        "protected": true
+      },
+      "finish": {
+        "move": "lotus-burst",
+        "name": "蓮華氣爆",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "cooldown": 153,
+        "serial": 1,
+        "blocked": true,
+        "stillBlocked": true,
+        "expired": true,
+        "label": "冷卻 2:33",
+        "left": true
+      }
+    },
+    {
+      "id": "halo-guard",
+      "charge": {
+        "initial": "charge",
+        "state": "charge",
+        "serial": 1,
+        "serialAfter": 1,
+        "hits": 0,
+        "rock": true,
+        "sharkHP": 48,
+        "button": "蓄力 80%",
+        "disabled": true
+      },
+      "strike": {
+        "stage": "strike",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "first": 4,
+        "second": 4,
+        "rockBroken": true,
+        "fragments": 168,
+        "shark": "flee",
+        "snake": true,
+        "kraken": true,
+        "friendSafe": true,
+        "farSafe": true,
+        "swords": 0,
+        "rings": 3,
+        "finite": true,
+        "protected": true
+      },
+      "finish": {
+        "move": "halo-guard",
+        "name": "星環震波",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "cooldown": 138,
+        "serial": 1,
+        "blocked": true,
+        "stillBlocked": true,
+        "expired": true,
+        "label": "冷卻 2:18",
+        "left": true
+      }
+    },
+    {
+      "id": "twin-kick",
+      "charge": {
+        "initial": "charge",
+        "state": "charge",
+        "serial": 1,
+        "serialAfter": 1,
+        "hits": 0,
+        "rock": true,
+        "sharkHP": 48,
+        "button": "蓄力 80%",
+        "disabled": true
+      },
+      "strike": {
+        "stage": "strike",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "first": 4,
+        "second": 4,
+        "rockBroken": true,
+        "fragments": 180,
+        "shark": "flee",
+        "snake": true,
+        "kraken": true,
+        "friendSafe": true,
+        "farSafe": true,
+        "swords": 0,
+        "rings": 4,
+        "finite": true,
+        "protected": true
+      },
+      "finish": {
+        "move": "twin-kick",
+        "name": "雙飛踢",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "cooldown": 113,
+        "serial": 1,
+        "blocked": true,
+        "stillBlocked": true,
+        "expired": true,
+        "label": "冷卻 1:53",
+        "left": true
+      }
+    },
+    {
+      "id": "sword-dance",
+      "charge": {
+        "initial": "charge",
+        "state": "charge",
+        "serial": 1,
+        "serialAfter": 1,
+        "hits": 0,
+        "rock": true,
+        "sharkHP": 48,
+        "button": "蓄力 80%",
+        "disabled": true
+      },
+      "strike": {
+        "stage": "strike",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "first": 4,
+        "second": 4,
+        "rockBroken": true,
+        "fragments": 180,
+        "shark": "flee",
+        "snake": true,
+        "kraken": true,
+        "friendSafe": true,
+        "farSafe": true,
+        "swords": 2,
+        "rings": 3,
+        "finite": true,
+        "protected": true
+      },
+      "finish": {
+        "move": "sword-dance",
+        "name": "流光劍舞",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "cooldown": 143,
+        "serial": 1,
+        "blocked": true,
+        "stillBlocked": true,
+        "expired": true,
+        "label": "冷卻 2:23",
+        "left": true
+      }
+    },
+    {
+      "id": "tidal-release",
+      "charge": {
+        "initial": "charge",
+        "state": "charge",
+        "serial": 1,
+        "serialAfter": 1,
+        "hits": 0,
+        "rock": true,
+        "sharkHP": 48,
+        "button": "蓄力 80%",
+        "disabled": true
+      },
+      "strike": {
+        "stage": "strike",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "first": 4,
+        "second": 4,
+        "rockBroken": true,
+        "fragments": 180,
+        "shark": "flee",
+        "snake": true,
+        "kraken": true,
+        "friendSafe": true,
+        "farSafe": true,
+        "swords": 0,
+        "rings": 6,
+        "finite": true,
+        "protected": true
+      },
+      "finish": {
+        "move": "tidal-release",
+        "name": "潮汐天光",
+        "hits": [
+          {
+            "kind": "predator",
+            "species": "great-white"
+          },
+          {
+            "kind": "wildlife",
+            "species": "sea-snake"
+          },
+          {
+            "kind": "wildlife",
+            "species": "kraken"
+          },
+          {
+            "kind": "rock",
+            "species": "rock"
+          }
+        ],
+        "cooldown": 180,
+        "serial": 1,
+        "blocked": true,
+        "stillBlocked": true,
+        "expired": true,
+        "label": "冷卻 3:00",
+        "left": true
+      }
+    }
+  ],
+  "extra": {
+    "miss": {
+      "move": "diagonal-slash",
+      "name": "斜月劍",
+      "hits": [],
+      "cooldown": 50,
+      "serial": 1
+    },
+    "reset": true,
+    "low": 30,
+    "high": 180,
+    "options": 11
+  },
+  "errors": []
+}

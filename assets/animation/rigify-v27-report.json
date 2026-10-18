@@ -1,0 +1,13 @@
+{
+  "extension": "Rigify",
+  "rig_controls": 222,
+  "actions": [
+    "tuck",
+    "extend",
+    "roll",
+    "dolphin"
+  ],
+  "sample_rate": 30,
+  "frames": 382,
+  "retarget": "evaluated DEF world deltas -> swimmer parent-local XYZW"
+}

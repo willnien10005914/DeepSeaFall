@@ -1,0 +1,17 @@
+{
+  "revision": 12,
+  "style": "near-black continuous long straight hair with light separated side-swept bangs",
+  "guide_count": 1584,
+  "smooth_fine_ribbons": true,
+  "opaque_brow_cap_removed": true,
+  "curtain_join": "C1 Hermite",
+  "hair_meshes": [
+    "hair_cap",
+    "hair_long_core",
+    "hair_long_layers",
+    "hair_fringe",
+    "hair_fine_long",
+    "hair_fine_fringe"
+  ],
+  "min_hair_y": 0.902469947460489
+}

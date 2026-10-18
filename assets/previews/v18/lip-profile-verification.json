@@ -1,0 +1,9 @@
+{
+  "revision": 18,
+  "centre_vertices": 53,
+  "side_vertices": 38,
+  "centre_thickness_ratio": 1.128613397217369,
+  "side_thickness_ratio": 0.7777819649179738,
+  "centre_forward_volume_m": 0.0004632298885135269,
+  "no_teeth": true
+}

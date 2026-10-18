@@ -1,7 +1,8 @@
-/** Procedural BGM + SFX via Web Audio API (no external assets). */
+/** Requested piano soundtrack with procedural underwater game sound effects. */
 
 export class SeaAudio {
   constructor() {
+    this.track=new Audio("assets/audio/requested-bgm.mp3?v=42");this.track.loop=true;this.track.preload="auto";this.musicEnabled=true;this.musicAvailable=false;
     this.ctx = null;
     this.master = null;
     this.musicGain = null;
@@ -22,18 +23,28 @@ export class SeaAudio {
       this.master.gain.value = 0.85;
       this.master.connect(this.ctx.destination);
       this.musicGain = this.ctx.createGain();
-      this.musicGain.gain.value = 0.28;
+      this.musicGain.gain.value = this.musicEnabled?.72:0;
       this.musicGain.connect(this.master);
+      this.trackSource=this.ctx.createMediaElementSource(this.track);this.trackSource.connect(this.musicGain);
       this.sfxGain = this.ctx.createGain();
       this.sfxGain.gain.value = 0.55;
       this.sfxGain.connect(this.master);
     }
-    if (this.ctx.state === "suspended") await this.ctx.resume();
+    const resumed=this.ctx.state === "suspended"?this.ctx.resume():Promise.resolve();
+    const playing=this.musicEnabled?this.track.play():Promise.resolve();
+    await resumed;
     if (!this._started) {
       this._started = true;
-      this._startBed();
-      this._timer = setInterval(() => this._pulse(), 480);
+
     }
+    if(this.musicEnabled){try{await playing;this.musicAvailable=true}catch(error){this.musicAvailable=false;console.info('Requested background music is not yet playing',error.message)}}
+  }
+
+  async toggleMusic(){
+    this.musicEnabled=!this.musicEnabled;
+    if(this.musicGain)this.musicGain.gain.setTargetAtTime(this.musicEnabled?.72:0,this.ctx.currentTime,.15);
+    if(this.musicEnabled)await this.unlock();else this.track.pause();
+    return this.musicEnabled;
   }
 
   setMood(mood) {

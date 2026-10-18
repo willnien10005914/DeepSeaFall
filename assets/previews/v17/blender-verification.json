@@ -1,0 +1,23 @@
+{
+  "bones": 19,
+  "actions": [
+    "Swim_breaststroke",
+    "Swim_dive",
+    "Swim_evade",
+    "Swim_float",
+    "Swim_flutter",
+    "Swim_glide",
+    "Swim_reach",
+    "Swim_turn"
+  ],
+  "source_matches_rig_m": {
+    "skin_body": 0.0,
+    "eyebrows": 0.0,
+    "eyelashes": 0.0,
+    "eyes": 0.0
+  },
+  "curves": [],
+  "lip_mask_error": 2.93155399955225e-08,
+  "lip_mask_vertices": 19158,
+  "valid": true
+}

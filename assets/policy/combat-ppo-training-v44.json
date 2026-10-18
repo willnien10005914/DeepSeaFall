@@ -1,0 +1,98 @@
+{
+  "version": 44,
+  "seed": 44,
+  "algorithm": "clipped PPO",
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip": 0.2,
+  "updates": 12,
+  "envs": 64,
+  "steps_per_update": 48,
+  "control_hz": 30,
+  "selected_rmse_rad": 0.05980849040789136,
+  "zero_residual_rmse_rad": 0.07594979323484051,
+  "improvement": 0.01614130282694915,
+  "history": [
+    {
+      "update": 0,
+      "loss": 23.12271499633789,
+      "rmse": 0.05980849040789136,
+      "zero_residual_rmse": 0.07594979323484051
+    },
+    {
+      "update": 6,
+      "loss": 18.628042221069336,
+      "rmse": 0.05981314493152326,
+      "zero_residual_rmse": 0.07594979323484051
+    },
+    {
+      "update": 11,
+      "loss": 13.039926528930664,
+      "rmse": 0.05985306627491174,
+      "zero_residual_rmse": 0.07594979323484051
+    }
+  ],
+  "policy_sha256": "fd12019a81a260ce7a0b4fb18f4a7e23abd0bb13bc6af235c0e22a41746cdf78",
+  "dynamics_sha256": "b3252e0f6555c375b7b197e0f1050f28fbb2a5e7ce446418776c2c387cd226af",
+  "isaac_lab": "Not launched. The GPU already hosts Isaac-Q1-Native-Backflip training and a live Isaac play server.",
+  "blender": "Not installed on this machine. Element motion is a curl-noise particle simulation with an 80-step palette fit.",
+  "elements": {
+    "fire": [
+      0.9631,
+      0.4189,
+      0.104
+    ],
+    "ice": [
+      0.6203,
+      0.8594,
+      0.9631
+    ],
+    "cold-fire": [
+      0.5509,
+      0.7796,
+      0.9631
+    ]
+  },
+  "moves": [
+    {
+      "id": "spiral-kick",
+      "element": "fire"
+    },
+    {
+      "id": "cross-blades",
+      "element": "ice"
+    },
+    {
+      "id": "diagonal-slash",
+      "element": "ice"
+    },
+    {
+      "id": "crescent-kick",
+      "element": "fire"
+    },
+    {
+      "id": "palm-wave",
+      "element": "fire"
+    },
+    {
+      "id": "lotus-burst",
+      "element": "cold-fire"
+    },
+    {
+      "id": "halo-guard",
+      "element": "cold-fire"
+    },
+    {
+      "id": "twin-kick",
+      "element": "fire"
+    },
+    {
+      "id": "sword-dance",
+      "element": "ice"
+    },
+    {
+      "id": "tidal-release",
+      "element": "cold-fire"
+    }
+  ]
+}

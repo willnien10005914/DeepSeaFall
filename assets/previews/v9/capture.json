@@ -1,0 +1,692 @@
+{
+  "file": "water-cut-waist-hair-30s.mp4",
+  "source": "actual WebGL game with fixed simulation steps",
+  "seconds": 30,
+  "frames": 720,
+  "encodedFps": 24,
+  "performanceBenchmark": false,
+  "renderer": "NVIDIA GB10 via ANGLE OpenGL ES EGL",
+  "audio": {
+    "source": "https://www.youtube.com/watch?v=m6SOJlkN1zU",
+    "excerptSeconds": [
+      0,
+      30
+    ],
+    "codec": "AAC",
+    "sampleRate": 48000
+  },
+  "events": {
+    "summonSeconds": 1,
+    "boostSeconds": 4.42,
+    "mode": "manual directional drag with water cuts",
+    "dragWindowsSeconds": [
+      [
+        0.875,
+        8.75
+      ],
+      [
+        10.875,
+        19.375
+      ],
+      [
+        21.708,
+        27.917
+      ]
+    ],
+    "visitorsSeconds": [
+      4,
+      16,
+      28
+    ],
+    "sleepSeconds": 28.33,
+    "wakeSeconds": 29.33,
+    "largeShoalsSeconds": [
+      [
+        6,
+        14.5
+      ],
+      [
+        23,
+        30
+      ]
+    ],
+    "closeWhaleSeconds": [
+      11,
+      21
+    ],
+    "girlActions": "see actual states below"
+  },
+  "states": [
+    {
+      "time": 0.041666666666666664,
+      "position": [
+        0,
+        -0.4,
+        0
+      ],
+      "reaction": {
+        "intent": "cruise",
+        "kind": null,
+        "distance": null,
+        "target": null,
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "waterCut": {
+        "active": false,
+        "strokePoints": 0,
+        "wakePoints": 0,
+        "swishPoints": 0,
+        "bursts": 0
+      },
+      "secondary": {
+        "hairTravel": 0.03778761566175346,
+        "fringeTravel": 0.0049656943659992505,
+        "clothTravel": 0.0510785141641856,
+        "flow": [
+          0,
+          0,
+          0
+        ]
+      },
+      "waist": {
+        "pitch": -0.04260628268943464,
+        "twist": 0.008093957328811312,
+        "roll": 0.03375505683408312
+      },
+      "running": true,
+      "stamina": 100,
+      "action": "flutter",
+      "whaleNear": 0
+    },
+    {
+      "time": 2.041666666666664,
+      "position": [
+        1.6095831082552103,
+        0.4465770581598509,
+        0
+      ],
+      "reaction": {
+        "intent": "cruise",
+        "kind": null,
+        "distance": null,
+        "target": null,
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "waterCut": {
+        "active": true,
+        "strokePoints": 12,
+        "wakePoints": 34,
+        "swishPoints": 0,
+        "bursts": 1
+      },
+      "secondary": {
+        "hairTravel": 0.022157353840858394,
+        "fringeTravel": 0.006068536158168319,
+        "clothTravel": 0.08054457542253393,
+        "flow": [
+          -0.01971100209963931,
+          -0.0011089742540672744,
+          -0.031160945834822915
+        ]
+      },
+      "waist": {
+        "pitch": 0.0772972479529424,
+        "twist": 0.1337472718246797,
+        "roll": -0.05653402183893332
+      },
+      "running": true,
+      "stamina": 100,
+      "action": "flutter",
+      "whaleNear": 0
+    },
+    {
+      "time": 4.041666666666677,
+      "position": [
+        2.330543576693114,
+        1.4959661577235983,
+        0
+      ],
+      "reaction": {
+        "intent": "approach",
+        "kind": "fish",
+        "distance": 1.8505910157084626,
+        "target": "Curious reef fish",
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "waterCut": {
+        "active": true,
+        "strokePoints": 12,
+        "wakePoints": 26,
+        "swishPoints": 0,
+        "bursts": 1
+      },
+      "secondary": {
+        "hairTravel": 0.023014875610337146,
+        "fringeTravel": 0.00624050862463208,
+        "clothTravel": 0.05790966549162121,
+        "flow": [
+          0.01877837125930842,
+          -0.008947925893357965,
+          -0.0020659276437900876
+        ]
+      },
+      "waist": {
+        "pitch": -0.08877559143569216,
+        "twist": -0.14282885941112375,
+        "roll": -0.01832139456348833
+      },
+      "running": true,
+      "stamina": 100,
+      "action": "flutter",
+      "whaleNear": 0
+    },
+    {
+      "time": 6.041666666666648,
+      "position": [
+        -0.21464986706598055,
+        1.8,
+        0
+      ],
+      "reaction": {
+        "intent": "approach",
+        "kind": "whale",
+        "distance": 2.374958028604071,
+        "target": null,
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "waterCut": {
+        "active": true,
+        "strokePoints": 12,
+        "wakePoints": 34,
+        "swishPoints": 0,
+        "bursts": 1
+      },
+      "secondary": {
+        "hairTravel": 0.04756969133216648,
+        "fringeTravel": 0.010372308808932085,
+        "clothTravel": 0.06557232765168161,
+        "flow": [
+          0.02027965932136655,
+          -0.008769688829074775,
+          0.008850247415665065
+        ]
+      },
+      "waist": {
+        "pitch": 0.09071526060254913,
+        "twist": -0.009526518839588188,
+        "roll": 0.11249908240541101
+      },
+      "running": true,
+      "stamina": 97.95000000000044,
+      "action": "flutter",
+      "whaleNear": 0
+    },
+    {
+      "time": 8.041666666666622,
+      "position": [
+        -0.16649604966726564,
+        1.3295473698605267,
+        0
+      ],
+      "reaction": {
+        "intent": "approach",
+        "kind": "whale",
+        "distance": 2.1031462435864956,
+        "target": null,
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "waterCut": {
+        "active": true,
+        "strokePoints": 12,
+        "wakePoints": 32,
+        "swishPoints": 0,
+        "bursts": 1
+      },
+      "secondary": {
+        "hairTravel": 0.03878789465875635,
+        "fringeTravel": 0.011300111736489813,
+        "clothTravel": 0.06633533410204322,
+        "flow": [
+          -0.02495034007118058,
+          0.005516969833788681,
+          -0.0076922959573576645
+        ]
+      },
+      "waist": {
+        "pitch": -0.11626170930558427,
+        "twist": 0.013756059916774619,
+        "roll": -0.11977225944654753
+      },
+      "running": true,
+      "stamina": 100,
+      "action": "flutter",
+      "whaleNear": 0
+    },
+    {
+      "time": 10.041666666666679,
+      "position": [
+        1.1840584303853603,
+        0.6729408857838143,
+        0
+      ],
+      "reaction": {
+        "intent": "probe",
+        "kind": "whale",
+        "distance": 2.067205696750984,
+        "target": null,
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "waterCut": {
+        "active": false,
+        "strokePoints": 0,
+        "wakePoints": 0,
+        "swishPoints": 0,
+        "bursts": 1
+      },
+      "secondary": {
+        "hairTravel": 0.013971954521146109,
+        "fringeTravel": 0.00742929163889214,
+        "clothTravel": 0.04750621286308245,
+        "flow": [
+          -0.0005607362412602423,
+          0.0002428422171485464,
+          -0.0002748949468730995
+        ]
+      },
+      "waist": {
+        "pitch": 0.10629784121198274,
+        "twist": 0.11066924486289928,
+        "roll": 0.0353163544840768
+      },
+      "running": true,
+      "stamina": 100,
+      "action": "reach",
+      "whaleNear": 0.013408818102178472
+    },
+    {
+      "time": 12.041666666666735,
+      "position": [
+        1.4829120292229157,
+        -0.32410392859796555,
+        0
+      ],
+      "reaction": {
+        "intent": "avoid",
+        "kind": "rock",
+        "distance": 3.010265141950454,
+        "target": "Scanned stone obstacle",
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "waterCut": {
+        "active": true,
+        "strokePoints": 12,
+        "wakePoints": 25,
+        "swishPoints": 0,
+        "bursts": 2
+      },
+      "secondary": {
+        "hairTravel": 0.03191273898757892,
+        "fringeTravel": 0.0068400255500337785,
+        "clothTravel": 0.058901271815664784,
+        "flow": [
+          0.00031079044339998814,
+          0.008626933544800527,
+          0.01577297462024359
+        ]
+      },
+      "waist": {
+        "pitch": -0.12711230568056645,
+        "twist": -0.2217688600035012,
+        "roll": 0.02776834407936505
+      },
+      "running": true,
+      "stamina": 100,
+      "action": "flutter",
+      "whaleNear": 0.6755415936057723
+    },
+    {
+      "time": 14.041666666666792,
+      "position": [
+        0.29529269338532105,
+        -0.9388214764605844,
+        0
+      ],
+      "reaction": {
+        "intent": "avoid",
+        "kind": "rock",
+        "distance": 3.1837754442172588,
+        "target": "Scanned stone obstacle",
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "waterCut": {
+        "active": true,
+        "strokePoints": 4,
+        "wakePoints": 12,
+        "swishPoints": 0,
+        "bursts": 2
+      },
+      "secondary": {
+        "hairTravel": 0.03232257262962034,
+        "fringeTravel": 0.007150494434054706,
+        "clothTravel": 0.0439749541597084,
+        "flow": [
+          0.004512318965674177,
+          -0.00040773570278683946,
+          0.002847951606178678
+        ]
+      },
+      "waist": {
+        "pitch": 0.11072858036355238,
+        "twist": 0.15377676085975683,
+        "roll": -0.04337650438045479
+      },
+      "running": true,
+      "stamina": 100,
+      "action": "flutter",
+      "whaleNear": 0.9879559189600561
+    },
+    {
+      "time": 16.041666666666845,
+      "position": [
+        1.4466483215836727,
+        -0.5521788528225856,
+        0
+      ],
+      "reaction": {
+        "intent": "avoid",
+        "kind": "rock",
+        "distance": 2.5051346973158166,
+        "target": "Scanned stone obstacle",
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "waterCut": {
+        "active": true,
+        "strokePoints": 12,
+        "wakePoints": 34,
+        "swishPoints": 0,
+        "bursts": 2
+      },
+      "secondary": {
+        "hairTravel": 0.02503671697589415,
+        "fringeTravel": 0.0085427504984398,
+        "clothTravel": 0.06669215971866996,
+        "flow": [
+          -0.014431684865883733,
+          -0.0030856685507457096,
+          -0.023958508410293136
+        ]
+      },
+      "waist": {
+        "pitch": -0.11634567756271544,
+        "twist": -0.07146848086548603,
+        "roll": 0.03159359771510623
+      },
+      "running": true,
+      "stamina": 100,
+      "action": "flutter",
+      "whaleNear": 0.99959804963203
+    },
+    {
+      "time": 18.041666666666732,
+      "position": [
+        3.2,
+        0.27464291033271704,
+        0
+      ],
+      "reaction": {
+        "intent": "avoid",
+        "kind": "rock",
+        "distance": 2.36939360932379,
+        "target": "Scanned stone obstacle",
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "waterCut": {
+        "active": true,
+        "strokePoints": 9,
+        "wakePoints": 15,
+        "swishPoints": 0,
+        "bursts": 3
+      },
+      "secondary": {
+        "hairTravel": 0.043550402580141055,
+        "fringeTravel": 0.007921416298815206,
+        "clothTravel": 0.05349770925664577,
+        "flow": [
+          0.00724986982166095,
+          -0.004540199078858389,
+          -0.0029086391973907433
+        ]
+      },
+      "waist": {
+        "pitch": 0.11860621411035087,
+        "twist": 0.2908908872799445,
+        "roll": -0.1263613185265203
+      },
+      "running": true,
+      "stamina": 100,
+      "action": "flutter",
+      "whaleNear": 0.992284588075434
+    },
+    {
+      "time": 20.041666666666618,
+      "position": [
+        3.152282500101354,
+        0.6791270767717515,
+        0
+      ],
+      "reaction": {
+        "intent": "probe",
+        "kind": "whale",
+        "distance": 2.046483961954953,
+        "target": null,
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "waterCut": {
+        "active": false,
+        "strokePoints": 0,
+        "wakePoints": 2,
+        "swishPoints": 0,
+        "bursts": 3
+      },
+      "secondary": {
+        "hairTravel": 0.042247963754708844,
+        "fringeTravel": 0.006603794139678066,
+        "clothTravel": 0.050438526340704955,
+        "flow": [
+          -0.00006182293674530318,
+          0.00015992322194314541,
+          0.00017165756749651294
+        ]
+      },
+      "waist": {
+        "pitch": -0.07304873975554958,
+        "twist": -0.1357638911896547,
+        "roll": 0.025013171116738286
+      },
+      "running": true,
+      "stamina": 100,
+      "action": "reach",
+      "whaleNear": 0.5364597330528914
+    },
+    {
+      "time": 22.041666666666504,
+      "position": [
+        2.735029944588647,
+        0.5283295715800435,
+        0
+      ],
+      "reaction": {
+        "intent": "probe",
+        "kind": "whale",
+        "distance": 1.376911866661006,
+        "target": null,
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "waterCut": {
+        "active": true,
+        "strokePoints": 8,
+        "wakePoints": 16,
+        "swishPoints": 19,
+        "bursts": 4
+      },
+      "secondary": {
+        "hairTravel": 0.01999052526759037,
+        "fringeTravel": 0.006338112645146532,
+        "clothTravel": 0.07036294286623108,
+        "flow": [
+          0.025936357429405164,
+          0.002302305680399456,
+          0.02105144194397577
+        ]
+      },
+      "waist": {
+        "pitch": 0.04099080174822427,
+        "twist": -0.16634694272511533,
+        "roll": 0.12575116703815417
+      },
+      "running": true,
+      "stamina": 100,
+      "action": "flutter",
+      "whaleNear": 0.04255993914840092
+    },
+    {
+      "time": 24.04166666666639,
+      "position": [
+        1.890612247788218,
+        -1.1685735504455872,
+        0
+      ],
+      "reaction": {
+        "intent": "approach",
+        "kind": "whale",
+        "distance": 2.2674067957703654,
+        "target": null,
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "waterCut": {
+        "active": true,
+        "strokePoints": 12,
+        "wakePoints": 34,
+        "swishPoints": 0,
+        "bursts": 4
+      },
+      "secondary": {
+        "hairTravel": 0.03555280159189768,
+        "fringeTravel": 0.006137306821851143,
+        "clothTravel": 0.055401974113757406,
+        "flow": [
+          -0.024232146902008467,
+          0.014276057062584755,
+          -0.007607114228629021
+        ]
+      },
+      "waist": {
+        "pitch": -0.03669553368440812,
+        "twist": -0.026038263257036114,
+        "roll": -0.10292656465503004
+      },
+      "running": true,
+      "stamina": 100,
+      "action": "flutter",
+      "whaleNear": 0.0014203643386946306
+    },
+    {
+      "time": 26.041666666666277,
+      "position": [
+        3.2,
+        -1.2,
+        0
+      ],
+      "reaction": {
+        "intent": "avoid",
+        "kind": "fish",
+        "distance": 2.9014489572456172,
+        "target": "Silver reef fish",
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "waterCut": {
+        "active": true,
+        "strokePoints": 9,
+        "wakePoints": 0,
+        "swishPoints": 0,
+        "bursts": 4
+      },
+      "secondary": {
+        "hairTravel": 0.038835084827772565,
+        "fringeTravel": 0.005350026738849929,
+        "clothTravel": 0.04593930487071715,
+        "flow": [
+          0.001075241970434508,
+          -0.00016604316653293712,
+          0.0016719406180766613
+        ]
+      },
+      "waist": {
+        "pitch": 0.04714536207610399,
+        "twist": 0.16905429828918184,
+        "roll": 0.06031040116736351
+      },
+      "running": true,
+      "stamina": 100,
+      "action": "flutter",
+      "whaleNear": 0.00004740220251727576
+    },
+    {
+      "time": 28.041666666666163,
+      "position": [
+        1.6794874854019322,
+        -1.2,
+        0
+      ],
+      "reaction": {
+        "intent": "avoid",
+        "kind": "fish",
+        "distance": 2.58444957049533,
+        "target": "Silver reef fish",
+        "source": "trained local imitation policy",
+        "modelVersion": 8
+      },
+      "waterCut": {
+        "active": false,
+        "strokePoints": 9,
+        "wakePoints": 28,
+        "swishPoints": 0,
+        "bursts": 4
+      },
+      "secondary": {
+        "hairTravel": 0.02828130023487437,
+        "fringeTravel": 0.007020889618759467,
+        "clothTravel": 0.06226990761592295,
+        "flow": [
+          0.024002442349979194,
+          -0.005667540870897282,
+          -0.012017099919458374
+        ]
+      },
+      "waist": {
+        "pitch": -0.033555710005966334,
+        "twist": 0.007032835864357476,
+        "roll": -0.060365809453773775
+      },
+      "running": true,
+      "stamina": 100,
+      "action": "evade",
+      "whaleNear": 0.000001581966501323087
+    }
+  ],
+  "errors": []
+}

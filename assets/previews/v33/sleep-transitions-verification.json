@@ -1,0 +1,112 @@
+{
+  "rows": [
+    {
+      "blend": 0.25,
+      "pose": {
+        "blend": 0.25,
+        "headToKnees": 0.8876251627530317,
+        "headFacingKnees": 0.6142089331202228,
+        "handToGripTargets": [
+          0.5341257913261385,
+          0.5012993346539096
+        ],
+        "kneesRaised": false
+      },
+      "garment": {
+        "active": true,
+        "actualBodyTriangleIntersections": 0,
+        "example": null,
+        "selectedBodyPoints": 16048,
+        "faces": 17350,
+        "vertices": 9426,
+        "armOpeningVertices": 122,
+        "milliseconds": 88.5
+      },
+      "originalVisible": false
+    },
+    {
+      "blend": 0.55,
+      "pose": {
+        "blend": 0.55,
+        "headToKnees": 0.6448460216719786,
+        "headFacingKnees": 0.9711080404507005,
+        "handToGripTargets": [
+          0.3204037746526688,
+          0.32701161973014325
+        ],
+        "kneesRaised": false
+      },
+      "garment": {
+        "active": true,
+        "actualBodyTriangleIntersections": 0,
+        "example": null,
+        "selectedBodyPoints": 16048,
+        "faces": 18295,
+        "vertices": 9795,
+        "armOpeningVertices": 37,
+        "milliseconds": 60.90000009536743
+      },
+      "originalVisible": false
+    },
+    {
+      "blend": 0.85,
+      "pose": {
+        "blend": 0.85,
+        "headToKnees": 0.3138823503221499,
+        "headFacingKnees": 0.9390070029871891,
+        "handToGripTargets": [
+          0.051265866637364266,
+          0.05810723711178158
+        ],
+        "kneesRaised": true
+      },
+      "garment": {
+        "active": true,
+        "actualBodyTriangleIntersections": 0,
+        "example": null,
+        "selectedBodyPoints": 16048,
+        "faces": 10740,
+        "vertices": 6008,
+        "armOpeningVertices": 101,
+        "milliseconds": 44
+      },
+      "originalVisible": false
+    },
+    {
+      "blend": 1,
+      "pose": {
+        "blend": 1,
+        "headToKnees": 0.15117060576195523,
+        "headFacingKnees": 0.9494477453034048,
+        "handToGripTargets": [
+          1.3092278833360675e-16,
+          8.326672684688674e-17
+        ],
+        "kneesRaised": true
+      },
+      "garment": {
+        "active": true,
+        "actualBodyTriangleIntersections": 0,
+        "example": null,
+        "selectedBodyPoints": 16048,
+        "faces": 7606,
+        "vertices": 4217,
+        "armOpeningVertices": 42,
+        "milliseconds": 31.699999809265137
+      },
+      "originalVisible": false
+    }
+  ],
+  "awake": {
+    "original": true,
+    "shell": false,
+    "straps": true,
+    "cloth": {
+      "minimumSignedDistance": 0.004132490354526612,
+      "penetratingVertices": 0,
+      "checked": 5747,
+      "triangleIntersections": []
+    }
+  },
+  "errors": []
+}

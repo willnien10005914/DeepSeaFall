@@ -1,0 +1,12 @@
+{
+  "seconds": 30,
+  "frames": 720,
+  "fps": 24,
+  "dimensions": [
+    720,
+    1440
+  ],
+  "audio": "AAC 48kHz stereo",
+  "full_decode_passed": true,
+  "sha256": "4c634beb68c41e9e3ae18e45406ba5fa3f540ba196f22712eafcc1bd84ba6759"
+}

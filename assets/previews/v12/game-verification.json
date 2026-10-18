@@ -1,0 +1,187 @@
+{
+  "samples": [
+    {
+      "time": 2,
+      "running": true,
+      "shaderTime": 2,
+      "flow": [
+        -0.01598327110554974,
+        0.0042121720192985984,
+        -0.0035842742716639796
+      ],
+      "action": "flutter",
+      "bonesFinite": true,
+      "hair": {
+        "hairTravel": 0,
+        "longHairTipEnvelope": 0.06244365549868296,
+        "fringeTravel": 0.004619853417998032,
+        "sideTravel": 0,
+        "clothTravel": 0.06006793923000876,
+        "flow": [
+          -0.01598327110554974,
+          0.0042121720192985984,
+          -0.0035842742716639796
+        ]
+      }
+    },
+    {
+      "time": 4.999999999999989,
+      "running": true,
+      "shaderTime": 4.999999999999989,
+      "flow": [
+        -0.003439528825377731,
+        0.0027759947595901685,
+        0.0011996106245136073
+      ],
+      "action": "flutter",
+      "bonesFinite": true,
+      "hair": {
+        "hairTravel": 0,
+        "longHairTipEnvelope": 0.040243837113388664,
+        "fringeTravel": 0.007781618291066802,
+        "sideTravel": 0,
+        "clothTravel": 0.04780933036855852,
+        "flow": [
+          -0.003439528825377731,
+          0.0027759947595901685,
+          0.0011996106245136073
+        ]
+      }
+    },
+    {
+      "time": 9.999999999999972,
+      "running": true,
+      "shaderTime": 9.999999999999972,
+      "flow": [
+        -0.0023314715287714844,
+        0.0009856906858279554,
+        0.0004982969979810833
+      ],
+      "action": "breaststroke",
+      "bonesFinite": true,
+      "hair": {
+        "hairTravel": 0,
+        "longHairTipEnvelope": 0.03664373680037771,
+        "fringeTravel": 0.008050095149632817,
+        "sideTravel": 0,
+        "clothTravel": 0.04786331678248789,
+        "flow": [
+          -0.0023314715287714844,
+          0.0009856906858279554,
+          0.0004982969979810833
+        ]
+      }
+    },
+    {
+      "time": 15.499999999999952,
+      "running": true,
+      "shaderTime": 15.499999999999952,
+      "flow": [
+        -0.002535745585508961,
+        -0.00022331274533856095,
+        -0.002127833322133309
+      ],
+      "action": "breaststroke",
+      "bonesFinite": true,
+      "hair": {
+        "hairTravel": 0,
+        "longHairTipEnvelope": 0.03797197274333571,
+        "fringeTravel": 0.007537293346381748,
+        "sideTravel": 0,
+        "clothTravel": 0.05032958005582748,
+        "flow": [
+          -0.002535745585508961,
+          -0.00022331274533856095,
+          -0.002127833322133309
+        ]
+      }
+    },
+    {
+      "time": 21,
+      "running": true,
+      "shaderTime": 21,
+      "flow": [
+        0.005232720655185143,
+        0.0017721888397119532,
+        0.005347352711122371
+      ],
+      "action": "flutter",
+      "bonesFinite": true,
+      "hair": {
+        "hairTravel": 0,
+        "longHairTipEnvelope": 0.045839670776766095,
+        "fringeTravel": 0.007932030564821195,
+        "sideTravel": 0,
+        "clothTravel": 0.05237794437723887,
+        "flow": [
+          0.005232720655185143,
+          0.0017721888397119532,
+          0.005347352711122371
+        ]
+      }
+    },
+    {
+      "time": 26,
+      "running": true,
+      "shaderTime": 26,
+      "flow": [
+        -0.0017576606891474755,
+        0.0016528767871890606,
+        0.002697211120426905
+      ],
+      "action": "flutter",
+      "bonesFinite": true,
+      "hair": {
+        "hairTravel": 0,
+        "longHairTipEnvelope": 0.03851399099967615,
+        "fringeTravel": 0.005420841635747549,
+        "sideTravel": 0,
+        "clothTravel": 0.04745938180755891,
+        "flow": [
+          -0.0017576606891474755,
+          0.0016528767871890606,
+          0.002697211120426905
+        ]
+      }
+    },
+    {
+      "time": 29.5,
+      "running": true,
+      "shaderTime": 29.5,
+      "flow": [
+        0.017240015051229123,
+        -0.0007203104585420348,
+        0.00926125249142589
+      ],
+      "action": "flutter",
+      "bonesFinite": true,
+      "hair": {
+        "hairTravel": 0,
+        "longHairTipEnvelope": 0.06725003765699661,
+        "fringeTravel": 0.005166757504971671,
+        "sideTravel": 0,
+        "clothTravel": 0.060633570751895044,
+        "flow": [
+          0.017240015051229123,
+          -0.0007203104585420348,
+          0.00926125249142589
+        ]
+      }
+    }
+  ],
+  "names": [
+    "hair_cap",
+    "hair_long_core",
+    "hair_long_layers",
+    "hair_fringe",
+    "hair_fine_long",
+    "hair_fine_fringe"
+  ],
+  "bind": true,
+  "music": {
+    "ready": 4,
+    "playing": true
+  },
+  "restart": true,
+  "errors": []
+}

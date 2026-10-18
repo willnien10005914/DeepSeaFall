@@ -1,0 +1,47 @@
+{
+  "file": "girl-whale-shoals-30s.mp4",
+  "source": "actual WebGL game with fixed simulation steps",
+  "seconds": 30,
+  "frames": 450,
+  "encodedFps": 15,
+  "performanceBenchmark": false,
+  "audio": {
+    "source": "https://www.youtube.com/watch?v=m6SOJlkN1zU",
+    "excerptSeconds": [
+      0,
+      30
+    ],
+    "codec": "AAC",
+    "sampleRate": 48000
+  },
+  "events": {
+    "summonSeconds": 1.2,
+    "boostSeconds": 4.4,
+    "dragSeconds": 4,
+    "sleepSeconds": 27.47,
+    "wakeSeconds": 28.67,
+    "largeShoalsSeconds": [
+      [
+        6,
+        14.5
+      ],
+      [
+        23,
+        30
+      ]
+    ],
+    "closeWhaleSeconds": [
+      11,
+      21
+    ],
+    "girlActions": [
+      "freestyle",
+      "glide",
+      "breaststroke",
+      "dive",
+      "turn",
+      "reach"
+    ]
+  },
+  "errors": []
+}

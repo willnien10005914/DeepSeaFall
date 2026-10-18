@@ -1,0 +1,17 @@
+{
+  "neck_width_reduction_max_percent": 10.5,
+  "limb_cross_section_reduction_percent": [
+    4.5,
+    8.5
+  ],
+  "cheek_forward_fill_max_mm": 3.2,
+  "skin_body_max_delta_mm": 12.132116268824946,
+  "eyebrows_max_delta_mm": 4.640779491694754,
+  "eyelashes_max_delta_mm": 4.650094010630431,
+  "eyes_max_delta_mm": 4.406262339979924,
+  "dress_skirt_max_delta_mm": 6.938893903907228e-15,
+  "dress_strap_l_max_delta_mm": 6.938893903907228e-15,
+  "dress_strap_r_max_delta_mm": 6.938893903907228e-15,
+  "eyelashes_lower_detail_l_max_delta_mm": 4.501537549615133,
+  "eyelashes_lower_detail_r_max_delta_mm": 4.50152476853918
+}

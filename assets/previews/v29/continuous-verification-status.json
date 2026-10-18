@@ -1,0 +1,8 @@
+{
+  "status": "incomplete",
+  "reason": "Extended 900-step continuous validation exceeded 12 minutes; stopped due to excessive computational cost. No continuous-motion pass claimed.",
+  "actual_visible_skin_pose_checks": 52,
+  "actual_visible_skin_intersections": 0,
+  "installed_manual_headfirst_check": "passed",
+  "performance": "High CPU cost remains; video encoding FPS is not real-time game FPS."
+}

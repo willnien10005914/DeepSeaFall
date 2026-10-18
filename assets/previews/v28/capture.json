@@ -1,0 +1,34 @@
+{
+  "source": "Actual exported character and game renderer",
+  "file": "soft-lips-full-layered-hair-30s.mp4",
+  "seconds": 30,
+  "frames": 720,
+  "fps": 24,
+  "dimensions": [
+    720,
+    1440
+  ],
+  "audio": "requested-bgm.mp3",
+  "shots": {
+    "lips": [
+      0,
+      7
+    ],
+    "crownAndSideburns": [
+      7,
+      12
+    ],
+    "hairTips": [
+      12,
+      18
+    ],
+    "gameplay": [
+      18,
+      30
+    ]
+  },
+  "whaleRoutes": [
+    0
+  ],
+  "errors": []
+}

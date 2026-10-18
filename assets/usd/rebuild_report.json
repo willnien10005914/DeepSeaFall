@@ -1,0 +1,85 @@
+{
+  "girl": {
+    "revision": 3,
+    "meshes": 11,
+    "vertices": 217757,
+    "triangles": 375896,
+    "materials": [
+      "brows",
+      "dress",
+      "eyes",
+      "hair",
+      "haircap",
+      "lashes",
+      "skin"
+    ],
+    "bounds_m": [
+      [
+        -0.4263904094696045,
+        0.0010972762247547507,
+        -0.12738126516342163
+      ],
+      [
+        0.4263904094696045,
+        1.5716221332550049,
+        0.2630418837070465
+      ]
+    ],
+    "glb_bytes": 15447248,
+    "editable_source": "assets/refined/girl_reference_v3.blend",
+    "film_hair_strands": 25648
+  },
+  "whale": {
+    "revision": 4,
+    "meshes": 38,
+    "vertices": 45231,
+    "triangles": 88572,
+    "bounds_m": [
+      [
+        -6.819182957186946,
+        -1.2504157749235822,
+        -4.7
+      ],
+      [
+        5.92,
+        1.74,
+        4.7
+      ]
+    ],
+    "glb_bytes": 4535584,
+    "skin": "dark dorsal, mottled pale ventral, non-periodic pores",
+    "head_width_m": 3.22,
+    "surface_orientation": {
+      "whale_body": {
+        "original_outward_dot": -1.1588205919473833,
+        "inverted": true,
+        "final_outward_dot": 1.1588205919473833
+      },
+      "pectoral_l": {
+        "original_outward_dot": 0.11420156716229725,
+        "inverted": false,
+        "final_outward_dot": 0.11420156716229725
+      },
+      "fluke_l": {
+        "original_outward_dot": 0.06264686052102574,
+        "inverted": false,
+        "final_outward_dot": 0.06264686052102574
+      },
+      "pectoral_r": {
+        "original_outward_dot": -0.11420156716229725,
+        "inverted": true,
+        "final_outward_dot": 0.11420156716229725
+      },
+      "fluke_r": {
+        "original_outward_dot": -0.06264686052102574,
+        "inverted": true,
+        "final_outward_dot": 0.06264686052102574
+      },
+      "dorsal": {
+        "original_outward_dot": -0.08724325471619884,
+        "inverted": true,
+        "final_outward_dot": 0.08724325471619884
+      }
+    }
+  }
+}

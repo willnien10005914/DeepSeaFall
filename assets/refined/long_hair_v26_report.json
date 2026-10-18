@@ -1,0 +1,104 @@
+{
+  "revision": 26,
+  "style": "soft off-centre part, three staggered side-swept bang lengths and loose face-frame wisps; full bilateral long hair in overlapping S-wave layers with softly curled tips",
+  "guide_count": 2776,
+  "long_guide_count": 1400,
+  "side_swept_bang_guides": 296,
+  "bang_layer_guides_per_side": [
+    48,
+    42,
+    36
+  ],
+  "long_face_frame_wisps_per_side": 22,
+  "fringe_tip_height_range": [
+    1.3622954545454546,
+    1.4946188469464556
+  ],
+  "temple_sideburn_guides": 150,
+  "back_layer_tip_heights": [
+    0.935,
+    1.02,
+    1.11,
+    1.07
+  ],
+  "side_layer_tip_heights": [
+    0.972,
+    1.048,
+    1.128,
+    1.088
+  ],
+  "bilateral_side_guides": {
+    "left": 300,
+    "right": 300
+  },
+  "long_guide_length_range": [
+    0.38707110912116294,
+    0.6101370690369757
+  ],
+  "hair_meshes": [
+    "hair_cap_l",
+    "hair_cap_r",
+    "hair_long_core",
+    "hair_long_core_lock_1",
+    "hair_long_core_lock_2",
+    "hair_long_core_lock_3",
+    "hair_long_core_lock_4",
+    "hair_long_core_lock_5",
+    "hair_long_core_lock_6",
+    "hair_long_core_lock_7",
+    "hair_long_core_lock_8",
+    "hair_long_core_lock_9",
+    "hair_long_core_lock_10",
+    "hair_long_core_lock_11",
+    "hair_long_side_l",
+    "hair_long_side_l_lock_1",
+    "hair_long_side_l_lock_2",
+    "hair_long_side_l_lock_3",
+    "hair_long_side_l_lock_4",
+    "hair_long_side_l_lock_5",
+    "hair_long_side_l_lock_6",
+    "hair_long_side_r",
+    "hair_long_side_r_lock_1",
+    "hair_long_side_r_lock_2",
+    "hair_long_side_r_lock_3",
+    "hair_long_side_r_lock_4",
+    "hair_long_side_r_lock_5",
+    "hair_long_side_r_lock_6",
+    "hair_sideburn_base_l",
+    "hair_sideburn_base_r",
+    "hair_long_layers",
+    "hair_long_side_layers",
+    "hair_crown",
+    "hair_fringe",
+    "hair_sideburn_l",
+    "hair_sideburn_r",
+    "hair_loose_l",
+    "hair_loose_r",
+    "hair_fringe_sweep_l",
+    "hair_fringe_sweep_r",
+    "hair_fine_long",
+    "hair_long_fine_side",
+    "hair_fine_crown",
+    "hair_fine_sideburn_l",
+    "hair_fine_sideburn_r",
+    "hair_fine_fringe_sweep_l",
+    "hair_fine_fringe_sweep_r"
+  ],
+  "native_hair_vertex_count": 478132,
+  "native_hair_face_count": 245464,
+  "min_hair_y": 0.9045734203309179,
+  "finite": true,
+  "support_and_fibres_share_curve": true,
+  "texture_uv": "native root-v1/tip-v0; glTF export flips V",
+  "no_reference_photo_baked": true,
+  "measured_curve_qa": {
+    "lower_third_curve_sag_median_mm": 14.40074290832923,
+    "lower_third_curve_sag_range_mm": [
+      5.208115599397178,
+      26.007305372740227
+    ],
+    "lower_third_total_turn_median_degrees": 64.17774323831458,
+    "separate_tapered_support_lock_count": 26,
+    "no_bun_or_ponytail_meshes": true
+  }
+}

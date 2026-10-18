@@ -1,0 +1,20 @@
+{
+  "errors": [],
+  "restart": {
+    "state": "hidden",
+    "visible": false,
+    "enabled": true
+  },
+  "afterSecondSummon": {
+    "state": "following",
+    "visible": true,
+    "sceneMetrics": {
+      "frame": 83,
+      "calls": 127,
+      "triangles": 616864,
+      "points": 1600,
+      "lines": 0
+    },
+    "walls": 4
+  }
+}

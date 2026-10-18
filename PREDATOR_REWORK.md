@@ -1,0 +1,9 @@
+# Predator encounter revision 34
+
+The great white and grey reef shark now have fuller heads, recessed nostrils, raised eye rims, tapered lip rims, larger upper/lower teeth, five paired gill slits, sensory lines and fine healed skin marks. Closed, curved fins have rounded cross sections. Skin has countershading and procedural fine roughness, rather than a single flat colour.
+
+Eight sequential approach profiles span left/right, upper/lower and foreground/background directions. Each approach follows a curved path, then blends into stalking, an open-jaw lunge and retreat. A continuous traveling lateral wave speeds up for attacks and flight, accompanied by articulated pectorals and bank turns. These are authored real-time animations, not a newly trained physical swimming policy.
+
+The visible summoned whale uses its posed body/fin contact shell to push shark trunk and extremity proxies outside the whale. Contact triggers a single bubble burst and a non-hostile flee state: the shark turns away, swims faster and exits after 3.8 seconds. A distant whale does not frighten a shark. An imminent bite checks whale contact first so a shark already touching the whale cannot bite through it. The whale remains massive and keeps its visit path. Ten-second whale companionship, rock shattering, girl/whale affection, injury and gem repairs remain intact.
+
+Validation: real Chrome/WebGL rendering; both shark species; eight entry trajectories; six whale poses with different shark orientations; overlap resolution, no repeat fright, no bite while frightened, far-shark exclusion and flight cleanup; existing survival and whale interaction regressions. Reports and previews are in assets/previews/v34. Geometry contacts use conservative sphere proxies for the shark and a posed whale surface; this is gameplay collision, not a fluid simulation.

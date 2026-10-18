@@ -1,0 +1,31 @@
+{
+  "revision": 3,
+  "installedFilesMatched": 127,
+  "endpoints": {
+    "model-review.html?view=face&v=3": {
+      "status": 200,
+      "bytes": 2542
+    },
+    "cinematic.html": {
+      "status": 200,
+      "bytes": 1500
+    },
+    "index.html": {
+      "status": 200,
+      "bytes": 4302
+    },
+    "assets/usd/girl.glb": {
+      "status": 200,
+      "bytes": 15447248
+    },
+    "assets/previews/v3/portrait.png": {
+      "status": 200,
+      "bytes": 1215362
+    },
+    "assets/refined/girl_reference_v3.blend": {
+      "status": 200,
+      "bytes": 22682116
+    }
+  },
+  "backup": "/home/spark/will/DeepSeaFall-backup-20261013-girl"
+}

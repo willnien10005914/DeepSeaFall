@@ -1,0 +1,11 @@
+{
+  "addon": "MPFB",
+  "version": [
+    2,
+    0,
+    18
+  ],
+  "operation": "TargetService.load_target + bake_targets",
+  "eye_aperture": "upper lid lift and lower lid relaxation; eyeball dimensions preserved",
+  "target_vertices": 1326
+}

@@ -1,0 +1,38 @@
+{
+  "source": "Actual exported character and game renderer",
+  "file": "contact-headfirst-volume-hair-30s.mp4",
+  "seconds": 30,
+  "frames": 720,
+  "fps": 24,
+  "dimensions": [
+    720,
+    1440
+  ],
+  "audio": "requested-bgm.mp3",
+  "shots": {
+    "solidHair": [
+      0,
+      6
+    ],
+    "clothTuck": [
+      6,
+      10
+    ],
+    "headfirst": [
+      10,
+      14
+    ],
+    "turning": [
+      14,
+      18
+    ],
+    "gameplay": [
+      18,
+      30
+    ]
+  },
+  "whaleRoutes": [
+    0
+  ],
+  "errors": []
+}

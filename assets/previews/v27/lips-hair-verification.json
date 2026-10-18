@@ -1,0 +1,11 @@
+{
+  "hidden_helpers_unchanged": true,
+  "body_and_rig_unchanged": true,
+  "no_oral_mesh_or_teeth": true,
+  "outer_corner_seam_zero": true,
+  "sideburn_guides": 230,
+  "minimum_sideburn_tip_z_m": 0.09904347826086957,
+  "guides": 3370,
+  "max_lip_vertex_delta_mm": 1.304810946825638,
+  "valid": true
+}

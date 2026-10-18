@@ -1,0 +1,13 @@
+{
+  "release": 16,
+  "no_teeth": true,
+  "temple_sweeps": [
+    "hair_fringe_sweep_l",
+    "hair_fringe_sweep_r",
+    "hair_fine_fringe_sweep_l",
+    "hair_fine_fringe_sweep_r"
+  ],
+  "concurrent_edit_conflicts": [],
+  "root_uv_y": 0,
+  "tip_uv_y": 1
+}

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Deep Sea Fall — Isaac Sim cinematic vertical dive (Girl & Whale mood).
 
-Procedural proxies (spheres/cuboids) + teal lighting for a vertical media-tower
-style descent. Writes RGB PNG frames for ffmpeg.
+Authored Y-up meshes referenced into Isaac's Z-up stage. Writes RGB PNG frames.
+The interactive reference animation is in cinematic.html.
 
 Usage:
   ./run_cinematic.sh --frames 90
@@ -45,10 +45,10 @@ from isaaclab.sensors.camera import Camera, CameraCfg
 def spawn_scene(showcase: bool = False):
     # Local geometry only — avoid Nucleus GroundPlane USD (can hang offline).
     floor = sim_utils.CuboidCfg(
-        size=(40.0, 0.2, 40.0),
+        size=(40.0, 40.0, 0.2),
         visual_material=sim_utils.PreviewSurfaceCfg(diffuse_color=(0.02, 0.05, 0.09), roughness=1.0),
     )
-    floor.func("/World/OceanFloor", floor, translation=(0.0, -0.1, 0.0))
+    floor.func("/World/OceanFloor", floor, translation=(0.0, 0.0, -5.0))
 
     # Soft ocean fill + rim keys so clearcoat / skin read on camera
     dome = sim_utils.DomeLightCfg(intensity=1100.0 if showcase else 900.0, color=(0.18, 0.38, 0.48))
@@ -86,18 +86,20 @@ def spawn_scene(showcase: bool = False):
             prim.GetReferences().AddReference(str(usd_file))
             xform = UsdGeom.Xformable(prim)
             xform.ClearXformOpOrder()
-            xform.AddTranslateOp().Set(Gf.Vec3d(*translate))
+            x, y, z = translate
+            xform.AddTranslateOp().Set(Gf.Vec3d(x, -z, y))
             if rotate_y_deg:
-                xform.AddRotateYOp().Set(float(rotate_y_deg))
+                xform.AddRotateZOp().Set(float(rotate_y_deg))
+            xform.AddRotateXOp().Set(90.0)
             xform.AddScaleOp().Set(Gf.Vec3f(scale, scale, scale))
 
         if showcase:
             # Side-by-side turnaround: girl readable, whale wet skin beside her
-            _ref("/World/Girl", girl_usd, (-1.15, 0.0, 0.35), 1.45, rotate_y_deg=18.0)
-            _ref("/World/Whale", whale_usd, (1.55, 0.05, -0.35), 0.78, rotate_y_deg=-12.0)
+            _ref("/World/Girl", girl_usd, (5.6, 0.6, 1.0), 1.0, rotate_y_deg=-60.0)
+            _ref("/World/Whale", whale_usd, (-1.0, -0.5, 0.0), 1.0, rotate_y_deg=-12.0)
         else:
-            _ref("/World/Girl", girl_usd, (0.0, 0.0, 0.0), 1.0)
-            _ref("/World/Whale", whale_usd, (0.8, 0.15, -1.0), 1.1)
+            _ref("/World/Girl", girl_usd, (0.5, 0.7, 2.8), 1.0, rotate_y_deg=60.0)
+            _ref("/World/Whale", whale_usd, (0.6, -1.0, -2.0), 1.0, rotate_y_deg=-53.0)
         print("[cinematic] USD references attached", flush=True)
     else:
         print("[cinematic] USD missing — fallback proxies. Run assets/scripts/generate_usd_from_style.py", flush=True)
@@ -193,18 +195,18 @@ def main():
         if showcase:
             # Orbit so girl (left) + whale (right) both stay in frame
             ang = t * math.tau + 0.35
-            rad = 6.8
+            rad = 13.0
             eye = torch.tensor(
-                [[math.cos(ang) * rad + 0.15, 1.85 + 0.35 * math.sin(ang), math.sin(ang) * rad + 0.55]],
+                [[math.cos(ang) * rad + 0.15, -(math.sin(ang) * rad + 0.55), 2.85 + 0.35 * math.sin(ang)]],
                 device=camera.device,
             )
-            target = torch.tensor([[0.2, 1.35, 0.05]], device=camera.device)
+            target = torch.tensor([[0.2, -0.05, 0.65]], device=camera.device)
         else:
             cam_y = 2.2 - t * 0.6
             cam_z = 6.2 - t * 0.4
             sway = math.sin(t * math.pi * 2.0) * 0.15
-            eye = torch.tensor([[0.9 + sway, cam_y, cam_z]], device=camera.device)
-            target = torch.tensor([[1.0, 1.3, -0.5]], device=camera.device)
+            eye = torch.tensor([[6.0 + sway, -cam_z * 2.3, cam_y + 1]], device=camera.device)
+            target = torch.tensor([[0.4, 0, 0.7]], device=camera.device)
         camera.set_world_poses_from_view(eye, target)
 
         sim.step()

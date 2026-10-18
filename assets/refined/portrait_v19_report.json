@@ -1,0 +1,54 @@
+{
+  "revision": 19,
+  "maximum_face_vertex_change_m": 0.016394650829660434,
+  "maximum_visible_change_from_v13_m": 0.0046863569234484,
+  "body_below_1_35_unchanged": true,
+  "head_rest_unchanged": true,
+  "finite_vertices": true,
+  "topology_and_uv_unchanged": true,
+  "maximum_mirrored_face_error_m": 0.0,
+  "head_only_sculpt": true,
+  "reference_views": 1,
+  "appearance": {
+    "lipCenter": [
+      0,
+      1.3998483721202395,
+      0.12576036205187788
+    ],
+    "lipWidth": 0.023,
+    "lipHeight": 0.0095,
+    "features": [
+      "short rounded chin with wider tip",
+      "soft flowing jaw transition",
+      "relaxed almond eyelids",
+      "soft nose bridge",
+      "rounded cupid bow and lower lip",
+      "natural closed-lip smile"
+    ]
+  },
+  "upper_lip_bounds": {
+    "min": [
+      -0.01825775639182116,
+      1.3987878963947722,
+      0.12310353471508723
+    ],
+    "max": [
+      0.01825775639182116,
+      1.4086298473628207,
+      0.13572039368219407
+    ]
+  },
+  "lower_lip_bounds": {
+    "min": [
+      -0.020954336478512654,
+      1.390305378445791,
+      0.12031086316660593
+    ],
+    "max": [
+      0.020954336478512654,
+      1.3988583643560646,
+      0.13182690943514863
+    ]
+  },
+  "limitations": "Reference-guided proportions from two photographs, not a scan or an exact likeness reconstruction."
+}

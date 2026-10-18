@@ -1,0 +1,24 @@
+{
+  "addedVolumes": [
+    {
+      "name": "hair_ear_wisp_volume_l",
+      "closedLocks": 14,
+      "watertight": true,
+      "positiveVolumes": true
+    },
+    {
+      "name": "hair_ear_wisp_volume_r",
+      "closedLocks": 14,
+      "watertight": true,
+      "positiveVolumes": true
+    },
+    {
+      "name": "hair_crown_lift_volume",
+      "closedLocks": 30,
+      "watertight": true,
+      "positiveVolumes": true
+    }
+  ],
+  "nonHairSourceUnchanged": true,
+  "contactAndAnimationDataUnchanged": true
+}

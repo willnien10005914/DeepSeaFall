@@ -1,0 +1,31 @@
+{
+  "life": {
+    "species": [
+      "lanternfish",
+      "hatchetfish",
+      "anglerfish"
+    ],
+    "jellyParts": [
+      "Pulsing bell",
+      "Trailing tentacles",
+      "Folded oral arms",
+      "Four internal gonads",
+      "Radial gastrovascular canals",
+      "Inner subumbrellar cavity"
+    ],
+    "transmission": 0.72,
+    "triangles": 51454,
+    "finite": true
+  },
+  "habitat": {
+    "count": 8,
+    "species": [
+      "lanternfish",
+      "hatchetfish",
+      "anglerfish"
+    ],
+    "finite": true,
+    "jellies": 3
+  },
+  "errors": []
+}

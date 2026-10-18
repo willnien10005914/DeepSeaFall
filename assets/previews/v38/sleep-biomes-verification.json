@@ -1,0 +1,627 @@
+{
+  "base": "http://127.0.0.1:8765/",
+  "sleep": [
+    {
+      "blend": 0.12,
+      "coverage": 0,
+      "original": true,
+      "folded": false,
+      "skin": {
+        "active": false
+      },
+      "awake": {
+        "minimumSignedDistance": 0.004601564299953452,
+        "penetratingVertices": 0,
+        "checked": 5748,
+        "triangleIntersections": []
+      },
+      "pose": {
+        "blend": 0.12,
+        "headToKnees": 0.9717734970698549,
+        "headFacingKnees": 0.19910583095673345,
+        "handToGripTargets": [
+          0.590821169487281,
+          0.5831114013355868
+        ],
+        "kneesRaised": false
+      }
+    },
+    {
+      "blend": 0.2,
+      "coverage": 0,
+      "original": true,
+      "folded": false,
+      "skin": {
+        "active": false
+      },
+      "awake": {
+        "minimumSignedDistance": 0.0017687036027767278,
+        "penetratingVertices": 0,
+        "checked": 5737,
+        "triangleIntersections": []
+      },
+      "pose": {
+        "blend": 0.2,
+        "headToKnees": 0.950180082083359,
+        "headFacingKnees": 0.3308971071789156,
+        "handToGripTargets": [
+          0.5646684190559605,
+          0.5508011857222567
+        ],
+        "kneesRaised": false
+      }
+    },
+    {
+      "blend": 0.35,
+      "coverage": 0.3935860058309037,
+      "original": true,
+      "folded": true,
+      "skin": {
+        "active": true,
+        "actualBodyTriangleIntersections": 0,
+        "example": null,
+        "selectedBodyPoints": 9561,
+        "faces": 13727,
+        "vertices": 7519,
+        "armOpeningVertices": 128,
+        "milliseconds": 77.59999990463257,
+        "coverage": 0.3935860058309037,
+        "kneeLength": true
+      },
+      "awake": {
+        "minimumSignedDistance": 0.00004096287606510443,
+        "penetratingVertices": 0,
+        "checked": 5716,
+        "triangleIntersections": []
+      },
+      "pose": {
+        "blend": 0.35,
+        "headToKnees": 0.8921843988990269,
+        "headFacingKnees": 0.5470323673834238,
+        "handToGripTargets": [
+          0.5088607257896491,
+          0.49141823509110183
+        ],
+        "kneesRaised": false
+      }
+    },
+    {
+      "blend": 0.55,
+      "coverage": 1,
+      "original": false,
+      "folded": true,
+      "skin": {
+        "active": true,
+        "actualBodyTriangleIntersections": 0,
+        "example": null,
+        "selectedBodyPoints": 9561,
+        "faces": 13297,
+        "vertices": 7304,
+        "armOpeningVertices": 116,
+        "milliseconds": 58.19999980926514,
+        "coverage": 1,
+        "kneeLength": true
+      },
+      "awake": null,
+      "pose": {
+        "blend": 0.55,
+        "headToKnees": 0.7826518394035437,
+        "headFacingKnees": 0.7732447280648453,
+        "handToGripTargets": [
+          0.4150205549725484,
+          0.39910101354285243
+        ],
+        "kneesRaised": false
+      }
+    },
+    {
+      "blend": 0.76,
+      "coverage": 1,
+      "original": false,
+      "folded": true,
+      "skin": {
+        "active": true,
+        "actualBodyTriangleIntersections": 0,
+        "example": null,
+        "selectedBodyPoints": 9561,
+        "faces": 15859,
+        "vertices": 8749,
+        "armOpeningVertices": 202,
+        "milliseconds": 69.2000002861023,
+        "coverage": 1,
+        "kneeLength": true
+      },
+      "awake": null,
+      "pose": {
+        "blend": 0.76,
+        "headToKnees": 0.6355104068426392,
+        "headFacingKnees": 0.9243448453480585,
+        "handToGripTargets": [
+          0.2889283109389076,
+          0.277691401040402
+        ],
+        "kneesRaised": false
+      }
+    },
+    {
+      "blend": 1,
+      "coverage": 1,
+      "original": false,
+      "folded": true,
+      "skin": {
+        "active": true,
+        "actualBodyTriangleIntersections": 0,
+        "example": null,
+        "selectedBodyPoints": 9561,
+        "faces": 15507,
+        "vertices": 8713,
+        "armOpeningVertices": 311,
+        "milliseconds": 61.40000009536743,
+        "coverage": 1,
+        "kneeLength": true
+      },
+      "awake": null,
+      "pose": {
+        "blend": 1,
+        "headToKnees": 0.4430758168884484,
+        "headFacingKnees": 0.9924975515514546,
+        "handToGripTargets": [
+          0.11698594378265896,
+          0.11374253218816387
+        ],
+        "kneesRaised": true
+      }
+    },
+    {
+      "blend": 0.76,
+      "coverage": 1,
+      "original": false,
+      "folded": true,
+      "skin": {
+        "active": true,
+        "actualBodyTriangleIntersections": 0,
+        "example": null,
+        "selectedBodyPoints": 9561,
+        "faces": 15859,
+        "vertices": 8749,
+        "armOpeningVertices": 202,
+        "milliseconds": 60.39999961853027,
+        "coverage": 1,
+        "kneeLength": true
+      },
+      "awake": null,
+      "pose": {
+        "blend": 0.76,
+        "headToKnees": 0.6337757723632244,
+        "headFacingKnees": 0.9252338117844636,
+        "handToGripTargets": [
+          0.2878351788095864,
+          0.27538071361600414
+        ],
+        "kneesRaised": false
+      }
+    },
+    {
+      "blend": 0.55,
+      "coverage": 1,
+      "original": false,
+      "folded": true,
+      "skin": {
+        "active": true,
+        "actualBodyTriangleIntersections": 0,
+        "example": null,
+        "selectedBodyPoints": 9561,
+        "faces": 14312,
+        "vertices": 7840,
+        "armOpeningVertices": 119,
+        "milliseconds": 50.09999990463257,
+        "coverage": 1,
+        "kneeLength": true
+      },
+      "awake": null,
+      "pose": {
+        "blend": 0.55,
+        "headToKnees": 0.7789671268367913,
+        "headFacingKnees": 0.7790913686573468,
+        "handToGripTargets": [
+          0.41377156547306343,
+          0.39378000787099454
+        ],
+        "kneesRaised": false
+      }
+    },
+    {
+      "blend": 0.35,
+      "coverage": 0.3935860058309037,
+      "original": true,
+      "folded": true,
+      "skin": {
+        "active": true,
+        "actualBodyTriangleIntersections": 0,
+        "example": null,
+        "selectedBodyPoints": 9561,
+        "faces": 13899,
+        "vertices": 7598,
+        "armOpeningVertices": 126,
+        "milliseconds": 46.799999713897705,
+        "coverage": 0.3935860058309037,
+        "kneeLength": true
+      },
+      "awake": {
+        "minimumSignedDistance": 0.00019504838784831658,
+        "penetratingVertices": 0,
+        "checked": 5715,
+        "triangleIntersections": []
+      },
+      "pose": {
+        "blend": 0.35,
+        "headToKnees": 0.8874353519424024,
+        "headFacingKnees": 0.5629073389469812,
+        "handToGripTargets": [
+          0.5082671094483233,
+          0.4829439771687379
+        ],
+        "kneesRaised": false
+      }
+    },
+    {
+      "blend": 0.2,
+      "coverage": 0,
+      "original": true,
+      "folded": false,
+      "skin": {
+        "active": false
+      },
+      "awake": {
+        "minimumSignedDistance": 0.0007115679430099351,
+        "penetratingVertices": 0,
+        "checked": 5746,
+        "triangleIntersections": []
+      },
+      "pose": {
+        "blend": 0.2,
+        "headToKnees": 0.9453783175186482,
+        "headFacingKnees": 0.35937828026214524,
+        "handToGripTargets": [
+          0.5638873913534143,
+          0.5383551740402043
+        ],
+        "kneesRaised": false
+      }
+    },
+    {
+      "blend": 0.12,
+      "coverage": 0,
+      "original": true,
+      "folded": false,
+      "skin": {
+        "active": false
+      },
+      "awake": {
+        "minimumSignedDistance": 0.005679524726847785,
+        "penetratingVertices": 0,
+        "checked": 5746,
+        "triangleIntersections": []
+      },
+      "pose": {
+        "blend": 0.12,
+        "headToKnees": 0.9674369001677074,
+        "headFacingKnees": 0.2364011816225886,
+        "handToGripTargets": [
+          0.588660652484878,
+          0.567458337374388
+        ],
+        "kneesRaised": false
+      }
+    },
+    {
+      "blend": 0,
+      "coverage": 0,
+      "original": true,
+      "folded": false,
+      "skin": {
+        "active": false
+      },
+      "awake": {
+        "minimumSignedDistance": 0.005062123760760366,
+        "penetratingVertices": 0,
+        "checked": 5736,
+        "triangleIntersections": []
+      },
+      "pose": {
+        "blend": 0.12,
+        "headToKnees": 0.9674369001677074,
+        "headFacingKnees": 0.2364011816225886,
+        "handToGripTargets": [
+          0.588660652484878,
+          0.567458337374388
+        ],
+        "kneesRaised": false
+      }
+    }
+  ],
+  "plan": {
+    "rows": [
+      {
+        "index": 0,
+        "id": "pink-meadow",
+        "stable": true,
+        "starts": 0
+      },
+      {
+        "index": 1,
+        "id": "star-drift",
+        "stable": true,
+        "starts": 1
+      },
+      {
+        "index": 2,
+        "id": "pink-meadow",
+        "stable": true,
+        "starts": 2
+      },
+      {
+        "index": 3,
+        "id": "lantern-abyss",
+        "stable": true,
+        "starts": 3
+      },
+      {
+        "index": 4,
+        "id": "star-drift",
+        "stable": true,
+        "starts": 4
+      },
+      {
+        "index": 5,
+        "id": "blue-garden",
+        "stable": true,
+        "starts": 5
+      },
+      {
+        "index": 6,
+        "id": "jade-forest",
+        "stable": true,
+        "starts": 6
+      },
+      {
+        "index": 7,
+        "id": "star-drift",
+        "stable": true,
+        "starts": 7
+      },
+      {
+        "index": 8,
+        "id": "jade-forest",
+        "stable": true,
+        "starts": 8
+      },
+      {
+        "index": 9,
+        "id": "blue-garden",
+        "stable": true,
+        "starts": 9
+      },
+      {
+        "index": 10,
+        "id": "violet-bloom",
+        "stable": true,
+        "starts": 10
+      },
+      {
+        "index": 11,
+        "id": "star-drift",
+        "stable": true,
+        "starts": 11
+      },
+      {
+        "index": 12,
+        "id": "jade-forest",
+        "stable": true,
+        "starts": 12
+      },
+      {
+        "index": 13,
+        "id": "violet-bloom",
+        "stable": true,
+        "starts": 13
+      },
+      {
+        "index": 14,
+        "id": "blue-garden",
+        "stable": true,
+        "starts": 14
+      },
+      {
+        "index": 15,
+        "id": "lantern-abyss",
+        "stable": true,
+        "starts": 15
+      },
+      {
+        "index": 16,
+        "id": "jade-forest",
+        "stable": true,
+        "starts": 16
+      },
+      {
+        "index": 17,
+        "id": "pink-meadow",
+        "stable": true,
+        "starts": 17
+      },
+      {
+        "index": 18,
+        "id": "star-drift",
+        "stable": true,
+        "starts": 18
+      },
+      {
+        "index": 19,
+        "id": "lantern-abyss",
+        "stable": true,
+        "starts": 19
+      },
+      {
+        "index": 20,
+        "id": "star-drift",
+        "stable": true,
+        "starts": 20
+      },
+      {
+        "index": 21,
+        "id": "jade-forest",
+        "stable": true,
+        "starts": 21
+      },
+      {
+        "index": 22,
+        "id": "lantern-abyss",
+        "stable": true,
+        "starts": 22
+      },
+      {
+        "index": 23,
+        "id": "pink-meadow",
+        "stable": true,
+        "starts": 23
+      },
+      {
+        "index": 24,
+        "id": "blue-garden",
+        "stable": true,
+        "starts": 24
+      },
+      {
+        "index": 25,
+        "id": "lantern-abyss",
+        "stable": true,
+        "starts": 25
+      },
+      {
+        "index": 26,
+        "id": "violet-bloom",
+        "stable": true,
+        "starts": 26
+      },
+      {
+        "index": 27,
+        "id": "pink-meadow",
+        "stable": true,
+        "starts": 27
+      },
+      {
+        "index": 28,
+        "id": "blue-garden",
+        "stable": true,
+        "starts": 28
+      },
+      {
+        "index": 29,
+        "id": "violet-bloom",
+        "stable": true,
+        "starts": 29
+      }
+    ],
+    "randomized": true
+  },
+  "biomes": [
+    {
+      "segment": 16,
+      "range": [
+        1600,
+        1700
+      ],
+      "id": "pink-meadow",
+      "name": "粉紅海草林",
+      "light": 0.74,
+      "stars": 0.4,
+      "lantern": 0,
+      "depth": 1600.1,
+      "ambient": 0.4,
+      "sun": 1.9,
+      "environment": 0.43000000000000005,
+      "weedColor": 12610718,
+      "lanternVisible": false,
+      "lanterns": 11,
+      "scatter": [
+        0.071,
+        0.13,
+        0.28
+      ]
+    },
+    {
+      "segment": 0,
+      "range": [
+        0,
+        100
+      ],
+      "id": "jade-forest",
+      "name": "翡翠流光林",
+      "light": 0.7999959362758107,
+      "stars": 0.26000948202310875,
+      "lantern": 0,
+      "depth": 0.1,
+      "ambient": 0.42999796813790525,
+      "sun": 2.0999864542527016,
+      "environment": 0.44999864542527024,
+      "weedColor": 3443556,
+      "lanternVisible": false,
+      "lanterns": 11,
+      "scatter": [
+        0.02500311552187859,
+        0.1999952589884457,
+        0.23000338643682455
+      ]
+    },
+    {
+      "segment": 1,
+      "range": [
+        100,
+        200
+      ],
+      "id": "star-drift",
+      "name": "星河浮游帶",
+      "light": 0.34003115494355496,
+      "stars": 0.9999498813772022,
+      "lantern": 0.17998780882743165,
+      "depth": 100.1,
+      "ambient": 0.2000155774717775,
+      "sun": 0.6500982057504755,
+      "environment": 0.21001625480501418,
+      "weedColor": 6778811,
+      "lanternVisible": true,
+      "lanterns": 11,
+      "scatter": [
+        0.025000000211010367,
+        0.06700900760085057,
+        0.20000203209145387
+      ]
+    },
+    {
+      "segment": 2,
+      "range": [
+        200,
+        300
+      ],
+      "id": "lantern-abyss",
+      "name": "燈籠魚幽谷",
+      "light": 0.06501862751261994,
+      "stars": 0.13005892060627605,
+      "lantern": 0.9999444616103847,
+      "depth": 200.1,
+      "ambient": 0.055009821721833656,
+      "sun": 0.060039966605881005,
+      "environment": 0.0450111763424384,
+      "weedColor": 2181463,
+      "lanternVisible": true,
+      "lanterns": 11,
+      "scatter": [
+        0.004001422303480599,
+        0.014003590233107443,
+        0.03501117537915198
+      ]
+    }
+  ],
+  "errors": []
+}

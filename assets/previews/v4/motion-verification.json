@@ -1,0 +1,41 @@
+{
+  "errors": [],
+  "broken": [],
+  "motion": {
+    "jointTravelMetres": {
+      "l_wrist": 0.6533265304743996,
+      "r_wrist": 0.6023444082956746,
+      "l_ankle": 0.187215300503745,
+      "r_ankle": 0.2328905960411876
+    },
+    "speedChangeHandDisplacementMetres": 0.008898097507954686,
+    "finiteNormalizedWeights": true,
+    "bones": 19,
+    "swimState": "swim",
+    "position": [
+      0,
+      -0.4,
+      0
+    ]
+  },
+  "dragged": [
+    1.300535386232008,
+    1.029339911015692,
+    0
+  ],
+  "sleeping": {
+    "sleeping": true,
+    "pose": "float"
+  },
+  "whale": {
+    "visible": true,
+    "state": "following",
+    "screenCenter": [
+      0.20768155649826406,
+      0.17023756771478057,
+      0.9884689298346551
+    ],
+    "inFrontOfCamera": true,
+    "inViewport": true
+  }
+}

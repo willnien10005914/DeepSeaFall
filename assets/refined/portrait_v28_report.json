@@ -1,0 +1,10 @@
+{
+  "revision": 28,
+  "central_lip_retraction_max_mm": 0.8638995935445065,
+  "upper_lip_vertical_reduction_mm": 0.32,
+  "lower_lip_vertical_reduction_mm": 0.42,
+  "ear_forward_max_mm": 3.499991900487831,
+  "cheek_fullness_reduced": true,
+  "body_below_neck_unchanged": true,
+  "hidden_helpers_unchanged": true
+}

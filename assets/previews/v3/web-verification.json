@@ -1,0 +1,71 @@
+{
+  "errors": [],
+  "shaderErrors": [],
+  "stats": {
+    "vertices": 231534,
+    "triangles": 376336,
+    "materials": [
+      {
+        "name": "skin",
+        "map": true,
+        "alphaTest": 0
+      },
+      {
+        "name": "brows",
+        "map": true,
+        "alphaTest": 0.25
+      },
+      {
+        "name": "lashes",
+        "map": true,
+        "alphaTest": 0.25
+      },
+      {
+        "name": "eyes",
+        "map": true,
+        "alphaTest": 0.04
+      },
+      {
+        "name": "haircap",
+        "map": false,
+        "alphaTest": 0
+      },
+      {
+        "name": "hair",
+        "map": true,
+        "alphaTest": 0.06
+      },
+      {
+        "name": "hair",
+        "map": true,
+        "alphaTest": 0.06
+      },
+      {
+        "name": "hair",
+        "map": true,
+        "alphaTest": 0.06
+      },
+      {
+        "name": "dress",
+        "map": false,
+        "alphaTest": 0
+      },
+      {
+        "name": "dress",
+        "map": false,
+        "alphaTest": 0
+      },
+      {
+        "name": "dress",
+        "map": false,
+        "alphaTest": 0
+      },
+      {
+        "name": "",
+        "map": false,
+        "alphaTest": 0
+      }
+    ],
+    "bones": 19
+  }
+}

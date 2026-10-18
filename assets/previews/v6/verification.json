@@ -1,0 +1,79 @@
+{
+  "swim": {
+    "bubbles": {
+      "rate": 21.204502836440014,
+      "alive": 62,
+      "boosted": false,
+      "swimming": true
+    },
+    "finite": true,
+    "whale": "hidden",
+    "creatures": 7
+  },
+  "boost": {
+    "bubbles": {
+      "rate": 86.97222913931984,
+      "alive": 241,
+      "boosted": true,
+      "swimming": true
+    },
+    "finite": true,
+    "whale": "approaching",
+    "creatures": 7
+  },
+  "following": {
+    "bubbles": {
+      "rate": 17.242432384940734,
+      "alive": 145,
+      "boosted": false,
+      "swimming": true
+    },
+    "finite": true,
+    "whale": "following",
+    "creatures": 9
+  },
+  "rest": {
+    "bubbles": {
+      "rate": 2.2,
+      "alive": 8,
+      "boosted": false,
+      "swimming": false
+    },
+    "finite": true,
+    "whale": "following",
+    "creatures": 24
+  },
+  "rocks": {
+    "arches": 2,
+    "cliffVertices": 14841,
+    "backgroundFish": 12,
+    "backgroundJelly": 3,
+    "scene": {
+      "frame": 57,
+      "calls": 202,
+      "triangles": 870600,
+      "points": 1600,
+      "lines": 0
+    }
+  },
+  "cleared": true,
+  "life": {
+    "fish": [
+      "body",
+      "fins",
+      "eyes",
+      "gill covers"
+    ],
+    "jelly": [
+      "Pulsing bell",
+      "Trailing tentacles",
+      "Folded oral arms",
+      "Four internal gonads"
+    ],
+    "fishMapSize": [
+      1024,
+      512
+    ]
+  },
+  "errors": []
+}
