@@ -1,7 +1,7 @@
 import {LearnedSwimmer,loadSwimPPO} from './ppo-swimmer.js?v=42';
 import {OceanDetails} from './ocean-details.js?v=42';
 import {CombatActor,loadCombatPPO} from './combat-ppo.js?v=44';
-import {CombatSystem} from './combat.js?v=44';
+import {CombatSystem} from './combat.js?v=45';
 import {combatMoves} from './combat-moves.js?v=44';
 import {descentTravel} from './descent-motion.js?v=42';
 import {DepthBiomes} from './depth-biomes.js?v=43';
@@ -754,6 +754,7 @@ export class Game3D {
     }
     this.ocean.update(this.t,{depth:this.depth});this.oceanDetails.update(this.t,this.depth,this);
     this.water.render(this.t,{depth:this.depth,light:this.depthBiomes.current?.light??1,biome:this.depthBiomes.current});
+    this.combat?.elemental?.renderOverlay(this.renderer, this.camera);
     requestAnimationFrame(this._loop);
   }
 

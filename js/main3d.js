@@ -1,4 +1,4 @@
-import { Game3D } from "./three/game3d.js?v=44";
+import { Game3D } from "./three/game3d.js?v=45";
 
 const canvas = document.getElementById("game");
 const $ = (id) => document.getElementById(id);

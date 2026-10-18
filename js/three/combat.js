@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import {combatMoves} from './combat-moves.js?v=44';
-import {ElementalCombat,loadElementalDynamics} from './elemental-combat.js?v=44';
+import {ElementalCombat,loadElementalDynamics} from './elemental-combat.js?v=45';
 import {predatorBodySpheres,scarePredator} from './predators.js?v=42';
 import {wildlifeCapsules} from './marine-encounters.js?v=42';
 const clamp=THREE.MathUtils.clamp,TAU=Math.PI*2,unitY=new THREE.Vector3(0,1,0);
