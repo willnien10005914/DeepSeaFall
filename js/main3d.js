@@ -1,4 +1,6 @@
-import { Game3D } from "./three/game3d.js?v=46";
+import {bootstrap,MultiplayerClient} from './multiplayer/client.js?v=47';
+import {seeded} from './multiplayer/common.js?v=47';
+import { Game3D } from "./three/game3d.js?v=47";
 
 const canvas = document.getElementById("game");
 const $ = (id) => document.getElementById(id);
@@ -73,13 +75,17 @@ const ui = {
   },
 };
 
+const roomInfo=await bootstrap();
+if(roomInfo||window.__MP_SIMULATION)Math.random=seeded(roomInfo?.seed??window.__MP_SEED);
 const game = new Game3D(canvas, ui);
 window.__deepSeaFall = game;
+const multiplayer=roomInfo?new MultiplayerClient(game,roomInfo):null;
+window.__multiplayer=multiplayer;
 
-$("btnStartManual").addEventListener("click", () => game.start("manual"));
+$("btnStartManual").addEventListener("click", () => multiplayer?multiplayer.join():game.start("manual"));
 $("btnStartAI").addEventListener("click", () => { game.prompt = "proactive"; game.start("ai"); });
 $("btnDemo").addEventListener("click", () => game.start("demo"));
-$("btnRetry").addEventListener("click", () => game.start(game.mode === "demo" ? "demo" : "manual"));
+$("btnRetry").addEventListener("click", () => multiplayer?multiplayer.join():game.start(game.mode === "demo" ? "demo" : "manual"));
 $("btnRevive").addEventListener("click", () => game.revive());
 
 const params = new URLSearchParams(location.search);

@@ -1,5 +1,12 @@
 # Deep Sea Fall — 少女與鯨（混合架構）
 
+
+## 多人一起下潛（Spark / Pinggy）
+
+同一個 Pinggy 網址可讓最多八位少女一起游泳：可選名字、各自衣色、頭頂名字與聊天泡泡、角色碰撞，以及共用體力、呼鯨和攻擊冷卻。打字或點麥克風，由 Spark GB10 的 Whisper CUDA 轉成可確認的聊天文字。游泳 PPO 也由 Spark 批次推論；晚加入會同步現有深度，第一位玩家離開也不會終止海域。
+
+啟動、架構與驗證見 [MULTIPLAYER.md](MULTIPLAYER.md)。`npm start` 啟動多人伺服器；`npm run start:solo` 保留單人版本。
+
 目前玩得到的少女是深色長直髮、淡綠方領洋裝。下面三張直接來自現在的 `girl.glb`，取代 README 裡舊的短棕髮棚拍。
 
 <p>
@@ -69,7 +76,7 @@
 
 ```bash
 cd ~/will/DeepSeaFall
-python3 -m http.server 8765
+npm start # 多人；先依 MULTIPLAYER.md 啟動 GPU worker
 # 手機／瀏覽器：http://localhost:8765
 # 2D：http://localhost:8765/2d.html
 ```

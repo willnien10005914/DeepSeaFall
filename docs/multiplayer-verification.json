@@ -1,0 +1,27 @@
+{
+  "verified_at": "2026-10-18T07:25:19.934798+00:00",
+  "unit_tests": 4,
+  "two_browser": {
+    "late_join": true,
+    "distinct_names_and_colors": true,
+    "literal_safe_chat": true,
+    "shared_attack_disabled": true,
+    "disconnect_notice": true,
+    "page_errors": []
+  },
+  "eight_clients": {
+    "count": 8,
+    "minimum_body_clearance_world_units": 0.043,
+    "mean_snapshot_bytes": 25416,
+    "last_simulation_step_ms": 32,
+    "simulation_error": null
+  },
+  "gpu": {
+    "device": "NVIDIA GB10",
+    "ppo_batches_observed": 557,
+    "speech_recording_to_editable_draft_to_chat": true,
+    "speech_cuda": true,
+    "page_errors": []
+  },
+  "scope": "Eight WS clients; two independently rendered browser contexts; fake microphone plays the upstream Whisper jfk.flac test fixture. Local Spark backend, before Pinggy forwarding."
+}

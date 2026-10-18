@@ -274,7 +274,7 @@ export function prepareCharacter(root, kind) {
 export function animateCharacter(root, time, motion={}) {
   if(root.userData.whaleRig)poseWhale(root,time,motion);
   const bones=root.userData.bones;
-  if(bones){
+  if(bones&&!root.userData.networkPose){
     poseSwimmer(root,time,motion);if(root.userData.kind==='girl')applyCombatPose(root);
   }
   if(root.userData.kind!=='girl')return;

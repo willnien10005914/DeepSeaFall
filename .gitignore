@@ -12,3 +12,11 @@ isaac_cinematic/output/*.log
 node_modules/
 .playwright/
 !isaac_cinematic/output/deep_sea_isaac_cinematic.mp4
+
+# Local multiplayer runtime and models
+.env
+.env.*
+!.env.example
+.runtime/
+runtime-models/
+__pycache__/

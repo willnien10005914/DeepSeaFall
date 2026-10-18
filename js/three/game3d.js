@@ -1,4 +1,4 @@
-import {LearnedSwimmer,loadSwimPPO} from './ppo-swimmer.js?v=42';
+import {LearnedSwimmer,loadSwimPPO} from './ppo-swimmer.js?v=47';
 import {OceanDetails} from './ocean-details.js?v=42';
 import {CombatActor,loadCombatPPO} from './combat-ppo.js?v=44';
 import {CombatSystem} from './combat.js?v=46';
@@ -21,7 +21,7 @@ import {SwimReactions} from './swim-reactions.js?v=42';
 import * as THREE from "three";
 import {SwimBubbles} from "./swim-bubbles.js?v=42";
 import {animateMarine} from "./marine-life.js?v=42";
-import { prepareCharacter, animateCharacter } from "./authored.js?v=42";
+import { prepareCharacter, animateCharacter } from "./authored.js?v=47";
 import { makeOcean, oceanEnvironment } from "./ocean-real.js?v=42";
 import { WaterRenderer } from "./water.js?v=42";
 import { SeaAudio } from "../audio.js?v=42";
@@ -224,6 +224,7 @@ export class Game3D {
       // Replace procedural proxies while keeping animation hooks
       this.scene.remove(this.girl);
       this.scene.remove(this.whale);
+      this.multiplayerTemplate=girlScene.clone(true);
       prepareCharacter(girlScene, 'girl');
       girlScene.userData.swimPPO=new LearnedSwimmer(swimPolicy);
       girlScene.userData.combatPPO=new CombatActor(combatPolicy);
@@ -616,7 +617,7 @@ export class Game3D {
     this.policyCommand=desired.clone();if(this.girl.userData.swimPPO&&!this.sleeping&&!this.combat.active)desired.multiplyScalar(this.girl.userData.swimPPO.locomotionGain(desired));
     if(this.sleeping)desired.set(0,0,0);if(this.combat.active)desired.multiplyScalar(.15);
     const velocity=this.swimMotor.update(dt,desired,{sleeping:this.sleeping,style:!aiMode&&this.tapMotion.active?this.tapMotion.style:null});this.swimVelocity.copy(velocity);if(this.sleeping){this.swimVelocity.x+=Math.sin(this.t*.23)*.035;this.swimVelocity.y+=Math.sin(this.t*.31+.8)*.025;this.swimVelocity.z+=Math.sin(this.t*.19)*.012;}this.girl.position.addScaledVector(this.swimVelocity,dt);
-    this.girl.position.x=clamp(this.girl.position.x,-3.2,3.2);this.girl.position.y=clamp(this.girl.position.y,-1.2,1.8);this.girl.position.z=clamp(this.girl.position.z,-.35,.35);
+    this.girl.position.x=clamp(this.girl.position.x,-3.2,3.2);this.girl.position.y=clamp(this.girl.position.y,-1.2,1.8);this.girl.position.z=clamp(this.girl.position.z,this.multiplayerAuthority?-1.2:-.35,this.multiplayerAuthority?1.2:.35);
     if((this.girl.position.y<=-1.2&&velocity.y<0)||(this.girl.position.y>=1.8&&velocity.y>0))this.swimMotor.velocity.y=0;
 
     const actualVelocity=this.girl.position.clone().sub(previous).multiplyScalar(1/Math.max(dt,.001));
