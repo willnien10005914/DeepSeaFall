@@ -1,11 +1,11 @@
 import * as THREE from 'three';
-import {SeaAudio} from './audio.js?v=49';
+import {SeaAudio} from './audio.js?v=50';
 const audio=new SeaAudio();
-import {SwimBubbles} from './three/swim-bubbles.js?v=49';
+import {SwimBubbles} from './three/swim-bubbles.js?v=50';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
-import {prepareCharacter,animateCharacter} from './three/authored.js?v=49';
-import {makeOcean,oceanEnvironment} from './three/ocean-real.js?v=49';
-import {WaterRenderer} from './three/water.js?v=49';
+import {prepareCharacter,animateCharacter} from './three/authored.js?v=50';
+import {makeOcean,oceanEnvironment} from './three/ocean-real.js?v=50';
+import {WaterRenderer} from './three/water.js?v=50';
 
 const renderer=new THREE.WebGLRenderer({canvas:document.querySelector('canvas'),antialias:true,preserveDrawingBuffer:true});
 renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.95;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
@@ -50,7 +50,7 @@ document.querySelector('#music').onclick=async e=>{if(!audio.ctx){await audio.un
 document.querySelector('#pause').onclick=e=>{paused=!paused;e.target.textContent=paused?'播放':'暫停'};
 range.oninput=()=>{time=Number(range.value);if(girl)pose(time)};
 try{
- const l=new GLTFLoader();const [g,w]=await Promise.all([l.loadAsync('assets/usd/girl.glb?v=49'),l.loadAsync('assets/usd/whale.glb?v=49')]);
+ const l=new GLTFLoader();const [g,w]=await Promise.all([l.loadAsync('assets/usd/girl.glb?v=50'),l.loadAsync('assets/usd/whale.glb?v=50')]);
  girl=prepareCharacter(g.scene,'girl');whale=prepareCharacter(w.scene,'whale');scene.add(girl,whale);water.apply(girl);water.apply(whale);document.querySelector('#loading').remove();
  window.cinematic={ready:true,scene,camera,renderer,girl,whale,water,ocean,bubbles,seek(t){time=t;paused=true;pose(t);water.render(t)}};
 }catch(e){document.querySelector('#loading').textContent='3D 模型載入失敗：'+e.message;throw e}

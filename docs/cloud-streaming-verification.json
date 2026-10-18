@@ -1,0 +1,233 @@
+{
+  "browser": "Chromium mobile emulation, WebGL disabled; not a physical iPhone test",
+  "h264": {
+    "stats": {
+      "bytes": 181888,
+      "frames": 30,
+      "codec": "mp4",
+      "reconnects": 0,
+      "firstFrameMs": 324.80000019073486,
+      "bufferSeconds": 0.08620000000000005
+    },
+    "ready": 4,
+    "paused": false,
+    "width": 480,
+    "height": 864,
+    "totalEntryMs": 2067.779392
+  },
+  "fallback": {
+    "stats": {
+      "bytes": 98632,
+      "frames": 4,
+      "codec": "jpeg",
+      "reconnects": 0,
+      "firstFrameMs": 398.2999997138977
+    },
+    "width": 480,
+    "height": 864,
+    "totalEntryMs": 2640.2919359999996
+  },
+  "sharedControls": {
+    "chat": true,
+    "whale": true,
+    "attack": true,
+    "videoReconnectKeepsIdentity": true,
+    "projectedPositionBefore": 0.6045,
+    "projectedPositionAfter": 0.7672
+  },
+  "health": {
+    "ready": true,
+    "players": 2,
+    "depth": 7.244999999999991,
+    "gpu": {
+      "ready": true,
+      "device": "NVIDIA GB10",
+      "policy": "swim-ppo-v42",
+      "asr": "Whisper small multilingual",
+      "cuda": true
+    },
+    "streaming": {
+      "ready": true,
+      "renderer": "ANGLE (NVIDIA Corporation, NVIDIA GB10/PCIe, OpenGL ES 3.2)",
+      "width": 480,
+      "height": 864,
+      "fps": 20,
+      "viewers": 2,
+      "capturedFrames": 50,
+      "fragments": 80,
+      "codec": "h264",
+      "error": null
+    },
+    "gpuBatches": 161,
+    "lastStepMs": 44,
+    "error": null
+  },
+  "forbiddenAssetRequests": [],
+  "requestedResources": [
+    "/",
+    "/css/style.css",
+    "/css/multiplayer.css",
+    "/css/cloud.css",
+    "/js/main3d.js",
+    "/js/multiplayer/client.js",
+    "/js/three/bottom-dock.js",
+    "/js/game-ui.js",
+    "/api/room",
+    "/js/stream/cloud-game.js",
+    "/js/audio.js",
+    "/js/stream/player.js",
+    "/js/stream/moves.js",
+    "/js/three/combat-definitions.js",
+    "/assets/audio/requested-bgm.mp3",
+    "/",
+    "/css/style.css",
+    "/css/multiplayer.css",
+    "/css/cloud.css",
+    "/js/main3d.js",
+    "/js/multiplayer/client.js",
+    "/js/three/bottom-dock.js",
+    "/js/game-ui.js",
+    "/api/room",
+    "/js/stream/cloud-game.js",
+    "/js/audio.js",
+    "/js/stream/player.js",
+    "/js/stream/moves.js",
+    "/js/three/combat-definitions.js",
+    "/assets/audio/requested-bgm.mp3"
+  ],
+  "errors": [],
+  "idleRenderingPauses": true,
+  "release": "v50",
+  "assetComplexity": {
+    "girlMB": 38.72,
+    "girlTriangles": 1001116,
+    "whaleMB": 9.51,
+    "whaleTriangles": 165920
+  },
+  "capacity": {
+    "clients": 8,
+    "viewers": 8,
+    "unauthorizedVideoRejected": true,
+    "sharedRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GB10/PCIe, OpenGL ES 3.2)",
+    "captureFPSDuringSample": 8.333333333333334,
+    "encodedFPS": 20,
+    "video": [
+      {
+        "init": 1,
+        "fragments": 31,
+        "bytes": 473463
+      },
+      {
+        "init": 1,
+        "fragments": 31,
+        "bytes": 473463
+      },
+      {
+        "init": 1,
+        "fragments": 31,
+        "bytes": 473463
+      },
+      {
+        "init": 1,
+        "fragments": 31,
+        "bytes": 473463
+      },
+      {
+        "init": 1,
+        "fragments": 31,
+        "bytes": 473463
+      },
+      {
+        "init": 1,
+        "fragments": 31,
+        "bytes": 473463
+      },
+      {
+        "init": 1,
+        "fragments": 31,
+        "bytes": 473463
+      },
+      {
+        "init": 1,
+        "fragments": 31,
+        "bytes": 473463
+      }
+    ],
+    "health": {
+      "ready": true,
+      "players": 8,
+      "depth": 2.3399999999999985,
+      "gpu": {
+        "ready": true,
+        "device": "NVIDIA GB10",
+        "policy": "swim-ppo-v42",
+        "asr": "Whisper small multilingual",
+        "cuda": true
+      },
+      "streaming": {
+        "ready": true,
+        "renderer": "ANGLE (NVIDIA Corporation, NVIDIA GB10/PCIe, OpenGL ES 3.2)",
+        "width": 480,
+        "height": 864,
+        "fps": 20,
+        "viewers": 8,
+        "capturedFrames": 77,
+        "fragments": 111,
+        "codec": "h264",
+        "error": null
+      },
+      "gpuBatches": 214,
+      "lastStepMs": 48,
+      "error": null
+    },
+    "validation": "Eight independent authenticated control/video socket pairs; browser video decoding is tested separately in cloud-browser.mjs."
+  },
+  "rejoin": {
+    "emptyRoomRejoin": {
+      "depth": 0.09,
+      "runId": 4,
+      "running": true,
+      "points": 60
+    },
+    "partialDisconnectResumesRun": true,
+    "newVisitorAfterAllQuit": true,
+    "controlsPreferencePersists": true,
+    "errors": []
+  },
+  "local3DRegression": {
+    "collisions": 4,
+    "clearance": 0.046,
+    "attack": {
+      "state": "strike",
+      "disabled": true
+    },
+    "health": {
+      "ready": true,
+      "players": 2,
+      "depth": 19.350000000000104,
+      "gpu": {
+        "ready": true,
+        "device": "NVIDIA GB10",
+        "policy": "swim-ppo-v42",
+        "asr": "Whisper small multilingual",
+        "cuda": true
+      },
+      "streaming": {
+        "ready": true,
+        "renderer": "ANGLE (NVIDIA Corporation, NVIDIA GB10/PCIe, OpenGL ES 3.2)",
+        "width": 480,
+        "height": 864,
+        "fps": 20,
+        "viewers": 0,
+        "capturedFrames": 88,
+        "fragments": 130,
+        "codec": "h264",
+        "error": null
+      },
+      "gpuBatches": 687,
+      "lastStepMs": 27,
+      "error": null
+    },
+    "errors": []
+  }
+}

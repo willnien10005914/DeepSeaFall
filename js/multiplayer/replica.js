@@ -1,4 +1,4 @@
-import { animateGemstone } from "../three/gemstones.js?v=49";
+import { animateGemstone } from "../three/gemstones.js?v=50";
 // Render-only replica. All gameplay mutations and actor decisions come from Spark.
 import * as T from "three";
 import {
@@ -8,12 +8,12 @@ import {
   applyTransform,
   withSeed,
   staticRocks,
-} from "./common.js?v=49";
-import { animateCharacter } from "../three/authored.js?v=49";
-import { animateMarine } from "../three/marine-life.js?v=49";
-import { makeTreasure } from "../three/meshes.js?v=49";
-import { SwimBubbles } from "../three/swim-bubbles.js?v=49";
-import { combatMoves } from "../three/combat-moves.js?v=49";
+} from "./common.js?v=50";
+import { animateCharacter } from "../three/authored.js?v=50";
+import { animateMarine } from "../three/marine-life.js?v=50";
+import { makeTreasure } from "../three/meshes.js?v=50";
+import { SwimBubbles } from "../three/swim-bubbles.js?v=50";
+import { combatMoves } from "../three/combat-moves.js?v=50";
 
 export class SeaReplica {
   constructor(game, id, onRoster) {

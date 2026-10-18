@@ -1,8 +1,8 @@
 /** Requested piano soundtrack with procedural underwater game sound effects. */
 
 export class SeaAudio {
-  constructor() {
-    this.track=new Audio("assets/audio/requested-bgm.mp3?v=49");this.track.loop=true;this.track.preload="auto";this.musicEnabled=true;this.musicAvailable=false;
+  constructor({preload="auto"} = {}) {
+    this.track=new Audio("assets/audio/requested-bgm.mp3?v=50");this.track.loop=true;this.track.preload=preload;this.musicEnabled=true;this.musicAvailable=false;
     this.ctx = null;
     this.master = null;
     this.musicGain = null;

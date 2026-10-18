@@ -1,4 +1,4 @@
-import {makeGemstone} from './gemstones.js?v=49';
+import {makeGemstone} from './gemstones.js?v=50';
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
@@ -6,8 +6,8 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
  *  Optional: load authored GLB from /assets/usd/*.glb (same generator as USD).
  */
 
-import {makeRealFish,makeRealJelly} from './marine-life.js?v=49';
-import {makeScannedRock} from './ocean-real.js?v=49';
+import {makeRealFish,makeRealJelly} from './marine-life.js?v=50';
+import {makeScannedRock} from './ocean-real.js?v=50';
 
 const loader = new GLTFLoader();
 

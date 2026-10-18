@@ -1,5 +1,7 @@
 # Shared dive on Spark / Pinggy
 
+Phones default to the Spark-rendered video client; desktop can choose `?render=cloud`. The original local 3D client remains at `?render=local`. Both clients join the same room. See [CLOUD_STREAMING.md](CLOUD_STREAMING.md) for the GPU renderer, video transport and phone tests.
+
 Open the same Pinggy HTTPS URL on each phone. Enter a name, then choose **加入同一片海**. Suggested names come from Greek, Japanese, Norse, Egyptian, Celtic, Indian and Taiwanese goddesses. The server rejects occupied names and assigns a distinct dress colour. One shared sea supports up to eight connected girls; a full room gives a clear message.
 
 Each player steers her own girl. Depth, health/stamina, sleep, dress repair, affection, whale visits and attack cooldowns are shared. Jewel counts and points are individual; see [ABYSS_RELICS.md](ABYSS_RELICS.md). Attack animation belongs to the girl who requested it. A late joiner receives the existing sea, not a new dive. When nobody remains online, the run ends; the next girl starts a fresh dive at 0m. A service restart also starts a new sea. No database or external account is needed.
@@ -15,7 +17,7 @@ flowchart LR
   ASR --> GPU
 ```
 
-The server runs the existing Three.js game's simulation without rendering frames. It advances the world once, updates every girl's individual locomotion, resolves posed body-sphere contacts between all girls, and publishes snapshots at up to 10 Hz (20 Hz simulation). Clients interpolate transforms and joint rotations and render hair, dresses, bubbles and combat effects locally. Entity creation recipes carry independent random seeds and counter values so late joiners reconstruct the same fish, predators and treasure. Terrain uses a shared seed; destroyed rocks and all entity transforms are authoritative.
+The server runs the existing Three.js game's simulation without rendering frames. It advances the world once, updates every girl's individual locomotion, resolves posed body-sphere contacts between all girls, and publishes snapshots at up to 10 Hz (20 Hz simulation). Local 3D clients interpolate transforms and joint rotations and render hair, dresses, bubbles and combat effects locally. Cloud clients receive encoded pictures from a separate shared Spark renderer and lightweight personal HUD/label updates. Entity creation recipes carry independent random seeds and counter values so late joiners reconstruct the same fish, predators and treasure. Terrain uses a shared seed; destroyed rocks and all entity transforms are authoritative.
 
 The first girl has no host authority: closing her browser does not stop the world. Clients can submit only bounded destinations, allowlisted actions and chat. They cannot submit health, positions, rewards or cooldown values. Duplicate action requests still pass the original server-side combat/cooldown checks. Server-side CUDA actor inference batches all girls, with the identical local JS actor as a short-lived inference-error fallback. Physics/contact resolution remains on CPU; GPU use is for the actual learned actor and speech model, not a claim of full fluid CFD.
 

@@ -101,3 +101,13 @@ test("last disconnect ends the run, clears stale commands/chat/reservations and 
   assert.notEqual(fresh.id, a.id, "an empty sea does not resume the abandoned identity");
   assert.equal(fresh.name, "Athena");
 });
+
+
+test("different abilities may be pressed together; repeated presses stay throttled", () => {
+  const room = new DiveRoom({now: () => 10000});
+  const p = room.join({});
+  room.receive(p, {type:"action", action:"whale"});
+  room.receive(p, {type:"action", action:"attack", move:"spiral-kick"});
+  room.receive(p, {type:"action", action:"attack", move:"cross-blades"});
+  assert.deepEqual(room.takeCommands().map(c=>c.action), ["whale", "attack"]);
+});

@@ -99,6 +99,7 @@ export class DiveRoom {
     p.lastChat = 0;
     p.lastInput = 0;
     p.lastAction = 0;
+    p.lastActions = new Map();
     p.alive = true;
     p.joinedAt = this.now();
     this.players.set(p.id, p);
@@ -181,7 +182,8 @@ export class DiveRoom {
         "restart",
       ].includes(m.action)
     ) {
-      if (now - p.lastAction < 220) return;
+      if (now - (p.lastActions.get(m.action) || 0) < 220) return;
+      p.lastActions.set(m.action, now);
       p.lastAction = now;
       this.commands.push({
         type: "action",

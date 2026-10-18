@@ -40,7 +40,7 @@ export class Simulation {
     });
     await this.page.evaluate(async () => {
       const { AuthoritativeDive } =
-        await import("/js/multiplayer/authoritative.js?v=49");
+        await import("/js/multiplayer/authoritative.js?v=50");
       window.diveSimulation = new AuthoritativeDive(window.__deepSeaFall);
       await diveSimulation.start();
     });

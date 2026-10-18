@@ -25,7 +25,7 @@ try {
     contexts.push(c);
     const p = await c.newPage();
     p.on("pageerror", (e) => errors.push(e.message));
-    await p.goto(base);
+    await p.goto(base + (process.env.TEST_RENDER === "local" ? "/?render=local" : ""));
     await p.locator("#playerName").waitFor();
     await p.fill("#playerName", name);
     await p.click("#btnStartManual");

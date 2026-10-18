@@ -1,9 +1,9 @@
 import * as THREE from 'three';
-import {combatMoves} from './combat-moves.js?v=49';
-import {ElementalCombat,loadElementalDynamics} from './elemental-combat.js?v=49';
-import {FlowGrains} from './attack-particles.js?v=49';
-import {predatorBodySpheres,scarePredator} from './predators.js?v=49';
-import {wildlifeCapsules} from './marine-encounters.js?v=49';
+import {combatMoves} from './combat-moves.js?v=50';
+import {ElementalCombat,loadElementalDynamics} from './elemental-combat.js?v=50';
+import {FlowGrains} from './attack-particles.js?v=50';
+import {predatorBodySpheres,scarePredator} from './predators.js?v=50';
+import {wildlifeCapsules} from './marine-encounters.js?v=50';
 const clamp=THREE.MathUtils.clamp,TAU=Math.PI*2,unitY=new THREE.Vector3(0,1,0);
 export function attackCooldown(move,hits){return clamp(move.cooldown+hits.reduce((n,h)=>n+(h.kind==='rock'?5:h.species==='kraken'?18:h.kind==='predator'?12:h.species==='sea-snake'?8:4),0),30,180);}
 export class CombatSystem{

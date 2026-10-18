@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 
 const loader = new THREE.TextureLoader();
-function texture(file,color=false){const t=loader.load('assets/marine/'+file+'?v=49');if(color)t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=4;return t}
+function texture(file,color=false){const t=loader.load('assets/marine/'+file+'?v=50');if(color)t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=4;return t}
 const maps={albedo:texture('fish-albedo.jpg',true),normal:texture('fish-normal.png'),rough:texture('fish-roughness.png'),fin:texture('fin-membrane.png',true)};
 const clamp=THREE.MathUtils.clamp;
 

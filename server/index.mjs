@@ -6,6 +6,7 @@ import { createReadStream } from "node:fs";
 import { WebSocketServer, WebSocket } from "ws";
 import { DiveRoom } from "./room.mjs";
 import { Simulation } from "./simulation.mjs";
+import { RenderStream, cloudSnapshot } from "./render-stream.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), ".."),
   PORT = Number(process.env.PORT || 8765),
@@ -38,6 +39,8 @@ const send = (ws, data) => {
       ws.close(1013, "Connection too slow");
       return;
     }
+    if (data.type === "snapshot" && ws.render === "cloud")
+      data = {type:"snapshot", state:cloudSnapshot(data.state, cloud.screen)};
     ws.send(
       JSON.stringify(data, (_k, v) =>
         typeof v === "number" && !Number.isInteger(v)
@@ -51,6 +54,7 @@ const broadcast = (data) => {
   for (const ws of sockets) if (ws.player) send(ws, data);
 };
 const room = new DiveRoom({ broadcast });
+const cloud = new RenderStream({room, url:`http://127.0.0.1:${PORT}/`, seed:room.seed});
 const json = (res, status, data) => {
   res.writeHead(status, {
     "Content-Type": "application/json",
@@ -93,6 +97,7 @@ const server = http.createServer(async (req, res) => {
         maxPlayers: room.maxPlayers,
         shared: ["depth", "stamina", "attack", "whale"],
         gpu: gpuHealth,
+        streaming: cloud.health(),
       });
     if (url.pathname === "/api/health" && req.method === "GET")
       return json(res, 200, {
@@ -100,6 +105,7 @@ const server = http.createServer(async (req, res) => {
         players: room.players.size,
         depth: room.snapshot?.depth || 0,
         gpu: gpuHealth,
+        streaming: cloud.health(),
         gpuBatches: sim.gpuBatches,
         lastStepMs: Math.round(lastStepMs),
         error: lastError,
@@ -188,11 +194,28 @@ const wss = new WebSocketServer({
   perMessageDeflate: false,
 });
 server.on("upgrade", (req, socket, head) => {
+  if (req.url === "/stream" && sameOrigin(req)) {
+    videoWss.handleUpgrade(req, socket, head, (ws) => videoWss.emit("connection", ws, req));
+    return;
+  }
   if (req.url !== "/ws" || !sameOrigin(req)) {
     socket.end("HTTP/1.1 403 Forbidden\r\n\r\n");
     return;
   }
   wss.handleUpgrade(req, socket, head, (ws) => wss.emit("connection", ws, req));
+});
+const videoWss = new WebSocketServer({noServer:true, maxPayload:4096, perMessageDeflate:false});
+videoWss.on("connection", ws => {
+  if(videoWss.clients.size>16){ws.close(1013,"Too many video connections");return;}
+  const timer=setTimeout(()=>{if(!cloud.viewers.has(ws))ws.close(1008,"Subscribe required");},20000);
+  ws.on("message",raw=>{
+    try {
+      const m=JSON.parse(raw);
+      if(m.type!=="subscribe" || cloud.viewers.has(ws))return;
+      cloud.subscribe(ws,m);clearTimeout(timer);
+    }catch{ws.close(1008,"Invalid video request");}
+  });
+  ws.on("close",()=>clearTimeout(timer));ws.on("error",()=>{});
 });
 wss.on("connection", (ws) => {
   if (sockets.size >= 24) {
@@ -216,6 +239,7 @@ wss.on("connection", (ws) => {
         if (m.type !== "join") return;
         try {
           ws.player = room.join(ws, m);
+          ws.render = m.render === "cloud" ? "cloud" : "local";
           send(ws, {
             type: "welcome",
             id: ws.player.id,
@@ -257,7 +281,7 @@ wss.on("connection", (ws) => {
       );
     clearTimeout(joinTimer);
     sockets.delete(ws);
-    if (ws.player) room.leave(ws.player.id);
+    if (ws.player) {cloud.remove(ws.player.id);room.leave(ws.player.id);}
   });
   ws.on("error", () => {});
 });
@@ -291,7 +315,7 @@ async function tick() {
       if (state && room.players.size && generation === room.generation) {
         state.notices = room.notices;
         room.snapshot = state;
-        if (state.tick % 2 === 0) broadcast({ type: "snapshot", state });
+        if (state.tick % 2 === 0) {cloud.push(state);broadcast({ type: "snapshot", state });}
       }
       lastError = null;
     }
@@ -322,6 +346,9 @@ server.listen(PORT, HOST, async () => {
     ready = true;
     console.log("Authoritative sea ready; Spark CUDA actor and ASR connected.");
     tick();
+    cloud.start(sim.browser).then(()=>console.log("Spark cloud renderer ready:",cloud.renderer)).catch(e=>{
+      cloud.error=e.message;console.error("Cloud rendering start:",e);
+    });
   } catch (e) {
     lastError = e.message;
     console.error(e);
@@ -332,6 +359,7 @@ async function close() {
   stopping = true;
   clearInterval(heartbeat);
   for (const ws of sockets) ws.close(1001, "Server restarting");
+  await cloud.close();
   await sim.close();
   server.close(() => process.exit(0));
   setTimeout(() => process.exit(0), 3000).unref();

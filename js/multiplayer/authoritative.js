@@ -2,7 +2,7 @@ import {
   awardGem,
   freshScore,
   nearestCollector,
-} from "../three/treasure-rules.js?v=49";
+} from "../three/treasure-rules.js?v=50";
 // Runs only inside the server-owned, non-rendering Chromium simulation.
 // Clients submit destinations/actions, never transforms, health or cooldowns.
 import * as T from "three";
@@ -13,15 +13,15 @@ import {
   transform,
   withSeed,
   staticRocks,
-} from "./common.js?v=49";
-import { TapSwim } from "../three/tap-swim.js?v=49";
-import { SwimPropulsion } from "../three/swim-propulsion.js?v=49";
-import { animateCharacter } from "../three/authored.js?v=49";
+} from "./common.js?v=50";
+import { TapSwim } from "../three/tap-swim.js?v=50";
+import { SwimPropulsion } from "../three/swim-propulsion.js?v=50";
+import { animateCharacter } from "../three/authored.js?v=50";
 import {
   resolveGirlShark,
   girlContactSpheres,
-} from "../three/shark-contacts.js?v=49";
-import { makeTreasure } from "../three/meshes.js?v=49";
+} from "../three/shark-contacts.js?v=50";
+import { makeTreasure } from "../three/meshes.js?v=50";
 
 const owned = [
   "girl",

@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import {MeshBVH,CENTER} from '../vendor/three-mesh-bvh.js';
-import {installFabricDamage} from './injury-effects.js?v=49';
+import {installFabricDamage} from './injury-effects.js?v=50';
 // A fixed-topology, open skirt cage around posed torso/leg cross-sections.
 // It keeps clothing off the skin without unbounded triangle-plane corrections.
 export class MotionGarment{

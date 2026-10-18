@@ -1,8 +1,7 @@
-import { SeaReplica } from "./replica.js?v=49";
 export async function bootstrap() {
-  if (window.__MP_SIMULATION) return null;
+  if (window.__MP_SIMULATION || window.__MP_RENDERER) return null;
   try {
-    const r = await fetch("/api/room", { signal: AbortSignal.timeout(2500) });
+    const r = await fetch("/api/room", { signal: AbortSignal.timeout(15000) });
     if (!r.ok) return null;
     const data = await r.json();
     return data.multiplayer ? data : null;
@@ -11,7 +10,8 @@ export async function bootstrap() {
   }
 }
 export class MultiplayerClient {
-  constructor(game, info) {
+  constructor(game, info, {makeReplica} = {}) {
+    this.makeReplica = makeReplica;
     this.g = game;
     this.info = info;
     this.seq = 0;
@@ -144,6 +144,7 @@ export class MultiplayerClient {
       clearTimeout(this.retryTimer);
       this.ws?.close();
       this.stopRecording();
+      this.g.stopStream?.();
     });
   }
   move(p) {
@@ -178,7 +179,7 @@ export class MultiplayerClient {
     }
     if (this.joining) return;
     this.joining = true;
-    this.status.textContent = "正在載入 3D 少女…";
+    this.status.textContent = this.g.remote ? "正在連上海域…" : "正在載入 3D 少女…";
     let assetTimer;
     try {
       // Start permission-sensitive audio from the tap, without waiting for it.
@@ -228,6 +229,7 @@ export class MultiplayerClient {
           type: "join",
           name: this.name.value,
           resumeToken: sessionStorage.getItem("diveResumeToken") || "",
+          render: this.g.remote ? "cloud" : "local",
         }),
       );
     ws.onmessage = (e) => {
@@ -255,7 +257,7 @@ export class MultiplayerClient {
         this.token = m.token;
         sessionStorage.setItem("diveResumeToken", m.token);
         if (!this.replica)
-          this.replica = new SeaReplica(this.g, m.id, (players, scoreboard) =>
+          this.replica = new this.makeReplica(this.g, m.id, (players, scoreboard) =>
             this.updateRoster(players, scoreboard),
           );
         else {
@@ -277,6 +279,7 @@ export class MultiplayerClient {
           }
           this.replica.id = m.id;
         }
+        this.g.connectStream?.(m.token);
         this.panel.classList.remove("hidden");
         this.g.ui.showGame();
         this.updateRoster(m.roster);
@@ -310,6 +313,7 @@ export class MultiplayerClient {
       if (ws !== this.ws) return;
       this.connected = false;
       this.stopRecording();
+      this.g.stopStream?.();
       if (this.joined && !this.leaving) {
         this.announce("連線暫時中斷，正在回到海裡…");
         this.retryTimer = setTimeout(

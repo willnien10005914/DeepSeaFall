@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import {reactionWeights} from './reaction-weights.js?v=49';
+import {reactionWeights} from './reaction-weights.js?v=50';
 export function inferReaction(observation){
  let values=observation;
  reactionWeights.layers.forEach((layer,index)=>{

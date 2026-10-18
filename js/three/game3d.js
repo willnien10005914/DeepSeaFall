@@ -1,37 +1,37 @@
-import {animateGemstone} from './gemstones.js?v=49';
-import {gemType} from './treasure-rules.js?v=49';
-import {LearnedSwimmer,loadSwimPPO} from './ppo-swimmer.js?v=49';
-import {OceanDetails} from './ocean-details.js?v=49';
-import {CombatActor,loadCombatPPO} from './combat-ppo.js?v=49';
-import {CombatSystem} from './combat.js?v=49';
-import {combatMoves} from './combat-moves.js?v=49';
-import {descentTravel} from './descent-motion.js?v=49';
-import {DepthBiomes} from './depth-biomes.js?v=49';
-import {resolveGirlShark} from './shark-contacts.js?v=49';
-import {makeMarineEncounter,updateMarineEncounter} from './marine-encounters.js?v=49';
-import {TapSwim} from './tap-swim.js?v=49';
-import {makePredator,updatePredator,preparePredatorEntry,predatorBodySpheres,scarePredator} from './predators.js?v=49';
-import {InjuryEffects} from './injury-effects.js?v=49';
-import {WhaleEncounter} from './whale-encounter.js?v=49';
-import {WhaleContacts} from './whale-contacts.js?v=49';
-import {RockFragments} from './rock-fragments.js?v=49';
-import {SwimPropulsion} from './swim-propulsion.js?v=49';
-import {GameFeedback} from './game-feedback.js?v=49';
-import {RockContacts} from './rock-contacts.js?v=49';
-import {WaterSwipe} from './water-swipe.js?v=49';
-import {SwimReactions} from './swim-reactions.js?v=49';
+import {animateGemstone} from './gemstones.js?v=50';
+import {gemType} from './treasure-rules.js?v=50';
+import {LearnedSwimmer,loadSwimPPO} from './ppo-swimmer.js?v=50';
+import {OceanDetails} from './ocean-details.js?v=50';
+import {CombatActor,loadCombatPPO} from './combat-ppo.js?v=50';
+import {CombatSystem} from './combat.js?v=50';
+import {combatMoves} from './combat-moves.js?v=50';
+import {descentTravel} from './descent-motion.js?v=50';
+import {DepthBiomes} from './depth-biomes.js?v=50';
+import {resolveGirlShark} from './shark-contacts.js?v=50';
+import {makeMarineEncounter,updateMarineEncounter} from './marine-encounters.js?v=50';
+import {TapSwim} from './tap-swim.js?v=50';
+import {makePredator,updatePredator,preparePredatorEntry,predatorBodySpheres,scarePredator} from './predators.js?v=50';
+import {InjuryEffects} from './injury-effects.js?v=50';
+import {WhaleEncounter} from './whale-encounter.js?v=50';
+import {WhaleContacts} from './whale-contacts.js?v=50';
+import {RockFragments} from './rock-fragments.js?v=50';
+import {SwimPropulsion} from './swim-propulsion.js?v=50';
+import {GameFeedback} from './game-feedback.js?v=50';
+import {RockContacts} from './rock-contacts.js?v=50';
+import {WaterSwipe} from './water-swipe.js?v=50';
+import {SwimReactions} from './swim-reactions.js?v=50';
 import * as THREE from "three";
-import {SwimBubbles} from "./swim-bubbles.js?v=49";
-import {animateMarine} from "./marine-life.js?v=49";
-import { prepareCharacter, animateCharacter } from "./authored.js?v=49";
-import { makeOcean, oceanEnvironment } from "./ocean-real.js?v=49";
-import { WaterRenderer } from "./water.js?v=49";
-import { SeaAudio } from "../audio.js?v=49";
+import {SwimBubbles} from "./swim-bubbles.js?v=50";
+import {animateMarine} from "./marine-life.js?v=50";
+import { prepareCharacter, animateCharacter } from "./authored.js?v=50";
+import { makeOcean, oceanEnvironment } from "./ocean-real.js?v=50";
+import { WaterRenderer } from "./water.js?v=50";
+import { SeaAudio } from "../audio.js?v=50";
 import { zoneAt } from "../zones.js";
 import {
   makeFish, makeJelly, makeRock, makeTreasure,
   loadGlb, HAIR_COLORS, DRESS_COLORS,
-} from "./meshes.js?v=49";
+} from "./meshes.js?v=50";
 
 const BEST_KEY = "deepSeaFall3dBest";
 const WHALE_LINES = [
@@ -217,8 +217,8 @@ export class Game3D {
   async _tryLoadAuthoredAssets() {
     try {
       const [girlScene, whaleScene,swimPolicy,combatPolicy] = await Promise.all([
-        loadGlb("assets/usd/girl.glb?v=49"),
-        loadGlb("assets/usd/whale.glb?v=49"),
+        loadGlb("assets/usd/girl.glb?v=50"),
+        loadGlb("assets/usd/whale.glb?v=50"),
         loadSwimPPO(),
         loadCombatPPO(),
         this.combat.dynamicsReady,
