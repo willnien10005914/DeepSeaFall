@@ -1,35 +1,37 @@
-import {LearnedSwimmer,loadSwimPPO} from './ppo-swimmer.js?v=47';
-import {OceanDetails} from './ocean-details.js?v=42';
-import {CombatActor,loadCombatPPO} from './combat-ppo.js?v=44';
-import {CombatSystem} from './combat.js?v=46';
-import {combatMoves} from './combat-moves.js?v=44';
-import {descentTravel} from './descent-motion.js?v=42';
-import {DepthBiomes} from './depth-biomes.js?v=43';
-import {resolveGirlShark} from './shark-contacts.js?v=42';
-import {makeMarineEncounter,updateMarineEncounter} from './marine-encounters.js?v=42';
-import {TapSwim} from './tap-swim.js?v=42';
-import {makePredator,updatePredator,preparePredatorEntry,predatorBodySpheres,scarePredator} from './predators.js?v=42';
-import {InjuryEffects} from './injury-effects.js?v=42';
-import {WhaleEncounter} from './whale-encounter.js?v=42';
-import {WhaleContacts} from './whale-contacts.js?v=42';
-import {RockFragments} from './rock-fragments.js?v=42';
-import {SwimPropulsion} from './swim-propulsion.js?v=42';
-import {GameFeedback} from './game-feedback.js?v=42';
-import {RockContacts} from './rock-contacts.js?v=42';
-import {WaterSwipe} from './water-swipe.js?v=42';
-import {SwimReactions} from './swim-reactions.js?v=42';
+import {animateGemstone} from './gemstones.js?v=48';
+import {gemType} from './treasure-rules.js?v=48';
+import {LearnedSwimmer,loadSwimPPO} from './ppo-swimmer.js?v=48';
+import {OceanDetails} from './ocean-details.js?v=48';
+import {CombatActor,loadCombatPPO} from './combat-ppo.js?v=48';
+import {CombatSystem} from './combat.js?v=48';
+import {combatMoves} from './combat-moves.js?v=48';
+import {descentTravel} from './descent-motion.js?v=48';
+import {DepthBiomes} from './depth-biomes.js?v=48';
+import {resolveGirlShark} from './shark-contacts.js?v=48';
+import {makeMarineEncounter,updateMarineEncounter} from './marine-encounters.js?v=48';
+import {TapSwim} from './tap-swim.js?v=48';
+import {makePredator,updatePredator,preparePredatorEntry,predatorBodySpheres,scarePredator} from './predators.js?v=48';
+import {InjuryEffects} from './injury-effects.js?v=48';
+import {WhaleEncounter} from './whale-encounter.js?v=48';
+import {WhaleContacts} from './whale-contacts.js?v=48';
+import {RockFragments} from './rock-fragments.js?v=48';
+import {SwimPropulsion} from './swim-propulsion.js?v=48';
+import {GameFeedback} from './game-feedback.js?v=48';
+import {RockContacts} from './rock-contacts.js?v=48';
+import {WaterSwipe} from './water-swipe.js?v=48';
+import {SwimReactions} from './swim-reactions.js?v=48';
 import * as THREE from "three";
-import {SwimBubbles} from "./swim-bubbles.js?v=42";
-import {animateMarine} from "./marine-life.js?v=42";
-import { prepareCharacter, animateCharacter } from "./authored.js?v=47";
-import { makeOcean, oceanEnvironment } from "./ocean-real.js?v=42";
-import { WaterRenderer } from "./water.js?v=42";
-import { SeaAudio } from "../audio.js?v=42";
+import {SwimBubbles} from "./swim-bubbles.js?v=48";
+import {animateMarine} from "./marine-life.js?v=48";
+import { prepareCharacter, animateCharacter } from "./authored.js?v=48";
+import { makeOcean, oceanEnvironment } from "./ocean-real.js?v=48";
+import { WaterRenderer } from "./water.js?v=48";
+import { SeaAudio } from "../audio.js?v=48";
 import { zoneAt } from "../zones.js";
 import {
   makeFish, makeJelly, makeRock, makeTreasure,
   loadGlb, HAIR_COLORS, DRESS_COLORS,
-} from "./meshes.js?v=42";
+} from "./meshes.js?v=48";
 
 const BEST_KEY = "deepSeaFall3dBest";
 const WHALE_LINES = [
@@ -65,7 +67,7 @@ export class Game3D {
     this.maxDepth = 0;
     this.best = Number(localStorage.getItem(BEST_KEY) || 0);
     this.stamina = 100;
-    this.lootCount = 0;
+    this.lootCount = 0;this.score=0;this.ui.setScore?.(0);
     this.ui.setTreasure?.(0);
     this.seaweed = 0;
     this.boost = 0;
@@ -207,7 +209,7 @@ export class Game3D {
     this.scene.add(this.bio);
     this.bio.visible=false;
     this.water=new WaterRenderer(this.renderer,this.scene,this.camera,this.sun);
-    this.depthBiomes=new DepthBiomes(this.scene);this.combat=new CombatSystem(this.scene);this.oceanDetails=new OceanDetails(this.scene,this.ocean);
+    this.depthBiomes=new DepthBiomes(this.scene);this.water.apply(this.depthBiomes.landmarks.group);this.combat=new CombatSystem(this.scene);this.oceanDetails=new OceanDetails(this.scene,this.ocean);
     this.assetsReady = this._tryLoadAuthoredAssets();
     this.water.apply(this.ocean.group);
   }
@@ -215,8 +217,8 @@ export class Game3D {
   async _tryLoadAuthoredAssets() {
     try {
       const [girlScene, whaleScene,swimPolicy,combatPolicy] = await Promise.all([
-        loadGlb("assets/usd/girl.glb?v=42"),
-        loadGlb("assets/usd/whale.glb?v=42"),
+        loadGlb("assets/usd/girl.glb?v=48"),
+        loadGlb("assets/usd/whale.glb?v=48"),
         loadSwimPPO(),
         loadCombatPPO(),
         this.combat.dynamicsReady,
@@ -327,7 +329,7 @@ export class Game3D {
     this.depth = 0;this.depthBiomes?.reset();
     this.maxDepth = 0;
     this.stamina = 100;
-    this.lootCount = 0;
+    this.lootCount = 0;this.score=0;this.ui.setScore?.(0);
     this.ui.setTreasure?.(0);
     this.seaweed = 0;
     this.boost = 0;
@@ -519,6 +521,8 @@ export class Game3D {
     }
   }
 
+  _spawnGem(id=null){const mesh=makeTreasure(id);mesh.position.set(rand(-2.8,2.8),rand(-4.0,-2.8),rand(-.18,.18));this.world.add(mesh);const e={mesh,kind:'loot',hostile:false,hp:1};this.entities.push(e);return e;}
+
   _setDressDamage(value){this.dressDamage=clamp(value,0,.75);if(this.girl?.userData.fabricDamage)this.girl.userData.fabricDamage.value=this.dressDamage;this.ui.setDressCondition?.(this.dressDamage);}
 
   _predatorBite(entity,point){
@@ -571,9 +575,9 @@ export class Game3D {
     if(e.dead)return;
     const point=this._screenPoint(e.mesh.getWorldPosition(new THREE.Vector3())),before=this.stamina;
     this.stamina=Math.min(100,this.stamina+(e.mesh.userData.staminaRestore||20));const repaired=this.dressDamage>0;this._setDressDamage(0);if(repaired)this.ui.toast('寶石修復洋裝，體力回復');
-    e.dead=true;this.lootCount++;this.ui.setTreasure?.(this.lootCount);this.ui.setStamina(this.stamina);this.audio.sfxTreasure();
+    e.dead=true;this.lootCount++;this.score+=gemType(e.mesh.userData.gemId).value;this.ui.setScore?.(this.score);this.ui.setTreasure?.(this.lootCount);this.ui.setStamina(this.stamina);this.audio.sfxTreasure();
     if(this.lootCount%5===0){this.seaweed++;this.ui.toast('收集 5 顆寶石：獲得一次海草復活');}
-    this.feedback.collect(point,Math.round(this.stamina-before));this.lastPickup={count:this.lootCount,staminaBefore:before,staminaAfter:this.stamina,repaired,point};
+    this.feedback.collect(point,Math.round(this.stamina-before),e.mesh.userData.gemId);this.feedback.label({x:point.x,y:point.y-20},`+${gemType(e.mesh.userData.gemId).value} 分`);this.lastPickup={count:this.lootCount,staminaBefore:before,staminaAfter:this.stamina,repaired,point};
   }
 
   _update(dt) {
@@ -668,6 +672,7 @@ export class Game3D {
         animateMarine(e.mesh,this.t,e.mesh.userData.vx);
       }
       if (e.kind === "loot") {
+        animateGemstone(e.mesh,this.t);
         e.mesh.rotation.y += dt*.65;
         e.mesh.rotation.z=Math.sin(this.t*1.8+e.mesh.position.x)*.10;
       }
@@ -724,7 +729,7 @@ export class Game3D {
     localStorage.setItem(BEST_KEY, String(this.best));
     this.ui.showGameOver({
       depth: Math.floor(this.maxDepth),
-      loot: this.lootCount,
+      loot: this.lootCount,score:this.score,
       canRevive: this.seaweed > 0,
     });
   }

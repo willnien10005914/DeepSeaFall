@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
-import {movingSlice} from './descent-motion.js?v=42';
+import {movingSlice} from './descent-motion.js?v=48';
 const Y=new THREE.Vector3(0,1,0),X=new THREE.Vector3(1,0,0),TAU=Math.PI*2;
 function ellipsoid(parent,p,s,mat){const m=new THREE.Mesh(new THREE.SphereGeometry(1,16,10),mat);m.position.set(...p);m.scale.set(...s);parent.add(m);return m;}
 function link(parent,a,b,r,mat){const va=new THREE.Vector3(...a),vb=new THREE.Vector3(...b),m=new THREE.Mesh(new THREE.CylinderGeometry(r*.7,r,va.distanceTo(vb),6),mat);m.position.copy(va).add(vb).multiplyScalar(.5);m.quaternion.setFromUnitVectors(Y,vb.sub(va).normalize());parent.add(m);return m;}

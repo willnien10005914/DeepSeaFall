@@ -2,7 +2,7 @@
 
 Open the same Pinggy HTTPS URL on each phone. Enter a name, then choose **加入同一片海**. Suggested names come from Greek, Japanese, Norse, Egyptian, Celtic, Indian and Taiwanese goddesses. The server rejects occupied names and assigns a distinct dress colour. One shared sea supports up to eight connected girls; a full room gives a clear message.
 
-Each player steers her own girl. Depth, health/stamina, sleep, gems, dress repair, affection, whale visits and attack cooldowns are shared. Attack animation belongs to the girl who requested it. A late joiner receives the existing sea, not a new dive. The sea pauses while nobody is online; a service restart starts a new sea. No database or external account is needed.
+Each player steers her own girl. Depth, health/stamina, sleep, dress repair, affection, whale visits and attack cooldowns are shared. Jewel counts and points are individual; see [ABYSS_RELICS.md](ABYSS_RELICS.md). Attack animation belongs to the girl who requested it. A late joiner receives the existing sea, not a new dive. The sea pauses while nobody is online; a service restart starts a new sea. No database or external account is needed.
 
 ```mermaid
 flowchart LR

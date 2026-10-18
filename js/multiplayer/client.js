@@ -1,4 +1,4 @@
-import { SeaReplica } from "./replica.js?v=47";
+import { SeaReplica } from "./replica.js?v=48";
 export async function bootstrap() {
   if (window.__MP_SIMULATION) return null;
   try {
@@ -85,7 +85,13 @@ export class MultiplayerClient {
     form.append(this.input, this.mic, send);
     this.speechStatus = document.createElement("p");
     this.speechStatus.className = "mp-speech-status";
-    this.contents.append(this.messages, form, this.speechStatus);
+    this.scores = document.createElement("details");
+    this.scores.className = "mp-scoreboard";
+    const heading = document.createElement("summary");
+    heading.textContent = "本局尋寶排行";
+    this.scoreRows = document.createElement("div");
+    this.scores.append(heading, this.scoreRows);
+    this.contents.append(this.scores, this.messages, form, this.speechStatus);
     this.panel.append(toggle, this.contents);
     document.querySelector("#app").append(this.panel);
     toggle.onclick = () => {
@@ -197,8 +203,8 @@ export class MultiplayerClient {
         this.token = m.token;
         sessionStorage.setItem("diveResumeToken", m.token);
         if (!this.replica)
-          this.replica = new SeaReplica(this.g, m.id, (players) =>
-            this.updateRoster(players),
+          this.replica = new SeaReplica(this.g, m.id, (players, scoreboard) =>
+            this.updateRoster(players, scoreboard),
           );
         else {
           const old = this.replica.id;
@@ -266,7 +272,20 @@ export class MultiplayerClient {
     this.lastNoticeId = m.id;
     this.announce(m.text, m.event === "leave");
   }
-  updateRoster(players) {
+  updateRoster(players, scoreboard) {
+    if (scoreboard && this.scoreRows) {
+      this.scoreRows.replaceChildren();
+      for (const p of [...scoreboard].sort((a, b) => b.points - a.points)) {
+        const row = document.createElement("p"),
+          name = document.createElement("span"),
+          score = document.createElement("strong");
+        name.textContent = p.name + (p.online ? "" : " · 離線");
+        name.style.color = p.color;
+        score.textContent = `◆${p.treasures} · ${p.points} 分`;
+        row.append(name, score);
+        this.scoreRows.append(row);
+      }
+    }
     this.online.textContent = ` · ${players.length} 人`;
     this.status.textContent = `${players.length} 位少女在線 · 共用體力與招式`;
   }

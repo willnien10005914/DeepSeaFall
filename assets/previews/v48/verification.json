@@ -1,0 +1,353 @@
+{
+  "verifiedAt": "2026-10-18T07:54:27.186453+00:00",
+  "unitTestsPassed": 7,
+  "actualAuthoritativePickups": {
+    "personalScores": [
+      {
+        "name": "Athena",
+        "points": 10,
+        "treasures": 1
+      },
+      {
+        "name": "Selene",
+        "points": 60,
+        "treasures": 1
+      }
+    ],
+    "sharedStaminaAfter": 65.035,
+    "duplicateAwardPrevented": true,
+    "reconnectPreservesScore": true,
+    "restartClearsRun": true,
+    "authority": "actual server-owned game, with test-positioned jewels"
+  },
+  "twoBrowserPersonalUI": [
+    {
+      "points": 190,
+      "treasures": 4,
+      "hudPoints": 190,
+      "hudCount": 4,
+      "labels": [
+        "Athena \u6e2c\u8a66 \u00b7 \u59b3 \u00b7 \u25c64 \u00b7 190 \u5206",
+        "Mazu \u6e2c\u8a66 \u00b7 \u25c62 \u00b7 50 \u5206"
+      ]
+    },
+    {
+      "points": 50,
+      "treasures": 2,
+      "hudPoints": 50,
+      "hudCount": 2,
+      "labels": [
+        "Athena \u6e2c\u8a66 \u00b7 \u25c64 \u00b7 190 \u5206",
+        "Mazu \u6e2c\u8a66 \u00b7 \u59b3 \u00b7 \u25c62 \u00b7 50 \u5206"
+      ]
+    }
+  ],
+  "multiplayer": {
+    "sharedAttackDisabled": true,
+    "pageErrors": [],
+    "gpu": {
+      "ready": true,
+      "device": "NVIDIA GB10",
+      "policy": "swim-ppo-v42",
+      "asr": "Whisper small multilingual",
+      "cuda": true
+    }
+  },
+  "depthPreviews": [
+    {
+      "depth": 55,
+      "id": "mythic-ruins",
+      "range": [
+        50,
+        70
+      ],
+      "landmarks": {
+        "ruins": 1,
+        "volcano": 0,
+        "alienCreatures": 0,
+        "alienKinds": [],
+        "clue": "\u5faa\u4e09\u9053\u661f\u7d0b\uff0c\u5c0b\u6f6e\u6c50\u4e4b\u9580"
+      }
+    },
+    {
+      "depth": 75,
+      "id": "stone-canyon",
+      "range": [
+        70,
+        100
+      ],
+      "landmarks": {
+        "ruins": 0,
+        "volcano": 0,
+        "alienCreatures": 0,
+        "alienKinds": [],
+        "clue": null
+      }
+    },
+    {
+      "depth": 110,
+      "id": "volcanic-rift",
+      "range": [
+        100,
+        130
+      ],
+      "landmarks": {
+        "ruins": 0,
+        "volcano": 1,
+        "alienCreatures": 0,
+        "alienKinds": [],
+        "clue": null
+      }
+    },
+    {
+      "depth": 140,
+      "id": "star-drift",
+      "range": [
+        130,
+        160
+      ],
+      "landmarks": {
+        "ruins": 0,
+        "volcano": 0,
+        "alienCreatures": 6,
+        "alienKinds": [
+          "glass-ray",
+          "siphonophore",
+          "orbital-nautilus"
+        ],
+        "clue": null
+      }
+    },
+    {
+      "depth": 175,
+      "id": "jade-forest",
+      "range": [
+        160,
+        190
+      ],
+      "landmarks": {
+        "ruins": 0,
+        "volcano": 0,
+        "alienCreatures": 6,
+        "alienKinds": [
+          "glass-ray",
+          "siphonophore",
+          "orbital-nautilus"
+        ],
+        "clue": null
+      }
+    },
+    {
+      "depth": 205,
+      "id": "violet-bloom",
+      "range": [
+        190,
+        220
+      ],
+      "landmarks": {
+        "ruins": 0,
+        "volcano": 0,
+        "alienCreatures": 6,
+        "alienKinds": [
+          "glass-ray",
+          "siphonophore",
+          "orbital-nautilus"
+        ],
+        "clue": null
+      }
+    },
+    {
+      "depth": 235,
+      "id": "crimson-reef",
+      "range": [
+        220,
+        250
+      ],
+      "landmarks": {
+        "ruins": 0,
+        "volcano": 0,
+        "alienCreatures": 6,
+        "alienKinds": [
+          "glass-ray",
+          "siphonophore",
+          "orbital-nautilus"
+        ],
+        "clue": null
+      }
+    },
+    {
+      "depth": 265,
+      "id": "amber-grove",
+      "range": [
+        250,
+        280
+      ],
+      "landmarks": {
+        "ruins": 0,
+        "volcano": 0,
+        "alienCreatures": 6,
+        "alienKinds": [
+          "glass-ray",
+          "siphonophore",
+          "orbital-nautilus"
+        ],
+        "clue": null
+      }
+    },
+    {
+      "depth": 295,
+      "id": "black-trench",
+      "range": [
+        280,
+        310
+      ],
+      "landmarks": {
+        "ruins": 0,
+        "volcano": 0,
+        "alienCreatures": 6,
+        "alienKinds": [
+          "glass-ray",
+          "siphonophore",
+          "orbital-nautilus"
+        ],
+        "clue": null
+      }
+    }
+  ],
+  "finalLandmarkWebglErrors": [],
+  "attackParticleSamples": [
+    {
+      "id": "spiral-kick",
+      "phase": 0,
+      "stage": "charge",
+      "baseGrains": 1360,
+      "alive": 85,
+      "maxSpeed": 0.8023922794133141,
+      "energy": 46.25498753536251,
+      "detached": false,
+      "method": "emitter momentum + curl advection + heat buoyancy + exponential drag/cooling"
+    },
+    {
+      "id": "spiral-kick",
+      "phase": 1,
+      "stage": "strike",
+      "baseGrains": 1288,
+      "alive": 563,
+      "maxSpeed": 2.47927749533373,
+      "energy": 254.1635831512953,
+      "detached": false,
+      "method": "emitter momentum + curl advection + heat buoyancy + exponential drag/cooling"
+    },
+    {
+      "id": "spiral-kick",
+      "phase": 2,
+      "stage": "cooldown",
+      "baseGrains": 0,
+      "alive": 134,
+      "maxSpeed": 0.8343683211353004,
+      "energy": 19.194405629274442,
+      "detached": true,
+      "method": "emitter momentum + curl advection + heat buoyancy + exponential drag/cooling"
+    },
+    {
+      "id": "spiral-kick",
+      "phase": 3,
+      "stage": "cooldown",
+      "baseGrains": 0,
+      "alive": 7,
+      "maxSpeed": 0.5801401987364053,
+      "energy": 0.7099641516097533,
+      "detached": true,
+      "method": "emitter momentum + curl advection + heat buoyancy + exponential drag/cooling"
+    },
+    {
+      "id": "cross-blades",
+      "phase": 0,
+      "stage": "charge",
+      "baseGrains": 162,
+      "alive": 85,
+      "maxSpeed": 0.5164163471658688,
+      "energy": 3.705200126566489,
+      "detached": false,
+      "method": "emitter momentum + curl advection + heat buoyancy + exponential drag/cooling"
+    },
+    {
+      "id": "cross-blades",
+      "phase": 1,
+      "stage": "strike",
+      "baseGrains": 162,
+      "alive": 526,
+      "maxSpeed": 1.3685256371092904,
+      "energy": 28.331747498180373,
+      "detached": false,
+      "method": "emitter momentum + curl advection + heat buoyancy + exponential drag/cooling"
+    },
+    {
+      "id": "cross-blades",
+      "phase": 2,
+      "stage": "cooldown",
+      "baseGrains": 0,
+      "alive": 203,
+      "maxSpeed": 0.5906383841888044,
+      "energy": 2.80681083580458,
+      "detached": true,
+      "method": "emitter momentum + curl advection + heat buoyancy + exponential drag/cooling"
+    },
+    {
+      "id": "cross-blades",
+      "phase": 3,
+      "stage": "cooldown",
+      "baseGrains": 0,
+      "alive": 19,
+      "maxSpeed": 0.5609172078900956,
+      "energy": 0.14938980915963476,
+      "detached": true,
+      "method": "emitter momentum + curl advection + heat buoyancy + exponential drag/cooling"
+    },
+    {
+      "id": "lotus-burst",
+      "phase": 0,
+      "stage": "charge",
+      "baseGrains": 203,
+      "alive": 84,
+      "maxSpeed": 0.6495572181094951,
+      "energy": 19.301303250251106,
+      "detached": false,
+      "method": "emitter momentum + curl advection + heat buoyancy + exponential drag/cooling"
+    },
+    {
+      "id": "lotus-burst",
+      "phase": 1,
+      "stage": "strike",
+      "baseGrains": 252,
+      "alive": 315,
+      "maxSpeed": 2.2667025274106294,
+      "energy": 73.68448976720208,
+      "detached": false,
+      "method": "emitter momentum + curl advection + heat buoyancy + exponential drag/cooling"
+    },
+    {
+      "id": "lotus-burst",
+      "phase": 2,
+      "stage": "recover",
+      "baseGrains": 189,
+      "alive": 611,
+      "maxSpeed": 1.2013123682394695,
+      "energy": 99.81484960179144,
+      "detached": false,
+      "method": "emitter momentum + curl advection + heat buoyancy + exponential drag/cooling"
+    },
+    {
+      "id": "lotus-burst",
+      "phase": 3,
+      "stage": "cooldown",
+      "baseGrains": 0,
+      "alive": 247,
+      "maxSpeed": 0.6746844178874344,
+      "energy": 19.785623292934623,
+      "detached": true,
+      "method": "emitter momentum + curl advection + heat buoyancy + exponential drag/cooling"
+    }
+  ],
+  "previewScope": "Test-positioned depths and actual attack animation; not a recorded playthrough. Screenshot gem-types intentionally enlarges three display crystals."
+}

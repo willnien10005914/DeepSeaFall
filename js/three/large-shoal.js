@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import {makeRealFish} from './marine-life.js?v=42';
+import {makeRealFish} from './marine-life.js?v=48';
 
 const hash=(i,k)=>{const n=Math.sin(i*127.1+k*311.7)*43758.5453;return n-Math.floor(n)};
 

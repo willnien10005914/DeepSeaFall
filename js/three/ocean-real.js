@@ -1,7 +1,7 @@
-import {descentTravel,movingSlice} from './descent-motion.js?v=42';
+import {descentTravel,movingSlice} from './descent-motion.js?v=48';
 import * as THREE from 'three';
-import {makeLargeShoal} from './large-shoal.js?v=42';
-import {makeMarineHabitat} from './marine-life.js?v=42';
+import {makeLargeShoal} from './large-shoal.js?v=48';
+import {makeMarineHabitat} from './marine-life.js?v=48';
 import {mergeVertices,mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 
 function hash(x,y,z){const n=Math.sin(x*127.1+y*311.7+z*74.7)*43758.5453;return n-Math.floor(n)}

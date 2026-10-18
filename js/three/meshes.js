@@ -1,3 +1,4 @@
+import {makeGemstone} from './gemstones.js?v=48';
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
@@ -5,8 +6,8 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
  *  Optional: load authored GLB from /assets/usd/*.glb (same generator as USD).
  */
 
-import {makeRealFish,makeRealJelly} from './marine-life.js?v=42';
-import {makeScannedRock} from './ocean-real.js?v=42';
+import {makeRealFish,makeRealJelly} from './marine-life.js?v=48';
+import {makeScannedRock} from './ocean-real.js?v=48';
 
 const loader = new GLTFLoader();
 
@@ -128,10 +129,7 @@ export function makeFish(color,scale=1){return makeRealFish(color,scale)}
 export function makeJelly(){return makeRealJelly()}
 export function makeRock(volcanic=false){return makeScannedRock(volcanic)}
 
-export function makeTreasure(){
- const material=new THREE.MeshPhysicalMaterial({color:0xffd86e,emissive:0xb97a18,emissiveIntensity:.28,metalness:.58,roughness:.20,clearcoat:.55,clearcoatRoughness:.15,flatShading:true});
- const gem=new THREE.Mesh(new THREE.OctahedronGeometry(.25,0),material);gem.scale.set(1,1.35,1);gem.name='Golden faceted gemstone';gem.userData.staminaRestore=20;gem.castShadow=true;return gem;
-}
+export function makeTreasure(id){return makeGemstone(id);}
 
 export function makeBubble() {
   return new THREE.Mesh(

@@ -1,12 +1,12 @@
 import * as THREE from 'three';
-import {SwimBubbles} from './three/swim-bubbles.js?v=42';
-import {makeRealFish,makeRealJelly,makeDeepSeaFish,animateMarine} from './three/marine-life.js?v=42';
+import {SwimBubbles} from './three/swim-bubbles.js?v=48';
+import {makeRealFish,makeRealJelly,makeDeepSeaFish,animateMarine} from './three/marine-life.js?v=48';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
-import {prepareCharacter, animateCharacter} from './three/authored.js?v=42';
-import {makeOcean,oceanEnvironment} from './three/ocean-real.js?v=42';
-import {WaterRenderer} from './three/water.js?v=42';
+import {prepareCharacter, animateCharacter} from './three/authored.js?v=48';
+import {makeOcean,oceanEnvironment} from './three/ocean-real.js?v=48';
+import {WaterRenderer} from './three/water.js?v=48';
 
 const renderer = new THREE.WebGLRenderer({canvas:document.querySelector('canvas'),antialias:true,preserveDrawingBuffer:true});
 renderer.setPixelRatio(Math.min(devicePixelRatio,2));
@@ -106,7 +106,7 @@ document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>setView(b.data
 document.querySelector('#motion').onclick=e=>{paused=!paused;e.target.textContent=paused?'播放':'暫停'};
 try{
  const loader=new GLTFLoader();
- const [g,w]=await Promise.all([loader.loadAsync('assets/usd/girl.glb?v=42'),loader.loadAsync('assets/usd/whale.glb?v=42')]);
+ const [g,w]=await Promise.all([loader.loadAsync('assets/usd/girl.glb?v=48'),loader.loadAsync('assets/usd/whale.glb?v=48')]);
  girl=prepareCharacter(g.scene,'girl');whale=prepareCharacter(w.scene,'whale');scene.add(girl,whale);
  water.apply(girl);water.apply(whale);
  window.review={scene,camera,renderer,girl,whale,setView,controls,water,ocean,bubbles,marineStudy,studyFish,studyJelly,deepStudy,lights:{key,fill,rim,ambient}};setView(new URLSearchParams(location.search).get('view')||'encounter');

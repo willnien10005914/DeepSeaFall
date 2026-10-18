@@ -166,3 +166,29 @@
     max-height: 72px;
   }
 }
+
+.mp-scoreboard {
+  margin: 5px 8px;
+  border-bottom: 1px solid #75bdce44;
+  font: 11px/1.5 system-ui;
+  color: #c9edf2;
+}
+.mp-scoreboard summary {
+  padding: 4px 0;
+  cursor: pointer;
+}
+.mp-scoreboard > div {
+  max-height: 115px;
+  overflow: auto;
+}
+.mp-scoreboard p {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 5px 0;
+}
+.mp-scoreboard strong {
+  white-space: nowrap;
+  font-weight: 600;
+  color: #ffe2a7;
+}

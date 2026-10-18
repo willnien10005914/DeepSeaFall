@@ -84,13 +84,13 @@ const server = http.createServer(async (req, res) => {
     if (url.pathname === "/api/room" && req.method === "GET")
       return json(res, 200, {
         multiplayer: true,
-        protocol: 1,
+        protocol: 2,
         ready,
         seed: room.seed,
         roster: room.roster(),
         names: room.available(),
         maxPlayers: room.maxPlayers,
-        shared: ["depth", "stamina", "attack", "whale", "loot"],
+        shared: ["depth", "stamina", "attack", "whale"],
         gpu: gpuHealth,
       });
     if (url.pathname === "/api/health" && req.method === "GET")
@@ -200,10 +200,14 @@ wss.on("connection", (ws) => {
   }
   sockets.add(ws);
   ws.alive = true;
+  ws.lastPong = Date.now();
   const joinTimer = setTimeout(() => {
     if (!ws.player) ws.close(1008, "Join required");
   }, 20000);
-  ws.on("pong", () => (ws.alive = true));
+  ws.on("pong", () => {
+    ws.alive = true;
+    ws.lastPong = Date.now();
+  });
   ws.on("message", (raw) => {
     try {
       const m = JSON.parse(raw);
@@ -258,14 +262,14 @@ wss.on("connection", (ws) => {
 const heartbeat = setInterval(() => {
   room.prune();
   for (const ws of sockets) {
-    if (!ws.alive) {
+    if (Date.now() - ws.lastPong > 45000) {
       ws.terminate();
       continue;
     }
     ws.alive = false;
     ws.ping();
   }
-}, 10000);
+}, 15000);
 const sim = new Simulation({
   url: `http://127.0.0.1:${PORT}/`,
   seed: room.seed,

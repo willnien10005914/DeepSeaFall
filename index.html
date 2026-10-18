@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=42" />
+  <link rel="stylesheet" href="css/style.css?v=48" />
   <script type="importmap">
   {
     "imports": {
@@ -18,7 +18,7 @@
     }
   }
   </script>
-  <link rel="stylesheet" href="css/multiplayer.css?v=47" />
+  <link rel="stylesheet" href="css/multiplayer.css?v=48" />
 </head>
 <body>
   <div id="app">
@@ -33,7 +33,7 @@
         <div class="best-pill">BEST <span id="bestValue">0</span>m</div>
       </div>
       <div class="stamina-wrap">
-        <div class="stamina-label"><span>STAMINA</span><span class="hud-rewards"><span class="treasure-total">寶石 <span id="treasureCount">0</span></span><span class="affection-total">♥ 好感 <span id="affectionCount">0</span></span></span></div>
+        <div class="stamina-label"><span>STAMINA</span><span class="hud-rewards"><span class="treasure-total">我的寶石 <span id="treasureCount">0</span> · <span id="scoreCount">0</span> 分</span><span class="affection-total">♥ 好感 <span id="affectionCount">0</span></span></span></div>
         <div class="stamina-bar"><div id="staminaFill"></div></div>
       </div>
       <div id="equipStrip" class="equip-strip"></div><span id="dressCondition" class="dress-condition">洋裝：完好</span>
@@ -74,9 +74,9 @@
           <button type="button" id="btnStartManual" class="primary">手動遊玩</button>
           <button type="button" id="btnStartAI" class="secondary">AI Mode</button>
           <button type="button" id="btnDemo" class="ghost">自動示範</button>
-          <a href="cinematic.html?v=42" class="ghost" style="color:#a8d0d6;text-decoration:none;padding:12px">深海相遇動畫 ↗</a>
+          <a href="cinematic.html?v=48" class="ghost" style="color:#a8d0d6;text-decoration:none;padding:12px">深海相遇動畫 ↗</a>
         </div>
-        <p class="hint">輕點目標後自動游幾秒 · 自由式／蛙式交替 · 收集金色寶石補體力 · 避開礁石 · <a href="model-review.html?v=42" style="color:#a8d0d6">旋轉檢視 3D 海景</a> · <a href="2d.html" style="color:#5ce1ff">2D 版</a></p>
+        <p class="hint">輕點目標後自動游幾秒 · 自由式／蛙式交替 · 收集金色寶石補體力 · 避開礁石 · <a href="model-review.html?v=48" style="color:#a8d0d6">旋轉檢視 3D 海景</a> · <a href="2d.html" style="color:#5ce1ff">2D 版</a></p>
       </div>
     </div>
 
@@ -86,6 +86,7 @@
         <h2>沉眠於深海</h2>
         <p class="over-stat">最深 <span id="finalDepth">0</span> m</p>
         <p class="over-stat">寶物 <span id="finalLoot">0</span></p>
+        <p class="over-stat">本局分數 <span id="finalScore">0</span></p>
         <p id="reviveHint" class="revive-hint hidden">海草還能復活一次</p>
         <div class="title-actions">
           <button type="button" id="btnRevive" class="secondary hidden">使用海草復活</button>
@@ -95,6 +96,6 @@
     </div>
   </div>
 
-  <script type="module" src="js/main3d.js?v=47"></script>
+  <script type="module" src="js/main3d.js?v=48"></script>
 </body>
 </html>

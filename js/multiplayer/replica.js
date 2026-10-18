@@ -1,3 +1,4 @@
+import { animateGemstone } from "../three/gemstones.js?v=48";
 // Render-only replica. All gameplay mutations and actor decisions come from Spark.
 import * as T from "three";
 import {
@@ -7,12 +8,12 @@ import {
   applyTransform,
   withSeed,
   staticRocks,
-} from "./common.js?v=47";
-import { animateCharacter } from "../three/authored.js?v=47";
-import { animateMarine } from "../three/marine-life.js?v=42";
-import { makeTreasure } from "../three/meshes.js?v=42";
-import { SwimBubbles } from "../three/swim-bubbles.js?v=42";
-import { combatMoves } from "../three/combat-moves.js?v=44";
+} from "./common.js?v=48";
+import { animateCharacter } from "../three/authored.js?v=48";
+import { animateMarine } from "../three/marine-life.js?v=48";
+import { makeTreasure } from "../three/meshes.js?v=48";
+import { SwimBubbles } from "../three/swim-bubbles.js?v=48";
+import { combatMoves } from "../three/combat-moves.js?v=48";
 
 export class SeaReplica {
   constructor(game, id, onRoster) {
@@ -43,7 +44,7 @@ export class SeaReplica {
     if (this.latest && state.tick <= this.latest.tick) return;
     this.latest = state;
     this.receivedAt = performance.now();
-    this.onRoster(state.players);
+    this.onRoster(state.players, state.scoreboard);
   }
   async ensure(info) {
     if (this.avatars.has(info.id) || this.loading.has(info.id)) return;
@@ -73,7 +74,7 @@ export class SeaReplica {
       chat.className = "mp-bubble";
       label.append(name, chat);
       this.layer.append(label);
-      this.labels.set(info.id, { label, chat, until: 0 });
+      this.labels.set(info.id, { label, name, chat, until: 0 });
     } finally {
       this.loading.delete(info.id);
     }
@@ -90,6 +91,15 @@ export class SeaReplica {
     const id = data.net.id;
     if (this.entityMap.has(id)) return this.entityMap.get(id);
     const recipe = data.net;
+    if (data.kind === "loot") {
+      const mesh = makeTreasure(data.gemId);
+      applyTransform(mesh, data);
+      this.g.world.add(mesh);
+      const e = { mesh, kind: "loot", hostile: false, hp: 1, net: recipe };
+      this.g.entities.push(e);
+      this.entityMap.set(id, e);
+      return e;
+    }
     let group = this.groups.get(recipe.group);
     if (!group) {
       const before = new Set(this.g.entities),
@@ -98,7 +108,7 @@ export class SeaReplica {
       try {
         withSeed(recipe.seed, () => {
           if (recipe.method === "treasure") {
-            const mesh = makeTreasure();
+            const mesh = makeTreasure(...(recipe.args || []));
             this.g.world.add(mesh);
             this.g.entities.push({ mesh, kind: "loot", hostile: false, hp: 1 });
           } else {
@@ -185,6 +195,8 @@ export class SeaReplica {
           .project(g.camera),
         rect = g.canvas.getBoundingClientRect();
       if (l) {
+        const text = `${p.name}${p.id === this.id ? " · 妳" : ""} · ◆${p.treasures || 0} · ${p.points || 0} 分`;
+        if (l.name.textContent !== text) l.name.textContent = text;
         l.label.style.transform = `translate(${(point.x * 0.5 + 0.5) * rect.width}px,${(-point.y * 0.5 + 0.5) * rect.height}px) translate(-50%,-100%)`;
         l.label.hidden =
           point.z > 1 || Math.abs(point.x) > 1.2 || Math.abs(point.y) > 1.2;
@@ -210,6 +222,7 @@ export class SeaReplica {
       if (e.mesh.userData.predator && data.predator)
         Object.assign(e.mesh.userData.predator, data.predator);
       animateMarine(e.mesh, g.t, e.mesh.userData.vx || 0);
+      if (e.kind === "loot") animateGemstone(e.mesh, g.t);
     }
     const broken = new Set(s.broken);
     for (let i = 0; i < this.rocks.length; i++)
@@ -266,7 +279,9 @@ export class SeaReplica {
 
     g.ui.setDepth(g.depth, g.best);
     g.ui.setStamina(s.stamina);
-    g.ui.setTreasure(s.loot);
+    const personal = s.players.find((p) => p.id === this.id);
+    g.ui.setTreasure(personal?.treasures || 0);
+    g.ui.setScore?.(personal?.points || 0);
     g.ui.setAffection(s.affection);
     g.ui.setDressCondition(s.dressDamage);
     g.ui.btnSleep.textContent = s.sleeping ? "一起醒來" : "一起抱膝補力";
@@ -287,7 +302,20 @@ export class SeaReplica {
         this.eventId = e.id;
         if (e.type === "whale") g.audio.sfxWhale();
         if (e.type === "attack") g.audio.sfxMagic();
-        if (e.type === "pickup") g.audio.sfxTreasure();
+        if (e.type === "pickup") {
+          g.audio.sfxTreasure();
+          if (e.playerId === this.id) {
+            const point = g._screenPoint(new T.Vector3(...e.point));
+            g.feedback.collect(point, e.gain || 0, e.gemId);
+            g.feedback.label(point, `+${e.value} 分`);
+            document
+              .querySelector(".treasure-total")
+              ?.animate(
+                [{ filter: "brightness(2)" }, { filter: "brightness(1)" }],
+                { duration: 500 },
+              );
+          }
+        }
         if (e.type === "damage") g.audio.sfxHit();
         if (e.type === "shatter") {
           const p = new T.Vector3(...e.point);
@@ -302,7 +330,8 @@ export class SeaReplica {
       else
         g.ui.showGameOver({
           depth: Math.floor(s.depth),
-          loot: s.loot,
+          loot: personal?.treasures || 0,
+          score: personal?.points || 0,
           canRevive: s.seaweed > 0,
         });
     }

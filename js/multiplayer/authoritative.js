@@ -1,3 +1,8 @@
+import {
+  awardGem,
+  freshScore,
+  nearestCollector,
+} from "../three/treasure-rules.js?v=48";
 // Runs only inside the server-owned, non-rendering Chromium simulation.
 // Clients submit destinations/actions, never transforms, health or cooldowns.
 import * as T from "three";
@@ -8,15 +13,15 @@ import {
   transform,
   withSeed,
   staticRocks,
-} from "./common.js?v=47";
-import { TapSwim } from "../three/tap-swim.js?v=42";
-import { SwimPropulsion } from "../three/swim-propulsion.js?v=42";
-import { animateCharacter } from "../three/authored.js?v=47";
+} from "./common.js?v=48";
+import { TapSwim } from "../three/tap-swim.js?v=48";
+import { SwimPropulsion } from "../three/swim-propulsion.js?v=48";
+import { animateCharacter } from "../three/authored.js?v=48";
 import {
   resolveGirlShark,
   girlContactSpheres,
-} from "../three/shark-contacts.js?v=42";
-import { makeTreasure } from "../three/meshes.js?v=42";
+} from "../three/shark-contacts.js?v=48";
+import { makeTreasure } from "../three/meshes.js?v=48";
 
 const owned = [
   "girl",
@@ -42,8 +47,13 @@ export class AuthoritativeDive {
     this.eventSerial = 0;
     this.collisionCount = 0;
     this.tick = 0;
+    this.scores = new Map();
+    this.runId = 1;
+    this.nextTreasureAt = 2;
+    this.collecting = false;
     for (const method of [
       "_spawn",
+      "_spawnGem",
       "_spawnMarine",
       "_spawnPredator",
       "_spawnVisitor",
@@ -80,11 +90,26 @@ export class AuthoritativeDive {
     for (const method of ["_breakWhaleRock", "_collectLoot", "_hurt"]) {
       const original = game[method].bind(game);
       game[method] = (...args) => {
+        const beforeStamina = game.stamina;
+        let picked = null;
+        if (method === "_collectLoot") {
+          if (!this.collecting || args[0].dead || args[0].claimedBy) return;
+          picked = awardGem(args[0], this.current);
+          if (!picked) return;
+        }
         const value = original(...args);
         if (method === "_hurt" && value)
           this.emit("damage", { amount: game.lastDamage.amount });
         if (method === "_collectLoot")
-          this.emit("pickup", { count: game.lootCount });
+          this.emit("pickup", {
+            playerId: this.current.id,
+            count: this.current.score.treasures,
+            points: this.current.score.points,
+            value: picked.value,
+            gain: Math.round(game.stamina - beforeStamina),
+            gemId: picked.id,
+            point: args[0].mesh.position.toArray(),
+          });
         if (method === "_breakWhaleRock")
           this.emit("shatter", { point: args[1].toArray() });
         return value;
@@ -123,7 +148,7 @@ export class AuthoritativeDive {
           seed: 0,
           group: ++this.recipeSerial,
           index: 0,
-          args: [],
+          args: [e.mesh.userData.gemId],
         };
   }
   async sync(roster) {
@@ -167,6 +192,7 @@ export class AuthoritativeDive {
       root.position.copy(best || new T.Vector3(2.8, 1.5, 0.3));
       const p = {
         ...info,
+        score: this.scores.get(info.id)?.score || freshScore(),
         girl: root,
         tapSwim: new TapSwim(),
         swimMotor: new SwimPropulsion(),
@@ -178,6 +204,12 @@ export class AuthoritativeDive {
         tapMotion: { active: false },
       };
       this.players.set(p.id, p);
+      this.scores.set(p.id, {
+        id: p.id,
+        name: p.name,
+        color: p.color,
+        score: p.score,
+      });
     }
   }
   action(c) {
@@ -233,6 +265,18 @@ export class AuthoritativeDive {
     if (this.restartRequested) {
       this.restartRequested = false;
       await g.start("manual");
+      this.runId++;
+      this.scores.clear();
+      for (const p of this.players.values()) {
+        p.score = freshScore();
+        this.scores.set(p.id, {
+          id: p.id,
+          name: p.name,
+          color: p.color,
+          score: p.score,
+        });
+      }
+      this.nextTreasureAt = 2;
       this.capture(primary);
       this.quiet(primary.girl);
       for (const p of this.players.values()) p.girl.userData.swimPPO.reset();
@@ -313,6 +357,39 @@ export class AuthoritativeDive {
         this.capture(p);
       }
     this.separate();
+    if (g.running) {
+      const candidates = [...this.players.values()],
+        bodies = new Map(
+          candidates.map((p) => [p.id, g.rockContacts.body(p.girl)]),
+        );
+      for (const e of g.entities)
+        if (e.kind === "loot" && !e.dead) {
+          const winner = nearestCollector(e, candidates, (p, gem) =>
+            Math.min(
+              ...bodies
+                .get(p.id)
+                .map((s) => s.center.distanceTo(gem.mesh.position) - s.radius),
+            ),
+          );
+          if (winner) {
+            this.use(winner);
+            this.collecting = true;
+            try {
+              g._collectLoot(e);
+            } finally {
+              this.collecting = false;
+            }
+          }
+        }
+      if (g.t >= this.nextTreasureAt) {
+        this.nextTreasureAt = g.t + 1.65;
+        const limit = Math.min(18, 4 + this.players.size * 2);
+        if (
+          g.entities.filter((e) => e.kind === "loot" && !e.dead).length < limit
+        )
+          g._spawnGem();
+      }
+    }
     this.use(primary);
     g.ocean.update(g.t, { depth: g.depth });
     g.oceanDetails.update(g.t, g.depth, g);
@@ -369,7 +446,7 @@ export class AuthoritativeDive {
           seed: 0,
           group: ++this.recipeSerial,
           index: 0,
-          args: [],
+          args: [e.mesh.userData.gemId],
         };
     let minimumClearance = null;
     const peers = [...this.players.values()];
@@ -384,6 +461,14 @@ export class AuthoritativeDive {
     return {
       tick: ++this.tick,
       t: g.t,
+      runId: this.runId,
+      scoreboard: [...this.scores.values()].map((p) => ({
+        id: p.id,
+        name: p.name,
+        color: p.color,
+        ...p.score,
+        online: this.players.has(p.id),
+      })),
       depth: g.depth,
       running: g.running,
       stamina: g.stamina,
@@ -401,6 +486,8 @@ export class AuthoritativeDive {
         id: p.id,
         name: p.name,
         color: p.color,
+        treasures: p.score.treasures,
+        points: p.score.points,
         ...transform(p.girl),
         bones: pose(p.girl),
         velocity: p.swimVelocity.toArray(),
@@ -433,6 +520,7 @@ export class AuthoritativeDive {
           kind: e.kind,
           hostile: e.hostile,
           hp: e.hp,
+          gemId: e.mesh.userData.gemId,
           ...transform(e.mesh),
           predator: e.mesh.userData.predator
             ? {

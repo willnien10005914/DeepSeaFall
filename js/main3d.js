@@ -1,6 +1,6 @@
-import {bootstrap,MultiplayerClient} from './multiplayer/client.js?v=47';
-import {seeded} from './multiplayer/common.js?v=47';
-import { Game3D } from "./three/game3d.js?v=47";
+import {bootstrap,MultiplayerClient} from './multiplayer/client.js?v=48';
+import {seeded} from './multiplayer/common.js?v=48';
+import { Game3D } from "./three/game3d.js?v=48";
 
 const canvas = document.getElementById("game");
 const $ = (id) => document.getElementById(id);
@@ -40,6 +40,7 @@ const ui = {
   setDressCondition(v) { const el=$('dressCondition');if(el){el.textContent=v>0?'洋裝：裙擺破損':'洋裝：完好';el.classList.toggle('worn',v>0);} },
   setAffection(v) { $("affectionCount").textContent = String(v); },
   setTreasure(v) { $("treasureCount").textContent = String(v); },
+  setScore(v){if($('scoreCount'))$('scoreCount').textContent=String(v);},
   setEquip(girl) {
     const strip = $("equipStrip");
     strip.innerHTML = "";
@@ -64,12 +65,13 @@ const ui = {
     clearTimeout(this._whaleTimer);
     this._whaleTimer = setTimeout(() => el.classList.remove("show"), 2200);
   },
-  showGameOver({ depth, loot, canRevive }) {
+  showGameOver({ depth, loot, score=0, canRevive }) {
     $("gameOver").classList.remove("hidden");
     $("controls").classList.add("hidden");
     $("aiPanel").classList.add("hidden");
     $("finalDepth").textContent = String(depth);
     $("finalLoot").textContent = String(loot);
+    if($("finalScore"))$("finalScore").textContent=String(score);
     $("btnRevive").classList.toggle("hidden", !canRevive);
     $("reviveHint").classList.toggle("hidden", !canRevive);
   },

@@ -109,8 +109,36 @@ try {
   }));
   assert(attack.disabled);
   await a.screenshot({ path: out + "/two-players.png" });
+  const personalUI = [];
+  for (const page of [a, b]) {
+    const row = await page.evaluate(() => {
+      const m = __multiplayer,
+        p = m.lastState.players.find((p) => p.id === m.id);
+      return {
+        points: p.points,
+        count: p.treasures,
+        hudPoints: Number(document.querySelector("#scoreCount").textContent),
+        hudCount: Number(document.querySelector("#treasureCount").textContent),
+        labels: [
+          ...document.querySelectorAll(".mp-avatar-label>span:first-child"),
+        ].map((e) => e.textContent),
+        roster: m.lastState.players,
+      };
+    });
+    assert.equal(row.hudPoints, row.points);
+    assert.equal(row.hudCount, row.count);
+    for (const peer of row.roster)
+      assert(
+        row.labels.some(
+          (text) =>
+            text.includes(peer.name) && text.includes(`${peer.points} 分`),
+        ),
+      );
+    personalUI.push(row);
+  }
   const health = await (await fetch(base + "/api/health")).json();
   assert(health.ready && health.gpu.cuda && health.gpuBatches > 0);
+  assert.equal(health.players, 2);
   assert.equal(health.error, null);
   await contexts[0].close();
   await b.waitForFunction(
@@ -128,6 +156,7 @@ try {
   assert.deepEqual(errors, []);
   const report = {
     lateJoin: late,
+    personalUI,
     beforeDepth: before,
     collisions,
     clearance,

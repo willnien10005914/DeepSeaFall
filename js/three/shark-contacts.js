@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import {predatorBodySpheres} from './predators.js?v=42';
+import {predatorBodySpheres} from './predators.js?v=48';
 export function girlContactSpheres(game){const root=game.girl,b=root.userData.bones,s=game.rockContacts.body(root);for(const prefix of ['l_','r_'])for(const [name,r]of [['shoulder',.105],['wrist',.07],['thigh',.11],['knee',.10],['ankle',.085],['foot',.085]])s.push({center:b[prefix+name].getWorldPosition(new THREE.Vector3()),radius:r});return s;}
 export function sharkContactCapsules(root){const spheres=predatorBodySpheres(root),pairs=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[0,9],[0,10],[3,8],[4,11],[11,12],[4,13],[13,14]];return pairs.map(([a,b])=>({a:spheres[a].center,b:spheres[b].center,radius:Math.max(spheres[a].radius,spheres[b].radius)}));}
 function nearest(s,c,dx=0,dy=0){const x=s.center.x+dx,y=s.center.y+dy,z=s.center.z,abx=c.b.x-c.a.x,aby=c.b.y-c.a.y,abz=c.b.z-c.a.z,length=abx*abx+aby*aby+abz*abz,t=THREE.MathUtils.clamp(((x-c.a.x)*abx+(y-c.a.y)*aby+(z-c.a.z)*abz)/(length||1),0,1);return{x:c.a.x+abx*t,y:c.a.y+aby*t,z:c.a.z+abz*t};}

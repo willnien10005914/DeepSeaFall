@@ -1,5 +1,6 @@
+import {AttackAdvection} from './attack-advection.js?v=48';
 import * as THREE from 'three';
-import { FlowGrains } from './attack-particles.js?v=46';
+import { FlowGrains } from './attack-particles.js?v=48';
 
 const ANCHORS = ['chest', 'l_wrist', 'r_wrist', 'l_ankle', 'r_ankle'];
 const FIRE_ANCHORS = {
@@ -45,6 +46,7 @@ export class ElementalCombat {
     this.overlay.name = 'Stacked attack grains';
     this.overlayScene.add(this.overlay);
     this.grains = new FlowGrains(5200, this.overlay);
+    this.flow = new AttackAdvection(this.overlay, scene);
     this.origin = new THREE.Vector3();
     this.quat = new THREE.Quaternion();
     this.point = new THREE.Vector3();
@@ -57,7 +59,8 @@ export class ElementalCombat {
     this.data = null;
   }
   install(data){ this.data = data; }
-  hide(){
+  hide(clear=true){
+    if(clear)this.flow.clear();
     for (const light of this.lights) light.visible = false;
     this.spot.visible = false;
     this.grains.begin();
@@ -109,9 +112,10 @@ export class ElementalCombat {
     }
   }
   update(game, move, pose){
-    if (!this.data || !pose || !move){ this.hide(); return; }
+    this.flow.update(game,move,pose);
+    if (!this.data || !pose || !move){ this.hide(false); return; }
     const element = this.data.elements[move.element];
-    if (!element){ this.hide(); return; }
+    if (!element){ this.hide(false); return; }
     const stageT = pose.stage === 'charge' ? pose.progress * 0.35 : pose.stage === 'strike' ? 0.35 + pose.progress * 0.55 : 0.9 + pose.progress * 0.1;
     const frame = Math.max(0, Math.min(element.particles.length - 1, Math.round(stageT * (element.particles.length - 1))));
     const fade = pose.stage === 'recover' ? 1 - pose.progress : pose.stage === 'charge' ? 0.35 + pose.progress * 0.65 : 1;
@@ -161,6 +165,6 @@ export class ElementalCombat {
     this.spot.position.copy(this.origin).add(new THREE.Vector3(0.35, 0.85, 0.55));
     this.spot.target.position.copy(this.origin).add(new THREE.Vector3(0, -0.55, 0.15));
     this.spot.castShadow = pose.stage === 'strike';
-    game.girl.userData.elementalAttack = { element: move.element, frame, fade, palette: element.lights.palette, detail: 'stacked-grains' };
+    game.girl.userData.elementalAttack = { element: move.element, frame, fade, palette: element.lights.palette, detail: 'stacked-grains + momentum/curl advection', flow:this.flow.stats };
   }
 }

@@ -1,14 +1,14 @@
-import {MotionGarment} from './motion-garment.js?v=42';
-import {applyCombatPose} from './combat-moves.js?v=44';
-import {SleepCloth} from './sleep-cloth.js?v=42';
-import {installFabricDamage} from './injury-effects.js?v=42';
-import {bodyColliderData} from './body-collider-data.js?v=42';
-import {ClothContact} from './cloth-contact.js?v=42';
+import {MotionGarment} from './motion-garment.js?v=48';
+import {applyCombatPose} from './combat-moves.js?v=48';
+import {SleepCloth} from './sleep-cloth.js?v=48';
+import {installFabricDamage} from './injury-effects.js?v=48';
+import {bodyColliderData} from './body-collider-data.js?v=48';
+import {ClothContact} from './cloth-contact.js?v=48';
 import * as THREE from 'three';
-import {installPortraitSkin} from './portrait-shading.js?v=42';
-import {rigData} from './rig-data.js?v=42';
-import {bindWhale, poseWhale} from './whale-motion.js?v=42';
-import {poseSwimmer} from './swimming.js?v=42';
+import {installPortraitSkin} from './portrait-shading.js?v=48';
+import {rigData} from './rig-data.js?v=48';
+import {bindWhale, poseWhale} from './whale-motion.js?v=48';
+import {poseSwimmer} from './swimming.js?v=48';
 
 function installHairFlow(material,uniforms){
   material.onBeforeCompile=shader=>{
@@ -124,8 +124,8 @@ export function prepareCharacter(root, kind) {
   const hairUniforms={uLongHairTime:{value:0},uLongHairFlow:{value:new THREE.Vector3()}};
   if(kind==='girl')root.userData.hairFlowUniforms=hairUniforms;
   const textureLoader=new THREE.TextureLoader();
-  const skinPores=kind==='girl'?textureLoader.load('assets/usd/textures/skin_micro_height.png?v=42'):null;
-  const fabric=kind==='girl'?textureLoader.load('assets/usd/textures/dress_weave_height.png?v=42'):null;
+  const skinPores=kind==='girl'?textureLoader.load('assets/usd/textures/skin_micro_height.png?v=48'):null;
+  const fabric=kind==='girl'?textureLoader.load('assets/usd/textures/dress_weave_height.png?v=48'):null;
   if(fabric){fabric.wrapS=fabric.wrapT=THREE.RepeatWrapping;fabric.repeat.set(16,16);fabric.anisotropy=4}
   root.traverse(obj => {
     if (!obj.isMesh) return;

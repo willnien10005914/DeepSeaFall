@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import {FluidFlow} from './fluid-flow.js?v=42';
+import {FluidFlow} from './fluid-flow.js?v=48';
 
 const waterFunctions=`
 uniform float uWaterTime;

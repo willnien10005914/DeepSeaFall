@@ -2,7 +2,7 @@
 
 export class SeaAudio {
   constructor() {
-    this.track=new Audio("assets/audio/requested-bgm.mp3?v=42");this.track.loop=true;this.track.preload="auto";this.musicEnabled=true;this.musicAvailable=false;
+    this.track=new Audio("assets/audio/requested-bgm.mp3?v=48");this.track.loop=true;this.track.preload="auto";this.musicEnabled=true;this.musicAvailable=false;
     this.ctx = null;
     this.master = null;
     this.musicGain = null;
