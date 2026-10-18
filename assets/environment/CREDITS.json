@@ -1,0 +1,31 @@
+{
+  "asset": "rock_boulder_dry",
+  "source": "https://polyhaven.com/a/rock_boulder_dry",
+  "license": "CC0",
+  "authors": [
+    "Dimitrios Savva",
+    "Rico Cilliers"
+  ],
+  "maps": {
+    "diff": {
+      "file": "rock-albedo.jpg",
+      "bytes": 859211,
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_boulder_dry/rock_boulder_dry_diff_1k.jpg"
+    },
+    "nor_gl": {
+      "file": "rock-normal.jpg",
+      "bytes": 802497,
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_boulder_dry/rock_boulder_dry_nor_gl_1k.jpg"
+    },
+    "rough": {
+      "file": "rock-roughness.jpg",
+      "bytes": 668127,
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_boulder_dry/rock_boulder_dry_rough_1k.jpg"
+    },
+    "disp": {
+      "file": "rock-height.jpg",
+      "bytes": 246228,
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_boulder_dry/rock_boulder_dry_disp_1k.jpg"
+    }
+  }
+}
