@@ -1,5 +1,36 @@
 # Deep Sea Fall — 少女與鯨（混合架構）
 
+目前玩得到的少女是深色長直髮、淡綠方領洋裝。下面三張直接來自現在的 `girl.glb`，取代 README 裡舊的短棕髮棚拍。
+
+<p>
+  <img src="assets/previews/v44/girl-front.png" width="240" alt="少女正面，深色長直髮與淡綠洋裝">
+  <img src="assets/previews/v44/girl-face.png" width="240" alt="少女五官">
+  <img src="assets/previews/v44/girl-side.png" width="240" alt="少女側面">
+</p>
+
+## 遊戲廣告
+
+開頭是標題「與座頭鯨一同潛入深海」，進入後約 1 公尺處旅程開始。呼喚鯨魚後，座頭鯨從左側游到少女身旁。
+
+<p>
+  <img src="assets/previews/v44/ad-title.png" width="220" alt="遊戲開頭標題">
+  <img src="assets/previews/v44/ad-opening.png" width="220" alt="下潛開頭，約 1 公尺">
+  <img src="assets/previews/v44/ad-whale.png" width="220" alt="座頭鯨出現在少女身旁">
+</p>
+
+### 和仁川機場媒體塔的對照
+
+[Incheon Airport Media Tower: Girl and Whale](https://www.behance.net/gallery/248368373/Incheon-Airport-Media-Tower-Girl-and-Whale) 是 IMAGO 等人為仁川機場第一航廈 24 公尺 LED 媒體塔做的變形影像，2026 年 6 月公開。少女從上方沉入黑暗，座頭鯨從暗處現形，兩人對望後一起升向水面。整座垂直塔是一段沒有按鈕的影片，用 Cinema 4D、Houdini、Octane 與 After Effects 完成。
+
+| | 媒體塔原作 | 這支遊戲 |
+| --- | --- | --- |
+| 開頭 | 少女從塔頂落入深海 | 標題之後進入海面，約 1 公尺處看見少女、魚群和峽谷 |
+| 鯨魚出現 | 鯨影從黑暗裡慢慢清楚，與少女對望 | 按下呼喚後，座頭鯨從左側游入，停在少女旁約十秒 |
+| 尺度 | 巨鯨與小小少女填滿 24 公尺直式牆面 | 同一組對比收進直式手機畫面，旁邊有體力、魚群和操作 |
+| 之後 | 一起上升，衝出明亮水面 | 繼續下潛，每 10 公尺換一座海底，可以游泳，也可以出招 |
+
+原作畫面留在 Behance，這裡放的是我們自己的遊戲截圖。
+
 ## 2026-10-13 海景與游動重製 v4
 
 - 拖曳時角色有交替划水、手肘與手腕動作、踢腿、傾身與轉向；睡眠切換成放鬆漂浮。
@@ -75,11 +106,9 @@ cd isaac_cinematic && ./export_character_previews.sh
 # 產出 assets/previews/character_*.png + character_orbit.mp4
 ```
 
-| 正面 | 五官 | 側面 |
-|:-----:|:-----:|:----:|
-| ![girl](assets/previews/v3/front.png) | ![face](assets/previews/v3/portrait.png) | ![side](assets/previews/v3/side.png) |
+頁首的三張是目前角色。`assets/previews/v3/` 的短棕髮棚拍是較早的精修，留作對照。
 
-最新的海景與角色即時動畫：[`cinematic.html?v=4.1`](cinematic.html?v=4.1)。`assets/previews/v2/deep-sea-encounter.mp4` 與 `character_orbit.mp4` 均為舊版預覽。
+最新的海景與角色即時動畫：[`cinematic.html?v=42`](cinematic.html?v=42)。`assets/previews/v2/deep-sea-encounter.mp4` 與 `character_orbit.mp4` 均為舊版預覽。
 
 ## Demo 錄影
 
